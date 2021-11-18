@@ -1,68 +1,546 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Background</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-</head>
-<body>
-    
-    <div class="container">
-        <div class="block-item block-item-1">
-            <div>
-                
-            </div>
-        </div>
-        
-        <div class="block-item block-item-2">
-            <div>
-                <h3>Бесконечность</h3>
-            </div>
-        </div>
-        <div class="block-item block-item-3">
-            <div>
-                
-            </div>
-        </div>
-        <div class="block-item block-item-4">
-            <div>
-                <h3>Границы вселенной</h3>
-            </div>
-        </div>
-        <div class="block-item block-item-5">
-            <div>
-                
-            </div>
-        </div>
-        <div class="block-item block-item-6">
-            <div>
-                <h3>Объять невозможное</h3>
-            </div>
-        </div>
-        <div class="block-item block-item-7">
-            <div>
-                
-            </div>
-        </div>
-        <div class="block-item block-item-8">
-            <div>
-                <h3>Получить ответы</h3>
-            </div>
-        </div>
-        <div class="block-item block-item-9">
-            <div>
-                
-            </div>
-        </div>
-        <div class="block-item block-item-10">
-            <div>
-                <i class="icon-user"></i>
-            </div>
-        </div>
-    </div>
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
 
-
-</body>
+        <link href="/css/tailwind.min.css" rel="stylesheet">
+        <link href="/css/style.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="space-layout">
+            <div class="planet-overlay"></div>
+            <div class="interface-items-container">
+                <div class="interface-radar">
+                    <span class="corner-element"><span></span></span>
+                    <div class="grid grid-flow-col gap-4">
+                        <div class="flex flex-wrap items-center">
+                            <div>
+                                <div class="interface-title mb-4">Радар</div>
+                                <div>Движения отсутствуют</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center col-auto">
+                            <div class="rotate-radar">
+                                <img src="/images/radar.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="interface-spaceships">
+                    <span class="corner-element"><span></span></span>
+                    <div class="interface-title mb-4">Корабли</div>
+                    <div class="grid grid-cols-1 gap-1">
+                        <div class="flex items-center">
+                            <span class="item item-sm unit-1 solid mr-3"></span>
+                            <span class="text-warning">12 000</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="item item-sm unit-2 solid mr-3"></span>
+                            <span class="text-warning">13 245</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="item item-sm unit-3 solid mr-3"></span>
+                            <span class="text-white">2 435</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="item item-sm unit-4 solid mr-3"></span>
+                            <span class="text-white">300</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="item item-sm unit-5 solid mr-3"></span>
+                            <span class="text-white">150</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="item item-sm unit-6 solid mr-3"></span>
+                            <span class="text-white">245</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="item item-sm unit-7 solid mr-3"></span>
+                            <span class="text-white">27</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="item item-sm unit-8 solid mr-3"></span>
+                            <span class="text-white">5</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="item item-sm unit-9 solid mr-3"></span>
+                            <span class="text-white">9</span>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="interface-resources">
+                    <span class="corner-element"><span></span></span>
+                    <div class="interface-title mb-6">Ресурсы</div>
+                    <div class="grid grid-flow-col auto-cols-max gap-6">
+                        <div class="flex items-center">
+                            <span class="item item-sm resource-2 mr-3"></span>
+                            28 250
+                        </div>
+                        <div class="flex items-center">
+                            <span class="item item-sm resource-101 mr-3"></span>
+                            5
+                        </div>
+                        <div class="flex items-center">
+                            <a href="#" class="dots mr-3"><img src="images/dots.png" /></a>
+                            28 250
+                        </div>
+                    </div>
+                    <div class="my-6">
+                        <progress max="100" value="80" class="progress-sm color-success w-full"></progress><!-- три состояния бара: color-success - зеленый, color-warning - оранжевый, color-danger - красный -->
+                    </div>
+                    <div class="text-gray-600 mb-2 flex space-x-4">
+                        <span class="item item-xs solarion flex-initial"></span>
+                        <span class="flex-initial">Соляриум</span>
+                        <span class="text-gray-100 flex-1 text-right">275</span>
+                    </div>
+                    <div class="text-gray-600 flex space-x-4">
+                        <span class="item item-xs energy flex-initial"></span>
+                        <span class="flex-initial">Энергия</span>
+                        <span class="text-gray-100 flex-1 text-right">70 549.83 b</span>
+                    </div>
+                </div>
+                <div class="interface-missiles">
+                    <span class="corner-element"><span></span></span>
+                    <div class="grid grid-flow-col auto-cols-max gap-6">
+                        <div class="flex items-center">
+                            <span class="item item-sm rocket-1 mr-3"></span>
+                            <span class="text-white">12 000</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="item item-sm rocket-2 mr-3"></span>
+                            <span class="text-white">17 122</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="item item-sm rocket-3 mr-3"></span>
+                            <span class="text-white">358</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="item item-sm rocket-4 mr-3"></span>
+                            <span class="text-white">7 352</span>
+                        </div>
+                        <div class="flex items-center">
+                            <a href="#" class="btn btn-danger btn-sm">
+                                <img src="images/delete.png" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- временный блок вместо leaflet, просто для теста космоса - начало -->
+            <div class="space-temp-layer">
+                <a href="#" class="planet">
+                    <img src="/images/planets/1/01-lg.png" class="spin" /><!--01-lg-without-shadow-->
+                    <img src="/images/planets/shadow.png" class="nospin" />
+                    <span class="temp-name">Vanadio</span>
+                </a>
+            </div>
+            <!-- временный блок вместо leaflet, просто для теста космоса - конец -->
+        </div>
+        <div class="planet-layout">
+            <a href="#" class="btn btn-default back-to-space">
+                <img src="images/back.png" class="mr-3" />
+                Назад к космосу
+            </a>
+            <div class="planet-name text-center">
+                <div class="planet-title uppercase mb-2">
+                    <span>vanadio</span>
+                    <a href="#" class="planet-edit"><img src="images/edit.png" /></a>
+                </div>
+                <div class="planet-type">
+                    Гигант <span class="ml-3">(X: <span>647127</span> <span>Y: 920891</span>)</span> <a href="#"><img src="images/copy.png" /></a>
+                </div>
+            </div>
+            <div class="planet-container">
+                <div class="planet-container-bg planet-1">
+                    <span class="planet-container-radial-element solid"></span>
+                    <span class="planet-container-radial-element dashed"></span>
+                    <img src="/images/planets/1/01-lg.png" class="spin" /><!--01-lg-without-shadow-->
+                    <!--<img src="/images/planets/1/01-lg-without-shadow.png" class="spin" />-->
+                    <img src="/images/planets/shadow.png" class="nospin" />
+                    <!--<video autoplay="autoplay" loop="true">
+                        <source src="/video/planet-01.webm" type="video/webm">
+                    </video>-->
+                    <div class="hexagon-container">
+                        <div class="hehagon-1">
+                            <a href="#"></a>
+                        </div>
+                        <div class="hehagon-2">
+                            <a href="#"></a>
+                        </div>
+                        <div class="hehagon-3">
+                            <a href="#"></a>
+                        </div>
+                        <div class="hehagon-4">
+                            <a href="#"></a>
+                        </div>
+                        <div class="hehagon-5">
+                            <a href="#"></a>
+                        </div>
+                        <div class="hehagon-6">
+                            <a href="#"></a>
+                        </div>
+                        <div class="hehagon-7">
+                            <a href="#"></a>
+                        </div>
+                        <div class="hehagon-8">
+                            <a href="#"></a>
+                        </div>
+                        <div class="hehagon-9">
+                            <a href="#"></a>
+                        </div>
+                        <div class="hehagon-10">
+                            <a href="#"></a>
+                        </div>
+                        <div class="hehagon-11">
+                            <a href="#"></a>
+                        </div>
+                        <div class="hehagon-12">
+                            <a href="#"></a>
+                        </div>
+                        <div class="hehagon-13">
+                            <a href="#"></a>
+                        </div>
+                        <div class="hehagon-14">
+                            <a href="#"></a>
+                        </div>
+                        <div class="hehagon-15">
+                            <a href="#"></a>
+                        </div>
+                        <div class="hehagon-16">
+                            <a href="#"></a>
+                        </div>
+                        <div class="hehagon-17 proceed">
+                            <a href="#">
+                                <svg width="38" height="35" viewBox="0 0 38 35" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M26.9715 0.15815C26.8516 0.29063 26.8301 0.431349 26.8301 1.08381C26.8301 1.7828 26.8454 1.86852 26.9971 2.02022C27.1055 2.12866 27.2883 2.20102 27.5182 2.2264L27.8725 2.26559L27.1919 10.3554C26.8176 14.8048 26.4899 18.6874 26.4635 18.9834L26.4157 19.5214H29.9H33.3843L33.352 19.2431C33.3342 19.0901 33.0209 15.3745 32.6557 10.9863C32.2906 6.59811 31.9725 2.83685 31.9488 2.628L31.9058 2.24815L32.2949 2.21074C32.8785 2.15471 32.9531 2.02542 32.9531 1.06985C32.9531 -0.0939714 33.2287 0.00191921 29.8846 0.00191921C27.161 0.00191921 27.1104 0.00466527 26.9715 0.15815ZM8.46346 9.0284C5.56017 9.56842 3.25805 11.7026 2.46859 14.5859L2.26538 15.3281L2.24356 23.8388L2.22181 32.3496L1.25259 32.374C0.00571496 32.4054 0 32.4106 0 33.5069C0 34.2035 0.0139531 34.2782 0.171742 34.4265L0.343559 34.5879H19.018H37.6924L37.8461 34.3923C37.9779 34.2249 38 34.0928 38 33.4728C38 32.4153 37.9886 32.4052 36.745 32.374L35.7734 32.3495V27.2314C35.7734 22.2259 35.7701 22.1066 35.622 21.8164C35.5387 21.6531 35.3634 21.4542 35.2324 21.3743C35.0016 21.2336 34.8232 21.229 29.5205 21.2288L24.0469 21.2285V19.7477C24.0469 18.9333 24.0093 18.0901 23.9635 17.8737C23.7137 16.6968 22.8251 15.8566 21.6215 15.6595C21.3838 15.6206 20.3163 15.5885 19.2492 15.5883C17.171 15.5879 17.2188 15.5965 17.2188 15.219C17.2188 14.9602 16.8391 13.7639 16.5869 13.2278C15.8273 11.6134 14.3695 10.2112 12.7325 9.52055C12.4037 9.38183 11.8676 9.20282 11.541 9.12266C10.7159 8.92027 9.28098 8.87633 8.46346 9.0284ZM21.6418 18.0447C21.771 18.1874 21.7832 18.3298 21.7832 19.6961V21.1914L20.3916 21.2116L19 21.2317V26.7965V32.3613H18.1465H17.293V25.125V17.8886H19.3967C21.4405 17.8886 21.5044 17.8931 21.6418 18.0447ZM25.5379 25.3002C25.6711 25.4648 25.6797 25.6245 25.6797 27.942C25.6797 30.8878 25.7541 30.6762 24.7036 30.7174C23.9559 30.7468 23.6635 30.6638 23.537 30.386C23.4804 30.2618 23.4531 29.4487 23.4531 27.884C23.4531 24.9766 23.4087 25.0753 24.7029 25.1077C25.331 25.1233 25.4094 25.1414 25.5379 25.3002ZM31.1143 25.294C31.2822 25.4618 31.2834 25.4779 31.3047 27.8758L31.3262 30.2887L31.1063 30.5086C30.8936 30.7213 30.8633 30.7285 30.1857 30.7285C29.5891 30.7285 29.4558 30.7056 29.2893 30.5746L29.0938 30.4208V27.9143C29.0938 24.8832 29.0121 25.0794 30.2608 25.1089C30.862 25.123 30.9659 25.1455 31.1143 25.294Z" fill="#8EF6FB"/>
+</svg>
+                                <span class="progress progress-upgrade">
+                                    <span style="height: 30%;" class="bg-success"></span>
+                                </span>
+                                <span class="progress progress-craft">
+                                    <span style="height: 60%;" class="bg-warning"></span>
+                                </span>
+                                
+                                <div class="hexagon-level">12</div>
+                            </a>
+                        </div>
+                        <div class="hehagon-18">
+                            <a href="#"></a>
+                        </div>
+                        <div class="hehagon-19">
+                            <a href="#"></a>
+                        </div>
+                        <div class="hehagon-20">
+                            <a href="#"></a>
+                        </div>
+                        <div class="hehagon-21">
+                            <a href="#"></a>
+                        </div>
+                        <div class="hehagon-22">
+                            <a href="#"></a>
+                        </div>
+                        <div class="hehagon-23">
+                            <a href="#"></a>
+                        </div>
+                        <div class="hehagon-24">
+                            <a href="#"></a>
+                        </div>
+                        <div class="hehagon-25">
+                            <a href="#"></a>
+                        </div>
+                        <div class="hehagon-26">
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="planet-modal">
+                <div class="grid justify-items-end modal-header">
+                    <a href="#" class="btn btn-default close">
+                        <img src="images/close.png" class="mr-3" />
+                        Закрыть
+                    </a>
+                </div>
+                <div class="modal-body grid grid-cols-5">
+                    <div class="col-span-3 overflow-container scrollbar">
+                        
+                        <div class="grid grid-cols-1 gap-5">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="grid grid-flow-col auto-cols-auto gap-8">
+                                        <div class="col-auto">
+                                            <img src="images/buildings/8/1-tmp.png" style="width: 150px;" />
+                                        </div>
+                                        <div>
+                                            <div class="flex items-center mb-6">
+                                                <h3 class="uppercase h3">Завод космолетов</h3>
+                                                <span class="badge badge-success ml-6">
+                                                    Уровень 20
+                                                </span>
+                                            </div>
+                                            <div class="flex justify-between mt-3">
+                                                <div class="text-opacity-70">Структура</div>
+                                                <span class="flex-auto stripped-line mx-2"></span>
+                                                <div>11 000<span class="text-success ml-2">(11 500)</span></div>
+                                            </div>
+                                            <div class="flex justify-between mt-3">
+                                                <div class="text-opacity-70">Ускорение производства</div>
+                                                <span class="flex-auto stripped-line mx-2"></span>
+                                                <div>50%<span class="text-success ml-2">(52%)</span></div>
+                                            </div>
+                                            <div class="flex justify-between mt-3">
+                                                <div class="text-opacity-70">Удешевление постройки флота</div>
+                                                <span class="flex-auto stripped-line mx-2"></span>
+                                                <div>3.7%<span class="text-success ml-2">(4.4%)</span></div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="flex justify-end gap-2">
+                                                <a href="#" class="btn btn-success"><img src="images/upgrade.png" /></a>
+                                                <a href="#" class="btn btn-warning"><img src="images/downgrade.png" /></a>
+                                                <a href="#" class="btn btn-danger"><img src="images/trash.png" /></a>
+                                            </div>
+                                            <div class="text-warning flex justify-end mt-6">
+                                                <span class="mr-3 flex-nowrap">1 Балл</span>
+                                                <span class="flex items-center flex-nowrap">
+                                                    <span class="item item-xs energy mr-2"></span>
+                                                    920.90m
+                                                </span>
+                                            </div>
+                                            <div class="flex justify-end mt-3">
+                                                <span class="flex items-center flex-nowrap">
+                                                    <span class="item item-xs clock mr-2"></span>
+                                                    38:11:40
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                
+                                <div class="card-body">
+                                    <div class="grid grid-cols-1 gap-5">
+                                        <div>
+                                            <ul class="items-list-pills grid grid-cols-9 gap-3">
+                                                <li>
+                                                    <a href="#" class="text-center">
+                                                        <img src="images/units/01-md.png" />
+                                                        <span class="text-bold my-2">Геркулес</span>
+                                                        <span class="text-opacity-60">256k</span>
+                                                    </a>
+                                                </li>
+                                                <li class="active">
+                                                    <a href="#" class="text-center">
+                                                        <img src="images/units/02-md.png" />
+                                                        <span class="text-bold my-2">Локи</span>
+                                                        <span class="text-opacity-60">150</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="text-center">
+                                                        <img src="images/units/03-md.png" />
+                                                        <span class="text-bold my-2">Раптор</span>
+                                                        <span class="text-opacity-60">0</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="text-center">
+                                                        <img src="images/units/04-md.png" />
+                                                        <span class="text-bold my-2">Хорнет</span>
+                                                        <span class="text-opacity-60">0</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="text-center">
+                                                        <img src="images/units/05-md.png" />
+                                                        <span class="text-bold my-2">Джавеллин</span>
+                                                        <span class="text-opacity-60">0</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="text-center">
+                                                        <img src="images/units/06-md.png" />
+                                                        <span class="text-bold my-2">Эскалибр</span>
+                                                        <span class="text-opacity-60">0</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="text-center">
+                                                        <img src="images/units/07-md.png" />
+                                                        <span class="text-bold my-2">Валькирия</span>
+                                                        <span class="text-opacity-60">0</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="text-center">
+                                                        <img src="images/units/08-md.png" />
+                                                        <span class="text-bold my-2">Титан</span>
+                                                        <span class="text-opacity-60">0</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="text-center">
+                                                        <img src="images/units/09-md.png" />
+                                                        <span class="text-bold my-2">Абаддон</span>
+                                                        <span class="text-opacity-60">0</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="flex justify-start gap-6">
+                                            <span class="text-lg flex items-center">
+                                                Геркулес
+                                                <span class="info ml-3"></span>
+                                            </span>
+                                            <span class="flex items-center flex-nowrap">
+                                                <span class="mr-2">
+                                                    <img src="images/hangar.png" />
+                                                </span>
+                                                10
+                                            </span>
+                                            <span class="flex items-center flex-nowrap">
+                                                <span class="mr-2">
+                                                    <img src="images/clock.png" />
+                                                </span>
+                                                38:11:40
+                                            </span>
+                                        </div>
+                                        <div class="flex items-center gap-6">
+                                            <div class="input-group flex-1">
+                                                <input type="text" placeholder="(345)" class="input-prepend" />
+                                                <button class="btn btn-success input-append">Построить</button>
+                                            </div>
+                                            <span class="flex items-center flex-nowrap">
+                                                <span class="mr-2">
+                                                    <img src="images/clock.png" />
+                                                </span>
+                                                <span class="text-lg">00:00:00</span>
+                                            </span>
+                                            <span class="flex items-center flex-nowrap">
+                                                <span class="text-opacity-60">Автопостройка</span>
+                                                <span class="ml-3">
+                                                    <img src="images/switch.png" />
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <div class="grid grid-cols-2 gap-5 mt-4">
+                                            <div>
+                                                <div class="flex justify-between mb-3">
+                                                    <div>Основные характеристики</div>
+                                                    <div><span class="info ml-3"></span></div>
+                                                </div>
+                                                <div class="flex justify-between mb-3">
+                                                    <div class="text-opacity-60">Скорость</div>
+                                                    <span class="flex-auto stripped-line mx-2"></span>
+                                                    <div>5</div>
+                                                </div>
+                                                <div class="flex justify-between mb-3">
+                                                    <div class="text-opacity-60">Урон</div>
+                                                    <span class="flex-auto stripped-line mx-2"></span>
+                                                    <div>25</div>
+                                                </div>
+                                                <div class="flex justify-between mb-3">
+                                                    <div class="text-opacity-60">Здоровье</div>
+                                                    <span class="flex-auto stripped-line mx-2"></span>
+                                                    <div>275</div>
+                                                </div>
+                                                <div class="flex justify-between mb-3">
+                                                    <div class="text-opacity-60">Вместимость</div>
+                                                    <span class="flex-auto stripped-line mx-2"></span>
+                                                    <div>100</div>
+                                                </div>
+                                                <div class="flex justify-between mb-3">
+                                                    <div class="text-opacity-60">Тип урона</div>
+                                                    <span class="flex-auto stripped-line mx-2"></span>
+                                                    <div class="text-danger">Лазерный</div>
+                                                </div>
+                                            </div>
+                                            <div class="grid grid-flow-col gap-3 attack-scheme p-4">
+                                                <div class="col-span-2 grid grid-flow-col">
+                                                    <div class="grid grid-rows-2 grid-flow-col">
+                                                        <div class="col-span-2 flex items-center justify-center text-danger px-2">
+                                                            <img src="images/units/06-md.png" class="mr-2" />
+                                                            0.5
+                                                        </div>
+                                                        <div class="col-span-2 flex items-center justify-center text-danger px-2">
+                                                           <img src="images/units/05-md.png" class="mr-2" />
+                                                            0.35
+                                                        </div>
+                                                        <div class="row-span-3 flex items-center justify-center px-3">
+                                                            <img src="images/arrow-next-red.png" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex items-center justify-center">
+                                                    <div>
+                                                        <img src="images/units/04-md.png" class="mr-2" />
+                                                        <div class="text-bold my-2">Геркулес</div>
+                                                        <div class="text-opacity-60">1</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-span-2 grid grid-flow-col">
+                                                    <div class="grid grid-rows-2 grid-flow-col">
+                                                        <div class="row-span-3 flex items-center justify-center px-3">
+                                                            <img src="images/arrow-next-green.png" />
+                                                        </div>
+                                                        <div class="col-span-2 flex items-center justify-center text-success px-2">
+                                                            <img src="images/units/03-md.png" class="mr-2" />
+                                                            1.5
+                                                        </div>
+                                                        <div class="col-span-2 flex items-center justify-center text-success px-2">
+                                                            <img src="images/units/02-md.png" class="mr-2" />
+                                                            2.12
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center gap-6">
+                                            <span>Ангары</span>
+                                            <div class="progress">
+                                                <span style="width: 60%;" class="bg-danger"></span>
+                                                <span style="width: 70%;" class="bg-warning"></span>
+                                                <span style="width: 90%;" class="bg-warning opacity-30"></span>
+                                            </div>
+                                            <span class="text-opacity-60 whitespace-nowrap">
+                                                0 / 58720
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </body>
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            
+        });
+        $('.hexagon-container a').click(function() {
+            $('.planet-modal').addClass('show');
+            $('.planet-container').addClass('move');
+        });
+        $('.planet-modal a.close').click(function() {
+            $('.planet-modal').removeClass('show');
+            $('.planet-container').removeClass('move');
+        });
+        /* временные - начало */
+        $('.planet').click(function() {
+            $('.planet-overlay').addClass('show');
+            $('.planet-layout').addClass('show');
+        });
+        $('.back-to-space').click(function() {
+            $('.planet-overlay').removeClass('show');
+            $('.planet-layout').removeClass('show');
+        });
+        /* временные - конец */
+    </script>
 </html>
