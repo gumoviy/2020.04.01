@@ -191,7 +191,8 @@ html, body {
       html .page-slider .panel.panel .animate-layer, body .page-slider .panel.panel .animate-layer {
         left: 0;
         overflow: hidden;
-        pointer-events: none; }
+        pointer-events: none;
+        z-index: -1; }
       html .page-slider .panel.panel.active:before, body .page-slider .panel.panel.active:before {
         opacity: .6; }
       html .page-slider .panel#data-slide-1:before, body .page-slider .panel#data-slide-1:before {
@@ -200,7 +201,6 @@ html, body {
         z-index: 1; }
       html .page-slider .panel#data-slide-1 .animate-layer, body .page-slider .panel#data-slide-1 .animate-layer {
         position: absolute;
-        z-index: -1;
         top: 0;
         right: 0;
         bottom: 0;
@@ -273,7 +273,6 @@ html, body {
         transform: scaleX(-1); }
       html .page-slider .panel#data-slide-2 .animate-layer, body .page-slider .panel#data-slide-2 .animate-layer {
         position: absolute;
-        z-index: 0;
         top: 0;
         right: 0;
         bottom: 0;
@@ -334,7 +333,6 @@ html, body {
         transform: scale(-1); }
       html .page-slider .panel#data-slide-3 .animate-layer, body .page-slider .panel#data-slide-3 .animate-layer {
         position: absolute;
-        z-index: 0;
         top: 0;
         left: 0;
         right: 0;
@@ -379,7 +377,6 @@ html, body {
         transform: scale(-1); }
       html .page-slider .panel#data-slide-4 .animate-layer, body .page-slider .panel#data-slide-4 .animate-layer {
         position: absolute;
-        z-index: 0;
         top: 0;
         left: 0;
         right: 0;
@@ -425,7 +422,6 @@ html, body {
         transform: scale(1); }
       html .page-slider .panel#data-slide-5 .animate-layer, body .page-slider .panel#data-slide-5 .animate-layer {
         position: absolute;
-        z-index: 0;
         top: 0;
         left: 0;
         right: 0;
@@ -471,7 +467,6 @@ html, body {
         transform: scaleX(-1); }
       html .page-slider .panel#data-slide-6 .animate-layer, body .page-slider .panel#data-slide-6 .animate-layer {
         position: absolute;
-        z-index: 0;
         top: 0;
         right: 0;
         bottom: 0;
@@ -516,7 +511,6 @@ html, body {
         -webkit-mask-image: linear-gradient(270deg, rgba(196, 196, 196, 0) 0%, #C4C4C4 7.95%, #C4C4C4 92.42%, rgba(196, 196, 196, 0) 100%); }
       html .page-slider .panel#data-slide-7 .animate-layer, body .page-slider .panel#data-slide-7 .animate-layer {
         position: absolute;
-        z-index: 0;
         top: 0;
         left: 0;
         right: 0;
@@ -561,7 +555,6 @@ html, body {
         transform: scaleX(-1); }
       html .page-slider .panel#data-slide-8 .animate-layer, body .page-slider .panel#data-slide-8 .animate-layer {
         position: absolute;
-        z-index: 0;
         top: 0;
         left: 0;
         right: 0;
@@ -726,7 +719,7 @@ html, body {
             padding: 0 1px;
             min-width: 310px;
             width: 310px;
-            backdrop-filter: none; }
+            backdrop-filter: blur(20px); }
           html .page-slider .panel .market .market-info .uk-margin-small-bottom, body .page-slider .panel .market .market-info .uk-margin-small-bottom {
             margin-bottom: 12.8px; }
           html .page-slider .panel .market .market-info .uk-margin-xsmall-bottom, body .page-slider .panel .market .market-info .uk-margin-xsmall-bottom {
@@ -1789,7 +1782,8 @@ html, body {
   html .select2-container, body .select2-container {
     min-width: auto;
     width: auto !important;
-    max-width: 100%; }
+    max-width: 100%;
+    backdrop-filter: blur(20px); }
   html ::-webkit-scrollbar-track, body ::-webkit-scrollbar-track {
     /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);*/
     background: rgba(255, 255, 255, 0);

@@ -106,7 +106,7 @@ html, body {
                 &:before {
                     opacity: 0; content: ''; display: block; width: 100%; height: 100%; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-size: 1920px; background-position: center; background-repeat: no-repeat; transition: all 300ms ease-in; pointer-events: none;
                 }
-                .animate-layer {left: 0; overflow: hidden; pointer-events: none;}
+                .animate-layer {left: 0; overflow: hidden; pointer-events: none; z-index: -1;}
                 &.active {
                     &:before {opacity: .6;}
                 }
@@ -116,7 +116,7 @@ html, body {
                     background-image: linear-gradient(135deg, rgba($red,0), rgba($red,.3)), url('../images/light-1.png'); transform: scale(1); z-index: 1;
                 }
                 .animate-layer {
-                    position: absolute; z-index: -1; top: 0; right: 0; bottom: 0; display: block; transition: left 300ms ease-in-out;
+                    position: absolute; top: 0; right: 0; bottom: 0; display: block; transition: left 300ms ease-in-out;
                     &:before {content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: block; background-image: url('../images/unit.png'); background-size: 45%; background-position: left 43% bottom 200%; background-repeat: no-repeat; opacity: 0; transition: all 600ms ease-in-out; transform: translateY(0) scale(1); z-index: 2;}
                     &:after {content: ''; position: absolute; top: 50%; left: 0; right: 0; bottom: 0; display: block; background-image: url('../images/planet-slide-1.png'); background-size: 100%; background-position: left 50% top 0; background-repeat: no-repeat; opacity: 0; transition: all 1000ms ease-in-out; transform: translateY(0); transition-delay: 400ms; filter: drop-shadow(0px 0px 250px rgba(56, 114, 164, 0.9)); z-index: 1;}
                     .stars-1 {width: 744px; height: 650px; background-image: url('../images/stars-1th-slide-left.png'); background-size: 60%; background-position: left bottom; background-repeat: no-repeat; position: absolute; left: -92px; bottom: 0; transition: left 300ms ease-in-out;}
@@ -134,7 +134,7 @@ html, body {
                     background-image: linear-gradient(135deg, rgba($blue,0), rgba($blue,.3)), url('../images/light-1.png'); transform: scaleX(-1);
                 }
                 .animate-layer {
-                    position: absolute; z-index: 0; top: 0; right: 0; bottom: 0; display: block; transition: left 300ms ease-in-out;
+                    position: absolute; top: 0; right: 0; bottom: 0; display: block; transition: left 300ms ease-in-out;
                     .stars-1 {width: 1756px; height: 624px; background-image: url('../images/stars-2th-slide-top.png'); background-size: 60%; background-position: center top; background-repeat: no-repeat; position: absolute; left: -92px; top: 0; opacity: 0; transition: transform 500ms ease-out, opacity 500ms ease-in-out; transform: translateY(-150px);}
                     .stars-2 {width: 1525px; height: 448px; background-image: url('../images/stars-2th-slide-bottom.png'); background-size: 60%; background-position: right bottom; background-repeat: no-repeat; position: absolute; right: 0; bottom: 0; transition: opacity 2200ms ease-out; transition-delay: 350ms; opacity: 0;}
                 }
@@ -162,7 +162,7 @@ html, body {
                     background-image: linear-gradient(135deg, rgba($orange,0), rgba($orange,.3)), url('../images/light-1.png'); transform: scale(-1);
                 }
                 .animate-layer {
-                    position: absolute; z-index: 0; top: 0; left: 0; right: 0; bottom: 0; display: block; transition: left 300ms ease-in-out;
+                    position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: block; transition: left 300ms ease-in-out;
                     .stars-1 {width: 1525px; height: 518px; background-image: url('../images/stars-3th-slide-top.png'); background-size: 60%; background-position: right top; background-repeat: no-repeat; position: absolute; right: 0; top: 0; opacity: 0; transition: transform 500ms ease-out, opacity 500ms ease-in-out; transform: translate(150px,-150px);}
                     .stars-2 {width: 1310px; height: 778px; background-image: url('../images/stars-3th-slide-left.png'); background-size: 60%; background-position: left bottom; background-repeat: no-repeat; position: absolute; left: 0; bottom: 0; transition: opacity 2200ms ease-out, transform 500ms ease-out; transition-delay: 350ms; opacity: 0; transform: translateX(-150px);}
                 }
@@ -178,7 +178,7 @@ html, body {
                     background-image: linear-gradient(170deg, rgba($purple,0), rgba($purple,.3)), url('../images/light-1.png'); transform: scale(-1);
                 }
                 .animate-layer {
-                    position: absolute; z-index: 0; top: 0; left: 0; right: 0; bottom: 0; display: block; transition: left 300ms ease-in-out;
+                    position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: block; transition: left 300ms ease-in-out;
                     .stars-1 {width: 1525px; height: 518px; background-image: url('../images/stars-3th-slide-top.png'); background-size: 60%; background-position: right top; background-repeat: no-repeat; position: absolute; right: 0; top: 0; opacity: 0; transition: transform 500ms ease-out, opacity 500ms ease-in-out; transform: translate(-150px,-150px) scaleX(-1);}
                     .stars-2 {width: 1310px; height: 778px; background-image: url('../images/stars-3th-slide-left.png'); background-size: 60%; background-position: left bottom; background-repeat: no-repeat; position: absolute; left: 0; bottom: 0; transition: opacity 2200ms ease-out, transform 800ms ease-out; transition-delay: 350ms; opacity: 0; transform: translateX(-150px) rotate(30deg); transform-origin: bottom left;}
                 }
@@ -194,7 +194,7 @@ html, body {
                     background-image: linear-gradient(225deg, rgba($yellow,0), rgba($yellow,.3)), url('../images/light-1.png'); transform: scale(1);
                 }
                 .animate-layer {
-                    position: absolute; z-index: 0; top: 0; left: 0; right: 0; bottom: 0; display: block; transition: left 300ms ease-in-out;
+                    position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: block; transition: left 300ms ease-in-out;
                     .stars-1 {width: 1493px; height: 624px; background-image: url('../images/stars-5th-slide-top.png'); background-size: 60%; background-position: right top; background-repeat: no-repeat; position: absolute; right: 0; top: 0; opacity: 0; transition: transform 500ms ease-out, opacity 500ms ease-in-out; transform: translate(150px,-150px);}
                     .stars-2 {width: 1280px; height: 448px; background-image: url('../images/stars-5th-slide-bottom.png'); background-size: 60%; background-position: left bottom; background-repeat: no-repeat; position: absolute; left: 0; bottom: 0; transition: opacity 1000ms ease-out, transform 800ms ease-out; transition-delay: 350ms; opacity: 0; transform: translateX(-150px); transform-origin: bottom left;}
                 }
@@ -210,7 +210,7 @@ html, body {
                     background-image: linear-gradient(45deg, rgba($green,0), rgba($green,.3)), url('../images/light-1.png'); transform: scaleX(-1);
                 }
                 .animate-layer {
-                    position: absolute; z-index: 0; top: 0; right: 0; bottom: 0; display: block; transition: left 300ms ease-in-out;
+                    position: absolute; top: 0; right: 0; bottom: 0; display: block; transition: left 300ms ease-in-out;
                     .stars-1 {width: 1756px; height: 624px; background-image: url('../images/stars-2th-slide-top.png'); background-size: 60%; background-position: center top; background-repeat: no-repeat; position: absolute; left: -92px; top: 0; opacity: 0; transition: transform 500ms ease-out, opacity 500ms ease-in-out; transform: translateY(-150px);}
                     .stars-2 {width: 1525px; height: 448px; background-image: url('../images/stars-2th-slide-bottom.png'); background-size: 60%; background-position: right bottom; background-repeat: no-repeat; position: absolute; right: 0; bottom: 0; transition: opacity 2200ms ease-out; transition-delay: 350ms; opacity: 0;}
                 }
@@ -229,7 +229,7 @@ html, body {
                     -webkit-mask-position: 0 0; -webkit-mask-image: linear-gradient(270deg, rgba(196, 196, 196, 0) 0%, #C4C4C4 7.95%, #C4C4C4 92.42%, rgba(196, 196, 196, 0) 100%);
                 }
                 .animate-layer {
-                    position: absolute; z-index: 0; top: 0; left: 0; right: 0; bottom: 0; display: block; transition: left 300ms ease-in-out;
+                    position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: block; transition: left 300ms ease-in-out;
                     .stars-1 {width: 1525px; height: 518px; background-image: url('../images/stars-3th-slide-top.png'); background-size: 60%; background-position: right top; background-repeat: no-repeat; position: absolute; right: 0; top: 0; opacity: 0; transition: transform 500ms ease-out, opacity 500ms ease-in-out; transform: translate(150px,-150px);}
                     .stars-2 {width: 1310px; height: 778px; background-image: url('../images/stars-3th-slide-left.png'); background-size: 60%; background-position: left bottom; background-repeat: no-repeat; position: absolute; left: 0; bottom: 0; transition: opacity 2200ms ease-out, transform 500ms ease-out; transition-delay: 350ms; opacity: 0; transform: translateX(-150px);}
                 }
@@ -245,7 +245,7 @@ html, body {
                     background-image: linear-gradient(135deg, rgba($blue,0), rgba($blue,.3)), url('../images/light-1.png'); transform: scaleX(-1);
                 }
                 .animate-layer {
-                    position: absolute; z-index: 0; top: 0; left: 0; right: 0; bottom: 0; display: block; transition: left 300ms ease-in-out;
+                    position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: block; transition: left 300ms ease-in-out;
                     .stars-1 {width: 1525px; height: 518px; background-image: url('../images/stars-3th-slide-top.png'); background-size: 60%; background-position: right top; background-repeat: no-repeat; position: absolute; right: 0; top: 0; opacity: 0; transition: transform 500ms ease-out, opacity 500ms ease-in-out; transform: translate(-150px,-150px) scaleX(-1);}
                     .stars-2 {width: 1310px; height: 778px; background-image: url('../images/stars-3th-slide-left.png'); background-size: 60%; background-position: left bottom; background-repeat: no-repeat; position: absolute; left: 0; bottom: 0; transition: opacity 2200ms ease-out, transform 800ms ease-out; transition-delay: 350ms; opacity: 0; transform: translateX(-150px) rotate(30deg); transform-origin: bottom left;}
                 }
@@ -342,7 +342,7 @@ html, body {
                 }
                 .market-info {
                     padding: 0 54px;
-                    > .uk-card {background-image: url('../images/market-card.svg'); background-color: transparent; border: 0; box-shadow: none; background-size: 100% auto; background-position: 0 0; border-radius: 0; padding: 0 1px; min-width: 310px; width: 310px; backdrop-filter: none;}
+                    > .uk-card {background-image: url('../images/market-card.svg'); background-color: transparent; border: 0; box-shadow: none; background-size: 100% auto; background-position: 0 0; border-radius: 0; padding: 0 1px; min-width: 310px; width: 310px; backdrop-filter: blur(20px);}
                     .uk-margin-small-bottom {margin-bottom: 12.8px;}
                     .uk-margin-xsmall-bottom {margin-bottom: 6.4px;}
                     .token-name {
@@ -994,7 +994,7 @@ html, body {
         }
     }
     .select2-container {
-        min-width: auto; width: auto!important; max-width: 100%;
+        min-width: auto; width: auto!important; max-width: 100%; backdrop-filter: blur(20px);
     }
     ::-webkit-scrollbar-track {/*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);*/ background: rgba(255,255,255,0); border-radius: 4px;}
     ::-webkit-scrollbar {width: 10px; background: rgba(0,0,0, 0.3); border-radius: 0px;}
