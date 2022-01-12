@@ -84,7 +84,7 @@ html, body {
                     }
                 }
             }
-            &._active .section {
+            &.active .section {
                 transform: translateY(0); /*transition-delay: 500ms;*/
                 .section-content {opacity: 1; transform: translateY(0px);/* transition-delay: 1000ms;*/}
             }
@@ -94,9 +94,12 @@ html, body {
             }
             &.panel {
                 &:before {
-                    opacity: .6; content: ''; display: block; width: 100%; height: 100%; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-size: 1920px; background-position: center; background-repeat: no-repeat;
+                    opacity: 0; content: ''; display: block; width: 100%; height: 100%; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-size: 1920px; background-position: center; background-repeat: no-repeat; transition: all 300ms ease-in;
                 }
-                .animate-layer {left: 0; overflow: hidden;}
+                .animate-layer {left: 0; overflow: hidden; pointer-events: none;}
+                &.active {
+                    &:before {opacity: .6;}
+                }
             }
             &#data-slide-1 {
                 &:before {
