@@ -558,11 +558,13 @@ html, body {
                                 > span {
                                     transform-origin: 0 0; margin: 0; display: flex; position: relative; padding: 27px 30px 26px 30px; width: 415px; box-sizing: border-box; justify-content: space-between; align-items: center; transform: translate(0, 415px) rotate(-90deg);
                                     > b {
-                                        padding-left: 48px; position: relative; font-family: $regular; font-size: 19.2px; line-height: 21px;
+                                        padding-left: 48px; position: relative; font-family: $regular; font-size: 19.2px; line-height: 21px; white-space: nowrap; order: 1;
                                         img {width: 32px; height: 32px; position: absolute; left: 0; top: 50%; transform: translateY(-50%);}
                                     }
-                                    > span {font-family: $regular; font-size: 16px; line-height: 21px; color: rgba(255,255,255,.6);}
-                                    
+                                    > span {font-family: $regular; font-size: 16px; line-height: 21px; color: rgba(255,255,255,.6); order: 3;}
+                                    &:before {
+                                        content: ''; display: block; width: 100%; height: 2px; margin: 0 24px; background: rgba(255, 255, 255, 0.3); order: 2;
+                                    }
                                 }
                             }
                             .uk-accordion-content {
