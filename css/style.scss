@@ -37,10 +37,10 @@ $bold: 'Gotham Pro Bold', sans-serif;
 /* настройки - конец */
 
 html, body {
-    margin: 0; padding: 0; position: relative; top: 0; left: 0; width: 100%; height: 100%; font-family: $regular; color: rgba(255,255,255,.6); font-size: 16px; line-height: 21px;
+    margin: 0; padding: 0; position: relative; /*top: 0; left: 0;*/ width: 100%; /*height: 100%;*/ font-family: $regular; color: rgba(255,255,255,.6); font-size: 16px; line-height: 21px; overflow-x: hidden;
     .page-slider {
-        position: relative; top: 0; width: 100vw; height: 100vh; max-width: 100%; max-height: 100%; overflow: hidden; box-sizing: border-box; background-color: #0f161e; background-image: url('../images/space-bg.png'); background-size: cover; background-position: center; background-repeat: no-repeat;
-        &:after {content: ''; display: block; width: 100%; height: 100%; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-image: url('../images/blink.png'); background-size: 60%; background-position: center right; background-repeat: no-repeat; z-index: 10; pointer-events: none;}
+        position: relative; top: 0; width: 100vw; /*height: 100vh;*/ max-width: 100%; /*max-height: 100%; overflow: hidden;*/ box-sizing: border-box; background-color: #0f161e; background-image: url('../images/space-bg.png'); background-attachment: fixed; background-size: cover; background-position: center; background-repeat: no-repeat;
+        &:after {content: ''; display: block; width: 100%; height: 100%; position: fixed; left: 0; top: 0; right: 0; bottom: 0; background-image: url('../images/blink.png'); background-size: 60%; background-position: center right; background-repeat: no-repeat; z-index: 10; pointer-events: none;}
         h1, h2, h3, h4, h5, h6 {color: rgba(255,255,255,1); font-family: $bold; letter-spacing: 0.08em; font-weight: 700;}
         h1, .h1 {
             font-size: 56px; line-height: 56px; margin-bottom: 32px;
@@ -64,19 +64,24 @@ html, body {
             }
         }
         .panel {
-            position: absolute; width: 100%; height: 100%; max-height: 100vh; top: 0; left: 0; bottom: 0; right: 0; margin: auto; padding-left: 92px; transition: padding 300ms ease-in-out, opacity 500ms ease-in-out; opacity: 0; box-sizing: border-box; /*overflow-y: auto;*/
+            /*position: absolute;*/ position: relative; width: 100%; /*height: 100%; max-height: 100vh; top: 0; left: 0; bottom: 0; right: 0;*/ padding-top: 10px; margin: auto; padding-left: 0; transition: padding 300ms ease-in-out, opacity 500ms ease-in-out; /*opacity: 0;*/ box-sizing: border-box; /*overflow-y: auto;*/
             &._active {
                 z-index: 10; opacity: 1;
             }
-            .trans-layer, .section {position: absolute; height: 100%; top: 0; left: 92px; bottom: 0; right: 0; width: calc(100% - 92px);}
+            .trans-layer, .section {/*position: absolute; height: 100%;*/ top: 0; left: 92px; bottom: 0; right: 0; /*width: calc(100% - 92px);*/}
             .trans-layer {
                 transform: translateY(-100%) skew(0) rotate(0) scale(2); border-radius: 50%; transition: all 500ms ease-in-out; transition-delay: 500ms;
             }
             &._active .trans-layer {transform: translateY(0) skew(0) rotate(0) scale(2); transition-delay: 0ms;}
             .section {
-                transform: translateY(100%); transition: all 300ms ease-in-out; transition-delay: 0ms; box-sizing: border-box; display: flex; align-items: center; z-index: 2;
+                /*transform: translateY(100%);*/ transition: all 300ms ease-in-out; transition-delay: 0ms; box-sizing: border-box; display: flex; align-items: center; z-index: 2; padding-left: 92px;
                 .section-content {
-                    /*display: flex; flex-flow: column;*/ width: 100%; /*justify-content: center; align-items: center;*/ color: rgba(255,255,255,.6); font-family: $regular; opacity: 0; transform: translateY(30px); transition: all 500ms ease; transition-delay: 0s; font-weight: 400; overflow-x: hidden; overflow-y: auto; margin: 100px 0; /*height: calc(100% - 200px);*/ height: auto; max-height: calc(100vh - 200px); z-index: 10; min-height: 70px;
+                    /*display: flex; flex-flow: column;*/ width: 100%; /*justify-content: center; align-items: center;*/ color: rgba(255,255,255,.6); font-family: $regular; /*opacity: 0; transform: translateY(30px);*/ transition: all 500ms ease; transition-delay: 0s; font-weight: 400; overflow-x: hidden; overflow-y: auto; /*margin: 100px 0;*/ /*height: calc(100% - 200px);*/ height: auto; /*max-height: calc(100vh - 200px);*/ z-index: 10; min-height: 70px; padding: 90px 0 24px 0;
+                }
+                &#section-1 {
+                    .section-content {
+                        padding-top: 170px;
+                    }
                 }
             }
             &._active .section {
@@ -84,34 +89,34 @@ html, body {
                 .section-content {opacity: 1; transform: translateY(0px);/* transition-delay: 1000ms;*/}
             }
             .slide-descr {
-                position: absolute; left: 50%; transform: translateX(-50%); bottom: 72px; line-height: 14.4px; font-size: 14.4px; text-transform: uppercase; transition: left .3s ease-in-out; pointer-events: none;
-                &.last-slide {bottom: 36px;}
+                /*position: absolute; left: 50%; transform: translateX(-50%); bottom: 72px;*/ position: relative; line-height: 14.4px; font-size: 14.4px; text-transform: uppercase; transition: left .3s ease-in-out; pointer-events: none;
+                &.last-slide {/*bottom: 36px;*/}
             }
-            &[data-slide] {
+            &.panel {
                 &:before {
                     opacity: .6; content: ''; display: block; width: 100%; height: 100%; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-size: 1920px; background-position: center; background-repeat: no-repeat;
                 }
-                .animate-layer {left: 92px;}
+                .animate-layer {left: 0; overflow: hidden;}
             }
-            &[data-slide="1"] {
+            &#data-slide-1 {
                 &:before {
                     background-image: linear-gradient(135deg, rgba($red,0), rgba($red,.3)), url('../images/light-1.png'); transform: scale(1); z-index: 1;
                 }
                 .animate-layer {
                     position: absolute; z-index: 0; top: 0; right: 0; bottom: 0; display: block; transition: left 300ms ease-in-out;
-                    &:before {content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: block; background-image: url('../images/unit.png'); background-size: 45%; background-position: left 43% top 60px; background-repeat: no-repeat; opacity: 0; transition: all 600ms ease-in-out; transform: translateY(100px) scale(1.2); z-index: 2;}
-                    &:after {content: ''; position: absolute; top: 50%; left: 0; right: 0; bottom: 0; display: block; background-image: url('../images/planet-slide-1.png'); background-size: 100%; background-position: left 50% top 0; background-repeat: no-repeat; opacity: 0; transition: all 1000ms ease-in-out; transform: translateY(100px); transition-delay: 400ms; filter: drop-shadow(0px 0px 250px rgba(56, 114, 164, 0.9)); z-index: 1;}
+                    &:before {content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: block; background-image: url('../images/unit.png'); background-size: 45%; background-position: left 43% bottom -150px; background-repeat: no-repeat; /*opacity: 0;*/ transition: all 600ms ease-in-out; transform: translateY(0) scale(1); z-index: 2;}
+                    &:after {content: ''; position: absolute; top: 50%; left: 0; right: 0; bottom: 0; display: block; background-image: url('../images/planet-slide-1.png'); background-size: 100%; background-position: left 50% top 0; background-repeat: no-repeat; /*opacity: 0;*/ transition: all 1000ms ease-in-out; transform: translateY(0); transition-delay: 400ms; filter: drop-shadow(0px 0px 250px rgba(56, 114, 164, 0.9)); z-index: 1;}
                     .stars-1 {width: 744px; height: 650px; background-image: url('../images/stars-1th-slide-left.png'); background-size: 60%; background-position: left bottom; background-repeat: no-repeat; position: absolute; left: -92px; bottom: 0; transition: left 300ms ease-in-out;}
                     .stars-2 {width: 739px; height: 864px; background-image: url('../images/stars-1th-slide-right.png'); background-size: 60%; background-position: right top; background-repeat: no-repeat; position: absolute; right: 0; top: 0;}
                 }
-                &._active {
+                /*&._active {
                     .animate-layer {
                         &:before {opacity: 1; transform: translateY(0) scale(1);}
                         &:after {opacity: 1; transform: translateY(0);}
                     }
-                }
+                }*/
             }
-            &[data-slide="2"] {
+            &#data-slide-2 {
                 &:before {
                     background-image: linear-gradient(135deg, rgba($blue,0), rgba($blue,.3)), url('../images/light-1.png'); transform: scaleX(-1);
                 }
@@ -139,7 +144,7 @@ html, body {
                     
                 }
             }
-            &[data-slide="3"] {
+            &#data-slide-3 {
                 &:before {
                     background-image: linear-gradient(135deg, rgba($orange,0), rgba($orange,.3)), url('../images/light-1.png'); transform: scale(-1);
                 }
@@ -155,7 +160,7 @@ html, body {
                     }
                 }
             }
-            &[data-slide="4"] {
+            &#data-slide-4 {
                 &:before {
                     background-image: linear-gradient(170deg, rgba($purple,0), rgba($purple,.3)), url('../images/light-1.png'); transform: scale(-1);
                 }
@@ -171,7 +176,7 @@ html, body {
                     }
                 }
             }
-            &[data-slide="5"] {
+            &#data-slide-5 {
                 &:before {
                     background-image: linear-gradient(225deg, rgba($yellow,0), rgba($yellow,.3)), url('../images/light-1.png'); transform: scale(1);
                 }
@@ -187,7 +192,7 @@ html, body {
                     }
                 }
             }
-            &[data-slide="6"] {
+            &#data-slide-6 {
                 &:before {
                     background-image: linear-gradient(45deg, rgba($green,0), rgba($green,.3)), url('../images/light-1.png'); transform: scaleX(-1);
                 }
@@ -203,7 +208,7 @@ html, body {
                     }
                 }
             }
-            &[data-slide="7"] {
+            &#data-slide-7 {
                 &:before {
                     background-image: linear-gradient(135deg, rgba($red,0), rgba($red,.3)), url('../images/light-1.png'); transform: scaleX(1);
                 }
@@ -222,7 +227,7 @@ html, body {
                     }
                 }
             }
-            &[data-slide="8"] {
+            &#data-slide-8 {
                 &:before {
                     background-image: linear-gradient(135deg, rgba($blue,0), rgba($blue,.3)), url('../images/light-1.png'); transform: scaleX(-1);
                 }
@@ -629,13 +634,16 @@ html, body {
             }
         }
         .nav-dots {
-            position: absolute; padding: 32px 0; top: 0; bottom: 0; left: 0; width: 92px; border-right: 1px solid rgba(255,255,255,.1); z-index: 20; transition: width 300ms ease-in-out, backdrop-filter 300ms ease-in-out, background 300ms ease-in-out, box-shadow 300ms ease-in-out; overflow-y: auto; -ms-overflow-style: none; scrollbar-width: none; backdrop-filter: blur(0); background: rgba(55, 55, 55, 0); box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0); /*display: flex; flex-direction: column;*/ height: 100vh; box-sizing: border-box;
+            /*position: absolute;*/position: fixed; padding: 0 0 32px 0; top: 0; bottom: 0; left: 0; width: 92px; border-right: 1px solid rgba(255,255,255,.1); z-index: 20; transition: width 300ms ease-in-out, backdrop-filter 300ms ease-in-out, background 300ms ease-in-out, box-shadow 300ms ease-in-out; overflow-y: hidden; -ms-overflow-style: none; scrollbar-width: none; backdrop-filter: blur(0); background: rgba(55, 55, 55, 0); box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0); /*display: flex; flex-direction: column;*/ height: 100vh; box-sizing: border-box;
+            //&+ .uk-sticky-placeholder {display: none;}
             > div {
+                padding-top: 32px;
                 &:first-child {overflow-y: auto; overflow-x: hidden;}
+                ul {padding: 0; margin: 0;}
+                &::-webkit-scrollbar {width: 0;}
             }
-            &::-webkit-scrollbar {width: 0;}
             .nav-dot {
-                margin: 0 32px 32px 32px; border-radius: 50%; /*background: #fff;*/ cursor: pointer; transition: all 300ms ease-out; display: flex; align-items: center; white-space: nowrap; min-width: 32px;
+                margin: 0 0 32px 0; border-radius: 50%; /*background: #fff;*/ cursor: pointer; transition: all 300ms ease-out; display: flex; align-items: center; white-space: nowrap; min-width: 32px;
                 svg {
                     width: 26px; height: 26px; min-width: 26px; opacity: .4; transition: all 300ms ease; color: #fff; -webkit-filter: drop-shadow(0 0 0 rgba(255,255,255,0)); filter: drop-shadow(0 0 0 rgba(255,255,255,0));
                 }
@@ -647,6 +655,7 @@ html, body {
                 &:hover {
                     svg {opacity: 1; text-shadow: 0px 0px 30px rgba(255, 255, 255, 0.9); -webkit-filter: drop-shadow(0 0 10px rgba(255,255,255,.9)); filter: drop-shadow(0 0 10px rgba(255,255,255,.9));}
                     span {color: rgba(255,255,255,1);}
+                    text-decoration: none;
                 }
             }
             .sidebar-nav-counter {
@@ -661,7 +670,7 @@ html, body {
                 }
             }
             a {
-                margin: 0 0 0 32px; display: block; height: 26px; margin-bottom: 32px;
+                padding: 0 0 0 32px; display: block; height: 26px; margin-bottom: 32px;
                 svg {opacity: 1; transition: opacity 300ms ease;}
                 line {
                     transition: transform 400ms ease-in-out;
@@ -692,7 +701,7 @@ html, body {
             100% {transform: translateX(0%); opacity: 1;}
         }
         .next-btn, .prev-btn {
-            width: 52px; height: 44.8px; position: absolute; z-index: 20; line-height: 44.8px; text-align: center; cursor: pointer; left: calc(50% + 48px); bottom: 19.2px; transform: translateX(-50%); transition: opacity 300ms ease, left 300ms ease-in-out;
+            width: 52px; /*height: 44.8px;*/ /*position: absolute;*/ position: relative; z-index: 20; /*line-height: 44.8px;*/ text-align: center; cursor: pointer; /*left: calc(50% + 48px); bottom: 19.2px; transform: translateX(-50%);*/ transition: opacity 300ms ease, left 300ms ease-in-out; width: auto;
             svg {
                 path {
                     transition: fill-opacity 300ms ease;
@@ -709,7 +718,7 @@ html, body {
             }
         }
         .prev-btn {
-            display: none; bottom: 60px;
+            //display: none; bottom: 60px;
             svg {transform: scale(-1);}
         }
         .top-nav {
@@ -733,9 +742,9 @@ html, body {
         }
         &.sidebar-active {
             .panel, .top-nav {
-                padding-left: 320px;
+                /*padding-left: 320px;*/
                 .section, .trans-layer {
-                    width: calc(100% - 320px); left: 320px;
+                    /*width: calc(100% - 320px); left: 320px;*/
                     .section-content {
                         .slide-descr {
                             //left: calc(50% + 38px);
@@ -743,12 +752,12 @@ html, body {
                     }
                 }
                 .animate-layer {
-                    left: 320px;
+                    /*left: 320px;*/
                 }
                 &[data-slide="1"] {
                     .animate-layer {
                         .stars-1 {
-                            left: -320px;
+                            /*left: -320px;*/
                         }
                     }
                 }
@@ -757,7 +766,7 @@ html, body {
                 width: 320px; backdrop-filter: blur(80px); background: rgba(55, 55, 55, 0.2); box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
                 a {
                     svg {
-                        opacity: 1;
+                        opacity: .4;
                         line {
                             &:nth-child(1) {transform: matrix(-1,0,0,1,23,3);}
                             &:nth-child(2) {transform: matrix(-1,0,0,1,33,11);}
@@ -765,7 +774,7 @@ html, body {
                         }
                     }
                     &:hover {
-                        svg {opacity: .5;}
+                        svg {opacity: 1;}
                     }
                 }
                 span {opacity: 1;}
@@ -777,7 +786,7 @@ html, body {
                     }
                 }
             }
-            .next-btn, .prev-btn {left: calc(50% + 160px);}
+            //.next-btn, .prev-btn {left: calc(50% + 160px);}
         }
     }
     .uk-container {
@@ -972,9 +981,14 @@ html, body {
     .select2-container {
         min-width: auto; width: auto!important; max-width: 100%;
     }
-    ::-webkit-scrollbar-track {-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); background: rgba(255, 255, 255, 0.05); border-radius: 4px;}
-    ::-webkit-scrollbar {width: 10px; background: rgba(255, 255, 255, 0.05); border-radius: 4px;}
-    ::-webkit-scrollbar-thumb {background: rgba(255, 255, 255, 0.1); border-radius: 4px;}
+    ::-webkit-scrollbar-track {/*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);*/ background: rgba(255,255,255,0); border-radius: 4px;}
+    ::-webkit-scrollbar {width: 10px; background: rgba(0,0,0, 0.3); border-radius: 0px;}
+    ::-webkit-scrollbar-thumb {background: rgba(0,0,0, 0.3); border-radius: 4px;}
+    * {
+        ::-webkit-scrollbar-track {/*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);*/ background: rgba(255,255,255, 0.05); border-radius: 4px;}
+        ::-webkit-scrollbar {width: 10px; background: rgba(255,255,255, 0.05); border-radius: 4px;}
+        ::-webkit-scrollbar-thumb {background: rgba(255,255,255, 0.1); border-radius: 4px;}
+    }
     @-webkit-keyframes rotating {
       from {
         -webkit-transform: rotate(0deg);
