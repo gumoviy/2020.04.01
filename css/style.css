@@ -182,80 +182,80 @@ html, body {
       html .page-slider .panel.panel .animate-layer, body .page-slider .panel.panel .animate-layer {
         left: 0;
         overflow: hidden; }
-      html .page-slider .panel#data-slide-1, body .page-slider .panel#data-slide-1 {
-        /*&._active {
-            .animate-layer {
-                &:before {opacity: 1; transform: translateY(0) scale(1);}
-                &:after {opacity: 1; transform: translateY(0);}
-            }
-        }*/ }
-        html .page-slider .panel#data-slide-1:before, body .page-slider .panel#data-slide-1:before {
-          background-image: linear-gradient(135deg, rgba(236, 81, 81, 0), rgba(236, 81, 81, 0.3)), url("../images/light-1.png");
-          transform: scale(1);
-          z-index: 1; }
-        html .page-slider .panel#data-slide-1 .animate-layer, body .page-slider .panel#data-slide-1 .animate-layer {
+      html .page-slider .panel#data-slide-1:before, body .page-slider .panel#data-slide-1:before {
+        background-image: linear-gradient(135deg, rgba(236, 81, 81, 0), rgba(236, 81, 81, 0.3)), url("../images/light-1.png");
+        transform: scale(1);
+        z-index: 1; }
+      html .page-slider .panel#data-slide-1 .animate-layer, body .page-slider .panel#data-slide-1 .animate-layer {
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        display: block;
+        transition: left 300ms ease-in-out; }
+        html .page-slider .panel#data-slide-1 .animate-layer:before, body .page-slider .panel#data-slide-1 .animate-layer:before {
+          content: '';
           position: absolute;
-          z-index: 0;
           top: 0;
+          left: 0;
           right: 0;
           bottom: 0;
           display: block;
+          background-image: url("../images/unit.png");
+          background-size: 45%;
+          background-position: left 43% bottom 200%;
+          background-repeat: no-repeat;
+          opacity: 0;
+          transition: all 600ms ease-in-out;
+          transform: translateY(0) scale(1);
+          z-index: 2; }
+        html .page-slider .panel#data-slide-1 .animate-layer:after, body .page-slider .panel#data-slide-1 .animate-layer:after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          display: block;
+          background-image: url("../images/planet-slide-1.png");
+          background-size: 100%;
+          background-position: left 50% top 0;
+          background-repeat: no-repeat;
+          opacity: 0;
+          transition: all 1000ms ease-in-out;
+          transform: translateY(0);
+          transition-delay: 400ms;
+          filter: drop-shadow(0px 0px 250px rgba(56, 114, 164, 0.9));
+          z-index: 1; }
+        html .page-slider .panel#data-slide-1 .animate-layer .stars-1, body .page-slider .panel#data-slide-1 .animate-layer .stars-1 {
+          width: 744px;
+          height: 650px;
+          background-image: url("../images/stars-1th-slide-left.png");
+          background-size: 60%;
+          background-position: left bottom;
+          background-repeat: no-repeat;
+          position: absolute;
+          left: -92px;
+          bottom: 0;
           transition: left 300ms ease-in-out; }
-          html .page-slider .panel#data-slide-1 .animate-layer:before, body .page-slider .panel#data-slide-1 .animate-layer:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            display: block;
-            background-image: url("../images/unit.png");
-            background-size: 45%;
-            background-position: left 43% bottom -150px;
-            background-repeat: no-repeat;
-            /*opacity: 0;*/
-            transition: all 600ms ease-in-out;
-            transform: translateY(0) scale(1);
-            z-index: 2; }
-          html .page-slider .panel#data-slide-1 .animate-layer:after, body .page-slider .panel#data-slide-1 .animate-layer:after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            display: block;
-            background-image: url("../images/planet-slide-1.png");
-            background-size: 100%;
-            background-position: left 50% top 0;
-            background-repeat: no-repeat;
-            /*opacity: 0;*/
-            transition: all 1000ms ease-in-out;
-            transform: translateY(0);
-            transition-delay: 400ms;
-            filter: drop-shadow(0px 0px 250px rgba(56, 114, 164, 0.9));
-            z-index: 1; }
-          html .page-slider .panel#data-slide-1 .animate-layer .stars-1, body .page-slider .panel#data-slide-1 .animate-layer .stars-1 {
-            width: 744px;
-            height: 650px;
-            background-image: url("../images/stars-1th-slide-left.png");
-            background-size: 60%;
-            background-position: left bottom;
-            background-repeat: no-repeat;
-            position: absolute;
-            left: -92px;
-            bottom: 0;
-            transition: left 300ms ease-in-out; }
-          html .page-slider .panel#data-slide-1 .animate-layer .stars-2, body .page-slider .panel#data-slide-1 .animate-layer .stars-2 {
-            width: 739px;
-            height: 864px;
-            background-image: url("../images/stars-1th-slide-right.png");
-            background-size: 60%;
-            background-position: right top;
-            background-repeat: no-repeat;
-            position: absolute;
-            right: 0;
-            top: 0; }
+        html .page-slider .panel#data-slide-1 .animate-layer .stars-2, body .page-slider .panel#data-slide-1 .animate-layer .stars-2 {
+          width: 739px;
+          height: 864px;
+          background-image: url("../images/stars-1th-slide-right.png");
+          background-size: 60%;
+          background-position: right top;
+          background-repeat: no-repeat;
+          position: absolute;
+          right: 0;
+          top: 0; }
+      html .page-slider .panel#data-slide-1.active .animate-layer:before, body .page-slider .panel#data-slide-1.active .animate-layer:before {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        background-position: left 43% bottom -150px; }
+      html .page-slider .panel#data-slide-1.active .animate-layer:after, body .page-slider .panel#data-slide-1.active .animate-layer:after {
+        opacity: 1;
+        transform: translateY(0); }
       html .page-slider .panel#data-slide-2:before, body .page-slider .panel#data-slide-2:before {
         background-image: linear-gradient(135deg, rgba(54, 146, 199, 0), rgba(54, 146, 199, 0.3)), url("../images/light-1.png");
         transform: scaleX(-1); }
@@ -293,10 +293,10 @@ html, body {
           transition: opacity 2200ms ease-out;
           transition-delay: 350ms;
           opacity: 0; }
-      html .page-slider .panel#data-slide-2._active .animate-layer .stars-1, body .page-slider .panel#data-slide-2._active .animate-layer .stars-1 {
+      html .page-slider .panel#data-slide-2.active .animate-layer .stars-1, body .page-slider .panel#data-slide-2.active .animate-layer .stars-1 {
         transform: translateY(0);
         opacity: 1; }
-      html .page-slider .panel#data-slide-2._active .animate-layer .stars-2, body .page-slider .panel#data-slide-2._active .animate-layer .stars-2 {
+      html .page-slider .panel#data-slide-2.active .animate-layer .stars-2, body .page-slider .panel#data-slide-2.active .animate-layer .stars-2 {
         opacity: 1; }
       html .page-slider .panel#data-slide-2 .section:before, body .page-slider .panel#data-slide-2 .section:before {
         width: 429px;
@@ -356,10 +356,10 @@ html, body {
           transition-delay: 350ms;
           opacity: 0;
           transform: translateX(-150px); }
-      html .page-slider .panel#data-slide-3._active .animate-layer .stars-1, body .page-slider .panel#data-slide-3._active .animate-layer .stars-1 {
+      html .page-slider .panel#data-slide-3.active .animate-layer .stars-1, body .page-slider .panel#data-slide-3.active .animate-layer .stars-1 {
         transform: translateY(0);
         opacity: 1; }
-      html .page-slider .panel#data-slide-3._active .animate-layer .stars-2, body .page-slider .panel#data-slide-3._active .animate-layer .stars-2 {
+      html .page-slider .panel#data-slide-3.active .animate-layer .stars-2, body .page-slider .panel#data-slide-3.active .animate-layer .stars-2 {
         opacity: 1;
         transform: translateX(0); }
       html .page-slider .panel#data-slide-4:before, body .page-slider .panel#data-slide-4:before {
@@ -402,10 +402,10 @@ html, body {
           opacity: 0;
           transform: translateX(-150px) rotate(30deg);
           transform-origin: bottom left; }
-      html .page-slider .panel#data-slide-4._active .animate-layer .stars-1, body .page-slider .panel#data-slide-4._active .animate-layer .stars-1 {
+      html .page-slider .panel#data-slide-4.active .animate-layer .stars-1, body .page-slider .panel#data-slide-4.active .animate-layer .stars-1 {
         transform: translateY(0) scaleX(-1);
         opacity: 1; }
-      html .page-slider .panel#data-slide-4._active .animate-layer .stars-2, body .page-slider .panel#data-slide-4._active .animate-layer .stars-2 {
+      html .page-slider .panel#data-slide-4.active .animate-layer .stars-2, body .page-slider .panel#data-slide-4.active .animate-layer .stars-2 {
         opacity: 1;
         transform: translateX(0) rotate(0); }
       html .page-slider .panel#data-slide-5:before, body .page-slider .panel#data-slide-5:before {
@@ -448,10 +448,10 @@ html, body {
           opacity: 0;
           transform: translateX(-150px);
           transform-origin: bottom left; }
-      html .page-slider .panel#data-slide-5._active .animate-layer .stars-1, body .page-slider .panel#data-slide-5._active .animate-layer .stars-1 {
+      html .page-slider .panel#data-slide-5.active .animate-layer .stars-1, body .page-slider .panel#data-slide-5.active .animate-layer .stars-1 {
         transform: translateY(0);
         opacity: 1; }
-      html .page-slider .panel#data-slide-5._active .animate-layer .stars-2, body .page-slider .panel#data-slide-5._active .animate-layer .stars-2 {
+      html .page-slider .panel#data-slide-5.active .animate-layer .stars-2, body .page-slider .panel#data-slide-5.active .animate-layer .stars-2 {
         opacity: 1;
         transform: translateX(0); }
       html .page-slider .panel#data-slide-6:before, body .page-slider .panel#data-slide-6:before {
@@ -491,10 +491,10 @@ html, body {
           transition: opacity 2200ms ease-out;
           transition-delay: 350ms;
           opacity: 0; }
-      html .page-slider .panel#data-slide-6._active .animate-layer .stars-1, body .page-slider .panel#data-slide-6._active .animate-layer .stars-1 {
+      html .page-slider .panel#data-slide-6.active .animate-layer .stars-1, body .page-slider .panel#data-slide-6.active .animate-layer .stars-1 {
         transform: translateY(0);
         opacity: 1; }
-      html .page-slider .panel#data-slide-6._active .animate-layer .stars-2, body .page-slider .panel#data-slide-6._active .animate-layer .stars-2 {
+      html .page-slider .panel#data-slide-6.active .animate-layer .stars-2, body .page-slider .panel#data-slide-6.active .animate-layer .stars-2 {
         opacity: 1; }
       html .page-slider .panel#data-slide-7:before, body .page-slider .panel#data-slide-7:before {
         background-image: linear-gradient(135deg, rgba(236, 81, 81, 0), rgba(236, 81, 81, 0.3)), url("../images/light-1.png");
@@ -538,10 +538,10 @@ html, body {
           transition-delay: 350ms;
           opacity: 0;
           transform: translateX(-150px); }
-      html .page-slider .panel#data-slide-7._active .animate-layer .stars-1, body .page-slider .panel#data-slide-7._active .animate-layer .stars-1 {
+      html .page-slider .panel#data-slide-7.active .animate-layer .stars-1, body .page-slider .panel#data-slide-7.active .animate-layer .stars-1 {
         transform: translateY(0);
         opacity: 1; }
-      html .page-slider .panel#data-slide-7._active .animate-layer .stars-2, body .page-slider .panel#data-slide-7._active .animate-layer .stars-2 {
+      html .page-slider .panel#data-slide-7.active .animate-layer .stars-2, body .page-slider .panel#data-slide-7.active .animate-layer .stars-2 {
         opacity: 1;
         transform: translateX(0); }
       html .page-slider .panel#data-slide-8:before, body .page-slider .panel#data-slide-8:before {
@@ -584,10 +584,10 @@ html, body {
           opacity: 0;
           transform: translateX(-150px) rotate(30deg);
           transform-origin: bottom left; }
-      html .page-slider .panel#data-slide-8._active .animate-layer .stars-1, body .page-slider .panel#data-slide-8._active .animate-layer .stars-1 {
+      html .page-slider .panel#data-slide-8.active .animate-layer .stars-1, body .page-slider .panel#data-slide-8.active .animate-layer .stars-1 {
         transform: translateY(0) scaleX(-1);
         opacity: 1; }
-      html .page-slider .panel#data-slide-8._active .animate-layer .stars-2, body .page-slider .panel#data-slide-8._active .animate-layer .stars-2 {
+      html .page-slider .panel#data-slide-8.active .animate-layer .stars-2, body .page-slider .panel#data-slide-8.active .animate-layer .stars-2 {
         opacity: 1;
         transform: translateX(0) rotate(0); }
       html .page-slider .panel .news .uk-slider, body .page-slider .panel .news .uk-slider {
