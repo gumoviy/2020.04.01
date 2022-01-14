@@ -78,6 +78,7 @@ html, body {
                 .section-content {
                     /*display: flex; flex-flow: column;*/ width: 100%; /*justify-content: center; align-items: center;*/ color: rgba(255,255,255,.6); font-family: $regular; /*opacity: 0; transform: translateY(30px);*/ transition: all 500ms ease; transition-delay: 0s; font-weight: 400; overflow-x: hidden; overflow-y: auto; /*margin: 100px 0;*/ /*height: calc(100% - 200px);*/ height: auto; /*max-height: calc(100vh - 200px);*/ z-index: 10; min-height: 70px; /*padding: 90px 0 24px 0;*/ padding: 180px 0;
                 }
+                &.active {transform: translateY(-100px);}
                 &#section-1 {
                     .section-content {
                         padding-top: 170px;
@@ -556,6 +557,9 @@ html, body {
                         margin: 0!important; overflow: hidden;
                         > div {
                             width: 74px; position: relative; overflow: hidden; height: 415px; background: rgba(255, 255, 255, 0.05); box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2); backdrop-filter: blur(40px); border-radius: 20px; border: 2px solid rgba(255,255,255,.06); transition: all 300ms ease-in-out;
+                            &:hover {
+                                background: rgba(255, 255, 255, 0.15);
+                            }
                             > a {
                                 width: 74px; transition: all 300ms ease-in-out; position: absolute; left: 0; top: 0; bottom: 0; z-index: 1; text-decoration: none;
                                 > span {
@@ -757,7 +761,7 @@ html, body {
                 padding: 44px 60px; background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.685419) 4.7%, rgba(0, 0, 0, 0.669221) 8.9%, rgba(0, 0, 0, 0.65072) 12.8%, rgba(0, 0, 0, 0.629233) 16.56%, rgba(0, 0, 0, 0.604074) 20.37%, rgba(0, 0, 0, 0.57456) 24.4%, rgba(0, 0, 0, 0.540006) 28.83%, rgba(0, 0, 0, 0.499727) 33.84%, rgba(0, 0, 0, 0.45304) 39.6%, rgba(0, 0, 0, 0.399259) 46.3%, rgba(0, 0, 0, 0.337701) 54.1%, rgba(0, 0, 0, 0.26768) 63.2%, rgba(0, 0, 0, 0.188513) 73.76%, rgba(0, 0, 0, 0.0995141) 85.97%, rgba(0, 0, 0, 0) 100%);
             }
             .avatar {
-                display: block; width: 50px; height: 50px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); box-sizing: border-box; background-image: url('../images/avatar.svg'); background-position: center; background-size: 80%; background-repeat: no-repeat;
+                display: block; width: 62px; height: 62px; margin: -6px 0; border-radius: 50%; background-color: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); box-sizing: border-box; background-image: url('../images/avatar.svg'); background-position: center; background-size: 80%; background-repeat: no-repeat;
             }
         }
         &.sidebar-active {
@@ -905,9 +909,9 @@ html, body {
                 path {transition: all 300ms ease-in-out;}
             }
             &:hover {
-                background: rgba(255,255,255,1); color: #181818; box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+                background: rgba(255,255,255,.2); /*color: #181818;*//* box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);*/
                 svg {
-                    path, g {fill: #181818!important;}
+                    /*path, g {fill: #181818!important;}*/
                 }
             }
         }
@@ -971,9 +975,9 @@ html, body {
     }
     .select2-container--default {
         .select2-selection--single {
-            background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); box-sizing: border-box; border-radius: 10px; height: 48px; display: flex; align-items: center; backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); box-sizing: border-box; border-radius: 10px; height: 48px; display: flex; align-items: center; backdrop-filter: blur(20px); transition: background 300ms ease-in-out;
             .select2-selection__rendered {
-                color: rgba(255,255,255,1); padding: 0 45px 0 15px; font-size: 14.4px;
+                color: rgba(255,255,255,1); padding: 0 45px 0 15px; font-size: 18px;
                 img {margin-right: 10px; width: 21px;}
             }
             .select2-selection__arrow {
@@ -983,14 +987,20 @@ html, body {
         }
         &.select2-container--open {
             .select2-selection--single {
+                background: rgba(255, 255, 255, 0.2);
                 .select2-selection__arrow {
                     b {transform: translate(-50%,-50%) scaleY(-1);}
                 }
             }
             .select2-results {color: #181818;}
         }
+        &:hover {
+            .select2-selection--single {
+                background: rgba(255, 255, 255, 0.2);
+            }
+        }
         .select2-dropdown {
-            background: rgba(0,0,0,.5); border: 1px solid rgba(255,255,255,.1); backdrop-filter: blur(5px);
+            background: transparent; border: 1px solid rgba(255,255,255,.3); border-top: 0; backdrop-filter: blur(5px); border-radius: 0 0 10px 10px; overflow: hidden;
             .select2-search--dropdown {
                 .select2-search__field {
                     background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); color: rgba(255,255,255,.3);
@@ -998,15 +1008,18 @@ html, body {
                 }
             }
             .select2-results {
+                .select2-results__option {
+                    padding: 10px 18px; line-height: 26px; font-size: 18px;
+                }
                 .select2-results__option--selected {background: rgba(255,255,255,.2);}
                 .select2-results__option--highlighted {
                     &.select2-results__option--selectable {
-                        background: rgba($orange,.3);
+                        background: rgba(255,255,255,.2);
                     }
                 }
                 .select2-results__option {
-                    transition: all 300ms ease-in-out; color: #fff;
-                    &:hover {background: rgba($orange,.3);}
+                    transition: all 300ms ease-in-out; color: #fff; background: rgba(255,255,255,.1);
+                    &:hover {background: rgba(255,255,255,.2);}
                 }
             }
         }
