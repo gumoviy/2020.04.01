@@ -220,18 +220,18 @@ html, body {
         html .page-slider .panel#data-slide-1 .animate-layer:before, body .page-slider .panel#data-slide-1 .animate-layer:before {
           content: '';
           position: absolute;
-          top: 0;
+          top: 40px;
           left: 114px;
           right: 0;
           bottom: 0;
           display: block;
           background-image: url("../images/unit.png");
           background-size: 45%;
-          background-position: left 43% bottom 200%;
+          background-position: left 43% top 0;
           background-repeat: no-repeat;
           opacity: 0;
           transition: all 600ms ease-in-out;
-          transform: translateY(0) scale(1);
+          transform: translateY(150px) scale(1);
           z-index: 2; }
         html .page-slider .panel#data-slide-1 .animate-layer:after, body .page-slider .panel#data-slide-1 .animate-layer:after {
           content: '';
@@ -275,7 +275,7 @@ html, body {
       html .page-slider .panel#data-slide-1.active .animate-layer:before, body .page-slider .panel#data-slide-1.active .animate-layer:before {
         opacity: 1;
         transform: translateY(0) scale(1);
-        background-position: left 43% bottom -150px; }
+        background-position: left 43% top 0; }
       html .page-slider .panel#data-slide-1.active .animate-layer:after, body .page-slider .panel#data-slide-1.active .animate-layer:after {
         opacity: 1;
         transform: translateY(0); }
