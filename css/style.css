@@ -221,7 +221,7 @@ html, body {
           content: '';
           position: absolute;
           top: 0;
-          left: 0;
+          left: 114px;
           right: 0;
           bottom: 0;
           display: block;
@@ -237,7 +237,7 @@ html, body {
           content: '';
           position: absolute;
           top: 50%;
-          left: 0;
+          left: 114px;
           right: 0;
           bottom: 0;
           display: block;
