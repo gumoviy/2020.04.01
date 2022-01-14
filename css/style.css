@@ -47,7 +47,8 @@ html, body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    overflow-y: auto; }
+    overflow-y: auto;
+    overflow-x: hidden; }
     html .page-slider:after, body .page-slider:after {
       content: '';
       display: block;
@@ -76,8 +77,9 @@ html, body {
       html .page-slider h1.uk-padding-large-left, html .page-slider .h1.uk-padding-large-left, body .page-slider h1.uk-padding-large-left, body .page-slider .h1.uk-padding-large-left {
         padding-left: 70px; }
     html .page-slider .logo, body .page-slider .logo {
-      display: inline-block;
-      text-decoration: none; }
+      display: flex;
+      text-decoration: none;
+      min-width: 165px; }
       html .page-slider .logo img:first-child, body .page-slider .logo img:first-child {
         -webkit-animation: rotating 10s infinite linear;
         animation: rotating 10s infinite linear;
@@ -149,7 +151,7 @@ html, body {
           z-index: 10;
           min-height: 70px;
           /*padding: 90px 0 24px 0;*/
-          padding: 228px 0; }
+          padding: 180px 0; }
         html .page-slider .panel .section#section-1 .section-content, body .page-slider .panel .section#section-1 .section-content {
           padding-top: 170px;
           /*.uk-container {
