@@ -770,11 +770,12 @@ html, body {
             svg {transform: scale(-1);}
         }
         .top-nav {
-            padding-left: 114px; position: fixed; left: 0; top: 0; right: 0; display: block; z-index: 11; transition: padding 300ms ease-in-out;
+            padding-left: 114px; /*position: fixed;*/ position: absolute; left: 0; top: 0; right: 0; display: block; z-index: 11; transition: padding 300ms ease-in-out;
+            &+ .uk-sticky-placeholder {display: none!important;}
             .primary-nav {
                 display: flex; align-items: center; padding: 0; margin: 0;
                 li {
-                    list-style: none; padding: 0 23px; margin: 0;
+                    list-style: none; padding: 0 23px; margin: 0; /*transition: padding 300ms ease-in-out;*/
                     &:last-child {padding-right: 0;}
                     &:first-child {padding-left: 0;}
                     a {
@@ -784,10 +785,38 @@ html, body {
                 }
             }
             .uk-container {
-                padding: 44px 60px; background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.685419) 4.7%, rgba(0, 0, 0, 0.669221) 8.9%, rgba(0, 0, 0, 0.65072) 12.8%, rgba(0, 0, 0, 0.629233) 16.56%, rgba(0, 0, 0, 0.604074) 20.37%, rgba(0, 0, 0, 0.57456) 24.4%, rgba(0, 0, 0, 0.540006) 28.83%, rgba(0, 0, 0, 0.499727) 33.84%, rgba(0, 0, 0, 0.45304) 39.6%, rgba(0, 0, 0, 0.399259) 46.3%, rgba(0, 0, 0, 0.337701) 54.1%, rgba(0, 0, 0, 0.26768) 63.2%, rgba(0, 0, 0, 0.188513) 73.76%, rgba(0, 0, 0, 0.0995141) 85.97%, rgba(0, 0, 0, 0) 100%);
+                padding: 44px 60px; background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.685419) 4.7%, rgba(0, 0, 0, 0.669221) 8.9%, rgba(0, 0, 0, 0.65072) 12.8%, rgba(0, 0, 0, 0.629233) 16.56%, rgba(0, 0, 0, 0.604074) 20.37%, rgba(0, 0, 0, 0.57456) 24.4%, rgba(0, 0, 0, 0.540006) 28.83%, rgba(0, 0, 0, 0.499727) 33.84%, rgba(0, 0, 0, 0.45304) 39.6%, rgba(0, 0, 0, 0.399259) 46.3%, rgba(0, 0, 0, 0.337701) 54.1%, rgba(0, 0, 0, 0.26768) 63.2%, rgba(0, 0, 0, 0.188513) 73.76%, rgba(0, 0, 0, 0.0995141) 85.97%, rgba(0, 0, 0, 0) 100%); /*transition: all 300ms ease-in-out;*/
+                /*.select2-container--default .select2-selection--single, html .select2-container--default .select2-selection--single {transition: all 300ms ease-in-out;}
+                .uk-button {transition: all 300ms ease-in-out;}*/
             }
             .avatar {
                 display: block; width: 62px; height: 62px; margin: -6px 0; border-radius: 50%; background-color: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); box-sizing: border-box; background-image: url('../images/avatar.svg'); background-position: center; background-size: 80%; background-repeat: no-repeat;
+            }
+            &.uk-active {
+                .uk-container {
+                    border-bottom: 1px solid rgba(255,255,255,.1); backdrop-filter: blur(80px); padding: 15px 30px; background: rgba(55,55,55,.2); /*box-shadow: 0 4px 24px -1px rgba(0,0,0,.2);*/
+                    .primary-nav {
+                        li {
+                            padding: 0 15px;
+                            &:last-child {padding-right: 0;}
+                            &:first-child {padding-left: 0;}
+                            a {
+                                font-size: 16px; color: rgba(255,255,255,1);
+                                &:hover {color: rgba(255,255,255,.6);}
+                            }
+                        }
+                    }
+                    .uk-button {
+                        padding: 7px 25px;
+                    }
+                    .select2-container--default .select2-selection--single, html .select2-container--default .select2-selection--single {height: 42px;}
+                    .logo {
+                        img {
+                            &:first-child {height: 40px;}
+                            &:last-child {height: 40px; width: 91px;}
+                        }
+                    }
+                }
             }
         }
         &.sidebar-active {
