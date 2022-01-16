@@ -1101,7 +1101,7 @@ html, body {
         padding-left: 140px; }
       html .page-slider .panel .partners .uk-accordion li, body .page-slider .panel .partners .uk-accordion li {
         margin: 0 !important;
-        overflow: hidden; }
+        /*overflow: hidden;*/ }
         html .page-slider .panel .partners .uk-accordion li > div, body .page-slider .panel .partners .uk-accordion li > div {
           width: 101px;
           position: relative;
