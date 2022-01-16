@@ -869,14 +869,14 @@ html, body {
           html .page-slider .panel .roadmap .timeline .roadmap-content ol, body .page-slider .panel .roadmap .timeline .roadmap-content ol {
             font-size: 0;
             min-width: 100vw;
-            padding: 155px 0;
+            padding: 240px 0;
             transition: all 1s;
             margin: 0; }
             html .page-slider .panel .roadmap .timeline .roadmap-content ol li, body .page-slider .panel .roadmap .timeline .roadmap-content ol li {
               position: relative;
               display: inline-block;
               list-style-type: none;
-              width: 160px;
+              width: 222px;
               height: 8px;
               background: rgba(255, 255, 255, 0.1); }
               html .page-slider .panel .roadmap .timeline .roadmap-content ol li.active:before, body .page-slider .panel .roadmap .timeline .roadmap-content ol li.active:before {
@@ -987,38 +987,40 @@ html, body {
               html .page-slider .panel .roadmap .timeline .roadmap-content ol li div, body .page-slider .panel .roadmap .timeline .roadmap-content ol li div {
                 position: absolute;
                 left: calc(100% + 7px);
-                width: 280px;
-                padding: 19px 13px;
-                font-size: 1rem;
+                width: 289px;
+                box-sizing: border-box;
+                padding: 19px 14px;
                 white-space: normal;
                 border-left: 1px solid #FFFFFF;
                 font-size: 16px;
-                line-height: 16.8px;
+                line-height: 20.8px;
                 color: rgba(255, 255, 255, 0.6);
                 height: auto !important;
-                max-height: 155px; }
+                /*max-height: 175px;*/ }
+                html .page-slider .panel .roadmap .timeline .roadmap-content ol li div .date, body .page-slider .panel .roadmap .timeline .roadmap-content ol li div .date {
+                  font-size: 15px; }
               html .page-slider .panel .roadmap .timeline .roadmap-content ol li:nth-child(even) div, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:nth-child(even) div {
                 padding-top: 0;
-                padding-bottom: 64px;
+                padding-bottom: 85px;
                 transform: translateY(-100%); }
                 html .page-slider .panel .roadmap .timeline .roadmap-content ol li:nth-child(even) div .date, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:nth-child(even) div .date {
                   position: absolute;
                   left: 0;
                   transform: translateX(-50%);
-                  bottom: -48px; }
+                  bottom: -55px; }
               html .page-slider .panel .roadmap .timeline .roadmap-content ol li:nth-child(odd) div, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:nth-child(odd) div {
                 padding-bottom: 0;
-                padding-top: 64px;
+                padding-top: 85px;
                 top: 100%; }
                 html .page-slider .panel .roadmap .timeline .roadmap-content ol li:nth-child(odd) div .date, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:nth-child(odd) div .date {
                   position: absolute;
                   left: 0;
                   transform: translateX(-50%);
-                  top: -48px; }
+                  top: -55px; }
           html .page-slider .panel .roadmap .timeline .roadmap-content time, body .page-slider .panel .roadmap .timeline .roadmap-content time {
             display: block;
-            font-size: 16px;
-            line-height: 21px;
+            font-size: 20px;
+            line-height: 26px;
             color: white;
             margin-bottom: 10px; }
           @media screen and (max-width: 599px) {

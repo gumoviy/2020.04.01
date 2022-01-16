@@ -448,8 +448,8 @@ html, body {
                         white-space: nowrap; overflow-x: hidden; position: relative; padding-left: 6px; overflow-y: hidden; -webkit-mask-position: 0 0; transition: all 300ms ease;
                         -webkit-mask-image: linear-gradient(270deg,rgba(196,196,196,0) 0,#c4c4c4 7.95%,#c4c4c4 92.42%,rgba(196,196,196,0) 100%); mask-image: linear-gradient(270deg,rgba(196,196,196,0) 0,#c4c4c4 7.95%,#c4c4c4 92.42%,rgba(196,196,196,0) 100%);
                         ol {
-                            font-size: 0; min-width: 100vw; padding: 155px 0; transition: all 1s; margin: 0;
-                            li {position: relative; display: inline-block; list-style-type: none; width: 160px; height: 8px; background: rgba(255, 255, 255, 0.1);
+                            font-size: 0; min-width: 100vw; padding: 240px 0; transition: all 1s; margin: 0;
+                            li {position: relative; display: inline-block; list-style-type: none; width: 222px; height: 8px; background: rgba(255, 255, 255, 0.1);
                                 &.active {
                                     &:before {
                                         content: ''; display: block; position: absolute; left: 0; right: 0; top: 50%; transform: translateY(-50%); height: 2px; background: linear-gradient(to right, $orange, $orange 5px, transparent 5px, transparent); background-size: 10px 100%;
@@ -491,24 +491,25 @@ html, body {
                                     }
                                 }
                                 div {
-                                    position: absolute; left: calc(100% + 7px); width: 280px; padding: 19px 13px; font-size: 1rem; white-space: normal; border-left: 1px solid #FFFFFF; font-size: 16px; line-height: 16.8px; color: rgba(255,255,255,.6); height: auto!important; max-height: 155px;
+                                    position: absolute; left: calc(100% + 7px); width: 289px; box-sizing: border-box; padding: 19px 14px; white-space: normal; border-left: 1px solid #FFFFFF; font-size: 16px; line-height: 20.8px; color: rgba(255,255,255,.6); height: auto!important; /*max-height: 175px;*/
+                                    .date {font-size: 15px;}
                                 }
                                 &:nth-child(even) {
                                     div {
-                                        padding-top: 0; padding-bottom: 64px; transform: translateY(-100%);
-                                        .date {position: absolute; left: 0; transform: translateX(-50%); bottom: -48px;}
+                                        padding-top: 0; padding-bottom: 85px; transform: translateY(-100%);
+                                        .date {position: absolute; left: 0; transform: translateX(-50%); bottom: -55px;}
                                     }
                                 }
                                 &:nth-child(odd) {
                                     div {
-                                        padding-bottom: 0; padding-top: 64px; top: 100%;
-                                        .date {position: absolute; left: 0; transform: translateX(-50%); top: -48px;}
+                                        padding-bottom: 0; padding-top: 85px; top: 100%;
+                                        .date {position: absolute; left: 0; transform: translateX(-50%); top: -55px;}
                                     }
                                 }
                             }
 
                         }
-                        time {display: block; font-size: 16px; line-height: 21px; color: rgba(255,255,255,1); margin-bottom: 10px;}
+                        time {display: block; font-size: 20px; line-height: 26px; color: rgba(255,255,255,1); margin-bottom: 10px;}
                         
                         @media screen and (max-width: 599px) {
                             ol {
