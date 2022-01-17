@@ -98,6 +98,7 @@ html, body {
             &.panel {
                 &:before {
                     opacity: 0; content: ''; display: block; width: 100%; height: 100%; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-size: cover; background-position: center; background-repeat: no-repeat; transition: all 300ms ease-in; pointer-events: none;
+                    display: none;
                 }
                 .animate-layer {left: 0; overflow: hidden; pointer-events: none; z-index: -1;}
                 &.active {
@@ -770,8 +771,8 @@ html, body {
             svg {transform: scale(-1);}
         }
         .top-nav {
-            padding-left: 114px; /*position: fixed;*/ position: absolute; left: 0; top: 0; right: 0; display: block; z-index: 11; transition: padding 300ms ease-in-out;
-            &+ .uk-sticky-placeholder {display: none!important;}
+            padding-left: 114px; /*position: fixed;*/ position: absolute; left: 0; top: 0; right: 0; display: block; z-index: 11; transition: padding 300ms ease-in-out; right: 0; left: 0; top: 0; /*min-width: calc(100% - 114px);*/ 
+            &+ .uk-sticky-placeholder {display: block!important; position: absolute;}
             .primary-nav {
                 display: flex; align-items: center; padding: 0; margin: 0;
                 li {
@@ -793,6 +794,7 @@ html, body {
                 display: block; width: 62px; height: 62px; margin: -6px 0; border-radius: 50%; background-color: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); box-sizing: border-box; background-image: url('../images/avatar.svg'); background-position: center; background-size: 80%; background-repeat: no-repeat;
             }
             &.uk-active {
+                width: 100%!important;
                 .uk-container {
                     border-bottom: 1px solid rgba(255,255,255,.1); backdrop-filter: blur(80px); padding: 15px 30px; background: rgba(55,55,55,.2); /*box-shadow: 0 4px 24px -1px rgba(0,0,0,.2);*/
                     .primary-nav {

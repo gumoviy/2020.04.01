@@ -175,7 +175,8 @@ html, body {
         background-position: center;
         background-repeat: no-repeat;
         transition: all 300ms ease-in;
-        pointer-events: none; }
+        pointer-events: none;
+        display: none; }
       html .page-slider .panel.panel .animate-layer, body .page-slider .panel.panel .animate-layer {
         left: 0;
         overflow: hidden;
@@ -1517,9 +1518,14 @@ html, body {
       right: 0;
       display: block;
       z-index: 11;
-      transition: padding 300ms ease-in-out; }
+      transition: padding 300ms ease-in-out;
+      right: 0;
+      left: 0;
+      top: 0;
+      /*min-width: calc(100% - 114px);*/ }
       html .page-slider .top-nav + .uk-sticky-placeholder, body .page-slider .top-nav + .uk-sticky-placeholder {
-        display: none !important; }
+        display: block !important;
+        position: absolute; }
       html .page-slider .top-nav .primary-nav, body .page-slider .top-nav .primary-nav {
         display: flex;
         align-items: center;
@@ -1564,32 +1570,34 @@ html, body {
         background-position: center;
         background-size: 80%;
         background-repeat: no-repeat; }
-      html .page-slider .top-nav.uk-active .uk-container, body .page-slider .top-nav.uk-active .uk-container {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(80px);
-        padding: 15px 30px;
-        background: rgba(55, 55, 55, 0.2);
-        /*box-shadow: 0 4px 24px -1px rgba(0,0,0,.2);*/ }
-        html .page-slider .top-nav.uk-active .uk-container .primary-nav li, body .page-slider .top-nav.uk-active .uk-container .primary-nav li {
-          padding: 0 15px; }
-          html .page-slider .top-nav.uk-active .uk-container .primary-nav li:last-child, body .page-slider .top-nav.uk-active .uk-container .primary-nav li:last-child {
-            padding-right: 0; }
-          html .page-slider .top-nav.uk-active .uk-container .primary-nav li:first-child, body .page-slider .top-nav.uk-active .uk-container .primary-nav li:first-child {
-            padding-left: 0; }
-          html .page-slider .top-nav.uk-active .uk-container .primary-nav li a, body .page-slider .top-nav.uk-active .uk-container .primary-nav li a {
-            font-size: 16px;
-            color: white; }
-            html .page-slider .top-nav.uk-active .uk-container .primary-nav li a:hover, body .page-slider .top-nav.uk-active .uk-container .primary-nav li a:hover {
-              color: rgba(255, 255, 255, 0.6); }
-        html .page-slider .top-nav.uk-active .uk-container .uk-button, body .page-slider .top-nav.uk-active .uk-container .uk-button {
-          padding: 7px 25px; }
-        html .page-slider .top-nav.uk-active .uk-container .select2-container--default .select2-selection--single, html .page-slider .top-nav.uk-active .uk-container html .select2-container--default .select2-selection--single, body .page-slider .top-nav.uk-active .uk-container .select2-container--default .select2-selection--single, body .page-slider .top-nav.uk-active .uk-container html .select2-container--default .select2-selection--single {
-          height: 42px; }
-        html .page-slider .top-nav.uk-active .uk-container .logo img:first-child, body .page-slider .top-nav.uk-active .uk-container .logo img:first-child {
-          height: 40px; }
-        html .page-slider .top-nav.uk-active .uk-container .logo img:last-child, body .page-slider .top-nav.uk-active .uk-container .logo img:last-child {
-          height: 40px;
-          width: 91px; }
+      html .page-slider .top-nav.uk-active, body .page-slider .top-nav.uk-active {
+        width: 100% !important; }
+        html .page-slider .top-nav.uk-active .uk-container, body .page-slider .top-nav.uk-active .uk-container {
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+          backdrop-filter: blur(80px);
+          padding: 15px 30px;
+          background: rgba(55, 55, 55, 0.2);
+          /*box-shadow: 0 4px 24px -1px rgba(0,0,0,.2);*/ }
+          html .page-slider .top-nav.uk-active .uk-container .primary-nav li, body .page-slider .top-nav.uk-active .uk-container .primary-nav li {
+            padding: 0 15px; }
+            html .page-slider .top-nav.uk-active .uk-container .primary-nav li:last-child, body .page-slider .top-nav.uk-active .uk-container .primary-nav li:last-child {
+              padding-right: 0; }
+            html .page-slider .top-nav.uk-active .uk-container .primary-nav li:first-child, body .page-slider .top-nav.uk-active .uk-container .primary-nav li:first-child {
+              padding-left: 0; }
+            html .page-slider .top-nav.uk-active .uk-container .primary-nav li a, body .page-slider .top-nav.uk-active .uk-container .primary-nav li a {
+              font-size: 16px;
+              color: white; }
+              html .page-slider .top-nav.uk-active .uk-container .primary-nav li a:hover, body .page-slider .top-nav.uk-active .uk-container .primary-nav li a:hover {
+                color: rgba(255, 255, 255, 0.6); }
+          html .page-slider .top-nav.uk-active .uk-container .uk-button, body .page-slider .top-nav.uk-active .uk-container .uk-button {
+            padding: 7px 25px; }
+          html .page-slider .top-nav.uk-active .uk-container .select2-container--default .select2-selection--single, html .page-slider .top-nav.uk-active .uk-container html .select2-container--default .select2-selection--single, body .page-slider .top-nav.uk-active .uk-container .select2-container--default .select2-selection--single, body .page-slider .top-nav.uk-active .uk-container html .select2-container--default .select2-selection--single {
+            height: 42px; }
+          html .page-slider .top-nav.uk-active .uk-container .logo img:first-child, body .page-slider .top-nav.uk-active .uk-container .logo img:first-child {
+            height: 40px; }
+          html .page-slider .top-nav.uk-active .uk-container .logo img:last-child, body .page-slider .top-nav.uk-active .uk-container .logo img:last-child {
+            height: 40px;
+            width: 91px; }
     html .page-slider.sidebar-active .nav-dots, body .page-slider.sidebar-active .nav-dots {
       width: 396px; }
       html .page-slider.sidebar-active .nav-dots a svg, body .page-slider.sidebar-active .nav-dots a svg {
