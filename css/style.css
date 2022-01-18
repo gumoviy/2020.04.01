@@ -960,7 +960,8 @@ html, body {
           html .page-slider .panel .nft a:not(.uk-button):hover, body .page-slider .panel .nft a:not(.uk-button):hover {
             text-decoration: none; }
         html .page-slider .panel .nft .uk-subnav li a, body .page-slider .panel .nft .uk-subnav li a {
-          text-decoration: none; }
+          text-decoration: none;
+          letter-spacing: .08em; }
         html .page-slider .panel .nft .uk-grid.uk-grid-small, body .page-slider .panel .nft .uk-grid.uk-grid-small {
           margin-left: -18px; }
         html .page-slider .panel .nft column-small > *, html .page-slider .panel .nft .uk-grid.uk-grid-small > *, html .page-slider .panel .nft .uk-grid.uk-grid-column-small > *, html .page-slider .panel .nft .uk-grid.uk-grid-small > *, body .page-slider .panel .nft column-small > *, body .page-slider .panel .nft .uk-grid.uk-grid-small > *, body .page-slider .panel .nft .uk-grid.uk-grid-column-small > *, body .page-slider .panel .nft .uk-grid.uk-grid-small > * {
