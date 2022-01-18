@@ -18,7 +18,173 @@
   font-weight: 700;
   font-style: normal;
   font-display: swap; }
+@font-face {
+  font-family: 'Furore';
+  src: url("../fonts/Furore.woff2") format("woff2"), url("../fonts/Furore.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; }
 /* настройки - конец */
+html .table .table-body .table-row, body .table .table-body .table-row {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 7px;
+  padding: 9.2px 16px; }
+html .table.table-small .table-row, body .table.table-small .table-row {
+  margin-bottom: 6.4px; }
+html .table .table-icon, body .table .table-icon {
+  margin-right: 5px;
+  width: 25px;
+  height: auto; }
+html .uk-table-list .uk-table-list-item .uk-card-body, html .uk-table-list .uk-table-list-item .uk-card-footer, html .uk-table-list .uk-table-list-item .uk-card-header, body .uk-table-list .uk-table-list-item .uk-card-body, body .uk-table-list .uk-table-list-item .uk-card-footer, body .uk-table-list .uk-table-list-item .uk-card-header {
+  padding: 24px 28px; }
+  html .uk-table-list .uk-table-list-item .uk-card-body .uk-table-list-descr, html .uk-table-list .uk-table-list-item .uk-card-footer .uk-table-list-descr, html .uk-table-list .uk-table-list-item .uk-card-header .uk-table-list-descr, body .uk-table-list .uk-table-list-item .uk-card-body .uk-table-list-descr, body .uk-table-list .uk-table-list-item .uk-card-footer .uk-table-list-descr, body .uk-table-list .uk-table-list-item .uk-card-header .uk-table-list-descr {
+    display: none; }
+  html .uk-table-list .uk-table-list-item .uk-card-body .uk-button, html .uk-table-list .uk-table-list-item .uk-card-footer .uk-button, html .uk-table-list .uk-table-list-item .uk-card-header .uk-button, body .uk-table-list .uk-table-list-item .uk-card-body .uk-button, body .uk-table-list .uk-table-list-item .uk-card-footer .uk-button, body .uk-table-list .uk-table-list-item .uk-card-header .uk-button {
+    height: 43px;
+    width: 43px;
+    line-height: 21px; }
+html .uk-table-list .uk-card, body .uk-table-list .uk-card {
+  transition: all 300ms ease-in-out; }
+html .uk-table-list .uk-active .uk-card.uk-card-default, body .uk-table-list .uk-active .uk-card.uk-card-default {
+  background: rgba(255, 255, 255, 0.1); }
+  html .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button, body .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button {
+    opacity: .2;
+    cursor: default;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.2);
+    color: white; }
+    html .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button .uk-visible, body .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button .uk-visible {
+      display: none; }
+    html .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button .uk-hidden, body .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button .uk-hidden {
+      display: inline-block !important; }
+    html .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button svg path, html .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button svg g, body .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button svg path, body .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button svg g {
+      fill: white !important; }
+    html .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button:hover svg path, html .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button:hover svg g, body .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button:hover svg path, body .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button:hover svg g {
+      fill: white !important; }
+  html .uk-table-list .uk-active .uk-card.uk-card-default .uk-table-list-descr, body .uk-table-list .uk-active .uk-card.uk-card-default .uk-table-list-descr {
+    display: block; }
+
+html .uk-button-group, body .uk-button-group {
+  display: flex;
+  justify-content: stretch;
+  width: 100%; }
+  html .uk-button-group > *, body .uk-button-group > * {
+    width: 100%; }
+  html .uk-button-group .uk-button, body .uk-button-group .uk-button {
+    border-radius: 0;
+    backdrop-filter: blur(1px);
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    html .uk-button-group .uk-button:first-child, body .uk-button-group .uk-button:first-child {
+      border-radius: 10px 0 0 10px; }
+    html .uk-button-group .uk-button:last-child, body .uk-button-group .uk-button:last-child {
+      border-radius: 0 10px 10px 0; }
+    html .uk-button-group .uk-button svg, body .uk-button-group .uk-button svg {
+      margin-right: 15px; }
+html .uk-button, body .uk-button {
+  padding: 10px 32px;
+  font-size: 18px;
+  line-height: 26px;
+  background-color: white;
+  color: #181818;
+  font-family: "Gotham Pro Regular", sans-serif;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-sizing: border-box;
+  box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  border-radius: 10px;
+  text-transform: none;
+  transition: background 300ms ease-in-out, color 300ms ease-in-out; }
+  html .uk-button.uk-button-default, body .uk-button.uk-button-default {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.2); }
+    html .uk-button.uk-button-default svg path, body .uk-button.uk-button-default svg path {
+      transition: all 300ms ease-in-out; }
+    html .uk-button.uk-button-default:hover, body .uk-button.uk-button-default:hover {
+      background: rgba(255, 255, 255, 0.2); }
+  html .uk-button.uk-padding-small-left, body .uk-button.uk-padding-small-left {
+    padding-left: 15px; }
+  html .uk-button.uk-padding-small-right, body .uk-button.uk-padding-small-right {
+    padding-right: 15px; }
+  html .uk-button[disabled], html .uk-button.uk-disabled, body .uk-button[disabled], body .uk-button.uk-disabled {
+    opacity: .2;
+    cursor: default; }
+    html .uk-button[disabled]:hover, html .uk-button.uk-disabled:hover, body .uk-button[disabled]:hover, body .uk-button.uk-disabled:hover {
+      opacity: .2;
+      cursor: default;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.2);
+      color: white; }
+      html .uk-button[disabled]:hover svg path, html .uk-button[disabled]:hover svg g, html .uk-button.uk-disabled:hover svg path, html .uk-button.uk-disabled:hover svg g, body .uk-button[disabled]:hover svg path, body .uk-button[disabled]:hover svg g, body .uk-button.uk-disabled:hover svg path, body .uk-button.uk-disabled:hover svg g {
+        color: white; }
+  html .uk-button:hover, body .uk-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white; }
+  html .uk-button.uk-button-drop, body .uk-button.uk-button-drop {
+    padding-left: 18px;
+    padding-right: 45px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    box-shadow: none;
+    position: relative; }
+    html .uk-button.uk-button-drop:before, body .uk-button.uk-button-drop:before {
+      content: '';
+      position: absolute;
+      border: 0;
+      background-image: url(../images/arrow-down.svg);
+      display: block;
+      width: 12px;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 0;
+      transform: translate(0, -50%) scaleY(1);
+      height: 8px;
+      right: 15px;
+      top: 50%; }
+    html .uk-button.uk-button-drop + .uk-dropdown, body .uk-button.uk-button-drop + .uk-dropdown {
+      background: 0 0;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(20px);
+      overflow: hidden;
+      padding: 0; }
+      html .uk-button.uk-button-drop + .uk-dropdown li a, body .uk-button.uk-button-drop + .uk-dropdown li a {
+        padding: 10px 18px;
+        line-height: 26px;
+        font-size: 18px;
+        color: white;
+        background: rgba(255, 255, 255, 0.1); }
+      html .uk-button.uk-button-drop + .uk-dropdown li.uk-active a, body .uk-button.uk-button-drop + .uk-dropdown li.uk-active a {
+        background: rgba(255, 255, 255, 0.2); }
+    html .uk-button.uk-button-drop[aria-expanded*="true"], body .uk-button.uk-button-drop[aria-expanded*="true"] {
+      border-radius: 10px 10px 0 0;
+      background: rgba(255, 255, 255, 0.2); }
+      html .uk-button.uk-button-drop[aria-expanded*="true"]:before, body .uk-button.uk-button-drop[aria-expanded*="true"]:before {
+        transform: translate(0, -50%) scaleY(-1); }
+      html .uk-button.uk-button-drop[aria-expanded*="true"] + .uk-dropdown li a:hover, body .uk-button.uk-button-drop[aria-expanded*="true"] + .uk-dropdown li a:hover {
+        background: rgba(255, 255, 255, 0.2); }
+      html .uk-button.uk-button-drop[aria-expanded*="true"] + .uk-dropdown[class*=uk-dropdown-top], body .uk-button.uk-button-drop[aria-expanded*="true"] + .uk-dropdown[class*=uk-dropdown-top] {
+        margin: 0;
+        border-radius: 10px 10px 0 0;
+        border-bottom: 0; }
+      html .uk-button.uk-button-drop[aria-expanded*="true"] + .uk-dropdown[class*=uk-dropdown-bottom], body .uk-button.uk-button-drop[aria-expanded*="true"] + .uk-dropdown[class*=uk-dropdown-bottom] {
+        margin: 0;
+        border-radius: 0 0 10px 10px;
+        border-top: 0; }
+    html .uk-button.uk-button-drop:hover, body .uk-button.uk-button-drop:hover {
+      background: rgba(255, 255, 255, 0.2); }
+
+@font-face {
+  font-family: 'Rogan';
+  src: local("Rogan Light"), local("Rogan-Light"), url("../fonts/Rogan-Light.woff2") format("woff2"), url("../fonts/Rogan-Light.woff") format("woff"), url("../fonts/Rogan-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
 html, body {
   margin: 0;
   padding: 0;
@@ -31,8 +197,17 @@ html, body {
   font-size: 20px;
   line-height: 26px;
   overflow-x: hidden;
+  background-color: #0f161e;
+  background-image: url("../images/space-bg.png");
+  background-size: 100%;
+  background-position: top center;
+  background-repeat: repeat-y;
   scrollbar-color: #7C7C7C #B2B2B2;
   scrollbar-width: thin; }
+  html *, body * {
+    font-family: "Rogan" !important;
+    font-weight: 300;
+    letter-spacing: 0em; }
   html .page-slider, body .page-slider {
     position: relative;
     top: 0;
@@ -41,35 +216,15 @@ html, body {
     max-width: 100%;
     /*max-height: 100%; overflow: hidden;*/
     box-sizing: border-box;
-    background-color: #0f161e;
-    background-image: url("../images/space-bg.png");
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     overflow-y: auto;
-    overflow-x: hidden; }
-    html .page-slider:after, body .page-slider:after {
-      content: '';
-      display: block;
-      width: 100%;
-      height: 100%;
-      position: fixed;
-      left: 0;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      background-image: url("../images/blink.png");
-      background-size: cover;
-      background-position: center right;
-      background-repeat: no-repeat;
-      z-index: 10;
-      pointer-events: none; }
+    overflow-x: hidden;
+    /*&:after {content: ''; display: block; width: 100%; height: 100%; position: fixed; left: 0; top: 0; right: 0; bottom: 0; background-image: url('../images/blink.png'); background-size: cover; background-position: center right; background-repeat: no-repeat; z-index: 10; pointer-events: none;}*/ }
     html .page-slider h1, html .page-slider h2, html .page-slider h3, html .page-slider h4, html .page-slider h5, html .page-slider h6, body .page-slider h1, body .page-slider h2, body .page-slider h3, body .page-slider h4, body .page-slider h5, body .page-slider h6 {
       color: white;
-      font-family: "Gotham Pro Bold", sans-serif;
+      /*font-family: $bold; */
+      font-family: "Furore", sans-serif !important;
       letter-spacing: 0.08em;
-      font-weight: 700; }
+      font-weight: 400; }
     html .page-slider h1, html .page-slider .h1, body .page-slider h1, body .page-slider .h1 {
       font-size: 70px;
       line-height: 70px;
@@ -1111,7 +1266,7 @@ html, body {
           height: 517px;
           background: rgba(255, 255, 255, 0.05);
           box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
-          backdrop-filter: blur(40px);
+          /*backdrop-filter: blur(40px);*/
           border-radius: 20px;
           border: 2px solid rgba(255, 255, 255, 0.06);
           transition: all 300ms ease-in-out; }
@@ -1639,24 +1794,6 @@ html, body {
     transition: all 300ms ease; }
     html a:hover, body a:hover {
       color: rgba(255, 255, 255, 0.6); }
-  html .uk-button-group, body .uk-button-group {
-    display: flex;
-    justify-content: stretch;
-    width: 100%; }
-    html .uk-button-group > *, body .uk-button-group > * {
-      width: 100%; }
-    html .uk-button-group .uk-button, body .uk-button-group .uk-button {
-      border-radius: 0;
-      backdrop-filter: blur(1px);
-      display: flex;
-      align-items: center;
-      justify-content: center; }
-      html .uk-button-group .uk-button:first-child, body .uk-button-group .uk-button:first-child {
-        border-radius: 10px 0 0 10px; }
-      html .uk-button-group .uk-button:last-child, body .uk-button-group .uk-button:last-child {
-        border-radius: 0 10px 10px 0; }
-      html .uk-button-group .uk-button svg, body .uk-button-group .uk-button svg {
-        margin-right: 15px; }
   html .uk-text-orange, body .uk-text-orange {
     color: #F2994A; }
   html .uk-text-green, body .uk-text-green {
@@ -1687,141 +1824,6 @@ html, body {
     font-size: 16px; }
   html .uk-card.uk-card-body + .uk-card-footer, html .uk-card .uk-card-body + .uk-card-footer, body .uk-card.uk-card-body + .uk-card-footer, body .uk-card .uk-card-body + .uk-card-footer {
     padding-top: 0; }
-  html .table .table-body .table-row, body .table .table-body .table-row {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 7px;
-    padding: 9.2px 16px; }
-  html .table.table-small .table-row, body .table.table-small .table-row {
-    margin-bottom: 6.4px; }
-  html .table .table-icon, body .table .table-icon {
-    margin-right: 5px;
-    width: 25px;
-    height: auto; }
-  html .uk-table-list .uk-table-list-item .uk-card-body, html .uk-table-list .uk-table-list-item .uk-card-footer, html .uk-table-list .uk-table-list-item .uk-card-header, body .uk-table-list .uk-table-list-item .uk-card-body, body .uk-table-list .uk-table-list-item .uk-card-footer, body .uk-table-list .uk-table-list-item .uk-card-header {
-    padding: 24px 28px; }
-    html .uk-table-list .uk-table-list-item .uk-card-body .uk-table-list-descr, html .uk-table-list .uk-table-list-item .uk-card-footer .uk-table-list-descr, html .uk-table-list .uk-table-list-item .uk-card-header .uk-table-list-descr, body .uk-table-list .uk-table-list-item .uk-card-body .uk-table-list-descr, body .uk-table-list .uk-table-list-item .uk-card-footer .uk-table-list-descr, body .uk-table-list .uk-table-list-item .uk-card-header .uk-table-list-descr {
-      display: none; }
-    html .uk-table-list .uk-table-list-item .uk-card-body .uk-button, html .uk-table-list .uk-table-list-item .uk-card-footer .uk-button, html .uk-table-list .uk-table-list-item .uk-card-header .uk-button, body .uk-table-list .uk-table-list-item .uk-card-body .uk-button, body .uk-table-list .uk-table-list-item .uk-card-footer .uk-button, body .uk-table-list .uk-table-list-item .uk-card-header .uk-button {
-      height: 43px;
-      width: 43px;
-      line-height: 21px; }
-  html .uk-table-list .uk-card, body .uk-table-list .uk-card {
-    transition: all 300ms ease-in-out; }
-  html .uk-table-list .uk-active .uk-card.uk-card-default, body .uk-table-list .uk-active .uk-card.uk-card-default {
-    background: rgba(255, 255, 255, 0.1); }
-    html .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button, body .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button {
-      opacity: .2;
-      cursor: default;
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.2);
-      color: white; }
-      html .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button .uk-visible, body .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button .uk-visible {
-        display: none; }
-      html .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button .uk-hidden, body .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button .uk-hidden {
-        display: inline-block !important; }
-      html .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button svg path, html .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button svg g, body .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button svg path, body .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button svg g {
-        fill: white !important; }
-      html .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button:hover svg path, html .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button:hover svg g, body .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button:hover svg path, body .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button:hover svg g {
-        fill: white !important; }
-    html .uk-table-list .uk-active .uk-card.uk-card-default .uk-table-list-descr, body .uk-table-list .uk-active .uk-card.uk-card-default .uk-table-list-descr {
-      display: block; }
-  html .uk-button, body .uk-button {
-    padding: 10px 32px;
-    font-size: 18px;
-    line-height: 26px;
-    background-color: white;
-    color: #181818;
-    font-family: "Gotham Pro Regular", sans-serif;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-sizing: border-box;
-    box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(20px);
-    border-radius: 10px;
-    text-transform: none;
-    transition: background 300ms ease-in-out, color 300ms ease-in-out; }
-    html .uk-button.uk-button-default, body .uk-button.uk-button-default {
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      color: white;
-      box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.2); }
-      html .uk-button.uk-button-default svg path, body .uk-button.uk-button-default svg path {
-        transition: all 300ms ease-in-out; }
-      html .uk-button.uk-button-default:hover, body .uk-button.uk-button-default:hover {
-        background: rgba(255, 255, 255, 0.2); }
-    html .uk-button.uk-padding-small-left, body .uk-button.uk-padding-small-left {
-      padding-left: 15px; }
-    html .uk-button.uk-padding-small-right, body .uk-button.uk-padding-small-right {
-      padding-right: 15px; }
-    html .uk-button[disabled], html .uk-button.uk-disabled, body .uk-button[disabled], body .uk-button.uk-disabled {
-      opacity: .2;
-      cursor: default; }
-      html .uk-button[disabled]:hover, html .uk-button.uk-disabled:hover, body .uk-button[disabled]:hover, body .uk-button.uk-disabled:hover {
-        opacity: .2;
-        cursor: default;
-        background: rgba(255, 255, 255, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.2);
-        color: white; }
-        html .uk-button[disabled]:hover svg path, html .uk-button[disabled]:hover svg g, html .uk-button.uk-disabled:hover svg path, html .uk-button.uk-disabled:hover svg g, body .uk-button[disabled]:hover svg path, body .uk-button[disabled]:hover svg g, body .uk-button.uk-disabled:hover svg path, body .uk-button.uk-disabled:hover svg g {
-          color: white; }
-    html .uk-button:hover, body .uk-button:hover {
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      color: white; }
-    html .uk-button.uk-button-drop, body .uk-button.uk-button-drop {
-      padding-left: 18px;
-      padding-right: 45px;
-      background: rgba(255, 255, 255, 0.1);
-      color: white;
-      box-shadow: none;
-      position: relative; }
-      html .uk-button.uk-button-drop:before, body .uk-button.uk-button-drop:before {
-        content: '';
-        position: absolute;
-        border: 0;
-        background-image: url(../images/arrow-down.svg);
-        display: block;
-        width: 12px;
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-        margin: 0;
-        transform: translate(0, -50%) scaleY(1);
-        height: 8px;
-        right: 15px;
-        top: 50%; }
-      html .uk-button.uk-button-drop + .uk-dropdown, body .uk-button.uk-button-drop + .uk-dropdown {
-        background: 0 0;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        backdrop-filter: blur(20px);
-        overflow: hidden;
-        padding: 0; }
-        html .uk-button.uk-button-drop + .uk-dropdown li a, body .uk-button.uk-button-drop + .uk-dropdown li a {
-          padding: 10px 18px;
-          line-height: 26px;
-          font-size: 18px;
-          color: white;
-          background: rgba(255, 255, 255, 0.1); }
-        html .uk-button.uk-button-drop + .uk-dropdown li.uk-active a, body .uk-button.uk-button-drop + .uk-dropdown li.uk-active a {
-          background: rgba(255, 255, 255, 0.2); }
-      html .uk-button.uk-button-drop[aria-expanded*="true"], body .uk-button.uk-button-drop[aria-expanded*="true"] {
-        border-radius: 10px 10px 0 0;
-        background: rgba(255, 255, 255, 0.2); }
-        html .uk-button.uk-button-drop[aria-expanded*="true"]:before, body .uk-button.uk-button-drop[aria-expanded*="true"]:before {
-          transform: translate(0, -50%) scaleY(-1); }
-        html .uk-button.uk-button-drop[aria-expanded*="true"] + .uk-dropdown li a:hover, body .uk-button.uk-button-drop[aria-expanded*="true"] + .uk-dropdown li a:hover {
-          background: rgba(255, 255, 255, 0.2); }
-        html .uk-button.uk-button-drop[aria-expanded*="true"] + .uk-dropdown[class*=uk-dropdown-top], body .uk-button.uk-button-drop[aria-expanded*="true"] + .uk-dropdown[class*=uk-dropdown-top] {
-          margin: 0;
-          border-radius: 10px 10px 0 0;
-          border-bottom: 0; }
-        html .uk-button.uk-button-drop[aria-expanded*="true"] + .uk-dropdown[class*=uk-dropdown-bottom], body .uk-button.uk-button-drop[aria-expanded*="true"] + .uk-dropdown[class*=uk-dropdown-bottom] {
-          margin: 0;
-          border-radius: 0 0 10px 10px;
-          border-top: 0; }
-      html .uk-button.uk-button-drop:hover, body .uk-button.uk-button-drop:hover {
-        background: rgba(255, 255, 255, 0.2); }
   html .uk-padding-xsmall-top, body .uk-padding-xsmall-top {
     padding-top: 5px; }
   html .uk-padding-small-top, body .uk-padding-small-top {

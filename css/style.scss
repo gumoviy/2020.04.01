@@ -31,17 +31,40 @@ $red: #ec5151;
     font-style: normal;
     font-display: swap;
 }
+@font-face {
+    font-family: 'Furore';
+    src: url('../fonts/Furore.woff2') format('woff2'),
+        url('../fonts/Furore.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 $regular: 'Gotham Pro Regular', sans-serif;
 $medium: 'Gotham Pro Medium', sans-serif;
 $bold: 'Gotham Pro Bold', sans-serif;
+$title: 'Furore', sans-serif;
 /* настройки - конец */
 
+@import "table.scss";
+@import "buttons.scss";
+
+@font-face {
+    font-family: 'Rogan';
+    src: local('Rogan Light'), local('Rogan-Light'),
+        url('../fonts/Rogan-Light.woff2') format('woff2'),
+        url('../fonts/Rogan-Light.woff') format('woff'),
+        url('../fonts/Rogan-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
 html, body {
-    margin: 0; padding: 0; position: relative; /*top: 0; left: 0;*/ width: 100%; /*height: 100%;*/ font-family: $regular; color: rgba(255,255,255,.6); font-size: 20px; line-height: 26px; overflow-x: hidden;
+    margin: 0; padding: 0; position: relative; /*top: 0; left: 0;*/ width: 100%; /*height: 100%;*/ font-family: $regular; color: rgba(255,255,255,.6); font-size: 20px; line-height: 26px; overflow-x: hidden; background-color: #0f161e; background-image: url('../images/space-bg.png'); background-size: 100%; background-position: top center; background-repeat: repeat-y;
+    * {font-family: 'Rogan'!important; font-weight: 300; letter-spacing: 0em;}
     .page-slider {
-        position: relative; top: 0; width: 100vw; /*height: 100vh;*/ max-width: 100%; /*max-height: 100%; overflow: hidden;*/ box-sizing: border-box; background-color: #0f161e; background-image: url('../images/space-bg.png'); background-attachment: fixed; background-size: cover; background-position: center; background-repeat: no-repeat; overflow-y: auto; overflow-x: hidden;
-        &:after {content: ''; display: block; width: 100%; height: 100%; position: fixed; left: 0; top: 0; right: 0; bottom: 0; background-image: url('../images/blink.png'); background-size: cover; background-position: center right; background-repeat: no-repeat; z-index: 10; pointer-events: none;}
-        h1, h2, h3, h4, h5, h6 {color: rgba(255,255,255,1); font-family: $bold; letter-spacing: 0.08em; font-weight: 700;}
+        position: relative; top: 0; width: 100vw; /*height: 100vh;*/ max-width: 100%; /*max-height: 100%; overflow: hidden;*/ box-sizing: border-box; overflow-y: auto; overflow-x: hidden;
+        /*&:after {content: ''; display: block; width: 100%; height: 100%; position: fixed; left: 0; top: 0; right: 0; bottom: 0; background-image: url('../images/blink.png'); background-size: cover; background-position: center right; background-repeat: no-repeat; z-index: 10; pointer-events: none;}*/
+        h1, h2, h3, h4, h5, h6 {color: rgba(255,255,255,1); /*font-family: $bold; */font-family: $title!important; letter-spacing: 0.08em; font-weight: 400;}
         h1, .h1 {
             font-size: 70px; line-height: 70px; margin-bottom: 40px;
             &.uk-padding-large-left {padding-left: 70px;}
@@ -564,7 +587,7 @@ html, body {
                     li {
                         margin: 0!important; /*overflow: hidden;*/
                         > div {
-                            width: 101px; position: relative; overflow: hidden; height: 517px; background: rgba(255, 255, 255, 0.05); box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2); backdrop-filter: blur(40px); border-radius: 20px; border: 2px solid rgba(255,255,255,.06); transition: all 300ms ease-in-out;
+                            width: 101px; position: relative; overflow: hidden; height: 517px; background: rgba(255, 255, 255, 0.05); box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2); /*backdrop-filter: blur(40px);*/ border-radius: 20px; border: 2px solid rgba(255,255,255,.06); transition: all 300ms ease-in-out;
                             > a {
                                 width: 101px; transition: all 300ms ease-in-out; position: absolute; left: 0; top: 0; bottom: 0; z-index: 1; text-decoration: none;
                                 > span {
@@ -859,18 +882,6 @@ html, body {
         color: rgba(255,255,255,1); transition: all 300ms ease;
         &:hover {color: rgba(255,255,255,.6);}
     }
-    .uk-button-group {
-        display: flex; justify-content: stretch; width: 100%;
-        > * {
-            width: 100%;
-        }
-        .uk-button {
-            border-radius: 0; backdrop-filter: blur(1px); display: flex; align-items: center; justify-content: center;
-            &:first-child {border-radius: 10px 0 0 10px;}
-            &:last-child {border-radius: 0 10px 10px 0;}
-            svg {margin-right: 15px;}
-        }
-    }
     .uk-text-orange {color: #F2994A;}
     .uk-text-green {color: $green;}
     .uk-text-red {color: $red;}
@@ -892,108 +903,6 @@ html, body {
         }
         &.uk-card-footer, .uk-card-footer {
             
-        }
-    }
-    .table {
-        .table-header {}
-        .table-body {
-            .table-row {background: rgba(255, 255, 255, 0.05); border-radius: 7px; padding: 9.2px 16px;}
-        }
-        &.table-small {
-            .table-row {margin-bottom: 6.4px;}
-        }
-        .table-icon {margin-right: 5px; width: 25px; height: auto;}
-    }
-    .uk-table-list {
-        .uk-table-list-item {
-            .uk-card-body, .uk-card-footer, .uk-card-header {
-                padding: 24px 28px;
-                .uk-table-list-descr {display: none;}
-                .uk-button {
-                    height: 43px; width: 43px; line-height: 21px;
-                }
-            }
-        }
-        .uk-card {transition: all 300ms ease-in-out;}
-        .uk-active {
-            .uk-card {
-                &.uk-card-default {
-                    background: rgba(255,255,255,.1);
-                    a {
-                        &.uk-button {
-                            opacity: .2; cursor: default; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.2); color: rgba(255,255,255,1);
-                            .uk-visible {display: none;}
-                            .uk-hidden {display: inline-block!important;}
-                            svg {
-                                path, g {fill: rgba(255,255,255,1)!important;}
-                            }
-                            &:hover {
-                                svg {
-                                    path, g {fill: rgba(255,255,255,1)!important;}
-                                }
-                            }
-                        }
-                    }
-                    .uk-table-list-descr {display: block;}
-                }
-            }
-        }
-    }
-    .uk-button {
-        padding: 10px 32px; font-size: 18px; line-height: 26px; background-color: rgba(255,255,255,1); color: #181818; font-family: $regular; border: 1px solid rgba(255, 255, 255, 0.2); box-sizing: border-box; box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.2); backdrop-filter: blur(20px); border-radius: 10px; text-transform: none; transition: background 300ms ease-in-out, color 300ms ease-in-out;
-        &.uk-button-default {
-            background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); color: rgba(255,255,255,1); box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.2);
-            svg {
-                path {transition: all 300ms ease-in-out;}
-            }
-            &:hover {
-                background: rgba(255,255,255,.2);
-            }
-        }
-        &.uk-padding-small-left {padding-left: 15px;}
-        &.uk-padding-small-right {padding-right: 15px;}
-        &[disabled], &.uk-disabled {
-            opacity: .2; cursor: default;
-            &:hover {
-                opacity: .2; cursor: default; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.2); color: rgba(255,255,255,1);
-                svg {
-                    path, g {color: rgba(255,255,255,1);}
-                }
-            }
-        }
-        &:hover {background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); color: rgba(255,255,255,1);}
-        &.uk-button-drop {
-            padding-left: 18px; padding-right: 45px; background: rgba(255,255,255,.1); color: rgba(255,255,255,1); box-shadow: none; position: relative;
-            &:before {content: ''; position: absolute; border: 0; background-image: url(../images/arrow-down.svg); display: block; width: 12px; background-size: contain; background-position: center; background-repeat: no-repeat; margin: 0; transform: translate(0,-50%) scaleY(1); height: 8px; right: 15px; top: 50%;}
-            &+ .uk-dropdown {
-                background: 0 0; border: 1px solid rgba(255,255,255,.3); backdrop-filter: blur(20px); overflow: hidden; padding: 0;
-                li {
-                    a {
-                        padding: 10px 18px; line-height: 26px; font-size: 18px; color: rgba(255,255,255,1); background: rgba(255,255,255,.1);
-                    }
-                    &.uk-active {
-                        a {background: rgba(255,255,255,.2);}
-                    }
-                }
-            }
-            &[aria-expanded*="true"] {
-                border-radius: 10px 10px 0 0; background: rgba(255,255,255,.2);
-                &:before {transform: translate(0,-50%) scaleY(-1);}
-                &+ .uk-dropdown {
-                    li {
-                        a {
-                            &:hover {background: rgba(255,255,255,.2);}
-                        }
-                    }
-                    &[class*=uk-dropdown-top] {margin: 0; border-radius: 10px 10px 0 0; border-bottom: 0;}
-                    &[class*=uk-dropdown-bottom] {
-                        margin: 0; border-radius: 0 0 10px 10px; border-top: 0;
-                    }
-                }
-            }
-            &:hover {
-                background: rgba(255,255,255,.2);
-            }
         }
     }
     .uk-padding-xsmall-top {padding-top: 5px;}
