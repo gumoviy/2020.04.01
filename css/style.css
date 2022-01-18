@@ -879,7 +879,9 @@ html, body {
                       line-height: 32px;
                       margin-bottom: 24px;
                       color: white;
-                      font-family: "Rogan Regular", sans-serif; }
+                      font-family: "Rogan Regular", sans-serif;
+                      font-size: 22px;
+                      letter-spacing: -.01em; }
                       html .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card.uk-card-body .uk-card-title + div, html .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card .uk-card-body .uk-card-title + div, body .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card.uk-card-body .uk-card-title + div, body .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card .uk-card-body .uk-card-title + div {
                         margin-top: auto; }
                     html .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card.uk-card-body .uk-text-small, html .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card .uk-card-body .uk-text-small, body .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card.uk-card-body .uk-text-small, body .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card .uk-card-body .uk-text-small {
