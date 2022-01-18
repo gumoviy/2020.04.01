@@ -890,12 +890,12 @@ html, body {
                 }
             }
             a {
-                color: rgba(255,255,255,1); font-size: 15px; line-height: 20px; text-transform: uppercase; letter-spacing: 0.05em; font-family: $bold; transition: color 300ms ease-in-out;
+                color: rgba(255,255,255,1); font-size: 15px; line-height: 20px; text-transform: uppercase; letter-spacing: 0.05em; font-family: $semibold; transition: color 300ms ease-in-out;
                 &:hover, &.active {text-decoration: none; color: rgba(255,255,255,.6);}
             }
             .select2-container--default {
                 .select2-selection--single {
-                    .select2-selection__rendered {font-size: 15px; letter-spacing: 0.05em; font-family: $bold;}
+                    .select2-selection__rendered {font-size: 15px; letter-spacing: 0.05em; font-family: $semibold;}
                 }
             }
             .uk-container {
