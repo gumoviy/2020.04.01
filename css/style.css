@@ -263,10 +263,10 @@ html .uk-button, body .uk-button {
     box-shadow: none;
     backdrop-filter: blur(0);
     border-radius: 0;
-    padding-right: 60px;
+    padding-right: 48px;
     display: flex;
     align-items: center;
-    font-size: 20px;
+    font-size: 15px;
     display: inline-flex;
     letter-spacing: 0em; }
     html .uk-button.uk-button-link:before, body .uk-button.uk-button-link:before {
@@ -276,10 +276,10 @@ html .uk-button, body .uk-button {
       right: 0;
       top: 50%;
       transform: translateY(-50%);
-      width: 42px;
-      height: 16px;
+      width: 30px;
+      height: 12px;
       background-image: url("../images/arrow-button.svg");
-      background-size: 42px;
+      background-size: 30px;
       background-position: center;
       background-repeat: no-repeat; }
     html .uk-button.uk-button-link:hover, body .uk-button.uk-button-link:hover {
