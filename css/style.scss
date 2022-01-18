@@ -204,7 +204,7 @@ html, body {
                     }
                 }
                 .table-header {
-                    b {font-size: 24px; font-family: $medium; font-weight: 500;}
+                    b {font-size: 26px; font-family: $medium; font-weight: 500; line-height: 24px; letter-spacing: .05em;}
                 }
             }
             &#data-slide-2 {
@@ -372,7 +372,7 @@ html, body {
                                             }
                                         }
                                     }
-                                    .uk-button {padding-left: 25px; padding-right: 25px;}
+                                    .uk-button {padding-left: 25px; padding-right: 25px; font-size: 15px;}
                                 }
                             }
                         }
@@ -398,7 +398,7 @@ html, body {
                     &:before {position: absolute; left: 50%; top: -50px; content: ''; width: 503px; height: 503px; background-image: url('../images/shine.png'); background-size: 100%; background-repeat: no-repeat; background-position: top center; display: block; pointer-events: none; transform: translateX(-50%);}
                     img {position: relative; width: 80%;}
                 }
-                h6 {font-size: 22px; margin-bottom: 12px;}
+                h6 {font-size: 26px; margin-bottom: 12px; font-family: $light; font-weight: 300; line-height: 1.2;}
                 .uk-grid-margin {
                     &.uk-margin-top {margin-top: 32px!important;}
                 }
@@ -412,7 +412,7 @@ html, body {
                 .uk-switcher {
                     &.uk-margin {/*margin-top: 15px!important; margin-bottom: 15px;*/}
                 }
-                p {line-height: 27px; font-size: 18px;}
+                p {font-size: 22px; line-height: 33px;}
                 a:not(.uk-button) {
                     text-decoration: underline;
                     &:hover {text-decoration: none;}

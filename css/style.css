@@ -157,6 +157,16 @@ html .uk-button, body .uk-button {
       transition: all 300ms ease-in-out; }
     html .uk-button.uk-button-default:hover, body .uk-button.uk-button-default:hover {
       background: rgba(255, 255, 255, 0.2); }
+    html .uk-button.uk-button-default.uk-button-hover-blue, body .uk-button.uk-button-default.uk-button-hover-blue {
+      transition: all 300ms ease-in-out; }
+      html .uk-button.uk-button-default.uk-button-hover-blue:hover, body .uk-button.uk-button-default.uk-button-hover-blue:hover {
+        background: rgba(48, 178, 230, 0.05);
+        border: 1px solid #30b2e6;
+        box-sizing: border-box;
+        box-shadow: inset 0px 0px 30px rgba(48, 178, 230, 0.5);
+        color: #30B2E6; }
+        html .uk-button.uk-button-default.uk-button-hover-blue:hover svg path, html .uk-button.uk-button-default.uk-button-hover-blue:hover svg g, body .uk-button.uk-button-default.uk-button-hover-blue:hover svg path, body .uk-button.uk-button-default.uk-button-hover-blue:hover svg g {
+          fill: #30b2e6 !important; }
   html .uk-button.uk-button-primary, body .uk-button.uk-button-primary {
     background: #30b2e6;
     border: 1px solid #30b2e6;
@@ -203,8 +213,9 @@ html .uk-button, body .uk-button {
     html .uk-button.uk-button-warning svg path, body .uk-button.uk-button-warning svg path {
       transition: all 300ms ease-in-out; }
     html .uk-button.uk-button-warning:hover, body .uk-button.uk-button-warning:hover {
-      background: rgba(255, 255, 255, 0.2);
-      box-shadow: inset 0px 0px 30px rgba(255, 255, 255, 0); }
+      background: rgba(245, 158, 90, 0.2);
+      box-shadow: inset 0px 0px 30px rgba(255, 255, 255, 0);
+      color: #fff; }
   html .uk-button.uk-button-blue, body .uk-button.uk-button-blue {
     background: rgba(48, 178, 230, 0.05);
     border: 1px solid #30b2e6;
@@ -214,8 +225,9 @@ html .uk-button, body .uk-button {
     html .uk-button.uk-button-blue svg path, body .uk-button.uk-button-blue svg path {
       transition: all 300ms ease-in-out; }
     html .uk-button.uk-button-blue:hover, body .uk-button.uk-button-blue:hover {
-      background: rgba(255, 255, 255, 0.2);
-      box-shadow: inset 0px 0px 30px rgba(255, 255, 255, 0); }
+      background: rgba(48, 178, 230, 0.2);
+      box-shadow: inset 0px 0px 30px rgba(255, 255, 255, 0);
+      color: #fff; }
   html .uk-button.uk-padding-small-left, body .uk-button.uk-padding-small-left {
     padding-left: 15px; }
   html .uk-button.uk-padding-small-right, body .uk-button.uk-padding-small-right {
@@ -560,9 +572,11 @@ html, body {
         html .page-slider .panel#data-slide-1 .uk-button.uk-button-primary:hover svg path, html .page-slider .panel#data-slide-1 .uk-button.uk-button-primary:hover svg rect, body .page-slider .panel#data-slide-1 .uk-button.uk-button-primary:hover svg path, body .page-slider .panel#data-slide-1 .uk-button.uk-button-primary:hover svg rect {
           fill: white !important; }
       html .page-slider .panel#data-slide-1 .table-header b, body .page-slider .panel#data-slide-1 .table-header b {
-        font-size: 24px;
+        font-size: 26px;
         font-family: "Rogan Medium", sans-serif;
-        font-weight: 500; }
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: .05em; }
       html .page-slider .panel#data-slide-2:before, body .page-slider .panel#data-slide-2:before {
         background-image: linear-gradient(135deg, rgba(54, 146, 199, 0), rgba(54, 146, 199, 0.3)), url("../images/light-1.png");
         transform: scaleX(-1); }
@@ -949,7 +963,8 @@ html, body {
                         padding-left: 18px; }
                 html .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-button, body .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-button {
                   padding-left: 25px;
-                  padding-right: 25px; }
+                  padding-right: 25px;
+                  font-size: 15px; }
         html .page-slider .panel .news .uk-slider .uk-slidenav, body .page-slider .panel .news .uk-slider .uk-slidenav {
           background: rgba(255, 255, 255, 0.1);
           border: 1px solid rgba(255, 255, 255, 0.2);
@@ -992,8 +1007,11 @@ html, body {
             position: relative;
             width: 80%; }
         html .page-slider .panel .nft h6, body .page-slider .panel .nft h6 {
-          font-size: 22px;
-          margin-bottom: 12px; }
+          font-size: 26px;
+          margin-bottom: 12px;
+          font-family: "Rogan Light", sans-serif;
+          font-weight: 300;
+          line-height: 1.2; }
         html .page-slider .panel .nft .uk-grid-margin.uk-margin-top, body .page-slider .panel .nft .uk-grid-margin.uk-margin-top {
           margin-top: 32px !important; }
         html .page-slider .panel .nft .card-container, body .page-slider .panel .nft .card-container {
@@ -1009,8 +1027,8 @@ html, body {
         html .page-slider .panel .nft .uk-switcher.uk-margin, body .page-slider .panel .nft .uk-switcher.uk-margin {
           /*margin-top: 15px!important; margin-bottom: 15px;*/ }
         html .page-slider .panel .nft p, body .page-slider .panel .nft p {
-          line-height: 27px;
-          font-size: 18px; }
+          font-size: 22px;
+          line-height: 33px; }
         html .page-slider .panel .nft a:not(.uk-button), body .page-slider .panel .nft a:not(.uk-button) {
           text-decoration: underline; }
           html .page-slider .panel .nft a:not(.uk-button):hover, body .page-slider .panel .nft a:not(.uk-button):hover {
