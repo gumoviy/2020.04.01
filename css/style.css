@@ -756,7 +756,9 @@ html, body {
           html .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items, body .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items {
             margin-left: -24px; }
             html .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li, body .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li {
-              width: 30%;
+              /*width: 30%;*/
+              width: 460px;
+              max-width: 460px;
               padding-left: 24px; }
               html .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li:first-child, body .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li:first-child {
                 margin-left: 0px; }

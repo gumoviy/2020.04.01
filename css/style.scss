@@ -295,7 +295,7 @@ html, body {
                         .uk-slider-items {
                             margin-left: -24px;
                             li {
-                                width: 30%; padding-left: 24px;
+                                /*width: 30%;*/ width: 460px; max-width: 460px; padding-left: 24px;
                                 &:first-child {margin-left: 0px;}
                                 &:last-child {padding-right: 0px; /*width: calc(30% + 70px);*/}
                                 > div {
