@@ -96,7 +96,7 @@ html, body {
             }
         }
         .panel {
-            position: relative; width: 100%; padding-top: 10px; margin: auto; padding-left: 0; transition: padding 300ms ease-in-out, opacity 500ms ease-in-out; box-sizing: border-box;
+            position: relative; width: 100%; padding-top: 10px; margin: auto; padding-left: 0; transition: padding 300ms ease-in-out, opacity 500ms ease-in-out; box-sizing: border-box; visibility: visible!important;
             &.active {
                 z-index: 10; opacity: 1;
             }
@@ -105,7 +105,7 @@ html, body {
                 transform: translateY(-100%) skew(0) rotate(0) scale(2); border-radius: 50%; transition: all 500ms ease-in-out; transition-delay: 500ms;
             }
             .section {
-                transition: all 300ms ease-in-out; transition-delay: 0ms; box-sizing: border-box; display: flex; align-items: center; z-index: 2; padding-left: 114px;
+                transition: all 300ms ease-in-out; transition-delay: 0ms; box-sizing: border-box; display: flex; align-items: center; z-index: 2; /*padding-left: 114px;*/ visibility: visible!important; position: relative; padding-left: 0; max-width: calc(100% - 114px);
                 .section-content {
                     width: 100%; color: rgba(255,255,255,.6); font-family: $regular; transition: all 500ms ease; transition-delay: 0s; font-weight: 400; overflow-x: hidden; overflow-y: auto; height: auto; z-index: 10; min-height: 70px; padding: 180px 0;
                     > .uk-container {
@@ -198,7 +198,7 @@ html, body {
                 }
             }
             &#data-slide-4 {
-                &:after {/*width: 1920px; height: 1199px;*/ content: ''; position: absolute; top: 100%; transform: translateY(-50%); display: block; pointer-events: none; background-image: url('../images/asteroids.png'); background-size: 100%; height: 0; width: 100%; padding-bottom: 63%; left: 0; right: 0; z-index: -1;}
+                &:after {/*width: 1920px; height: 1199px;*/ content: ''; position: absolute; top: 100%; transform: translateY(-50%); display: block; pointer-events: none; background-image: url('../images/asteroids.png'); background-size: 100%; height: 0; width: 100%; padding-bottom: 63%; left: 0; right: 0; z-index: 0;}
                 &:before {
                     background-image: linear-gradient(170deg, rgba($purple,0), rgba($purple,.3)), url('../images/light-1.png'); transform: scale(-1);
                 }

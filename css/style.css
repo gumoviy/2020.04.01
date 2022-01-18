@@ -264,7 +264,8 @@ html, body {
       margin: auto;
       padding-left: 0;
       transition: padding 300ms ease-in-out, opacity 500ms ease-in-out;
-      box-sizing: border-box; }
+      box-sizing: border-box;
+      visibility: visible !important; }
       html .page-slider .panel.active, body .page-slider .panel.active {
         z-index: 10;
         opacity: 1; }
@@ -285,7 +286,11 @@ html, body {
         display: flex;
         align-items: center;
         z-index: 2;
-        padding-left: 114px; }
+        /*padding-left: 114px;*/
+        visibility: visible !important;
+        position: relative;
+        padding-left: 0;
+        max-width: calc(100% - 114px); }
         html .page-slider .panel .section .section-content, body .page-slider .panel .section .section-content {
           width: 100%;
           color: rgba(255, 255, 255, 0.6);
@@ -525,7 +530,7 @@ html, body {
         padding-bottom: 63%;
         left: 0;
         right: 0;
-        z-index: -1; }
+        z-index: 0; }
       html .page-slider .panel#data-slide-4:before, body .page-slider .panel#data-slide-4:before {
         background-image: linear-gradient(170deg, rgba(178, 95, 255, 0), rgba(178, 95, 255, 0.3)), url("../images/light-1.png");
         transform: scale(-1); }
