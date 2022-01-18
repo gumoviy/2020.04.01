@@ -802,6 +802,9 @@ html, body {
                       margin-left: -18px; }
                       html .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card.uk-card-body .uk-grid.uk-grid-small > *, html .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card .uk-card-body .uk-grid.uk-grid-small > *, body .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card.uk-card-body .uk-grid.uk-grid-small > *, body .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card .uk-card-body .uk-grid.uk-grid-small > * {
                         padding-left: 18px; }
+                html .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-button, body .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-button {
+                  padding-left: 25px;
+                  padding-right: 25px; }
         html .page-slider .panel .news .uk-slider .uk-slidenav, body .page-slider .panel .news .uk-slider .uk-slidenav {
           background: rgba(255, 255, 255, 0.1);
           border: 1px solid rgba(255, 255, 255, 0.2);
