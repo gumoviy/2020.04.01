@@ -7,7 +7,7 @@ html, body {
         &.table-small {
             .table-row {margin-bottom: 6.4px;}
         }
-        .table-icon {margin-right: 5px; width: 25px; height: auto;}
+        .table-icon {margin-right: 12px; width: 25px; height: auto;}
     }
     .uk-table-list {
         .uk-table-list-item {
@@ -15,7 +15,13 @@ html, body {
                 padding: 24px 28px;
                 .uk-table-list-descr {display: none;}
                 .uk-button {
-                    height: 43px; width: 43px; line-height: 21px;
+                    height: 43px; width: 43px; line-height: 21px; transition: box-shadow 300ms ease-in-out, border 300ms ease-in-out;
+                    &:hover {
+                        background: rgba($primary, 0.05); border: 1px solid rgba($primary,1); box-sizing: border-box; box-shadow: inset 0px 0px 30px rgba($primary, 0.5); color: $primary;
+                        svg {
+                            path, g {fill: rgba($primary,1)!important;}
+                        }
+                    }
                 }
             }
         }

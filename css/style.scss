@@ -1,12 +1,14 @@
 /* настройки - начало */
 
 $blue: #3692c7;
+$primary: #30B2E6;
+$warning: #F59E5A;
 $yellow: #ffc74c;
 $green: #0cb754;
 $orange: #feaf14;
 $purple: #b25fff;
 $red: #ec5151;
-
+/*
 @font-face {
     font-family: 'Gotham Pro Regular';
     src: url('../fonts/GothamPro.woff2') format('woff2'),
@@ -39,17 +41,15 @@ $red: #ec5151;
     font-style: normal;
     font-display: swap;
 }
+*/
+/*
 $regular: 'Gotham Pro Regular', sans-serif;
 $medium: 'Gotham Pro Medium', sans-serif;
 $bold: 'Gotham Pro Bold', sans-serif;
-$title: 'Furore', sans-serif;
-/* настройки - конец */
-
-@import "table.scss";
-@import "buttons.scss";
+*/
 
 @font-face {
-    font-family: 'Rogan';
+    font-family: 'Rogan Light';
     src: local('Rogan Light'), local('Rogan-Light'),
         url('../fonts/Rogan-Light.woff2') format('woff2'),
         url('../fonts/Rogan-Light.woff') format('woff'),
@@ -58,7 +58,7 @@ $title: 'Furore', sans-serif;
     font-style: normal;
 }
 @font-face {
-    font-family: 'Rogan';
+    font-family: 'Rogan Medium';
     src: local('Rogan Medium'), local('Rogan-Medium'),
         url('../fonts/Rogan-Medium.woff2') format('woff2'),
         url('../fonts/Rogan-Medium.woff') format('woff'),
@@ -66,16 +66,35 @@ $title: 'Furore', sans-serif;
     font-weight: 500;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Rogan Bold';
+    src: local('Rogan Bold'), local('Rogan-Bold'),
+        url('../fonts/Rogan-Bold.woff2') format('woff2'),
+        url('../fonts/Rogan-Bold.woff') format('woff'),
+        url('../fonts/Rogan-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+$light: 'Rogan Light', sans-serif;
+$regular: 'Rogan Regular', sans-serif;
+$medium: 'Rogan Medium', sans-serif;
+$bold: 'Rogan Bold', sans-serif;
+$title: 'Furore', sans-serif;
+/* настройки - конец */
+
+@import "table.scss";
+@import "buttons.scss";
+
+
 
 html, body {
-    margin: 0; padding: 0; position: relative; /*top: 0; left: 0;*/ width: 100%; /*height: 100%;*/ font-family: $regular; color: rgba(255,255,255,.6); font-size: 20px; line-height: 26px; overflow-x: hidden; background-color: #0f161e; background-image: url('../images/space-bg.png'); background-size: 100%; background-position: top center; background-repeat: repeat-y;
-    * {font-family: 'Rogan'!important; font-weight: 300; letter-spacing: 0em;}
+    margin: 0; padding: 0; position: relative; /*top: 0; left: 0;*/ width: 100%; /*height: 100%;*/ font-family: $regular; color: rgba(255,255,255,.6); font-size: 22px; line-height: 33px; overflow-x: hidden; background-color: #0f161e; background-image: url('../images/space-bg.png'); background-size: 100%; background-position: top center; background-repeat: repeat-y;
     .page-slider {
         position: relative; top: 0; width: 100vw; /*height: 100vh;*/ max-width: 100%; /*max-height: 100%; overflow: hidden;*/ box-sizing: border-box; overflow-y: auto; overflow-x: hidden;
         /*&:after {content: ''; display: block; width: 100%; height: 100%; position: fixed; left: 0; top: 0; right: 0; bottom: 0; background-image: url('../images/blink.png'); background-size: cover; background-position: center right; background-repeat: no-repeat; z-index: 10; pointer-events: none;}*/
-        h1, h2, h3, h4, h5, h6 {color: rgba(255,255,255,1); /*font-family: $bold; *//*font-family: $title!important; letter-spacing: 0.08em;*//* font-weight: 400;*/ font-family: 'Rogan'!important; font-weight: 500;}
+        h1, h2, h3, h4, h5, h6 {color: rgba(255,255,255,1); font-family: $medium;}
         h1, .h1 {
-            font-size: 55px; line-height: 55px; margin-bottom: 40px;
+            font-size: 55px; line-height: 66px; margin-bottom: 40px;
             &.uk-padding-large-left {padding-left: 70px;}
         }
         .logo {
@@ -288,7 +307,8 @@ html, body {
                 }
             }
             .news {
-                h1 {padding-left: 140px;}
+                h1 {}
+                .uk-container, .uk-container .uk-container {padding-left: 140px; padding-right: 140px;}
                 .uk-slider {
                     padding-right: 0;
                     .uk-slider-container {
@@ -296,7 +316,7 @@ html, body {
                         .uk-slider-items {
                             margin-left: -24px;
                             li {
-                                /*width: 30%;*/ width: 460px; max-width: 460px; padding-left: 24px;
+                                /*width: 30%;*/ width: 512px; max-width: 512px; padding-left: 24px;
                                 &:first-child {margin-left: 0px;}
                                 &:last-child {padding-right: 0px; /*width: calc(30% + 70px);*/}
                                 > div {
@@ -306,10 +326,10 @@ html, body {
                                         &.uk-card-body, .uk-card-body {
                                             padding: 26px 26px; display: flex; flex-direction: column;
                                             .uk-card-title {
-                                                font-size: 24px; line-height: 31px; margin-bottom: 24px; color: rgba(255,255,255,1); font-family: $regular;
+                                                font-size: 27px; line-height: 32px; margin-bottom: 24px; color: rgba(255,255,255,1); font-family: $regular;
                                                 &+ div {margin-top: auto;}
                                             }
-                                            .uk-text-small {font-size: 20px;}
+                                            .uk-text-small {font-size: 22px; line-height: 26px;}
                                             svg {margin-right: 10px;}
                                             .uk-grid {
                                                 &.uk-grid-small {
@@ -325,7 +345,7 @@ html, body {
                         }
                     }
                     .uk-slidenav {
-                        background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); box-sizing: border-box; backdrop-filter: blur(20px); border-radius: 20px; border: 1px solid rgba(255,255,255,.06); padding: 16.4px 20.8px; transition: all 300ms ease-in-out; margin-right: 32px; margin-left: 32px;
+                        background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); box-sizing: border-box; backdrop-filter: blur(20px); border-radius: 20px; border: 1px solid rgba(255,255,255,.06); padding: 16.4px 25.8px; transition: all 300ms ease-in-out; margin-right: 32px; margin-left: 32px;
                         svg {
                             path {transition: all 300ms ease;}
                         }
@@ -359,7 +379,7 @@ html, body {
                 .uk-switcher {
                     &.uk-margin {/*margin-top: 15px!important; margin-bottom: 15px;*/}
                 }
-                p {line-height: 23.4px; font-size: 18px;}
+                p {line-height: 27px; font-size: 18px;}
                 a:not(.uk-button) {
                     text-decoration: underline;
                     &:hover {text-decoration: none;}
@@ -565,7 +585,7 @@ html, body {
                     .arrows {
                         display: flex; position: absolute; width: 100%; margin: 0; top: 50%; height: 0; background: transparent; justify-content: space-between;
                         .arrow {
-                            padding: 0; border: 0; cursor: pointer; background: rgba(255,255,255,.1); box-sizing: border-box; backdrop-filter: blur(20px); border-radius: 20px; border: 1px solid rgba(255,255,255,.06); padding: 16.4px 20.8px; transition: all .3s ease-in-out; margin-right: 32px; margin-left: 32px; height: 57.2px; transform: translateY(-50%);
+                            padding: 0; border: 0; cursor: pointer; background: rgba(255,255,255,.1); box-sizing: border-box; backdrop-filter: blur(20px); border-radius: 20px; border: 1px solid rgba(255,255,255,.06); padding: 16.4px 25.8px; transition: all .3s ease-in-out; margin-right: 32px; margin-left: 32px; height: 67.2px; transform: translateY(-50%);
                             svg {
                                 path, g {transition: all .3s ease-in-out;}
                             }
@@ -654,7 +674,7 @@ html, body {
                     }
                 }
                 .uk-slidenav {
-                    background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); box-sizing: border-box; backdrop-filter: blur(20px); border-radius: 20px; border: 1px solid rgba(255,255,255,.06); padding: 16.4px 20.8px; transition: all 300ms ease-in-out; margin-right: 32px; margin-left: 32px;
+                    background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); box-sizing: border-box; backdrop-filter: blur(20px); border-radius: 20px; border: 1px solid rgba(255,255,255,.06); padding: 16.4px 25.8px; transition: all 300ms ease-in-out; margin-right: 32px; margin-left: 32px;
                     svg {
                         path {transition: all 300ms ease;}
                     }
@@ -813,16 +833,15 @@ html, body {
                     list-style: none; padding: 0 23px; margin: 0; /*transition: padding 300ms ease-in-out;*/
                     &:last-child {padding-right: 0;}
                     &:first-child {padding-left: 0;}
-                    a {
-                        color: rgba(255,255,255,.6); font-size: 18px; line-height: 18px; text-transform: uppercase; letter-spacing: 0.1em; font-family: $regular; transition: color 300ms ease-in-out;
-                        &:hover, &.active {text-decoration: none; color: rgba(255,255,255,1);}
-                    }
+                    
                 }
             }
+            a {
+                color: rgba(255,255,255,.6); font-size: 22px; line-height: 20px; text-transform: uppercase; letter-spacing: 0.1em; font-family: $regular; transition: color 300ms ease-in-out;
+                &:hover, &.active {text-decoration: none; color: rgba(255,255,255,1);}
+            }
             .uk-container {
-                padding: 44px 60px; background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.685419) 4.7%, rgba(0, 0, 0, 0.669221) 8.9%, rgba(0, 0, 0, 0.65072) 12.8%, rgba(0, 0, 0, 0.629233) 16.56%, rgba(0, 0, 0, 0.604074) 20.37%, rgba(0, 0, 0, 0.57456) 24.4%, rgba(0, 0, 0, 0.540006) 28.83%, rgba(0, 0, 0, 0.499727) 33.84%, rgba(0, 0, 0, 0.45304) 39.6%, rgba(0, 0, 0, 0.399259) 46.3%, rgba(0, 0, 0, 0.337701) 54.1%, rgba(0, 0, 0, 0.26768) 63.2%, rgba(0, 0, 0, 0.188513) 73.76%, rgba(0, 0, 0, 0.0995141) 85.97%, rgba(0, 0, 0, 0) 100%); /*transition: all 300ms ease-in-out;*/
-                /*.select2-container--default .select2-selection--single, html .select2-container--default .select2-selection--single {transition: all 300ms ease-in-out;}
-                .uk-button {transition: all 300ms ease-in-out;}*/
+                padding: 44px 60px; background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.685419) 4.7%, rgba(0, 0, 0, 0.669221) 8.9%, rgba(0, 0, 0, 0.65072) 12.8%, rgba(0, 0, 0, 0.629233) 16.56%, rgba(0, 0, 0, 0.604074) 20.37%, rgba(0, 0, 0, 0.57456) 24.4%, rgba(0, 0, 0, 0.540006) 28.83%, rgba(0, 0, 0, 0.499727) 33.84%, rgba(0, 0, 0, 0.45304) 39.6%, rgba(0, 0, 0, 0.399259) 46.3%, rgba(0, 0, 0, 0.337701) 54.1%, rgba(0, 0, 0, 0.26768) 63.2%, rgba(0, 0, 0, 0.188513) 73.76%, rgba(0, 0, 0, 0.0995141) 85.97%, rgba(0, 0, 0, 0) 100%);
             }
             .avatar {
                 display: block; width: 62px; height: 62px; margin: -6px 0; border-radius: 50%; background-color: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); box-sizing: border-box; background-image: url('../images/avatar.svg'); background-position: center; background-size: 80%; background-repeat: no-repeat;
@@ -837,7 +856,7 @@ html, body {
                             &:last-child {padding-right: 0;}
                             &:first-child {padding-left: 0;}
                             a {
-                                font-size: 16px; color: rgba(255,255,255,1);
+                                /*font-size: 16px; */color: rgba(255,255,255,1);
                                 &:hover {color: rgba(255,255,255,.6);}
                             }
                         }
@@ -923,11 +942,11 @@ html, body {
         &.uk-subnav-pill {
             li {
                 padding: 0; background: rgba(255, 255, 255, 0.05); border-radius: 0;
-                a {font-size: 18px; line-height: 16px; padding: 11px 13px; color: rgba(255,255,255,.4); font-family: $regular; text-transform: none; transition: all 300ms ease;}
+                a {font-size: 18px; line-height: 16px; padding: 16px 16px; color: rgba(255,255,255,.4); font-family: $bold; text-transform: uppercase; transition: all 300ms ease;}
                 &:first-of-type {border-radius: 7px 0 0 7px;}
                 &:last-of-type {border-radius: 0 7px 7px 0;}
                 &.uk-active, &:hover {
-                    a {background: rgba(255, 255, 255, 0.05); border-radius: 7px; color: rgba(255,255,255,1);}
+                    a {background: rgba($primary,1); border-radius: 7px; color: rgba(#121212,1);}
                 }
             }
         }
@@ -963,9 +982,9 @@ html, body {
     }
     .select2-container--default {
         .select2-selection--single {
-            background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); box-sizing: border-box; border-radius: 10px; height: 48px; display: flex; align-items: center; backdrop-filter: blur(20px); transition: background 300ms ease-in-out;
+            background: rgba(255, 255, 255, 0); border: 0 solid rgba(255, 255, 255, 0.2); box-sizing: border-box; border-radius: 0; height: 48px; display: flex; align-items: center; backdrop-filter: blur(0); transition: background 300ms ease-in-out;
             .select2-selection__rendered {
-                color: rgba(255,255,255,1); padding: 0 45px 0 18px; font-size: 18px; display: flex;
+                color: rgba($primary,1); padding: 0 45px 0 18px; font-size: 22px; text-transform: uppercase; display: flex; transition: color 300ms ease-in-out;
                 img {margin-right: 10px; width: 21px;}
             }
             .select2-selection__arrow {
@@ -975,20 +994,22 @@ html, body {
         }
         &.select2-container--open {
             .select2-selection--single {
-                background: rgba(255, 255, 255, 0.2);
+                background: rgba(255, 255, 255, 0);
                 .select2-selection__arrow {
                     b {transform: translate(-50%,-50%) scaleY(-1);}
                 }
+                .select2-selection__rendered {color: rgba(255,255,255,1);}
             }
             .select2-results {color: #181818;}
         }
         &:hover {
             .select2-selection--single {
-                background: rgba(255, 255, 255, 0.2);
+                background: rgba(255, 255, 255, 0);
+                .select2-selection__rendered {color: rgba(255,255,255,1);}
             }
         }
         .select2-dropdown {
-            background: transparent; border: 1px solid rgba(255,255,255,.3); border-top: 0; backdrop-filter: blur(20px); border-radius: 0 0 10px 10px; overflow: hidden;
+            background: transparent; border: 1px solid rgba(255,255,255,.3); backdrop-filter: blur(20px); border-radius: 10px; overflow: hidden;
             .select2-search--dropdown {
                 .select2-search__field {
                     background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); color: rgba(255,255,255,.3);
