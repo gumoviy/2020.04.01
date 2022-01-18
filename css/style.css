@@ -875,7 +875,7 @@ html, body {
                     display: flex;
                     flex-direction: column; }
                     html .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card.uk-card-body .uk-card-title, html .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card .uk-card-body .uk-card-title, body .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card.uk-card-body .uk-card-title, body .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card .uk-card-body .uk-card-title {
-                      font-size: 27px;
+                      font-size: 22px;
                       line-height: 32px;
                       margin-bottom: 24px;
                       color: white;
@@ -883,8 +883,9 @@ html, body {
                       html .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card.uk-card-body .uk-card-title + div, html .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card .uk-card-body .uk-card-title + div, body .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card.uk-card-body .uk-card-title + div, body .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card .uk-card-body .uk-card-title + div {
                         margin-top: auto; }
                     html .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card.uk-card-body .uk-text-small, html .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card .uk-card-body .uk-text-small, body .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card.uk-card-body .uk-text-small, body .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card .uk-card-body .uk-text-small {
-                      font-size: 22px;
-                      line-height: 26px; }
+                      font-size: 15px;
+                      line-height: 26px;
+                      letter-spacing: .08em; }
                     html .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card.uk-card-body svg, html .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card .uk-card-body svg, body .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card.uk-card-body svg, body .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card .uk-card-body svg {
                       margin-right: 10px; }
                     html .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card.uk-card-body .uk-grid.uk-grid-small, html .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card .uk-card-body .uk-grid.uk-grid-small, body .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card.uk-card-body .uk-grid.uk-grid-small, body .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card .uk-card-body .uk-grid.uk-grid-small {
