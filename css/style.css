@@ -581,6 +581,9 @@ html, body {
         font-weight: 500;
         line-height: 24px;
         letter-spacing: .05em; }
+      html .page-slider .panel#data-slide-1 .table-header svg, body .page-slider .panel#data-slide-1 .table-header svg {
+        min-width: 21px;
+        max-width: 24px; }
       html .page-slider .panel#data-slide-2:before, body .page-slider .panel#data-slide-2:before {
         background-image: linear-gradient(135deg, rgba(54, 146, 199, 0), rgba(54, 146, 199, 0.3)), url("../images/light-1.png");
         transform: scaleX(-1); }

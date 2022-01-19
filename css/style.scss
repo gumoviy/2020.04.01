@@ -206,6 +206,7 @@ html, body {
                 }
                 .table-header {
                     b {font-size: 26px; font-family: $medium; font-weight: 500; line-height: 24px; letter-spacing: .05em;}
+                    svg {min-width: 21px; max-width: 24px}
                 }
             }
             &#data-slide-2 {
