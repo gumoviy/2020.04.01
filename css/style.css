@@ -1155,7 +1155,8 @@ html, body {
             -webkit-animation: 15s spinchart360 infinite linear;
             animation: 15s spinchart360 infinite linear; }
           html .page-slider .panel .market .chart-animetd-container a, body .page-slider .panel .market .chart-animetd-container a {
-            display: inline-block;
+            padding-top: 25px;
+            box-sizing: border-box;
             line-height: 18px;
             width: 200px;
             height: 200px;

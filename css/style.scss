@@ -492,7 +492,7 @@ html, body {
                         #layer-inner {transform-origin: center; -webkit-animation: 15s spinchart360 infinite linear; animation: 15s spinchart360 infinite linear;}
                     }
                     a {
-                        display: inline-block; line-height: 18px; width: 200px; height: 200px; position: absolute; z-index: 1; left: 50%; top: 50%; transform: translate(-50%,-50%); border-radius: 50%; background-color: $green; font-family: $semibold; font-weight: 600; font-size: 18px; letter-spacing: .08em; text-align: center; text-transform: uppercase; color: #121212;display: flex; align-items: center; justify-content: center; flex-direction: column;
+                            padding-top: 25px; box-sizing: border-box; line-height: 18px; width: 200px; height: 200px; position: absolute; z-index: 1; left: 50%; top: 50%; transform: translate(-50%,-50%); border-radius: 50%; background-color: $green; font-family: $semibold; font-weight: 600; font-size: 18px; letter-spacing: .08em; text-align: center; text-transform: uppercase; color: #121212;display: flex; align-items: center; justify-content: center; flex-direction: column;
                         svg {margin-top: 5px;}
                         &:hover {text-decoration: none;}
                     }
