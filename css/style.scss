@@ -197,6 +197,7 @@ html, body {
                         font-family: $semibold; font-weight: 600; line-height: 34px;
                         svg {margin-top: -6px; margin-bottom: -5px;}
                         &:hover {
+                            color: #121212;
                             svg {
                                 path, rect {fill: rgba(255,255,255,1)!important;}
                             }
@@ -485,6 +486,17 @@ html, body {
                     }
                 }
                 
+                .chart-animetd-container {
+                    margin-top: -30px; position: relative; z-index: 1; width: 290px; height: 290px; margin-left: auto; margin-right: auto; padding-left: 2px;
+                    > svg {
+                        #layer-inner {transform-origin: center; -webkit-animation: 15s spinchart360 infinite linear; animation: 15s spinchart360 infinite linear;}
+                    }
+                    a {
+                        display: inline-block; line-height: 18px; width: 200px; height: 200px; position: absolute; z-index: 1; left: 50%; top: 50%; transform: translate(-50%,-50%); border-radius: 50%; background-color: $green; font-family: $semibold; font-weight: 600; font-size: 18px; letter-spacing: .08em; text-align: center; text-transform: uppercase; color: #121212;display: flex; align-items: center; justify-content: center; flex-direction: column;
+                        svg {margin-top: 5px;}
+                        &:hover {text-decoration: none;}
+                    }
+                }
                 
                 .chart-container {
                     margin-top: -30px;
@@ -498,6 +510,16 @@ html, body {
                         @keyframes spinchart {
                             to {
                                 transform: rotate(180deg);
+                            }
+                        }
+                        @-webkit-keyframes spinchart360 {
+                            to {
+                                transform: rotate(360deg);
+                            }
+                        }
+                        @keyframes spinchart360 {
+                            to {
+                                transform: rotate(360deg);
                             }
                         }
                         @-webkit-keyframes backgroundchart {
@@ -651,7 +673,7 @@ html, body {
                         .arrows {display: none;}
                     }
                 }
-                
+                .uk-container {padding-left: 140px; padding-right: 140px;}
             }
             .partners {
                 .uk-slider-container {
@@ -738,6 +760,7 @@ html, body {
                         }
                     }
                 }
+                .uk-container {padding-left: 140px; padding-right: 140px;}
             }
             .links {
                 .uk-margin-large-top {
@@ -785,7 +808,7 @@ html, body {
                 .uk-button-group {
                     .uk-button {
                         font-size: 20px; line-height: 26px; padding-top: 21px; padding-bottom: 21px;
-                        svg {width: 24px; height: 24px; margin-right: 18px;}
+                        svg {max-height: 24px; margin-right: 18px;}
                     }
                 }
             }
@@ -890,12 +913,12 @@ html, body {
                 }
             }
             a {
-                color: rgba(255,255,255,1); font-size: 15px; line-height: 20px; text-transform: uppercase; letter-spacing: 0.05em; font-family: $semibold; transition: color 300ms ease-in-out;
+                color: rgba(255,255,255,1); font-size: 20px; line-height: 20px; text-transform: uppercase; letter-spacing: 0.05em; font-family: $semibold; transition: color 300ms ease-in-out;
                 &:hover, &.active {text-decoration: none; color: rgba(255,255,255,.6);}
             }
             .select2-container--default {
                 .select2-selection--single {
-                    .select2-selection__rendered {font-size: 15px; letter-spacing: 0.05em; font-family: $semibold;}
+                    .select2-selection__rendered {font-size: 20px; letter-spacing: 0.05em; font-family: $semibold;}
                 }
             }
             .uk-container {
@@ -1000,7 +1023,7 @@ html, body {
         &.uk-subnav-pill {
             li {
                 padding: 0; background: rgba(255, 255, 255, 0.05); border-radius: 0;
-                a {font-size: 18px; line-height: 16px; padding: 16px 16px; color: rgba(255,255,255,.4); font-family: $bold; text-transform: uppercase; transition: all 300ms ease;}
+                a {font-size: 18px; line-height: 16px; padding: 16px 16px; color: rgba(255,255,255,.4); font-family: $medium; text-transform: uppercase; transition: all 300ms ease;}
                 &:first-of-type {border-radius: 7px 0 0 7px;}
                 &:last-of-type {border-radius: 0 7px 7px 0;}
                 &.uk-active, &:hover {

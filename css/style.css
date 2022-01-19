@@ -139,7 +139,7 @@ html .uk-button, body .uk-button {
   line-height: 26px;
   background-color: white;
   color: #181818;
-  font-family: "Rogan Bold", sans-serif;
+  font-family: "Rogan Regular", sans-serif;
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-sizing: border-box;
   box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.2);
@@ -213,9 +213,10 @@ html .uk-button, body .uk-button {
     html .uk-button.uk-button-warning svg path, body .uk-button.uk-button-warning svg path {
       transition: all 300ms ease-in-out; }
     html .uk-button.uk-button-warning:hover, body .uk-button.uk-button-warning:hover {
-      background: rgba(245, 158, 90, 0.2);
-      box-shadow: inset 0px 0px 30px rgba(255, 255, 255, 0);
-      color: #fff; }
+      background: rgba(245, 158, 90, 0.05);
+      /*box-shadow: inset 0px 0px 30px rgba(255,255,255, 0);*/
+      color: #fff;
+      border: 1px solid rgba(245, 158, 90, 0.8); }
   html .uk-button.uk-button-blue, body .uk-button.uk-button-blue {
     background: rgba(48, 178, 230, 0.05);
     border: 1px solid #30b2e6;
@@ -225,9 +226,10 @@ html .uk-button, body .uk-button {
     html .uk-button.uk-button-blue svg path, body .uk-button.uk-button-blue svg path {
       transition: all 300ms ease-in-out; }
     html .uk-button.uk-button-blue:hover, body .uk-button.uk-button-blue:hover {
-      background: rgba(48, 178, 230, 0.2);
-      box-shadow: inset 0px 0px 30px rgba(255, 255, 255, 0);
-      color: #fff; }
+      background: rgba(48, 178, 230, 0.05);
+      /*box-shadow: inset 0px 0px 30px rgba(255,255,255, 0);*/
+      color: #fff;
+      border: 1px solid rgba(48, 178, 230, 0.8); }
   html .uk-button.uk-padding-small-left, body .uk-button.uk-padding-small-left {
     padding-left: 15px; }
   html .uk-button.uk-padding-small-right, body .uk-button.uk-padding-small-right {
@@ -569,8 +571,10 @@ html, body {
         html .page-slider .panel#data-slide-1 .uk-button.uk-button-primary svg, body .page-slider .panel#data-slide-1 .uk-button.uk-button-primary svg {
           margin-top: -6px;
           margin-bottom: -5px; }
-        html .page-slider .panel#data-slide-1 .uk-button.uk-button-primary:hover svg path, html .page-slider .panel#data-slide-1 .uk-button.uk-button-primary:hover svg rect, body .page-slider .panel#data-slide-1 .uk-button.uk-button-primary:hover svg path, body .page-slider .panel#data-slide-1 .uk-button.uk-button-primary:hover svg rect {
-          fill: white !important; }
+        html .page-slider .panel#data-slide-1 .uk-button.uk-button-primary:hover, body .page-slider .panel#data-slide-1 .uk-button.uk-button-primary:hover {
+          color: #121212; }
+          html .page-slider .panel#data-slide-1 .uk-button.uk-button-primary:hover svg path, html .page-slider .panel#data-slide-1 .uk-button.uk-button-primary:hover svg rect, body .page-slider .panel#data-slide-1 .uk-button.uk-button-primary:hover svg path, body .page-slider .panel#data-slide-1 .uk-button.uk-button-primary:hover svg rect {
+            fill: white !important; }
       html .page-slider .panel#data-slide-1 .table-header b, body .page-slider .panel#data-slide-1 .table-header b {
         font-size: 26px;
         font-family: "Rogan Medium", sans-serif;
@@ -1137,6 +1141,46 @@ html, body {
               height: 16px; }
             html .page-slider .panel .market .market-info .nowrapline svg, body .page-slider .panel .market .market-info .nowrapline svg {
               min-width: 10px; }
+        html .page-slider .panel .market .chart-animetd-container, body .page-slider .panel .market .chart-animetd-container {
+          margin-top: -30px;
+          position: relative;
+          z-index: 1;
+          width: 290px;
+          height: 290px;
+          margin-left: auto;
+          margin-right: auto;
+          padding-left: 2px; }
+          html .page-slider .panel .market .chart-animetd-container > svg #layer-inner, body .page-slider .panel .market .chart-animetd-container > svg #layer-inner {
+            transform-origin: center;
+            -webkit-animation: 15s spinchart360 infinite linear;
+            animation: 15s spinchart360 infinite linear; }
+          html .page-slider .panel .market .chart-animetd-container a, body .page-slider .panel .market .chart-animetd-container a {
+            display: inline-block;
+            line-height: 18px;
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            z-index: 1;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            background-color: #0cb754;
+            font-family: "Rogan Semibold", sans-serif;
+            font-weight: 600;
+            font-size: 18px;
+            letter-spacing: .08em;
+            text-align: center;
+            text-transform: uppercase;
+            color: #121212;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column; }
+            html .page-slider .panel .market .chart-animetd-container a svg, body .page-slider .panel .market .chart-animetd-container a svg {
+              margin-top: 5px; }
+            html .page-slider .panel .market .chart-animetd-container a:hover, body .page-slider .panel .market .chart-animetd-container a:hover {
+              text-decoration: none; }
         html .page-slider .panel .market .chart-container, body .page-slider .panel .market .chart-container {
           margin-top: -30px; }
           html .page-slider .panel .market .chart-container .chart, body .page-slider .panel .market .chart-container .chart {
@@ -1159,6 +1203,12 @@ html, body {
 @keyframes spinchart {
   to {
     transform: rotate(180deg); } }
+@-webkit-keyframes spinchart360 {
+  to {
+    transform: rotate(360deg); } }
+@keyframes spinchart360 {
+  to {
+    transform: rotate(360deg); } }
 @-webkit-keyframes backgroundchart {
   50% {
     background-color: currentColor; } }
@@ -1451,6 +1501,9 @@ html, body {
         @media screen and (max-width: 599px) {
           html .page-slider .panel .roadmap .timeline .arrows, body .page-slider .panel .roadmap .timeline .arrows {
             display: none; } }
+      html .page-slider .panel .roadmap .uk-container, body .page-slider .panel .roadmap .uk-container {
+        padding-left: 140px;
+        padding-right: 140px; }
       html .page-slider .panel .partners .uk-slider-container, body .page-slider .panel .partners .uk-slider-container {
         padding-left: 70px;
         padding-right: 70px; }
@@ -1617,6 +1670,9 @@ html, body {
           box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2); }
           html .page-slider .panel .partners .uk-slidenav:hover svg path, body .page-slider .panel .partners .uk-slidenav:hover svg path {
             fill: #181818 !important; }
+      html .page-slider .panel .partners .uk-container, body .page-slider .panel .partners .uk-container {
+        padding-left: 140px;
+        padding-right: 140px; }
       @media (min-width: 1200px) {
         html .page-slider .panel .links .uk-margin-large-top, body .page-slider .panel .links .uk-margin-large-top {
           margin-top: 60px !important; } }
@@ -1705,8 +1761,7 @@ html, body {
         padding-top: 21px;
         padding-bottom: 21px; }
         html .page-slider .panel .links .uk-button-group .uk-button svg, body .page-slider .panel .links .uk-button-group .uk-button svg {
-          width: 24px;
-          height: 24px;
+          max-height: 24px;
           margin-right: 18px; }
     html .page-slider .nav-dots, body .page-slider .nav-dots {
       position: fixed;
@@ -1912,7 +1967,7 @@ html, body {
             padding-left: 0; }
       html .page-slider .top-nav a, body .page-slider .top-nav a {
         color: white;
-        font-size: 15px;
+        font-size: 20px;
         line-height: 20px;
         text-transform: uppercase;
         letter-spacing: 0.05em;
@@ -1922,7 +1977,7 @@ html, body {
           text-decoration: none;
           color: rgba(255, 255, 255, 0.6); }
       html .page-slider .top-nav .select2-container--default .select2-selection--single .select2-selection__rendered, body .page-slider .top-nav .select2-container--default .select2-selection--single .select2-selection__rendered {
-        font-size: 15px;
+        font-size: 20px;
         letter-spacing: 0.05em;
         font-family: "Rogan Semibold", sans-serif; }
       html .page-slider .top-nav .uk-container, body .page-slider .top-nav .uk-container {
@@ -2055,7 +2110,7 @@ html, body {
         line-height: 16px;
         padding: 16px 16px;
         color: rgba(255, 255, 255, 0.4);
-        font-family: "Rogan Bold", sans-serif;
+        font-family: "Rogan Medium", sans-serif;
         text-transform: uppercase;
         transition: all 300ms ease; }
       html .uk-subnav.uk-subnav-pill li:first-of-type, body .uk-subnav.uk-subnav-pill li:first-of-type {
