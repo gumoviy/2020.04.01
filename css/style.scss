@@ -117,7 +117,8 @@ html, body {
             &.uk-padding-large-left {padding-left: 70px;}
         }
         .logo {
-            display: flex; text-decoration: none; min-width: 165px;
+            display: flex; text-decoration: none; min-width: 160px; position: relative;
+            &:before {content: 'beta'; display: inline-block; position: absolute; top: -10px; right: 0; transform: translateX(34px); font-size: 14px; line-height: 17px; font-family: $bold; letter-spacing: 0.1em; background: rgba(230,89,87,.85); padding: 5.5px 10px; border-radius: 15px; text-transform: uppercase; z-index: 1; color: rgba(255,255,255,1);}
             img {
                 &:first-child {
                     -webkit-animation: rotating 10s infinite linear; animation: rotating 10s infinite linear; animation-play-state: paused; width: 46px; height: 46px;
@@ -129,8 +130,9 @@ html, body {
                     &:first-child {
                         -webkit-animation: rotating 10s infinite linear; animation: rotating 10s infinite linear; animation-play-state: running;
                     }
-                    &:last-child {opacity: .4;}
+                    &:last-of-type {opacity: .4;}
                 }
+                &:before {color: rgba(255,255,255,1);}
             }
         }
         .panel {
@@ -493,9 +495,26 @@ html, body {
                         #layer-inner {transform-origin: center; -webkit-animation: 15s spinchart360 infinite linear; animation: 15s spinchart360 infinite linear;}
                     }
                     a {
-                            padding-top: 25px; box-sizing: border-box; line-height: 18px; width: 200px; height: 200px; position: absolute; z-index: 1; left: 50%; top: 50%; transform: translate(-50%,-50%); border-radius: 50%; background-color: $green; font-family: $semibold; font-weight: 600; font-size: 18px; letter-spacing: .08em; text-align: center; text-transform: uppercase; color: #121212;display: flex; align-items: center; justify-content: center; flex-direction: column;
-                        svg {margin-top: 5px;}
-                        &:hover {text-decoration: none;}
+                        padding-top: 25px; box-sizing: border-box; line-height: 18px; width: 200px; height: 200px; position: absolute; z-index: 1; left: 50%; top: 50%; transform: translate(-50%,-50%); border-radius: 50%; background-color: $green; font-family: $semibold; font-weight: 600; font-size: 18px; letter-spacing: .08em; text-align: center; text-transform: uppercase; color: #121212; display: flex; align-items: center; justify-content: center; flex-direction: column; overflow: hidden;
+                        &:before {content: ""; position: absolute; top: 0px; left: 0px; width: 110%; height: 102%; background-color: rgba($green,1); filter: brightness(1.07); opacity: 0; transform: translate3d(-100%, 0px, 0px); transition: transform 0.4s ease 0s, opacity 0.4s ease 0s; clip-path: polygon(0px 0px, 100% 0%, calc(100% - 20px) 100%, 0% 100%); z-index: 0;}
+                        > span {position: relative; z-index: 1; display: flex; align-items: center; justify-content: center; flex-direction: column;}
+                        svg {
+                            margin-top: 5px;
+                            g {
+                                path {fill: rgba(#121212,1)!important; transition: all 300ms ease-in-out;}
+                            }
+                            circle {fill: #121212!important; transition: all 300ms ease-in-out;}
+                        }
+                        &:hover {
+                            text-decoration: none;
+                            &:before {opacity: 1; transform: translate3d(0px, 0px, 0px);}
+                            svg {
+                                g {
+                                    path {fill: rgba(255,255,255,1)!important; margin-top: 5px;}
+                                }
+                                circle {fill: #fff!important; fill-opacity: .8!important;}
+                            }
+                        }
                     }
                 }
                 
@@ -614,7 +633,7 @@ html, body {
                                 }
                                 div {
                                     position: absolute; left: calc(100% + 7px); width: 289px; box-sizing: border-box; padding: 19px 14px; white-space: normal; border-left: 1px solid #FFFFFF; font-size: 16px; line-height: 20.8px; color: rgba(255,255,255,.6); height: auto!important; /*max-height: 175px;*/
-                                    .date {font-size: 15px;}
+                                    .date {font-size: 15px; letter-spacing: .08em;}
                                 }
                                 &:nth-child(even) {
                                     div {
@@ -948,6 +967,8 @@ html, body {
                     }
                     .select2-container--default .select2-selection--single, html .select2-container--default .select2-selection--single {height: 42px;}
                     .logo {
+                        min-width: 145px;
+                        &:before {padding: 4px 8px; font-size: 12px; line-height: 15px; transform: translateX(28px); }
                         img {
                             &:first-child {height: 40px;}
                             &:last-child {height: 40px; width: 91px;}
