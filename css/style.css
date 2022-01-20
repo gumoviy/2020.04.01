@@ -1447,15 +1447,21 @@ html, body {
             top: 50%;
             transform: scale(1) translate(-50%, -50%);
             transition: all 300ms ease-in-out; }
-          html .page-slider .panel .video .video-play img:last-child, body .page-slider .panel .video .video-play img:last-child {
-            position: absolute;
-            transform: scale(1);
-            transition: all 300ms ease-in-out;
-            display: inline-block; }
+          html .page-slider .panel .video .video-play img, body .page-slider .panel .video .video-play img {
+            transition: all 300ms ease-in-out; }
+            html .page-slider .panel .video .video-play img:first-child, body .page-slider .panel .video .video-play img:first-child {
+              transform: scale(1.05); }
+            html .page-slider .panel .video .video-play img:last-child, body .page-slider .panel .video .video-play img:last-child {
+              position: absolute;
+              transform: scale(1);
+              transition: all 300ms ease-in-out;
+              display: inline-block; }
           html .page-slider .panel .video .video-play:hover, body .page-slider .panel .video .video-play:hover {
             border: 2px solid rgba(48, 54, 75, 0.9); }
             html .page-slider .panel .video .video-play:hover svg, body .page-slider .panel .video .video-play:hover svg {
               transform: translate(-50%, -50%) scale(1.1); }
+            html .page-slider .panel .video .video-play:hover img:first-child, body .page-slider .panel .video .video-play:hover img:first-child {
+              transform: scale(1); }
             html .page-slider .panel .video .video-play:hover img:last-child, body .page-slider .panel .video .video-play:hover img:last-child {
               transform: scale(1.1); }
       html .page-slider .panel .roadmap .timeline, body .page-slider .panel .roadmap .timeline {
