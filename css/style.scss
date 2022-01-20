@@ -405,16 +405,17 @@ html, body {
                         .uk-slider-items {
                             margin-left: -24px;
                             li {
-                                /*width: 512px; max-width: 512px;*/ padding-left: 24px;
+                                padding-left: 24px;
                                 &:first-child {margin-left: 0px;}
                                 &:last-child {padding-right: 0px;}
                                 > div {
-                                    overflow: hidden; height: 100%;
+                                    overflow: hidden; border-radius: 20px; border: 1px solid rgba(255,255,255,.1); color: #fff;
                                     .uk-card {
-                                        overflow: hidden; height: 0; width: 100%; padding-bottom: 100%; background-size: cover; background-repeat: no-repeat; background-position: center; position: relative;
+                                        overflow: hidden; height: 0; width: 100%; padding-bottom: 100%; background-size: 100%; background-repeat: no-repeat; background-position: center; position: relative; display: block; transition: all 300ms ease-in-out; border-radius: 0; border: 0px solid rgba(255,255,255,.06);
                                         h6 {
-                                            font-size: 27px; line-height: 32px; font-family: $medium; text-align: center; bottom: 0; left: 0; right: 0; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,1); min-height: 64px; position: absolute; padding: 0 15px 28px 15px; background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .7) 100%); margin: 0;
+                                            font-size: 27px; line-height: 32px; font-family: $medium; text-align: center; bottom: 0; left: 0; right: 0; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,1); min-height: 64px; position: absolute; padding: 0 30px 28px 30px; background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .7) 100%); margin: 0;
                                         }
+                                        &:hover {background-size: 110%;}
                                     }
                                 }
                             }
