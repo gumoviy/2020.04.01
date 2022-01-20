@@ -651,6 +651,7 @@ html, body {
             .roadmap {
                 .timeline {
                     position: relative;
+                    .uk-container {padding-left: 140px; padding-right: 140px;}
                     &.with-ends {
                         .roadmap-content {
                             -webkit-mask-image: linear-gradient(270deg,rgba(196,196,196,1) 0,#c4c4c4 7.95%,#c4c4c4 92.42%,rgba(196,196,196,0) 100%); mask-image: linear-gradient(270deg,rgba(196,196,196,1) 0,#c4c4c4 7.95%,#c4c4c4 92.42%,rgba(196,196,196,0) 100%);
