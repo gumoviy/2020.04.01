@@ -1279,6 +1279,36 @@
                             </div>
                             -->
                         </div>
+                        <div class="uk-container uk-container-expand uk-padding-large-left uk-padding-large-right video">
+                            <div class="uk-text-center">
+                                <!--<video src="video/galaxyonline.mp4" loop muted-"false" playsinline uk-video="autoplay: false"></video>-->
+                                <!--
+                                <video controls="controls" poster="video/duel.jpg" loop muted-"false" playsinline uk-video="autoplay: false">
+                                    <source src="video/galaxyonline.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                                    Тег video не поддерживается вашим браузером.
+                                </video>
+                                -->
+                                <a href="#modal-media-video" uk-toggle class="video-play">
+                                    <img src="video/galaxyonline-cover.jpg" />
+                                    <img src="images/play-button-large.png" />
+                                    <!--
+                                    <svg width="230" height="230" viewBox="0 0 277 275" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter0_bd_2331_7197)"><rect x="23" y="19" width="231" height="229" rx="114.5" fill="black" fill-opacity="0.3" shape-rendering="crispEdges"/><g clip-path="url(#clip0_2331_7197)"><path fill-rule="evenodd" clip-rule="evenodd" d="M68.6763 72.3173C80.2903 60.7409 94.7569 52.4157 110.622 48.1785C126.487 43.9412 143.192 43.9412 159.057 48.1784C174.922 52.4156 189.389 60.7408 201.003 72.3172C212.617 83.8935 220.969 98.3132 225.22 114.127L213.832 117.168C210.117 103.347 202.817 90.7445 192.666 80.6267C182.516 70.509 169.872 63.2328 156.006 59.5294C142.139 55.8261 127.54 55.8261 113.673 59.5295C99.8074 63.2329 87.1635 70.5091 77.0128 80.6269L68.6763 72.3173ZM218.847 138.266C218.847 152.964 214.965 167.404 207.592 180.133C200.219 192.863 189.614 203.433 176.843 210.782C164.072 218.132 149.586 222.001 134.84 222.001C120.093 222.001 105.607 218.132 92.8359 210.782L98.4644 201.065C109.524 207.43 122.069 210.78 134.84 210.78C147.61 210.78 160.155 207.43 171.215 201.065C182.274 194.701 191.458 185.547 197.843 174.523C204.228 163.499 207.59 150.995 207.59 138.266H218.847ZM74.6176 101.96C66.5994 115.174 63.1795 130.656 64.8885 146.004L75.8709 144.79C74.4302 131.851 77.3131 118.799 84.0725 107.66C90.8319 96.5207 101.09 87.9157 113.256 83.1798L109.236 72.9205C94.8045 78.5385 82.6359 88.746 74.6176 101.96Z" fill="white" fill-opacity="0.3"/><path d="M173.193 136.886C173.861 137.27 173.861 138.235 173.193 138.619L118.598 170.037C117.932 170.421 117.099 169.939 117.099 169.17L117.099 106.335C117.099 105.565 117.932 105.084 118.598 105.468L173.193 136.886Z" fill="white"/></g><rect x="24" y="20" width="229" height="227" rx="113.5" stroke="url(#paint0_linear_2331_7197)" stroke-opacity="0.6" stroke-width="2" shape-rendering="crispEdges"/></g><defs><filter id="filter0_bd_2331_7197" x="-17" y="-21" width="311" height="309" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feGaussianBlur in="BackgroundImage" stdDeviation="20"/><feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_2331_7197"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feMorphology radius="1" operator="erode" in="SourceAlpha" result="effect2_dropShadow_2331_7197"/><feOffset dy="4"/><feGaussianBlur stdDeviation="12"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/><feBlend mode="normal" in2="effect1_backgroundBlur_2331_7197" result="effect2_dropShadow_2331_7197"/><feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_2331_7197" result="shape"/></filter><linearGradient id="paint0_linear_2331_7197" x1="23" y1="19" x2="261.897" y2="27.5586" gradientUnits="userSpaceOnUse"><stop stop-color="white" stop-opacity="0.3"/><stop offset="1" stop-color="white" stop-opacity="0.1"/></linearGradient><clipPath id="clip0_2331_7197"><rect width="203" height="177" fill="white" transform="translate(41.5 45)"/></clipPath></defs></svg>-->
+                                </a>
+                                <!--
+                                <video controls="false" playsinline uk-video="autoplay: false">
+                                    <source src="video/galaxyonline.mp4" type="video/mp4">
+                                    !--<source src="https://quirksmode.org/html5/videos/big_buck_bunny.ogv" type="video/ogg">--
+                                </video>
+                                -->
+                                <div id="modal-media-video" class="uk-flex-top" uk-modal>
+                                    <div class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical">
+                                        <button class="uk-modal-close-outside" type="button" uk-close></button>
+                                        <video src="video/galaxyonline.mp4" controls playsinline uk-video></video>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
                     </div>
                 </section>
                 <!--
@@ -2145,6 +2175,124 @@
                                 -->
                             </div>
                         </div>
+                        
+                        <div class="uk-container uk-container-expand uk-padding-remove-left uk-padding-remove-right fan-club">
+                            <div class="uk-grid uk-grid-collapse" uk-grid>
+                                <div class="uk-width-1-1">
+                                    <div class="uk-container uk-container-expand">
+                                        <h1 class="uk-margin-remove uk-text-uppercase uk-text-center">Материалы из фан-клуба</h1>
+                                    </div>
+                                </div>
+                                
+                                <div class="uk-width-1-1 uk-overflow-hidden uk-margin-medium-top">
+                                    
+                                    <div uk-slider="draggable: false; center: true; sets: false">
+
+                                        <div class="uk-position-relative">
+
+                                            <div class="uk-slider-container">
+                                                <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-5@m uk-grid" uk-height-match=".uk-card-body">
+                                                    <li>
+                                                        <div>
+                                                            <div class="uk-card uk-card-default box-shadow-none" style="background-image: url('https://galaxyonline.io/images/news/unknown.jpg');">
+                                                                <h6>История самого молодого офицера</h6>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div>
+                                                            <div class="uk-card uk-card-default box-shadow-none" style="background-image: url('https://galaxyonline.io/images/news/korvin.jpg');">
+                                                                <h6>История самого молодого офицера</h6>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div>
+                                                            <div class="uk-card uk-card-default box-shadow-none" style="background-image: url('https://galaxyonline.io/images/news/officer.jpg');">
+                                                                <h6>История самого молодого офицера</h6>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div>
+                                                            <div class="uk-card uk-card-default box-shadow-none" style="background-image: url('https://galaxyonline.io/images/news/unknown.jpg');">
+                                                                <h6>История самого молодого офицера</h6>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div>
+                                                            <div class="uk-card uk-card-default box-shadow-none" style="background-image: url('https://galaxyonline.io/images/news/korvin.jpg');">
+                                                                <h6>История самого молодого офицера</h6>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div>
+                                                            <div class="uk-card uk-card-default box-shadow-none" style="background-image: url('https://galaxyonline.io/images/news/officer.jpg');">
+                                                                <h6>История самого молодого офицера</h6>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div>
+                                                            <div class="uk-card uk-card-default box-shadow-none" style="background-image: url('https://galaxyonline.io/images/news/unknown.jpg');">
+                                                                <h6>История самого молодого офицера</h6>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div>
+                                                            <div class="uk-card uk-card-default box-shadow-none" style="background-image: url('https://galaxyonline.io/images/news/korvin.jpg');">
+                                                                <h6>История самого молодого офицера</h6>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div>
+                                                            <div class="uk-card uk-card-default box-shadow-none" style="background-image: url('https://galaxyonline.io/images/news/officer.jpg');">
+                                                                <h6>История самого молодого офицера</h6>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div>
+                                                            <div class="uk-card uk-card-default box-shadow-none" style="background-image: url('https://galaxyonline.io/images/news/unknown.jpg');">
+                                                                <h6>История самого молодого офицера</h6>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div>
+                                                            <div class="uk-card uk-card-default box-shadow-none" style="background-image: url('https://galaxyonline.io/images/news/korvin.jpg');">
+                                                                <h6>История самого молодого офицера</h6>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div>
+                                                            <div class="uk-card uk-card-default box-shadow-none" style="background-image: url('https://galaxyonline.io/images/news/officer.jpg');">
+                                                                <h6>История самого молодого офицера</h6>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <a class="uk-position-center-left uk-position-small uk-slidenav" href="#" uk-slider-item="previous">
+                                                <svg width="13.6" height="23.2" viewBox="0 0 17 29" fill="none" version="1.1" id="svg4" inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"><path d="M 0.72172781,15.5926 13.182118,28.0528 c 0.28819,0.2884 0.67291,0.4473 1.08312,0.4473 0.41021,0 0.79492,-0.1589 1.08312,-0.4473 l 0.91762,-0.9174 c 0.597104,-0.5978 0.597104,-1.5693 0,-2.1662 L 5.8026278,14.5059 16.277588,4.03093 c 0.288194,-0.28842 0.447316,-0.67291 0.447316,-1.08289 0,-0.41044 -0.159122,-0.79493 -0.447316,-1.08358 l -0.91762,-0.917164 c -0.28843,-0.288421 -0.67291,-0.447315 -1.08312,-0.447315 -0.41021,0 -0.79493,0.158894 -1.08312,0.447315 L 0.72172781,13.4189 c -0.2889,0.2893 -0.4476,0.6756 -0.4467,1.0863 -9e-4,0.4122 0.1578,0.7983 0.4467,1.0874 z" fill="white" id="path2" style="fill:#ffffff;fill-opacity:1" /></svg> 
+                                            </a>
+                                            <a class="uk-position-center-right uk-position-small uk-slidenav" href="#" uk-slider-item="next">
+                                                <svg width="13.6" height="23.2" viewBox="0 0 17 29" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.2782 15.5926L3.81781 28.0528C3.52962 28.3412 3.1449 28.5001 2.73469 28.5001C2.32448 28.5001 1.93977 28.3412 1.65157 28.0528L0.73395 27.1354C0.136846 26.5376 0.136846 25.5661 0.73395 24.9692L11.1973 14.5059L0.72234 4.03093C0.434146 3.74251 0.275024 3.35802 0.275024 2.94804C0.275024 2.5376 0.434146 2.15311 0.72234 1.86446L1.63996 0.947296C1.92839 0.658875 2.31287 0.499981 2.72308 0.499981C3.13329 0.499981 3.51801 0.658875 3.8062 0.947296L16.2782 13.4189C16.5671 13.7082 16.7258 14.0945 16.7249 14.5052C16.7258 14.9174 16.5671 15.3035 16.2782 15.5926Z" fill="white"/></svg>
+                                            </a>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
                 </section>
                 <!--
