@@ -1288,17 +1288,18 @@ html, body {
             -webkit-animation: 15s spinchart360 infinite linear;
             animation: 15s spinchart360 infinite linear; }
           html .page-slider .panel .market .chart-animetd-container a, body .page-slider .panel .market .chart-animetd-container a {
-            padding-top: 25px;
+            padding-top: 0;
             box-sizing: border-box;
             line-height: 18px;
             width: 200px;
-            height: 200px;
+            height: 55px;
+            line-height: 55px;
             position: absolute;
             z-index: 1;
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
-            border-radius: 50%;
+            border-radius: 10px;
             background-color: #0cb754;
             font-family: "Rogan Semibold", sans-serif;
             font-weight: 600;
@@ -1332,9 +1333,9 @@ html, body {
               display: flex;
               align-items: center;
               justify-content: center;
-              flex-direction: column; }
+              /* flex-direction: column;*/ }
             html .page-slider .panel .market .chart-animetd-container a svg, body .page-slider .panel .market .chart-animetd-container a svg {
-              margin-top: 5px; }
+              margin-left: 5px; }
               html .page-slider .panel .market .chart-animetd-container a svg g path, body .page-slider .panel .market .chart-animetd-container a svg g path {
                 fill: #121212 !important;
                 transition: all 300ms ease-in-out; }
