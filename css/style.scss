@@ -396,7 +396,6 @@ html, body {
                 }
             }
             .fan-club {
-                margin-top: 150px;
                 .uk-container, .uk-container .uk-container {padding-left: 140px; padding-right: 140px;}
                 .uk-slider {
                     padding-right: 0;
@@ -434,6 +433,10 @@ html, body {
                         }
                     }
                 }
+            }
+            .anyone {
+                margin-top: 150px;
+                p {font-size: 32px; line-height: 48px; font-family: $regular;}
             }
             .nft {
                 overflow: visible;
@@ -601,6 +604,9 @@ html, body {
                 .uk-overflow-auto {
                     height: calc(100vh - 286px); padding-right: 22px;
                 }
+                .switcher-container {
+                    .uk-overflow-auto {padding-right: 0;}
+                }
                 font-size: 16px; line-height: 24px;
                 .uk-text-normal {font-size: 18px; line-height: 24px;}
                 .union-list-item-descr {
@@ -665,7 +671,7 @@ html, body {
                             li {position: relative; display: inline-block; list-style-type: none; width: 222px; height: 8px; background: rgba(255, 255, 255, 0.1);
                                 &.active {
                                     &:before {
-                                        content: ''; display: block; position: absolute; left: 0; right: 0; top: 50%; transform: translateY(-50%); height: 2px; background: linear-gradient(to right, $orange, $orange 5px, transparent 5px, transparent); background-size: 10px 100%;
+                                        content: ''; display: block; position: absolute; left: 0; right: 0; top: 50%; transform: translateY(-50%); height: 2px; background: linear-gradient(to right, $green, $green 5px, transparent 5px, transparent); background-size: 10px 100%;
                                     }
                                 }
                                 &:after {

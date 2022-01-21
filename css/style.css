@@ -173,7 +173,8 @@ html .uk-button, body .uk-button {
     color: #121212;
     box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.2);
     position: relative;
-    overflow: hidden; }
+    overflow: hidden;
+    font-family: "Rogan Semibold", sans-serif; }
     html .uk-button.uk-button-primary:before, body .uk-button.uk-button-primary:before {
       content: "";
       position: absolute;
@@ -198,9 +199,12 @@ html .uk-button, body .uk-button {
         transition: all 300ms ease-in-out; }
     html .uk-button.uk-button-primary:hover, body .uk-button.uk-button-primary:hover {
       background: #30b2e6;
-      border: 1px solid #30b2e6; }
+      border: 1px solid #30b2e6;
+      color: #121212; }
       html .uk-button.uk-button-primary:hover svg, body .uk-button.uk-button-primary:hover svg {
         transform: translateX(5px); }
+        html .uk-button.uk-button-primary:hover svg path, body .uk-button.uk-button-primary:hover svg path {
+          fill: #fff; }
       html .uk-button.uk-button-primary:hover:before, body .uk-button.uk-button-primary:hover:before {
         opacity: 1;
         transform: translate3d(0px, 0px, 0px); }
@@ -229,8 +233,13 @@ html .uk-button, body .uk-button {
     html .uk-button.uk-button-warning > *, body .uk-button.uk-button-warning > * {
       z-index: 1;
       position: relative; }
-    html .uk-button.uk-button-warning svg path, body .uk-button.uk-button-warning svg path {
-      transition: all 300ms ease-in-out; }
+    html .uk-button.uk-button-warning svg, body .uk-button.uk-button-warning svg {
+      margin-left: 5px;
+      margin-top: -7px;
+      margin-bottom: -5px; }
+      html .uk-button.uk-button-warning svg path, body .uk-button.uk-button-warning svg path {
+        transition: all 300ms ease-in-out;
+        fill: #121212; }
     html .uk-button.uk-button-warning:hover, body .uk-button.uk-button-warning:hover {
       /*box-shadow: inset 0px 0px 30px rgba(255,255,255, 0);*/
       color: #121212;
@@ -239,6 +248,8 @@ html .uk-button, body .uk-button {
       html .uk-button.uk-button-warning:hover:before, body .uk-button.uk-button-warning:hover:before {
         opacity: 1;
         transform: translate3d(0px, 0px, 0px); }
+      html .uk-button.uk-button-warning:hover svg path, body .uk-button.uk-button-warning:hover svg path {
+        fill: #ffffff; }
   html .uk-button.uk-button-yellow, body .uk-button.uk-button-yellow {
     background: rgba(245, 158, 90, 0.05);
     border: 1px solid #f59e5a;
@@ -1046,81 +1057,85 @@ html, body {
             box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2); }
             html .page-slider .panel .news .uk-slider .uk-slidenav:hover svg path, body .page-slider .panel .news .uk-slider .uk-slidenav:hover svg path {
               fill: #181818 !important; }
-      html .page-slider .panel .fan-club, body .page-slider .panel .fan-club {
-        margin-top: 150px; }
-        html .page-slider .panel .fan-club .uk-container, html .page-slider .panel .fan-club .uk-container .uk-container, body .page-slider .panel .fan-club .uk-container, body .page-slider .panel .fan-club .uk-container .uk-container {
-          padding-left: 140px;
-          padding-right: 140px; }
-        html .page-slider .panel .fan-club .uk-slider, body .page-slider .panel .fan-club .uk-slider {
-          padding-right: 0; }
-          html .page-slider .panel .fan-club .uk-slider .uk-slider-container, body .page-slider .panel .fan-club .uk-slider .uk-slider-container {
-            padding-right: 70px;
-            -webkit-mask-position: 0 0;
-            -webkit-mask-image: linear-gradient(270deg, rgba(196, 196, 196, 0) 0, #c4c4c4 7.95%, #c4c4c4 92.42%, rgba(196, 196, 196, 0) 100%); }
-            html .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items, body .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items {
-              margin-left: -24px; }
-              html .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li, body .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li {
-                padding-left: 24px; }
-                html .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li:first-child, body .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li:first-child {
-                  margin-left: 0px; }
-                html .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li:last-child, body .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li:last-child {
-                  padding-right: 0px; }
-                html .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div, body .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div {
+      html .page-slider .panel .fan-club .uk-container, html .page-slider .panel .fan-club .uk-container .uk-container, body .page-slider .panel .fan-club .uk-container, body .page-slider .panel .fan-club .uk-container .uk-container {
+        padding-left: 140px;
+        padding-right: 140px; }
+      html .page-slider .panel .fan-club .uk-slider, body .page-slider .panel .fan-club .uk-slider {
+        padding-right: 0; }
+        html .page-slider .panel .fan-club .uk-slider .uk-slider-container, body .page-slider .panel .fan-club .uk-slider .uk-slider-container {
+          padding-right: 70px;
+          -webkit-mask-position: 0 0;
+          -webkit-mask-image: linear-gradient(270deg, rgba(196, 196, 196, 0) 0, #c4c4c4 7.95%, #c4c4c4 92.42%, rgba(196, 196, 196, 0) 100%); }
+          html .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items, body .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items {
+            margin-left: -24px; }
+            html .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li, body .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li {
+              padding-left: 24px; }
+              html .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li:first-child, body .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li:first-child {
+                margin-left: 0px; }
+              html .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li:last-child, body .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li:last-child {
+                padding-right: 0px; }
+              html .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div, body .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div {
+                overflow: hidden;
+                border-radius: 20px;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                color: #fff; }
+                html .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card, body .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card {
                   overflow: hidden;
-                  border-radius: 20px;
-                  border: 1px solid rgba(255, 255, 255, 0.1);
-                  color: #fff; }
-                  html .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card, body .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card {
-                    overflow: hidden;
-                    height: 0;
-                    width: 100%;
-                    padding-bottom: 100%;
-                    background-size: 100%;
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    position: relative;
-                    display: block;
-                    transition: all 300ms ease-in-out;
-                    border-radius: 0;
-                    border: 0px solid rgba(255, 255, 255, 0.06); }
-                    html .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card h6, body .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card h6 {
-                      font-size: 27px;
-                      line-height: 32px;
-                      font-family: "Rogan Medium", sans-serif;
-                      text-align: center;
-                      bottom: 0;
-                      left: 0;
-                      right: 0;
-                      display: flex;
-                      align-items: center;
-                      justify-content: center;
-                      color: white;
-                      min-height: 64px;
-                      position: absolute;
-                      padding: 0 30px 28px 30px;
-                      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
-                      margin: 0; }
-                    html .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card:hover, body .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card:hover {
-                      background-size: 110%; }
-          html .page-slider .panel .fan-club .uk-slider .uk-slidenav, body .page-slider .panel .fan-club .uk-slider .uk-slidenav {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-sizing: border-box;
-            backdrop-filter: blur(20px);
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            padding: 16.4px 25.8px;
-            transition: all 300ms ease-in-out;
-            margin-right: 32px;
-            margin-left: 32px; }
-            html .page-slider .panel .fan-club .uk-slider .uk-slidenav svg path, body .page-slider .panel .fan-club .uk-slider .uk-slidenav svg path {
-              transition: all 300ms ease; }
-            html .page-slider .panel .fan-club .uk-slider .uk-slidenav:hover, body .page-slider .panel .fan-club .uk-slider .uk-slidenav:hover {
-              background: white;
-              color: #181818;
-              box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2); }
-              html .page-slider .panel .fan-club .uk-slider .uk-slidenav:hover svg path, body .page-slider .panel .fan-club .uk-slider .uk-slidenav:hover svg path {
-                fill: #181818 !important; }
+                  height: 0;
+                  width: 100%;
+                  padding-bottom: 100%;
+                  background-size: 100%;
+                  background-repeat: no-repeat;
+                  background-position: center;
+                  position: relative;
+                  display: block;
+                  transition: all 300ms ease-in-out;
+                  border-radius: 0;
+                  border: 0px solid rgba(255, 255, 255, 0.06); }
+                  html .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card h6, body .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card h6 {
+                    font-size: 27px;
+                    line-height: 32px;
+                    font-family: "Rogan Medium", sans-serif;
+                    text-align: center;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: white;
+                    min-height: 64px;
+                    position: absolute;
+                    padding: 0 30px 28px 30px;
+                    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+                    margin: 0; }
+                  html .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card:hover, body .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card:hover {
+                    background-size: 110%; }
+        html .page-slider .panel .fan-club .uk-slider .uk-slidenav, body .page-slider .panel .fan-club .uk-slider .uk-slidenav {
+          background: rgba(255, 255, 255, 0.1);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          box-sizing: border-box;
+          backdrop-filter: blur(20px);
+          border-radius: 20px;
+          border: 1px solid rgba(255, 255, 255, 0.06);
+          padding: 16.4px 25.8px;
+          transition: all 300ms ease-in-out;
+          margin-right: 32px;
+          margin-left: 32px; }
+          html .page-slider .panel .fan-club .uk-slider .uk-slidenav svg path, body .page-slider .panel .fan-club .uk-slider .uk-slidenav svg path {
+            transition: all 300ms ease; }
+          html .page-slider .panel .fan-club .uk-slider .uk-slidenav:hover, body .page-slider .panel .fan-club .uk-slider .uk-slidenav:hover {
+            background: white;
+            color: #181818;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2); }
+            html .page-slider .panel .fan-club .uk-slider .uk-slidenav:hover svg path, body .page-slider .panel .fan-club .uk-slider .uk-slidenav:hover svg path {
+              fill: #181818 !important; }
+      html .page-slider .panel .anyone, body .page-slider .panel .anyone {
+        margin-top: 150px; }
+        html .page-slider .panel .anyone p, body .page-slider .panel .anyone p {
+          font-size: 32px;
+          line-height: 48px;
+          font-family: "Rogan Regular", sans-serif; }
       html .page-slider .panel .nft, body .page-slider .panel .nft {
         overflow: visible; }
         html .page-slider .panel .nft .shine, body .page-slider .panel .nft .shine {
@@ -1411,6 +1426,8 @@ html, body {
         html .page-slider .panel .union .uk-overflow-auto, body .page-slider .panel .union .uk-overflow-auto {
           height: calc(100vh - 286px);
           padding-right: 22px; }
+        html .page-slider .panel .union .switcher-container .uk-overflow-auto, body .page-slider .panel .union .switcher-container .uk-overflow-auto {
+          padding-right: 0; }
         html .page-slider .panel .union .uk-text-normal, body .page-slider .panel .union .uk-text-normal {
           font-size: 18px;
           line-height: 24px; }
@@ -1507,7 +1524,7 @@ html, body {
                 top: 50%;
                 transform: translateY(-50%);
                 height: 2px;
-                background: linear-gradient(to right, #feaf14, #feaf14 5px, transparent 5px, transparent);
+                background: linear-gradient(to right, #0cb754, #0cb754 5px, transparent 5px, transparent);
                 background-size: 10px 100%; }
               html .page-slider .panel .roadmap .timeline .roadmap-content ol li:after, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:after {
                 box-shadow: 0 0 0 14px rgba(247, 152, 18, 0.1); }

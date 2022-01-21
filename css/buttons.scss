@@ -33,7 +33,7 @@ html, body {
             }
         }
         &.uk-button-primary {
-            background: rgba($primary,1); border: 1px solid rgba($primary,1); color: rgba(#121212,1); box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.2); position: relative; overflow: hidden;
+            background: rgba($primary,1); border: 1px solid rgba($primary,1); color: rgba(#121212,1); box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.2); position: relative; overflow: hidden; font-family: $semibold;
             &:before {content: ""; position: absolute; top: 0px; left: 0px; width: 110%; height: 102%; background-color: rgb(48, 178, 230); filter: brightness(1.07); opacity: 0; transform: translate3d(-100%, 0px, 0px); transition: transform 0.4s ease 0s, opacity 0.4s ease 0s; clip-path: polygon(0px 0px, 100% 0%, calc(100% - 20px) 100%, 0% 100%); z-index: 0;}
             > * {z-index: 1; position: relative;}
             svg {
@@ -41,9 +41,10 @@ html, body {
                 path {transition: all 300ms ease-in-out;}
             }
             &:hover {
-                background: rgba($primary,1); border: 1px solid rgba($primary,1);
+                background: rgba($primary,1); border: 1px solid rgba($primary,1); color: #121212;
                 svg {
                     transform: translateX(5px);
+                    path {fill: #fff;}
                 }
                 &:before {opacity: 1; transform: translate3d(0px, 0px, 0px);}
             }
@@ -53,11 +54,15 @@ html, body {
             &:before {content: ""; position: absolute; top: 0px; left: 0px; width: 110%; height: 102%; background-color: rgba($warning,1); filter: brightness(1.07); opacity: 0; transform: translate3d(-100%, 0px, 0px); transition: transform 0.4s ease 0s, opacity 0.4s ease 0s; clip-path: polygon(0px 0px, 100% 0%, calc(100% - 20px) 100%, 0% 100%); z-index: 0;}
             > * {z-index: 1; position: relative;}
             svg {
-                path {transition: all 300ms ease-in-out;}
+                margin-left: 5px; margin-top: -7px; margin-bottom: -5px;
+                path {transition: all 300ms ease-in-out; fill: #121212}
             }
             &:hover {
                 /*box-shadow: inset 0px 0px 30px rgba(255,255,255, 0);*/ color: #121212; border: 1px solid rgba($warning,1); background: rgba($warning,1);
                 &:before {opacity: 1; transform: translate3d(0px, 0px, 0px);}
+                svg {
+                    path {fill: #ffffff;}
+                }
             }
         }
         &.uk-button-yellow {
