@@ -339,6 +339,22 @@ html, body {
                         .stars-2 {opacity: 1; transform: translateX(0) rotate(0);}
                     }
                 }
+            }
+            &#data-slide-9 {
+                &:before {
+                    background-image: linear-gradient(135deg, rgba($blue,0), rgba($blue,.3)), url('../images/light-1.png'); transform: scaleX(-1);
+                }
+                .animate-layer {
+                    position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: block; transition: left 300ms ease-in-out;
+                    .stars-1 {width: 1525px; height: 518px; background-image: url('../images/stars-3th-slide-top.png'); background-size: 60%; background-position: right top; background-repeat: no-repeat; position: absolute; right: 0; top: 0; opacity: 0; transition: transform 500ms ease-out, opacity 500ms ease-in-out; transform: translate(-150px,-150px) scaleX(-1);}
+                    .stars-2 {width: 1310px; height: 778px; background-image: url('../images/stars-3th-slide-left.png'); background-size: 60%; background-position: left bottom; background-repeat: no-repeat; position: absolute; left: 0; bottom: 0; transition: opacity 2200ms ease-out, transform 800ms ease-out; transition-delay: 350ms; opacity: 0; transform: translateX(-150px) rotate(30deg); transform-origin: bottom left;}
+                }
+                &.active {
+                    .animate-layer {
+                        .stars-1 {transform: translateY(0) scaleX(-1); opacity: 1;}
+                        .stars-2 {opacity: 1; transform: translateX(0) rotate(0);}
+                    }
+                }
                 .section {
                     .section-content {padding-bottom: 43px;}
                 }
