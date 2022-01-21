@@ -64,6 +64,48 @@ $bold: 'Gotham Pro Bold', sans-serif;
   src: local("Rogan Bold"), local("Rogan-Bold"), url("../fonts/Rogan-Bold.woff2") format("woff2"), url("../fonts/Rogan-Bold.woff") format("woff"), url("../fonts/Rogan-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal; }
+/*
+@font-face {
+    font-family: 'Shentox Light';
+    src: local('Shentox Light'), local('Shentox-Light'),
+        url('../fonts/Shentox-Light.woff2') format('woff2'),
+        url('../fonts/Shentox-Light.woff') format('woff'),
+        url('../fonts/Shentox-Light.ttf') format('truetype');
+    //font-weight: 300;
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Shentox Regular';
+    src: local('Shentox Regular'), local('Shentox-Regular'),
+        url('../fonts/Shentox-Regular.woff2') format('woff2'),
+        url('../fonts/Shentox-Regular.woff') format('woff'),
+        url('../fonts/Shentox-Regular.ttf') format('truetype');
+    //font-weight: 400;
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Shentox Medium';
+    src: local('Shentox Medium'), local('Shentox-Medium'),
+        url('../fonts/Shentox-Medium.woff2') format('woff2'),
+        url('../fonts/Shentox-Medium.woff') format('woff'),
+        url('../fonts/Shentox-Medium.ttf') format('truetype');
+    //font-weight: 500;
+    font-weight: 600!important;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Shentox Semibold';
+    src: local('Shentox SemiBold'), local('Shentox-SemiBold'),
+        url('../fonts/Shentox-SemiBold.woff2') format('woff2'),
+        url('../fonts/Shentox-SemiBold.woff') format('woff'),
+        url('../fonts/Shentox-SemiBold.ttf') format('truetype');
+    //font-weight: 600;
+    font-weight: 700;
+    font-style: normal;
+}
+*/
 /* настройки - конец */
 html .table .table-body .table-row, body .table .table-body .table-row {
   background: rgba(255, 255, 255, 0.05);
@@ -133,20 +175,27 @@ html .uk-button-group, body .uk-button-group {
     html .uk-button-group .uk-button svg, body .uk-button-group .uk-button svg {
       margin-right: 15px; }
 html .uk-button, body .uk-button {
-  padding: 10px 32px;
-  font-size: 18px;
+  /*padding: 10px 32px;*/
+  padding: .521vw 1.67vw;
+  /*font-size: 18px;*/
+  font-size: 1.066vw;
   text-transform: uppercase;
-  line-height: 26px;
+  /*line-height: 26px;*/
+  line-height: 144%;
   background-color: white;
   color: #181818;
-  font-family: "Rogan Regular", sans-serif;
+  font-family: "Shentox Light", "Rogan Regular", sans-serif;
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-sizing: border-box;
   box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(20px);
-  border-radius: 10px;
+  /*border-radius: 10px;*/
+  border-radius: 0.521vw;
   transition: background 300ms ease-in-out, box-shadow 300ms ease-in-out, border 300ms ease-in-out, color 300ms ease-in-out;
   letter-spacing: 0.08em; }
+  html .uk-button svg, body .uk-button svg {
+    width: 2.08vw;
+    height: 2.08vw; }
   html .uk-button.uk-button-default, body .uk-button.uk-button-default {
     background: rgba(255, 255, 255, 0.1);
     /*border: 1px solid rgba(255, 255, 255, 0.2);*/
@@ -174,7 +223,7 @@ html .uk-button, body .uk-button {
     box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.2);
     position: relative;
     overflow: hidden;
-    font-family: "Rogan Semibold", sans-serif; }
+    font-family: "Shentox Light", "Rogan Semibold", sans-serif; }
     html .uk-button.uk-button-primary:before, body .uk-button.uk-button-primary:before {
       content: "";
       position: absolute;
@@ -215,7 +264,7 @@ html .uk-button, body .uk-button {
     color: #121212;
     overflow: hidden;
     box-shadow: inset 0px 0px 30px rgba(245, 158, 90, 0);
-    font-family: "Rogan Semibold", sans-serif; }
+    font-family: "Shentox Light", "Rogan Semibold", sans-serif; }
     html .uk-button.uk-button-warning:before, body .uk-button.uk-button-warning:before {
       content: "";
       position: absolute;
@@ -367,7 +416,7 @@ html .uk-button, body .uk-button {
     font-size: 15px;
     display: inline-flex;
     letter-spacing: 0.05em;
-    font-family: "Rogan Medium", sans-serif;
+    font-family: "Shentox Light", "Rogan Medium", sans-serif;
     font-weight: 500; }
     html .uk-button.uk-button-link:before, body .uk-button.uk-button-link:before {
       content: '';
@@ -392,10 +441,10 @@ html, body {
   /*top: 0; left: 0;*/
   width: 100%;
   /*height: 100%;*/
-  font-family: "Rogan Regular", sans-serif;
+  font-family: "Shentox Light", "Rogan Regular", sans-serif;
   color: rgba(255, 255, 255, 0.6);
-  font-size: 22px;
-  line-height: 33px;
+  font-size: 1.145vw;
+  line-height: 133%;
   overflow-x: hidden;
   background-color: #0f161e;
   background-image: url("../images/space-bg.png");
@@ -417,11 +466,12 @@ html, body {
     /*&:after {content: ''; display: block; width: 100%; height: 100%; position: fixed; left: 0; top: 0; right: 0; bottom: 0; background-image: url('../images/blink.png'); background-size: cover; background-position: center right; background-repeat: no-repeat; z-index: 10; pointer-events: none;}*/ }
     html .page-slider h1, html .page-slider h2, html .page-slider h3, html .page-slider h4, html .page-slider h5, html .page-slider h6, body .page-slider h1, body .page-slider h2, body .page-slider h3, body .page-slider h4, body .page-slider h5, body .page-slider h6 {
       color: white;
-      font-family: "Rogan Semibold", sans-serif; }
+      font-family: "Shentox Light", "Rogan Medium", sans-serif; }
     html .page-slider h1, html .page-slider .h1, body .page-slider h1, body .page-slider .h1 {
-      font-size: 55px;
-      line-height: 66px;
-      margin-bottom: 40px; }
+      font-size: 2.182vw;
+      line-height: 138%;
+      margin-bottom: 2.08vw;
+      /* margin-bottom: 40px;*/ }
       html .page-slider h1.uk-padding-large-left, html .page-slider .h1.uk-padding-large-left, body .page-slider h1.uk-padding-large-left, body .page-slider .h1.uk-padding-large-left {
         padding-left: 70px; }
     html .page-slider .logo, body .page-slider .logo {
@@ -501,7 +551,7 @@ html, body {
         html .page-slider .panel .section .section-content, body .page-slider .panel .section .section-content {
           width: 100%;
           color: rgba(255, 255, 255, 0.6);
-          font-family: "Rogan Regular", sans-serif;
+          font-family: "Shentox Light", "Rogan Regular", sans-serif;
           transition: all 500ms ease;
           transition-delay: 0s;
           font-weight: 400;
@@ -512,8 +562,8 @@ html, body {
           min-height: 70px;
           padding: 180px 0; }
           html .page-slider .panel .section .section-content > .uk-container, body .page-slider .panel .section .section-content > .uk-container {
-            padding-left: 140px;
-            padding-right: 140px; }
+            padding-left: 6.5625vw;
+            padding-right: 6.5625vw; }
             html .page-slider .panel .section .section-content > .uk-container .uk-slider-container, body .page-slider .panel .section .section-content > .uk-container .uk-slider-container {
               padding-left: 140px;
               padding-right: 140px; }
@@ -631,9 +681,10 @@ html, body {
         opacity: 1;
         transform: translateY(0); }
       html .page-slider .panel#data-slide-1 .uk-button.uk-button-primary, body .page-slider .panel#data-slide-1 .uk-button.uk-button-primary {
-        font-family: "Rogan Semibold", sans-serif;
+        font-family: "Shentox Light", "Rogan Semibold", sans-serif;
         font-weight: 600;
-        line-height: 34px; }
+        /* line-height: 34px;*/
+        line-height: 1.77vw; }
         html .page-slider .panel#data-slide-1 .uk-button.uk-button-primary svg, body .page-slider .panel#data-slide-1 .uk-button.uk-button-primary svg {
           margin-top: -6px;
           margin-bottom: -5px; }
@@ -643,13 +694,15 @@ html, body {
             fill: white !important; }
       html .page-slider .panel#data-slide-1 .table-header b, body .page-slider .panel#data-slide-1 .table-header b {
         font-size: 26px;
-        font-family: "Rogan Medium", sans-serif;
+        font-family: "Shentox Light", "Rogan Medium", sans-serif;
         font-weight: 500;
         line-height: 24px;
         letter-spacing: .05em; }
       html .page-slider .panel#data-slide-1 .table-header svg, body .page-slider .panel#data-slide-1 .table-header svg {
         min-width: 21px;
         max-width: 24px; }
+      html .page-slider .panel#data-slide-1 .uk-margin-medium-top, body .page-slider .panel#data-slide-1 .uk-margin-medium-top {
+        margin-top: 2.08vw !important; }
       html .page-slider .panel#data-slide-2:before, body .page-slider .panel#data-slide-2:before {
         background-image: linear-gradient(135deg, rgba(54, 146, 199, 0), rgba(54, 146, 199, 0.3)), url("../images/light-1.png");
         transform: scaleX(-1); }
@@ -1064,7 +1117,7 @@ html, body {
                       line-height: 32px;
                       margin-bottom: 24px;
                       color: white;
-                      font-family: "Rogan Regular", sans-serif;
+                      font-family: "Shentox Light", "Rogan Regular", sans-serif;
                       font-size: 22px;
                       letter-spacing: -.01em; }
                       html .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card.uk-card-body .uk-card-title + div, html .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card .uk-card-body .uk-card-title + div, body .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card.uk-card-body .uk-card-title + div, body .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card .uk-card-body .uk-card-title + div {
@@ -1140,7 +1193,7 @@ html, body {
                   html .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card h6, body .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card h6 {
                     font-size: 27px;
                     line-height: 32px;
-                    font-family: "Rogan Medium", sans-serif;
+                    font-family: "Shentox Light", "Rogan Medium", sans-serif;
                     text-align: center;
                     bottom: 0;
                     left: 0;
@@ -1180,7 +1233,7 @@ html, body {
         html .page-slider .panel .anyone p, body .page-slider .panel .anyone p {
           font-size: 32px;
           line-height: 48px;
-          font-family: "Rogan Regular", sans-serif; }
+          font-family: "Shentox Light", "Rogan Regular", sans-serif; }
       html .page-slider .panel .nft, body .page-slider .panel .nft {
         overflow: visible; }
         html .page-slider .panel .nft .shine, body .page-slider .panel .nft .shine {
@@ -1206,7 +1259,7 @@ html, body {
         html .page-slider .panel .nft h6, body .page-slider .panel .nft h6 {
           font-size: 26px;
           margin-bottom: 12px;
-          font-family: "Rogan Light", sans-serif;
+          font-family: "Shentox Light", "Rogan Light", sans-serif;
           font-weight: 300;
           line-height: 1.2; }
         html .page-slider .panel .nft .uk-grid-margin.uk-margin-top, body .page-slider .panel .nft .uk-grid-margin.uk-margin-top {
@@ -1242,7 +1295,7 @@ html, body {
         html .page-slider .panel .market h6, body .page-slider .panel .market h6 {
           margin-bottom: 19px;
           font-size: 19px;
-          font-family: "Rogan Regular", sans-serif; }
+          font-family: "Shentox Light", "Rogan Regular", sans-serif; }
         html .page-slider .panel .market p, body .page-slider .panel .market p {
           margin-top: 19px;
           margin-bottom: 19px; }
@@ -1361,7 +1414,7 @@ html, body {
             transform: translate(-50%, -50%);
             border-radius: 10px;
             background-color: #0cb754;
-            font-family: "Rogan Semibold", sans-serif;
+            font-family: "Shentox Light", "Rogan Semibold", sans-serif;
             font-weight: 600;
             font-size: 18px;
             letter-spacing: .08em;
@@ -1824,7 +1877,7 @@ html, body {
               html .page-slider .panel .partners .uk-accordion li > div > a > span > b, body .page-slider .panel .partners .uk-accordion li > div > a > span > b {
                 padding-left: 64px;
                 position: relative;
-                font-family: "Rogan Regular", sans-serif;
+                font-family: "Shentox Light", "Rogan Regular", sans-serif;
                 font-size: 24px;
                 line-height: 21px;
                 white-space: nowrap;
@@ -1837,7 +1890,7 @@ html, body {
                   top: 50%;
                   transform: translateY(-50%) rotate(90deg); }
               html .page-slider .panel .partners .uk-accordion li > div > a > span > span, body .page-slider .panel .partners .uk-accordion li > div > a > span > span {
-                font-family: "Rogan Regular", sans-serif;
+                font-family: "Shentox Light", "Rogan Regular", sans-serif;
                 font-size: 20px;
                 line-height: 26px;
                 color: rgba(255, 255, 255, 0.6);
@@ -1888,7 +1941,7 @@ html, body {
                 top: 50%;
                 transform: translateY(-50%); }
               html .page-slider .panel .partners .uk-accordion li > div .uk-accordion-content + span b, body .page-slider .panel .partners .uk-accordion li > div .uk-accordion-content + span b {
-                font-family: "Rogan Regular", sans-serif;
+                font-family: "Shentox Light", "Rogan Regular", sans-serif;
                 font-size: 24px;
                 position: relative;
                 padding-left: 93px;
@@ -2010,7 +2063,7 @@ html, body {
             margin: 0 0 15px 0;
             font-size: 24px;
             line-height: 31px;
-            font-family: "Rogan Regular", sans-serif; }
+            font-family: "Shentox Light", "Rogan Regular", sans-serif; }
           html .page-slider .panel .links .links-column-list .links-column-list-item > div ul, body .page-slider .panel .links .links-column-list .links-column-list-item > div ul {
             padding: 0;
             margin: 0; }
@@ -2098,7 +2151,7 @@ html, body {
           color: rgba(255, 255, 255, 0.6);
           transition: all 300ms ease-in-out;
           letter-spacing: 0.1em;
-          font-family: "Rogan Regular", sans-serif;
+          font-family: "Shentox Light", "Rogan Regular", sans-serif;
           font-weight: 400; }
         html .page-slider .nav-dots .nav-dot.active svg, body .page-slider .nav-dots .nav-dot.active svg {
           opacity: 1;
@@ -2132,7 +2185,7 @@ html, body {
           align-items: center;
           transition-delay: 150ms;
           font-size: 24px;
-          font-family: "Rogan Regular", sans-serif;
+          font-family: "Shentox Light", "Rogan Regular", sans-serif;
           color: rgba(255, 255, 255, 0.6);
           font-weight: 400;
           padding-left: 0;
@@ -2144,7 +2197,7 @@ html, body {
             margin: 0 5px 0 0;
             color: white;
             font-weight: 500;
-            font-family: "Rogan Medium", sans-serif; }
+            font-family: "Shentox Light", "Rogan Medium", sans-serif; }
         html .page-slider .nav-dots .sidebar-nav-counter:before, body .page-slider .nav-dots .sidebar-nav-counter:before {
           content: '';
           display: flex;
@@ -2248,7 +2301,7 @@ html, body {
         line-height: 20px;
         text-transform: uppercase;
         letter-spacing: 0.05em;
-        font-family: "Rogan Semibold", sans-serif;
+        font-family: "Shentox Light", "Rogan Semibold", sans-serif;
         transition: color 300ms ease-in-out; }
         html .page-slider .top-nav a:hover, html .page-slider .top-nav a.active, body .page-slider .top-nav a:hover, body .page-slider .top-nav a.active {
           text-decoration: none;
@@ -2256,7 +2309,7 @@ html, body {
       html .page-slider .top-nav .select2-container--default .select2-selection--single .select2-selection__rendered, body .page-slider .top-nav .select2-container--default .select2-selection--single .select2-selection__rendered {
         font-size: 20px;
         letter-spacing: 0.05em;
-        font-family: "Rogan Semibold", sans-serif; }
+        font-family: "Shentox Light", "Rogan Semibold", sans-serif; }
       html .page-slider .top-nav .uk-container, body .page-slider .top-nav .uk-container {
         padding: 44px 60px;
         background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.685419) 4.7%, rgba(0, 0, 0, 0.669221) 8.9%, rgba(0, 0, 0, 0.65072) 12.8%, rgba(0, 0, 0, 0.629233) 16.56%, rgba(0, 0, 0, 0.604074) 20.37%, rgba(0, 0, 0, 0.57456) 24.4%, rgba(0, 0, 0, 0.540006) 28.83%, rgba(0, 0, 0, 0.499727) 33.84%, rgba(0, 0, 0, 0.45304) 39.6%, rgba(0, 0, 0, 0.399259) 46.3%, rgba(0, 0, 0, 0.337701) 54.1%, rgba(0, 0, 0, 0.26768) 63.2%, rgba(0, 0, 0, 0.188513) 73.76%, rgba(0, 0, 0, 0.0995141) 85.97%, rgba(0, 0, 0, 0) 100%); }
@@ -2394,7 +2447,7 @@ html, body {
         line-height: 16px;
         padding: 16px 16px;
         color: rgba(255, 255, 255, 0.4);
-        font-family: "Rogan Medium", sans-serif;
+        font-family: "Shentox Light", "Rogan Medium", sans-serif;
         text-transform: uppercase;
         transition: all 300ms ease; }
       html .uk-subnav.uk-subnav-pill li:first-of-type, body .uk-subnav.uk-subnav-pill li:first-of-type {

@@ -93,10 +93,53 @@ $bold: 'Gotham Pro Bold', sans-serif;
     font-weight: 700;
     font-style: normal;
 }
-$light: 'Rogan Light', sans-serif;
-$regular: 'Rogan Regular', sans-serif;
-$medium: 'Rogan Medium', sans-serif;
-$semibold: 'Rogan Semibold', sans-serif;
+
+/*
+@font-face {
+    font-family: 'Shentox Light';
+    src: local('Shentox Light'), local('Shentox-Light'),
+        url('../fonts/Shentox-Light.woff2') format('woff2'),
+        url('../fonts/Shentox-Light.woff') format('woff'),
+        url('../fonts/Shentox-Light.ttf') format('truetype');
+    //font-weight: 300;
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Shentox Regular';
+    src: local('Shentox Regular'), local('Shentox-Regular'),
+        url('../fonts/Shentox-Regular.woff2') format('woff2'),
+        url('../fonts/Shentox-Regular.woff') format('woff'),
+        url('../fonts/Shentox-Regular.ttf') format('truetype');
+    //font-weight: 400;
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Shentox Medium';
+    src: local('Shentox Medium'), local('Shentox-Medium'),
+        url('../fonts/Shentox-Medium.woff2') format('woff2'),
+        url('../fonts/Shentox-Medium.woff') format('woff'),
+        url('../fonts/Shentox-Medium.ttf') format('truetype');
+    //font-weight: 500;
+    font-weight: 600!important;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Shentox Semibold';
+    src: local('Shentox SemiBold'), local('Shentox-SemiBold'),
+        url('../fonts/Shentox-SemiBold.woff2') format('woff2'),
+        url('../fonts/Shentox-SemiBold.woff') format('woff'),
+        url('../fonts/Shentox-SemiBold.ttf') format('truetype');
+    //font-weight: 600;
+    font-weight: 700;
+    font-style: normal;
+}
+*/
+$light: 'Shentox Light','Rogan Light', sans-serif;
+$regular: 'Shentox Light','Rogan Regular', sans-serif;
+$medium: 'Shentox Light','Rogan Medium', sans-serif;
+$semibold: 'Shentox Light','Rogan Semibold', sans-serif;
 $bold: 'Rogan Bold', sans-serif;
 $title: 'Furore', sans-serif;
 /* настройки - конец */
@@ -107,13 +150,13 @@ $title: 'Furore', sans-serif;
 
 
 html, body {
-    margin: 0; padding: 0; position: relative; /*top: 0; left: 0;*/ width: 100%; /*height: 100%;*/ font-family: $regular; color: rgba(255,255,255,.6); font-size: 22px; line-height: 33px; overflow-x: hidden; background-color: #0f161e; background-image: url('../images/space-bg.png'); background-size: 100%; background-position: top center; background-repeat: repeat-y;
+    margin: 0; padding: 0; position: relative; /*top: 0; left: 0;*/ width: 100%; /*height: 100%;*/ font-family: $regular; color: rgba(255,255,255,.6); font-size: 1.145vw; line-height: 133%; overflow-x: hidden; background-color: #0f161e; background-image: url('../images/space-bg.png'); background-size: 100%; background-position: top center; background-repeat: repeat-y;
     .page-slider {
         position: relative; top: 0; width: 100vw; /*height: 100vh;*/ max-width: 100%; /*max-height: 100%; overflow: hidden;*/ box-sizing: border-box; overflow-y: auto; overflow-x: hidden;
         /*&:after {content: ''; display: block; width: 100%; height: 100%; position: fixed; left: 0; top: 0; right: 0; bottom: 0; background-image: url('../images/blink.png'); background-size: cover; background-position: center right; background-repeat: no-repeat; z-index: 10; pointer-events: none;}*/
-        h1, h2, h3, h4, h5, h6 {color: rgba(255,255,255,1); font-family: $semibold;}
+        h1, h2, h3, h4, h5, h6 {color: rgba(255,255,255,1); font-family: $medium;}
         h1, .h1 {
-            font-size: 55px; line-height: 66px; margin-bottom: 40px;
+            font-size: 2.182vw; line-height: 138%; margin-bottom: 2.08vw;/* margin-bottom: 40px;*/
             &.uk-padding-large-left {padding-left: 70px;}
         }
         .logo {
@@ -149,7 +192,8 @@ html, body {
                 .section-content {
                     width: 100%; color: rgba(255,255,255,.6); font-family: $regular; transition: all 500ms ease; transition-delay: 0s; font-weight: 400; overflow-x: hidden; overflow-y: auto; height: auto; z-index: 10; min-height: 70px; padding: 180px 0;
                     > .uk-container {
-                        padding-left: 140px; padding-right: 140px;
+                        //padding-left: 140px; padding-right: 140px;
+                        padding-left: 6.5625vw; padding-right: 6.5625vw;
                         .uk-slider-container {padding-left: 140px; padding-right: 140px;}
                     }
                 }
@@ -196,7 +240,7 @@ html, body {
                 }
                 .uk-button {
                     &.uk-button-primary {
-                        font-family: $semibold; font-weight: 600; line-height: 34px;
+                        font-family: $semibold; font-weight: 600;/* line-height: 34px;*/ line-height: 1.77vw;
                         svg {margin-top: -6px; margin-bottom: -5px;}
                         &:hover {
                             color: #121212;
@@ -210,6 +254,7 @@ html, body {
                     b {font-size: 26px; font-family: $medium; font-weight: 500; line-height: 24px; letter-spacing: .05em;}
                     svg {min-width: 21px; max-width: 24px}
                 }
+                .uk-margin-medium-top {margin-top: 2.08vw!important;}
             }
             &#data-slide-2 {
                 &:before {

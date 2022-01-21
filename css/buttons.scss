@@ -13,7 +13,8 @@ html, body {
         }
     }
     .uk-button {
-        padding: 10px 32px; font-size: 18px; text-transform: uppercase; line-height: 26px; background-color: rgba(255,255,255,1); color: #181818; font-family: $regular; border: 1px solid rgba(255, 255, 255, 0.2); box-sizing: border-box; box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.2); backdrop-filter: blur(20px); border-radius: 10px; transition: background 300ms ease-in-out, box-shadow 300ms ease-in-out, border 300ms ease-in-out, color 300ms ease-in-out; letter-spacing: 0.08em;
+        /*padding: 10px 32px;*/ padding: .521vw 1.67vw; /*font-size: 18px;*/ font-size: 1.066vw; text-transform: uppercase; /*line-height: 26px;*/ line-height: 144%; background-color: rgba(255,255,255,1); color: #181818; font-family: $regular; border: 1px solid rgba(255, 255, 255, 0.2); box-sizing: border-box; box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.2); backdrop-filter: blur(20px); /*border-radius: 10px;*/ border-radius: 0.521vw; transition: background 300ms ease-in-out, box-shadow 300ms ease-in-out, border 300ms ease-in-out, color 300ms ease-in-out; letter-spacing: 0.08em;
+        svg {width: 2.08vw; height: 2.08vw;}
         &.uk-button-default {
             background: rgba(255, 255, 255, 0.1); /*border: 1px solid rgba(255, 255, 255, 0.2);*/ border: 1px solid rgba(255, 255, 255, 0); color: rgba(255,255,255,1); box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.2);
             svg {
