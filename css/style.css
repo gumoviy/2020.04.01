@@ -703,6 +703,14 @@ html, body {
         max-width: 24px; }
       html .page-slider .panel#data-slide-1 .uk-margin-medium-top, body .page-slider .panel#data-slide-1 .uk-margin-medium-top {
         margin-top: 2.08vw !important; }
+      html .page-slider .panel#data-slide-1 .uk-card .table .table-body .table-row, body .page-slider .panel#data-slide-1 .uk-card .table .table-body .table-row {
+        font-size: 0.8333333333vw;
+        border-radius: 0.3645833333vw;
+        padding: 0.4791666667vw 0.8333333333vw;
+        margin-bottom: 0.3333333333vw; }
+      html .page-slider .panel#data-slide-1 .uk-card .table .table-icon, body .page-slider .panel#data-slide-1 .uk-card .table .table-icon {
+        margin-right: 0.625vw;
+        width: 1.3020833333vw; }
       html .page-slider .panel#data-slide-2:before, body .page-slider .panel#data-slide-2:before {
         background-image: linear-gradient(135deg, rgba(54, 146, 199, 0), rgba(54, 146, 199, 0.3)), url("../images/light-1.png");
         transform: scaleX(-1); }
@@ -2421,7 +2429,7 @@ html, body {
     border-radius: 10px; }
   html .uk-card .uk-card-header, html .uk-card .uk-card-body, html .uk-card .uk-card-footer, body .uk-card .uk-card-header, body .uk-card .uk-card-body, body .uk-card .uk-card-footer {
     border: 0;
-    padding: 28px 32px; }
+    padding: 1.4583333333vw 1.6666666667vw; }
   html .uk-card.uk-card-header .table-header, html .uk-card .uk-card-header .table-header, body .uk-card.uk-card-header .table-header, body .uk-card .uk-card-header .table-header {
     font-size: 16px; }
   html .uk-card.uk-card-header + .uk-card-body, html .uk-card .uk-card-header + .uk-card-body, body .uk-card.uk-card-header + .uk-card-body, body .uk-card .uk-card-header + .uk-card-body {
