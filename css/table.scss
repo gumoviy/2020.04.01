@@ -38,6 +38,9 @@ html, body {
             .uk-card {
                 &.uk-card-default {
                     background: rgba(255,255,255,.1);
+                    @-moz-document url-prefix() {
+                        background: rgba(#32363a,.85);
+                    }
                     a {
                         &.uk-button {
                             opacity: .2; cursor: default; background: rgba(255, 255, 255, 0.1); border: 0.0521vw solid rgba(255, 255, 255, 0.2); box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.2); color: rgba(255,255,255,1);

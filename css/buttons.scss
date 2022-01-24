@@ -6,6 +6,39 @@ $vw-viewport: 1920;
 }
 
 html, body {
+    .uk-area-drop {
+        padding-left: 0px; padding-right: 0; background: rgba(255,255,255,0); border: 0; color: rgba($primary,1); box-shadow: none; position: relative; font-size: get-vw(22px); letter-spacing: 0em; cursor: pointer;
+        &+ .uk-dropdown {
+            background: 0 0; border: 0.0521vw solid rgba(255,255,255,.3); backdrop-filter: blur(get-vw(20px)); overflow: hidden; padding: 0;
+            li {
+                a {
+                    padding: get-vw(10px) get-vw(18px); line-height: get-vw(26px); font-size: get-vw(18px); color: rgba(255,255,255,1); background: rgba(255,255,255,.1);
+                }
+                &.uk-active {
+                    a {background: rgba(255,255,255,.2);}
+                }
+            }
+        }
+        &[aria-expanded*="true"] {
+            border-radius: get-vw(10px); background: rgba(255,255,255,0); color: rgba(255,255,255,1);
+            &:before {transform: translate(0,-50%) scaleY(-1);}
+            &+ .uk-dropdown {
+                
+                li {
+                    a {
+                        &:hover {background: rgba(255,255,255,.2);}
+                    }
+                }
+                &[class*=uk-dropdown-top] {margin: 0; border-radius: get-vw(10px);}
+                &[class*=uk-dropdown-bottom] {
+                    margin: 0; border-radius: get-vw(10px);
+                }
+            }
+        }
+        &:hover {
+            background: rgba(255,255,255,0);
+        }
+    }
     .uk-button-group {
         display: flex; justify-content: stretch; width: 100%;
         > * {
