@@ -608,21 +608,104 @@ html, body {
         z-index: -1; }
       html .page-slider .panel.panel.active:before, body .page-slider .panel.panel.active:before {
         opacity: .6; }
-      html .page-slider .panel#data-slide-1:after, body .page-slider .panel#data-slide-1:after {
-        content: '';
+      html .page-slider .panel#data-slide-1 .first-slide-container, body .page-slider .panel#data-slide-1 .first-slide-container {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
         display: block;
         pointer-events: none;
-        background-image: url("../images/1th-slide.png");
+        background-image: url("../images/1th-slide-planet.png");
         background-size: 100%;
         height: 0;
         width: 100%;
         padding-bottom: 65%;
         left: 0;
         right: 0;
-        z-index: 0; }
+        z-index: 0;
+        background-position: top 0 right 0;
+        transition: all 300ms ease-in;
+        opacity: 0; }
+        html .page-slider .panel#data-slide-1 .first-slide-container span, body .page-slider .panel#data-slide-1 .first-slide-container span {
+          position: absolute;
+          top: 0;
+          transform: translateY(0);
+          display: block;
+          pointer-events: none;
+          background-image: url("../images/1th-slide-spaceship.png");
+          background-size: 100%;
+          height: 0;
+          width: 100%;
+          padding-bottom: 65%;
+          left: 0;
+          right: 0;
+          z-index: 2;
+          transition: opacity 1300ms ease-out, transform 1500ms ease-out;
+          transition-delay: 1200ms;
+          transform: translate(5%, -5%);
+          opacity: 0;
+          animation: shipAnimation 7s ease-out infinite;
+          animation-delay: 3400ms; }
+        html .page-slider .panel#data-slide-1 .first-slide-container:after, body .page-slider .panel#data-slide-1 .first-slide-container:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          transform: translateY(0);
+          display: block;
+          pointer-events: none;
+          background-image: url("../images/1th-slide-fog.png");
+          background-size: 100%;
+          height: 0;
+          width: 100%;
+          padding-bottom: 65%;
+          left: 0;
+          right: 0;
+          z-index: 0;
+          transition: opacity 200ms ease, transform 2000ms ease-out;
+          transform: translateY(10px) scale(0.98);
+          opacity: 0;
+          animation: fogAnimation 30s ease infinite;
+          animation-delay: 3000ms; }
+        html .page-slider .panel#data-slide-1 .first-slide-container:before, body .page-slider .panel#data-slide-1 .first-slide-container:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          transform: translateY(0);
+          display: block;
+          pointer-events: none;
+          background-image: url("../images/1th-slide-gate.png");
+          background-size: 100%;
+          height: 0;
+          width: 100%;
+          padding-bottom: 65%;
+          left: 0;
+          right: 0;
+          z-index: 1;
+          transition: opacity 400ms ease-in-out;
+          transition-delay: 500ms;
+          opacity: 0;
+          animation: gateAnimation 4s ease infinite;
+          animation-delay: 1000ms; }
+@keyframes fogAnimation {
+  0% {
+    transform: translate(0, 0); }
+  33% {
+    transform: translate(-20px, -20px); }
+  66% {
+    transform: translate(35px, 17px); }
+  100% {
+    transform: translate(0, 0); } }
+@keyframes shipAnimation {
+  0% {
+    transform: translate(0, 0); }
+  33% {
+    transform: translate(10px, -10px); }
+  66% {
+    transform: translate(-5px, -5px); }
+  100% {
+    transform: translate(0, 0); } }
+@keyframes gateAnimation {
+  50% {
+    transform: translateY(5px); } }
       html .page-slider .panel#data-slide-1:before, body .page-slider .panel#data-slide-1:before {
         background-image: linear-gradient(135deg, rgba(236, 81, 81, 0), rgba(236, 81, 81, 0.3)), url("../images/light-1.png");
         transform: scale(1);
@@ -696,6 +779,17 @@ html, body {
       html .page-slider .panel#data-slide-1.active .animate-layer:after, body .page-slider .panel#data-slide-1.active .animate-layer:after {
         opacity: 1;
         transform: translateY(0); }
+      html .page-slider .panel#data-slide-1.active .first-slide-container, body .page-slider .panel#data-slide-1.active .first-slide-container {
+        background-position: top 0 right 0;
+        opacity: 1; }
+        html .page-slider .panel#data-slide-1.active .first-slide-container:before, body .page-slider .panel#data-slide-1.active .first-slide-container:before {
+          opacity: 1; }
+        html .page-slider .panel#data-slide-1.active .first-slide-container:after, body .page-slider .panel#data-slide-1.active .first-slide-container:after {
+          transform: translateY(0) scale(1);
+          opacity: 1; }
+        html .page-slider .panel#data-slide-1.active .first-slide-container span, body .page-slider .panel#data-slide-1.active .first-slide-container span {
+          transform: translate(0, 0);
+          opacity: 1; }
       html .page-slider .panel#data-slide-1 .uk-button.uk-button-primary, body .page-slider .panel#data-slide-1 .uk-button.uk-button-primary {
         font-family: "Shentox Light", "Rogan Semibold", sans-serif;
         font-weight: 600;
