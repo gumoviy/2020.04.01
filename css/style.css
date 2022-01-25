@@ -736,7 +736,7 @@ html, body {
           z-index: 1;
           transition: opacity 400ms ease-in-out;
           transition-delay: 500ms;
-          opacity: 0; }
+          /*opacity: 0;*/ }
 @keyframes fogAnimation {
   0% {
     transform: translate(0, 0); }
@@ -845,9 +845,7 @@ html, body {
         background-position: top 0 right 0;
         opacity: 1; }
         html .page-slider .panel#data-slide-1.active .first-slide-container:before, body .page-slider .panel#data-slide-1.active .first-slide-container:before {
-          opacity: 1;
-          animation: gateAnimation 4s ease infinite;
-          animation-delay: 1000ms; }
+          /*opacity: 1; animation: gateAnimation 4s ease infinite; animation-delay: 1000ms;*/ }
         html .page-slider .panel#data-slide-1.active .first-slide-container:after, body .page-slider .panel#data-slide-1.active .first-slide-container:after {
           transform: translateY(0) scale(1);
           opacity: 1;
@@ -885,7 +883,7 @@ html, body {
   html .page-slider .panel#data-slide-1 .uk-card, body .page-slider .panel#data-slide-1 .uk-card {
     background: rgba(61, 89, 106, 0.95); } }
       html .page-slider .panel#data-slide-1 .uk-card .table .table-body .table-row, body .page-slider .panel#data-slide-1 .uk-card .table .table-body .table-row {
-        font-size: 0.8333333333vw;
+        font-size: 0.9375vw;
         border-radius: 0.3645833333vw;
         padding: 0.625vw 0.8333333333vw;
         margin-bottom: 0.3645833333vw; }
@@ -1182,6 +1180,23 @@ html, body {
         transform: translateX(0); }
       html .page-slider .panel#data-slide-7 .section .section-content, body .page-slider .panel#data-slide-7 .section .section-content {
         overflow: visible; }
+      html .page-slider .panel#data-slide-8:after, body .page-slider .panel#data-slide-8:after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        display: block;
+        pointer-events: none;
+        background-image: url("../images/last-slide-you-want.png");
+        background-size: 100%;
+        height: 0;
+        width: 100%;
+        padding-bottom: 55%;
+        left: 0;
+        right: 0;
+        z-index: 0;
+        transform: translateY(-55%);
+        background-repeat: no-repeat;
+        background-position: center; }
       html .page-slider .panel#data-slide-8:before, body .page-slider .panel#data-slide-8:before {
         background-image: linear-gradient(135deg, rgba(54, 146, 199, 0), rgba(54, 146, 199, 0.3)), url("../images/light-1.png");
         transform: scaleX(-1); }
@@ -1431,7 +1446,9 @@ html, body {
         html .page-slider .panel .anyone p, body .page-slider .panel .anyone p {
           font-size: 1.6666666667vw;
           line-height: 2.5vw;
-          font-family: "Shentox Light", "Rogan Regular", sans-serif; }
+          font-family: "Shentox Light", "Rogan Regular", sans-serif;
+          color: rgba(255, 255, 255, 0.6);
+          text-shadow: 0 0 5px rgba(0, 0, 0, 0.8); }
       html .page-slider .panel .nft, body .page-slider .panel .nft {
         overflow: visible; }
         html .page-slider .panel .nft .shine, body .page-slider .panel .nft .shine {
