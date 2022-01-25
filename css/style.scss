@@ -339,6 +339,7 @@ html, body {
                         }
                     }
                 }
+                .section-content {padding-bottom: 60px;}
             }
             &#data-slide-2 {
                 &:before {
@@ -359,7 +360,6 @@ html, body {
                     /*&:before {
                         width: 429px; height: 1080px; position: absolute; top: 0; bottom: 0; right: -70px; background-image: url('../images/slide-2-shadow.png'); background-size: cover; background-position: top right; content: ''; display: block; z-index: 1; pointer-events: none;
                     }*/
-                    .section-content {padding-top: 60px;}
                     .uk-slider-container {
                         -webkit-mask-position: 0 0; -webkit-mask-image: linear-gradient(270deg, rgba(196, 196, 196, 0) 0%, #C4C4C4 7.95%, #C4C4C4 92.42%, rgba(196, 196, 196, 0) 100%);
                         
