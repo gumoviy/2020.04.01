@@ -1230,7 +1230,13 @@ html, body {
                 display: block; width: get-vw(62px); height: get-vw(62px); margin: get-vw(-6px) 0; border-radius: 50%; background-color: rgba(255, 255, 255, 0.05); border: 0.0521vw solid rgba(255, 255, 255, 0.1); box-sizing: border-box; background-image: url('../images/avatar.svg'); background-position: center; background-size: 80%; background-repeat: no-repeat;
                 &.uk-area-drop {
                     &+ .uk-dropdown {
-                        top: calc(100% + 0.5208vw)!important; left: auto!important; right: 0;
+                        top: calc(100% + 0.5208vw)!important; left: auto!important; right: 0; background: rgba(#32363a,.85);
+                        li {
+                            a {
+                                background: rgba(#32363a,.85); transition: all 300ms ease-in-out;
+                                &:hover {background: rgba(255,255,255,.2);}
+                            }
+                        }
                         @-moz-document url-prefix() {
                             background: rgba(#181D23,.95);
                         }

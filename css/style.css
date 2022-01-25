@@ -2605,7 +2605,13 @@ html, body {
         html .page-slider .top-nav .avatar.uk-area-drop + .uk-dropdown, body .page-slider .top-nav .avatar.uk-area-drop + .uk-dropdown {
           top: calc(100% + 0.5208vw) !important;
           left: auto !important;
-          right: 0; }
+          right: 0;
+          background: rgba(50, 54, 58, 0.85); }
+          html .page-slider .top-nav .avatar.uk-area-drop + .uk-dropdown li a, body .page-slider .top-nav .avatar.uk-area-drop + .uk-dropdown li a {
+            background: rgba(50, 54, 58, 0.85);
+            transition: all 300ms ease-in-out; }
+            html .page-slider .top-nav .avatar.uk-area-drop + .uk-dropdown li a:hover, body .page-slider .top-nav .avatar.uk-area-drop + .uk-dropdown li a:hover {
+              background: rgba(255, 255, 255, 0.2); }
 @-moz-document url-prefix() {
   html .page-slider .top-nav .avatar.uk-area-drop + .uk-dropdown, body .page-slider .top-nav .avatar.uk-area-drop + .uk-dropdown {
     background: rgba(24, 29, 35, 0.95); } }
