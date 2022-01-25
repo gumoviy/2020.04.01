@@ -959,13 +959,15 @@ html, body {
             .partners {
                 .uk-slider-container {
                     padding-left: get-vw(70px); padding-right: get-vw(70px);
+                    -webkit-mask-image: linear-gradient(270deg,rgba(196,196,196,0) 0,#c4c4c4 7.95%,#c4c4c4 92.42%,rgba(196,196,196,0) 100%); mask-image: linear-gradient(270deg,rgba(196,196,196,0) 0,#c4c4c4 7.95%,#c4c4c4 92.42%,rgba(196,196,196,0) 100%);
                 }
                 h1 {padding-left: get-vw(140px);}
                 .uk-accordion {
                     li {
                         margin: 0!important; /*overflow: hidden;*/
                         > div {
-                            width: get-vw(101px); position: relative; overflow: hidden; height: get-vw(517px); background: rgba(255, 255, 255, 0.05); box-shadow: 0px get-vw(4px) get-vw(24px) get-vw(-1px) rgba(0, 0, 0, 0.2); backdrop-filter: blur(40px); border-radius: get-vw(20px); border: get-vw(2px) solid rgba(255,255,255,.06); transition: all 300ms ease-in-out;
+                            width: get-vw(101px); position: relative; overflow: hidden; height: get-vw(517px); background: rgba(255, 255, 255, 0.05); box-shadow: 0px get-vw(4px) get-vw(24px) get-vw(-1px) rgba(0, 0, 0, 0.2); /*backdrop-filter: blur(40px);*/ border-radius: get-vw(20px); border: get-vw(2px) solid rgba(255,255,255,.06); transition: all 300ms ease-in-out;
+                            background: rgba(#181D23,.95); //вместо backdrop-filter, потому, что он с mask не работает - или фильтр или маска
                             @-moz-document url-prefix() {
                                 background: rgba(#181D23,.95);
                             }
@@ -1007,7 +1009,7 @@ html, body {
                         }
                         &:hover {
                             > div {
-                                background: rgba(255, 255, 255, 0.15);
+                                /*background: rgba(255, 255, 255, 0.15);*/ background: rgba(#32363a,.85);
                                 @-moz-document url-prefix() {
                                     background: rgba(#32363a,.85);
                                 }
@@ -1024,7 +1026,7 @@ html, body {
                             }
                             &:hover {
                                 > div {
-                                    background: rgba(255, 255, 255, 0.05);
+                                    /*background: rgba(255, 255, 255, 0.05);*/ background: rgba(#181D23,.95);
                                     @-moz-document url-prefix() {
                                         background: rgba(#181D23,.95);
                                     }
