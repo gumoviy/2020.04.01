@@ -1420,6 +1420,26 @@ html, body {
                     padding: 0 1.5625vw 1.4583333333vw 1.5625vw;
                     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
                     margin: 0; }
+                  html .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card .fun-club-card-info, body .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card .fun-club-card-info {
+                    width: 1.4583333333vw;
+                    height: 1.4583333333vw;
+                    position: absolute;
+                    right: 1.25vw;
+                    top: 1.25vw;
+                    display: inline-block;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain; }
+                    html .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card .fun-club-card-info.fun-club-card-text, body .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card .fun-club-card-info.fun-club-card-text {
+                      background-image: url("../images/fun-club-post.svg"); }
+                    html .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card .fun-club-card-info.fun-club-card-video, body .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card .fun-club-card-info.fun-club-card-video {
+                      background-image: url("../images/fun-club-video.svg"); }
+                    html .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card .fun-club-card-info.fun-club-card-audio, body .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card .fun-club-card-info.fun-club-card-audio {
+                      background-image: url("../images/fun-club-post.svg"); }
+                    html .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card .fun-club-card-info.fun-club-card-print, body .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card .fun-club-card-info.fun-club-card-print {
+                      background-image: url("../images/fun-club-print.svg"); }
+                    html .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card .fun-club-card-info.fun-club-card-pic, body .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card .fun-club-card-info.fun-club-card-pic {
+                      background-image: url("../images/fun-club-wallpapers.svg"); }
                   html .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card:hover, body .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card:hover {
                     background-size: 110%; }
         html .page-slider .panel .fan-club .uk-slider .uk-slidenav, body .page-slider .panel .fan-club .uk-slider .uk-slidenav {
