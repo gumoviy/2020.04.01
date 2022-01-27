@@ -466,6 +466,9 @@ html, body {
                 .section {
                     .section-content {overflow: visible; padding-bottom: get-vw(60px);}
                 }
+                &:after {
+                    position: absolute; z-index: 0; left: 0; top: 100%; transform: translate(-20%,-50%); background-image: url('../images/nebula-mint.png'); background-size: 100%; background-position: center; background-repeat: no-repeat; content: ''; display: block; width: get-vw(1343px); height: get-vw(1043px); opacity: .6;
+                }
             }
             &#data-slide-8 {
                 &:after {content: ''; position: absolute; top: 100%; display: block; pointer-events: none; background-image: url('../images/last-slide-you-want.png'); background-size: 100%; height: 0; width: 100%; padding-bottom: 55%; left: 0; right: 0; z-index: 0; transform: translateY(-55%); background-repeat: no-repeat; background-position: center;}
@@ -523,6 +526,7 @@ html, body {
                                     .uk-card {
                                         overflow: hidden; height: 100%;
                                         .uk-card-media-top {
+                                            height: 0; padding-bottom: 60%;
                                             img {width: 100%;}
                                         }
                                         &.uk-card-body, .uk-card-body {
@@ -547,14 +551,14 @@ html, body {
                         }
                     }
                     .uk-slidenav {
-                        background: rgba(255, 255, 255, 0.1); border: 0.0521vw solid rgba(255, 255, 255, 0.2); box-sizing: border-box; backdrop-filter: blur(get-vw(20px)); border-radius: get-vw(20px); border: 0.0521vw solid rgba(255,255,255,.06); padding: get-vw(16.4px) 0; transition: all 300ms ease-in-out; margin-right: get-vw(32px); margin-left: get-vw(32px); text-align: center; width: get-vw(64.42px);
+                        background: rgba(255, 255, 255, 0.1); border: 0.0521vw solid rgba(255, 255, 255, 0.2); box-sizing: border-box; backdrop-filter: blur(get-vw(20px)); border-radius: get-vw(20px); border: 0.0521vw solid rgba(255,255,255,.06); padding: get-vw(16.4px) 0; transition: all 300ms ease-in-out; margin-right: get-vw(32px); margin-left: get-vw(32px); text-align: center; width: get-vw(67px); height: get-vw(67px);
                         svg {
                             path {transition: all 300ms ease;}
                         }
                         &:hover {
-                            background: rgba(255,255,255,1); color: #181818; box-shadow: 0px 0px get-vw(10px) rgba(255, 255, 255, 0.2);
+                            background: rgba(255,255,255,.2); color: #fff; box-shadow: 0px 0px get-vw(10px) rgba(255, 255, 255, 0.2);
                             svg {
-                                path {fill: #181818!important;}
+                                path {fill: #fff!important;}
                             }
                         }
                     }
@@ -604,14 +608,15 @@ html, body {
                         }
                     }
                     .uk-slidenav {
-                        background: rgba(255, 255, 255, 0.1); border: 0.0521vw solid rgba(255, 255, 255, 0.2); box-sizing: border-box; backdrop-filter: blur(get-vw(20px)); border-radius: get-vw(20px); border: 0.0521vw solid rgba(255,255,255,.06); padding: get-vw(16.4px) get-vw(25.8px); transition: all 300ms ease-in-out; margin-right: get-vw(32px); margin-left: get-vw(32px);
+                        background: rgba(255, 255, 255, 0.1); border: 0.0521vw solid rgba(255, 255, 255, 0.2); box-sizing: border-box; backdrop-filter: blur(get-vw(20px)); border-radius: get-vw(20px); border: 0.0521vw solid rgba(255,255,255,.06); padding: get-vw(16.4px) get-vw(25.8px); transition: all 300ms ease-in-out; margin-right: get-vw(32px); margin-left: get-vw(32px); height: get-vw(67px); width: get-vw(67px);
                         svg {
+                            width: get-vw(13.6px);
                             path {transition: all 300ms ease;}
                         }
                         &:hover {
-                            background: rgba(255,255,255,1); color: #181818; box-shadow: 0px 0px get-vw(10px) rgba(255, 255, 255, 0.2);
+                            background: rgba(255,255,255,.2); color: #181818; box-shadow: 0px 0px get-vw(10px) rgba(255, 255, 255, 0.2);
                             svg {
-                                path {fill: #181818!important;}
+                                path {fill: #fff!important;}
                             }
                         }
                     }
@@ -657,7 +662,12 @@ html, body {
             }
             .market {
                 overflow: hidden;
-                h6 {margin-bottom: get-vw(19px); font-size: get-vw(19px); font-family: $regular;}
+                h6 {
+                    margin-bottom: get-vw(19px); font-size: get-vw(24px); font-family: $regular;
+                    svg {
+                        width: get-vw(34px); height: auto;
+                    }
+                }
                 p {
                     margin-top: get-vw(19px); margin-bottom: get-vw(19px);
                     &:last-of-type {margin-bottom: 0;}
@@ -667,18 +677,13 @@ html, body {
                         width: get-vw(9px); height: auto;
                     }
                 }
-                h6 {
-                    svg {
-                        width: get-vw(34px); height: auto;
-                    }
-                }
                 .uk-card {
                     svg {
                         &.uk-margin-small-right {margin-right: get-vw(12px)!important;}
                     }
                     .uk-card-body {
                         padding: get-vw(32px) get-vw(32px) get-vw(53px) get-vw(32px);
-                        p {line-height: 160%; font-size: get-vw(22px); color: rgba(255,255,255,.6);}
+                        p {line-height: 140%; font-size: get-vw(22px); color: rgba(255,255,255,.6);}
                         a {
                             height: get-vw(43px); width: get-vw(43px); line-height: get-vw(21px);
                             &.uk-button {
@@ -688,6 +693,14 @@ html, body {
                                     svg {
                                         path, g {fill: rgba($primary,1)!important;}
                                     }
+                                }
+                            }
+                        }
+                        &:hover {
+                            a {
+                                background: rgba($primary, 0.05); border: 0.0521vw solid rgba($primary,1); box-sizing: border-box; box-shadow: inset 0px 0px get-vw(30px) rgba($primary, 0.5); color: $primary;
+                                svg {
+                                    path, g {fill: rgba($primary,1)!important;}
                                 }
                             }
                         }
@@ -868,7 +881,7 @@ html, body {
                         scrollbar-color: #7C7C7C #B2B2B2; scrollbar-width: none;
                         -webkit-mask-image: linear-gradient(270deg,rgba(196,196,196,0) 0,#c4c4c4 7.95%,#c4c4c4 92.42%,rgba(196,196,196,0) 100%); mask-image: linear-gradient(270deg,rgba(196,196,196,0) 0,#c4c4c4 7.95%,#c4c4c4 92.42%,rgba(196,196,196,0) 100%);
                         ol {
-                            font-size: 0; min-width: 100vw; padding: get-vw(240px) 0; transition: all 1s; margin: 0;
+                            font-size: 0; min-width: 100vw; padding: get-vw(300px) 0; transition: all 1s; margin: 0;
                             li {position: relative; display: inline-block; list-style-type: none; width: get-vw(222px); height: get-vw(8px); background: rgba(255, 255, 255, 0.1);
                                 &.active {
                                     &:before {
@@ -955,9 +968,9 @@ html, body {
                                 path, g {transition: all .3s ease-in-out;}
                             }
                             &:hover {
-                                background: #fff!important; color: #181818; box-shadow: 0 0 get-vw(10px) rgba(255,255,255,.2); background: rgba(255,255,255,.1); box-shadow: none;
+                                color: #181818; box-shadow: 0 0 get-vw(10px) rgba(255,255,255,.2); background: rgba(255,255,255,.2); box-shadow: none;
                                 svg {
-                                        path, g {fill: #181818!important;}
+                                    path, g {fill: #fff!important;}
                                 }
                             }
                             &.disabled {
@@ -1066,14 +1079,14 @@ html, body {
                     }
                 }
                 .uk-slidenav {
-                    background: rgba(255, 255, 255, 0.1); box-sizing: border-box; backdrop-filter: blur(get-vw(20px)); border-radius: get-vw(20px); border: 0.0521vw solid rgba(255,255,255,.06); padding: get-vw(16.4px) 0; transition: all 300ms ease-in-out; margin-right: get-vw(32px); margin-left: get-vw(32px); text-align: center; width: get-vw(64.42px);
+                    background: rgba(255, 255, 255, 0.1); box-sizing: border-box; backdrop-filter: blur(get-vw(20px)); border-radius: get-vw(20px); border: 0.0521vw solid rgba(255,255,255,.06); padding: get-vw(16.4px) 0; transition: all 300ms ease-in-out; margin-right: get-vw(32px); margin-left: get-vw(32px); text-align: center; width: get-vw(67px); height: get-vw(67px);
                     svg {
                         path {transition: all 300ms ease;}
                     }
                     &:hover {
-                        background: rgba(255,255,255,1); color: #181818; box-shadow: 0px 0px get-vw(10px) rgba(255, 255, 255, 0.2);
+                        background: rgba(255,255,255,.2); color: #fff; box-shadow: 0px 0px get-vw(10px) rgba(255, 255, 255, 0.2);
                         svg {
-                            path {fill: #181818!important;}
+                            path {fill: #fff!important;}
                         }
                     }
                 }
@@ -1245,7 +1258,7 @@ html, body {
                 padding: get-vw(44px) get-vw(60px); background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.685419) 4.7%, rgba(0, 0, 0, 0.669221) 8.9%, rgba(0, 0, 0, 0.65072) 12.8%, rgba(0, 0, 0, 0.629233) 16.56%, rgba(0, 0, 0, 0.604074) 20.37%, rgba(0, 0, 0, 0.57456) 24.4%, rgba(0, 0, 0, 0.540006) 28.83%, rgba(0, 0, 0, 0.499727) 33.84%, rgba(0, 0, 0, 0.45304) 39.6%, rgba(0, 0, 0, 0.399259) 46.3%, rgba(0, 0, 0, 0.337701) 54.1%, rgba(0, 0, 0, 0.26768) 63.2%, rgba(0, 0, 0, 0.188513) 73.76%, rgba(0, 0, 0, 0.0995141) 85.97%, rgba(0, 0, 0, 0) 100%);
             }
             .avatar {
-                display: block; width: get-vw(62px); height: get-vw(62px); margin: get-vw(-6px) 0; border-radius: 50%; background-color: rgba(255, 255, 255, 0.05); border: 0.0521vw solid rgba(255, 255, 255, 0.1); box-sizing: border-box; background-image: url('../images/avatar.svg'); background-position: center; background-size: 80%; background-repeat: no-repeat;
+                display: block; width: get-vw(62px); height: get-vw(62px); margin: get-vw(-6px) 0; border-radius: 50%; background-color: rgba(255, 255, 255, 0.05); border: 0.0521vw solid rgba(255, 255, 255, 0.1); box-sizing: border-box; background-image: url('../images/avatar.svg'); background-position: center; background-size: 80%; background-repeat: no-repeat; backdrop-filter: blur(10px);
                 &.uk-area-drop {
                     &+ .uk-dropdown {
                         top: calc(100% + 0.5208vw)!important; left: auto!important; right: 0; background: rgba(#32363a,.85);
@@ -1264,7 +1277,7 @@ html, body {
             &.uk-active {
                 width: 100%!important;
                 .uk-container {
-                    border-bottom: 0.0521vw solid rgba(255,255,255,.1); backdrop-filter: blur(get-vw(80px)); padding: get-vw(15px) get-vw(30px); background: rgba(55,55,55,.2); /*box-shadow: 0 4px 24px -1px rgba(0,0,0,.2);*/
+                    border-bottom: 0.0521vw solid rgba(255,255,255,.1); backdrop-filter: blur(get-vw(80px)); padding: get-vw(15px) get-vw(20px); background: rgba(55,55,55,.2); /*box-shadow: 0 4px 24px -1px rgba(0,0,0,.2);*/
                     @-moz-document url-prefix() {
                         background: rgba(#181D23,.95);
                     }
@@ -1372,8 +1385,14 @@ html, body {
                 a {font-size: get-vw(18px); line-height: get-vw(16px); padding: get-vw(16px) get-vw(16px); color: rgba(255,255,255,.4); font-family: $medium; text-transform: uppercase; transition: all 300ms ease;}
                 &:first-of-type {border-radius: get-vw(7px) 0 0 get-vw(7px);}
                 &:last-of-type {border-radius: 0 get-vw(7px) get-vw(7px) 0;}
-                &.uk-active, &:hover {
+                &.uk-active {
                     a {background: rgba($primary,1); border-radius: get-vw(7px); color: rgba(#121212,1);}
+                    &:hover {
+                        a {background: rgba($primary,1); border-radius: get-vw(7px); color: rgba(#121212,1); cursor: default;}
+                    }
+                }
+                &:hover {
+                    a {background: rgba($primary,1); border-radius: get-vw(7px); color: rgba(255,255,255,1); text-shadow: 0 0 5px rgba(255,255,255,.4); cursor: pointer;}
                 }
             }
         }

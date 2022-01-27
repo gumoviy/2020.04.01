@@ -1214,6 +1214,21 @@ html, body {
       html .page-slider .panel#data-slide-7 .section .section-content, body .page-slider .panel#data-slide-7 .section .section-content {
         overflow: visible;
         padding-bottom: 3.125vw; }
+      html .page-slider .panel#data-slide-7:after, body .page-slider .panel#data-slide-7:after {
+        position: absolute;
+        z-index: 0;
+        left: 0;
+        top: 100%;
+        transform: translate(-20%, -50%);
+        background-image: url("../images/nebula-mint.png");
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        content: '';
+        display: block;
+        width: 69.9479166667vw;
+        height: 54.3229166667vw;
+        opacity: .6; }
       html .page-slider .panel#data-slide-8:after, body .page-slider .panel#data-slide-8:after {
         content: '';
         position: absolute;
@@ -1352,8 +1367,11 @@ html, body {
                 html .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card, body .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card {
                   overflow: hidden;
                   height: 100%; }
-                  html .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card .uk-card-media-top img, body .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card .uk-card-media-top img {
-                    width: 100%; }
+                  html .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card .uk-card-media-top, body .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card .uk-card-media-top {
+                    height: 0;
+                    padding-bottom: 60%; }
+                    html .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card .uk-card-media-top img, body .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card .uk-card-media-top img {
+                      width: 100%; }
                   html .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card.uk-card-body, html .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card .uk-card-body, body .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card.uk-card-body, body .page-slider .panel .news .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card .uk-card-body {
                     padding: 1.3541666667vw 1.3541666667vw;
                     display: flex;
@@ -1395,15 +1413,16 @@ html, body {
           margin-right: 1.6666666667vw;
           margin-left: 1.6666666667vw;
           text-align: center;
-          width: 3.3552083333vw; }
+          width: 3.4895833333vw;
+          height: 3.4895833333vw; }
           html .page-slider .panel .news .uk-slider .uk-slidenav svg path, body .page-slider .panel .news .uk-slider .uk-slidenav svg path {
             transition: all 300ms ease; }
           html .page-slider .panel .news .uk-slider .uk-slidenav:hover, body .page-slider .panel .news .uk-slider .uk-slidenav:hover {
-            background: white;
-            color: #181818;
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
             box-shadow: 0px 0px 0.5208333333vw rgba(255, 255, 255, 0.2); }
             html .page-slider .panel .news .uk-slider .uk-slidenav:hover svg path, body .page-slider .panel .news .uk-slider .uk-slidenav:hover svg path {
-              fill: #181818 !important; }
+              fill: #fff !important; }
       html .page-slider .panel .fan-club .uk-container, html .page-slider .panel .fan-club .uk-container .uk-container, body .page-slider .panel .fan-club .uk-container, body .page-slider .panel .fan-club .uk-container .uk-container {
         padding-left: 7.2916666667vw;
         padding-right: 7.2916666667vw; }
@@ -1488,15 +1507,19 @@ html, body {
           padding: 0.8541666667vw 1.34375vw;
           transition: all 300ms ease-in-out;
           margin-right: 1.6666666667vw;
-          margin-left: 1.6666666667vw; }
-          html .page-slider .panel .fan-club .uk-slider .uk-slidenav svg path, body .page-slider .panel .fan-club .uk-slider .uk-slidenav svg path {
-            transition: all 300ms ease; }
+          margin-left: 1.6666666667vw;
+          height: 3.4895833333vw;
+          width: 3.4895833333vw; }
+          html .page-slider .panel .fan-club .uk-slider .uk-slidenav svg, body .page-slider .panel .fan-club .uk-slider .uk-slidenav svg {
+            width: 0.7083333333vw; }
+            html .page-slider .panel .fan-club .uk-slider .uk-slidenav svg path, body .page-slider .panel .fan-club .uk-slider .uk-slidenav svg path {
+              transition: all 300ms ease; }
           html .page-slider .panel .fan-club .uk-slider .uk-slidenav:hover, body .page-slider .panel .fan-club .uk-slider .uk-slidenav:hover {
-            background: white;
+            background: rgba(255, 255, 255, 0.2);
             color: #181818;
             box-shadow: 0px 0px 0.5208333333vw rgba(255, 255, 255, 0.2); }
             html .page-slider .panel .fan-club .uk-slider .uk-slidenav:hover svg path, body .page-slider .panel .fan-club .uk-slider .uk-slidenav:hover svg path {
-              fill: #181818 !important; }
+              fill: #fff !important; }
       html .page-slider .panel .anyone, body .page-slider .panel .anyone {
         margin-top: 7.8125vw; }
         html .page-slider .panel .anyone p, body .page-slider .panel .anyone p {
@@ -1565,8 +1588,11 @@ html, body {
         overflow: hidden; }
         html .page-slider .panel .market h6, body .page-slider .panel .market h6 {
           margin-bottom: 0.9895833333vw;
-          font-size: 0.9895833333vw;
+          font-size: 1.25vw;
           font-family: "Shentox Light", "Rogan Regular", sans-serif; }
+          html .page-slider .panel .market h6 svg, body .page-slider .panel .market h6 svg {
+            width: 1.7708333333vw;
+            height: auto; }
         html .page-slider .panel .market p, body .page-slider .panel .market p {
           margin-top: 0.9895833333vw;
           margin-bottom: 0.9895833333vw; }
@@ -1575,15 +1601,12 @@ html, body {
         html .page-slider .panel .market .uk-button svg, body .page-slider .panel .market .uk-button svg {
           width: 0.46875vw;
           height: auto; }
-        html .page-slider .panel .market h6 svg, body .page-slider .panel .market h6 svg {
-          width: 1.7708333333vw;
-          height: auto; }
         html .page-slider .panel .market .uk-card svg.uk-margin-small-right, body .page-slider .panel .market .uk-card svg.uk-margin-small-right {
           margin-right: 0.625vw !important; }
         html .page-slider .panel .market .uk-card .uk-card-body, body .page-slider .panel .market .uk-card .uk-card-body {
           padding: 1.6666666667vw 1.6666666667vw 2.7604166667vw 1.6666666667vw; }
           html .page-slider .panel .market .uk-card .uk-card-body p, body .page-slider .panel .market .uk-card .uk-card-body p {
-            line-height: 160%;
+            line-height: 140%;
             font-size: 1.1458333333vw;
             color: rgba(255, 255, 255, 0.6); }
           html .page-slider .panel .market .uk-card .uk-card-body a, body .page-slider .panel .market .uk-card .uk-card-body a {
@@ -1604,6 +1627,14 @@ html, body {
                 color: #30B2E6; }
                 html .page-slider .panel .market .uk-card .uk-card-body a.uk-button:hover svg path, html .page-slider .panel .market .uk-card .uk-card-body a.uk-button:hover svg g, body .page-slider .panel .market .uk-card .uk-card-body a.uk-button:hover svg path, body .page-slider .panel .market .uk-card .uk-card-body a.uk-button:hover svg g {
                   fill: #30b2e6 !important; }
+          html .page-slider .panel .market .uk-card .uk-card-body:hover a, body .page-slider .panel .market .uk-card .uk-card-body:hover a {
+            background: rgba(48, 178, 230, 0.05);
+            border: 0.0521vw solid #30b2e6;
+            box-sizing: border-box;
+            box-shadow: inset 0px 0px 1.5625vw rgba(48, 178, 230, 0.5);
+            color: #30B2E6; }
+            html .page-slider .panel .market .uk-card .uk-card-body:hover a svg path, html .page-slider .panel .market .uk-card .uk-card-body:hover a svg g, body .page-slider .panel .market .uk-card .uk-card-body:hover a svg path, body .page-slider .panel .market .uk-card .uk-card-body:hover a svg g {
+              fill: #30b2e6 !important; }
         html .page-slider .panel .market .market-info, body .page-slider .panel .market .market-info {
           padding: 0 2.8125vw; }
           html .page-slider .panel .market .market-info *, body .page-slider .panel .market .market-info * {
@@ -1914,7 +1945,7 @@ html, body {
           html .page-slider .panel .roadmap .timeline .roadmap-content ol, body .page-slider .panel .roadmap .timeline .roadmap-content ol {
             font-size: 0;
             min-width: 100vw;
-            padding: 12.5vw 0;
+            padding: 15.625vw 0;
             transition: all 1s;
             margin: 0; }
             html .page-slider .panel .roadmap .timeline .roadmap-content ol li, body .page-slider .panel .roadmap .timeline .roadmap-content ol li {
@@ -2126,13 +2157,12 @@ html, body {
             html .page-slider .panel .roadmap .timeline .arrows .arrow svg path, html .page-slider .panel .roadmap .timeline .arrows .arrow svg g, body .page-slider .panel .roadmap .timeline .arrows .arrow svg path, body .page-slider .panel .roadmap .timeline .arrows .arrow svg g {
               transition: all .3s ease-in-out; }
             html .page-slider .panel .roadmap .timeline .arrows .arrow:hover, body .page-slider .panel .roadmap .timeline .arrows .arrow:hover {
-              background: #fff !important;
               color: #181818;
               box-shadow: 0 0 0.5208333333vw rgba(255, 255, 255, 0.2);
-              background: rgba(255, 255, 255, 0.1);
+              background: rgba(255, 255, 255, 0.2);
               box-shadow: none; }
               html .page-slider .panel .roadmap .timeline .arrows .arrow:hover svg path, html .page-slider .panel .roadmap .timeline .arrows .arrow:hover svg g, body .page-slider .panel .roadmap .timeline .arrows .arrow:hover svg path, body .page-slider .panel .roadmap .timeline .arrows .arrow:hover svg g {
-                fill: #181818 !important; }
+                fill: #fff !important; }
             html .page-slider .panel .roadmap .timeline .arrows .arrow.disabled, body .page-slider .panel .roadmap .timeline .arrows .arrow.disabled {
               cursor: default;
               opacity: 0;
@@ -2320,15 +2350,16 @@ html, body {
         margin-right: 1.6666666667vw;
         margin-left: 1.6666666667vw;
         text-align: center;
-        width: 3.3552083333vw; }
+        width: 3.4895833333vw;
+        height: 3.4895833333vw; }
         html .page-slider .panel .partners .uk-slidenav svg path, body .page-slider .panel .partners .uk-slidenav svg path {
           transition: all 300ms ease; }
         html .page-slider .panel .partners .uk-slidenav:hover, body .page-slider .panel .partners .uk-slidenav:hover {
-          background: white;
-          color: #181818;
+          background: rgba(255, 255, 255, 0.2);
+          color: #fff;
           box-shadow: 0px 0px 0.5208333333vw rgba(255, 255, 255, 0.2); }
           html .page-slider .panel .partners .uk-slidenav:hover svg path, body .page-slider .panel .partners .uk-slidenav:hover svg path {
-            fill: #181818 !important; }
+            fill: #fff !important; }
       html .page-slider .panel .partners .uk-container, body .page-slider .panel .partners .uk-container {
         padding-left: 7.2916666667vw;
         padding-right: 7.2916666667vw; }
@@ -2661,7 +2692,8 @@ html, body {
         background-image: url("../images/avatar.svg");
         background-position: center;
         background-size: 80%;
-        background-repeat: no-repeat; }
+        background-repeat: no-repeat;
+        backdrop-filter: blur(10px); }
         html .page-slider .top-nav .avatar.uk-area-drop + .uk-dropdown, body .page-slider .top-nav .avatar.uk-area-drop + .uk-dropdown {
           top: calc(100% + 0.5208vw) !important;
           left: auto !important;
@@ -2680,7 +2712,7 @@ html, body {
         html .page-slider .top-nav.uk-active .uk-container, body .page-slider .top-nav.uk-active .uk-container {
           border-bottom: 0.0521vw solid rgba(255, 255, 255, 0.1);
           backdrop-filter: blur(4.1666666667vw);
-          padding: 0.78125vw 1.5625vw;
+          padding: 0.78125vw 1.0416666667vw;
           background: rgba(55, 55, 55, 0.2);
           /*box-shadow: 0 4px 24px -1px rgba(0,0,0,.2);*/ }
 @-moz-document url-prefix() {
@@ -2814,10 +2846,21 @@ html, body {
         border-radius: 0.3645833333vw 0 0 0.3645833333vw; }
       html .uk-subnav.uk-subnav-pill li:last-of-type, body .uk-subnav.uk-subnav-pill li:last-of-type {
         border-radius: 0 0.3645833333vw 0.3645833333vw 0; }
-      html .uk-subnav.uk-subnav-pill li.uk-active a, html .uk-subnav.uk-subnav-pill li:hover a, body .uk-subnav.uk-subnav-pill li.uk-active a, body .uk-subnav.uk-subnav-pill li:hover a {
+      html .uk-subnav.uk-subnav-pill li.uk-active a, body .uk-subnav.uk-subnav-pill li.uk-active a {
         background: #30b2e6;
         border-radius: 0.3645833333vw;
         color: #121212; }
+      html .uk-subnav.uk-subnav-pill li.uk-active:hover a, body .uk-subnav.uk-subnav-pill li.uk-active:hover a {
+        background: #30b2e6;
+        border-radius: 0.3645833333vw;
+        color: #121212;
+        cursor: default; }
+      html .uk-subnav.uk-subnav-pill li:hover a, body .uk-subnav.uk-subnav-pill li:hover a {
+        background: #30b2e6;
+        border-radius: 0.3645833333vw;
+        color: white;
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+        cursor: pointer; }
   html .box-shadow-none, body .box-shadow-none {
     box-shadow: none !important; }
   html .uk-grid, body .uk-grid {
