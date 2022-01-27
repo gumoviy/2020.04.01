@@ -339,7 +339,7 @@ html, body {
                         }
                     }
                 }
-                .section-content {padding-bottom: 60px;}
+                .section-content {padding-bottom: 0;}
             }
             &#data-slide-2 {
                 &:before {
@@ -678,7 +678,7 @@ html, body {
                     }
                     .uk-card-body {
                         padding: get-vw(32px) get-vw(32px) get-vw(53px) get-vw(32px);
-                        p {line-height: get-vw(23.4px); font-size: get-vw(18px); color: rgba(255,255,255,.6);}
+                        p {line-height: 160%; font-size: get-vw(22px); color: rgba(255,255,255,.6);}
                         a {
                             height: get-vw(43px); width: get-vw(43px); line-height: get-vw(21px);
                             &.uk-button {
@@ -694,7 +694,7 @@ html, body {
                     }
                 }
                 .market-info {
-                    * {line-height: get-vw(22.4px); font-size: get-vw(16px);}
+                    * {line-height: get-vw(22.4px); font-size: get-vw(18px);}
                     padding: 0 get-vw(54px);
                     > .uk-card {background-image: url('../images/market-card.svg'); background-color: transparent; border: 0; box-shadow: none; background-size: 100% auto; background-position: 0 0; border-radius: 0; padding: 0 get-vw(1px); min-width: get-vw(360px); width: get-vw(360px); backdrop-filter: blur(get-vw(20px));}
                     .uk-margin-small-bottom {margin-bottom: get-vw(16px);}
@@ -801,7 +801,7 @@ html, body {
                 .switcher-container {
                     .uk-overflow-auto {padding-right: 0;}
                 }
-                font-size: get-vw(16px); line-height: get-vw(24px);
+                font-size: get-vw(18px); line-height: get-vw(24px);
                 .uk-text-normal {font-size: get-vw(18px); line-height: get-vw(24px);}
                 .union-list-item-descr {
                     height: calc(100% - 13.3333vw); overflow-y: auto; margin-right: get-vw(-20px); padding-right: get-vw(12px);
@@ -876,7 +876,7 @@ html, body {
                                     }
                                 }
                                 &:after {
-                                    box-shadow: 0 0 0 get-vw(14px) rgba(247, 152, 18, 0.1);
+                                    box-shadow: 0 0 0 get-vw(14px) rgba($green, 0.1);
                                 }
                                 &:first-child {margin-left: get-vw(70px);}
                                 &:last-child {
@@ -903,11 +903,11 @@ html, body {
                                 &:not(:last-child):after {content: ''; position: absolute; top: 50%; left: calc(100% - 0.0521vw); bottom: 0; width: get-vw(14px); height: get-vw(14px); transform: translateY(-50%); border-radius: 50%; background: rgba(255,255,255,1);}
                                 &.active {
                                     &:not(:last-child) {
-                                        &:after {background: $orange;}
+                                        &:after {background: $green;}
                                         
                                     }
                                     &.last {
-                                        &:after {box-shadow: 0 0 0 get-vw(14px) rgba(#2E3421,.8), 0 0 get-vw(12px) get-vw(20px) rgba(247,152,18,.4);}
+                                        &:after {box-shadow: 0 0 0 get-vw(14px) rgba(#2E3421,.8), 0 0 get-vw(12px) get-vw(20px) rgba($green,.4);}
                                     }
                                 }
                                 div {

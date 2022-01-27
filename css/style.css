@@ -888,7 +888,7 @@ html, body {
         margin-right: 0.625vw;
         width: 1.3020833333vw; }
       html .page-slider .panel#data-slide-1 .section-content, body .page-slider .panel#data-slide-1 .section-content {
-        padding-bottom: 60px; }
+        padding-bottom: 0; }
       html .page-slider .panel#data-slide-2:before, body .page-slider .panel#data-slide-2:before {
         background-image: linear-gradient(135deg, rgba(54, 146, 199, 0), rgba(54, 146, 199, 0.3)), url("../images/light-1.png");
         transform: scaleX(-1); }
@@ -1583,8 +1583,8 @@ html, body {
         html .page-slider .panel .market .uk-card .uk-card-body, body .page-slider .panel .market .uk-card .uk-card-body {
           padding: 1.6666666667vw 1.6666666667vw 2.7604166667vw 1.6666666667vw; }
           html .page-slider .panel .market .uk-card .uk-card-body p, body .page-slider .panel .market .uk-card .uk-card-body p {
-            line-height: 1.21875vw;
-            font-size: 0.9375vw;
+            line-height: 160%;
+            font-size: 1.1458333333vw;
             color: rgba(255, 255, 255, 0.6); }
           html .page-slider .panel .market .uk-card .uk-card-body a, body .page-slider .panel .market .uk-card .uk-card-body a {
             height: 2.2395833333vw;
@@ -1608,7 +1608,7 @@ html, body {
           padding: 0 2.8125vw; }
           html .page-slider .panel .market .market-info *, body .page-slider .panel .market .market-info * {
             line-height: 1.1666666667vw;
-            font-size: 0.8333333333vw; }
+            font-size: 0.9375vw; }
           html .page-slider .panel .market .market-info > .uk-card, body .page-slider .panel .market .market-info > .uk-card {
             background-image: url("../images/market-card.svg");
             background-color: transparent;
@@ -1798,7 +1798,7 @@ html, body {
               -webkit-animation-delay: inherit;
               animation-delay: inherit; }
       html .page-slider .panel .union, body .page-slider .panel .union {
-        font-size: 0.8333333333vw;
+        font-size: 0.9375vw;
         line-height: 1.25vw; }
         html .page-slider .panel .union .uk-overflow-auto, body .page-slider .panel .union .uk-overflow-auto {
           height: calc(100vh - 14.8958vw);
@@ -1936,7 +1936,7 @@ html, body {
                 background: linear-gradient(to right, #0cb754, #0cb754 0.2604166667vw, transparent 0.2604166667vw, transparent);
                 background-size: 0.5208333333vw 100%; }
               html .page-slider .panel .roadmap .timeline .roadmap-content ol li:after, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:after {
-                box-shadow: 0 0 0 0.7291666667vw rgba(247, 152, 18, 0.1); }
+                box-shadow: 0 0 0 0.7291666667vw rgba(12, 183, 84, 0.1); }
               html .page-slider .panel .roadmap .timeline .roadmap-content ol li:first-child, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:first-child {
                 margin-left: 3.6458333333vw; }
               html .page-slider .panel .roadmap .timeline .roadmap-content ol li:last-child, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:last-child {
@@ -2026,9 +2026,9 @@ html, body {
                 border-radius: 50%;
                 background: white; }
               html .page-slider .panel .roadmap .timeline .roadmap-content ol li.active:not(:last-child):after, body .page-slider .panel .roadmap .timeline .roadmap-content ol li.active:not(:last-child):after {
-                background: #feaf14; }
+                background: #0cb754; }
               html .page-slider .panel .roadmap .timeline .roadmap-content ol li.active.last:after, body .page-slider .panel .roadmap .timeline .roadmap-content ol li.active.last:after {
-                box-shadow: 0 0 0 0.7291666667vw rgba(46, 52, 33, 0.8), 0 0 0.625vw 1.0416666667vw rgba(247, 152, 18, 0.4); }
+                box-shadow: 0 0 0 0.7291666667vw rgba(46, 52, 33, 0.8), 0 0 0.625vw 1.0416666667vw rgba(12, 183, 84, 0.4); }
               html .page-slider .panel .roadmap .timeline .roadmap-content ol li div, body .page-slider .panel .roadmap .timeline .roadmap-content ol li div {
                 position: absolute;
                 left: calc(100% + 0.3646vw);
