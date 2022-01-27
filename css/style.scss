@@ -809,7 +809,7 @@ html, body {
             }
             .union {
                 .uk-overflow-auto {
-                    height: calc(100vh - 14.8958vw); padding-right: get-vw(22px); min-height: get-vw(350px);
+                    height: calc(100vh - 25vw); padding-right: get-vw(22px); min-height: get-vw(350px);
                 }
                 .switcher-container {
                     .uk-overflow-auto {padding-right: 0;}
@@ -817,7 +817,7 @@ html, body {
                 font-size: get-vw(18px); line-height: get-vw(24px);
                 .uk-text-normal {font-size: get-vw(18px); line-height: get-vw(24px);}
                 .union-list-item-descr {
-                    height: calc(100% - 13.3333vw); overflow-y: auto; margin-right: get-vw(-20px); padding-right: get-vw(12px);
+                    height: calc(100% - 14vw); overflow-y: auto; margin-right: get-vw(-20px); padding-right: get-vw(12px);
                     p {color: rgba(255,255,255,.5);}
                     &::-webkit-scrollbar {
                         width: get-vw(5px); background: transparent;

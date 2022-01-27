@@ -1832,7 +1832,7 @@ html, body {
         font-size: 0.9375vw;
         line-height: 1.25vw; }
         html .page-slider .panel .union .uk-overflow-auto, body .page-slider .panel .union .uk-overflow-auto {
-          height: calc(100vh - 14.8958vw);
+          height: calc(100vh - 25vw);
           padding-right: 1.1458333333vw;
           min-height: 18.2291666667vw; }
         html .page-slider .panel .union .switcher-container .uk-overflow-auto, body .page-slider .panel .union .switcher-container .uk-overflow-auto {
@@ -1841,7 +1841,7 @@ html, body {
           font-size: 0.9375vw;
           line-height: 1.25vw; }
         html .page-slider .panel .union .union-list-item-descr, body .page-slider .panel .union .union-list-item-descr {
-          height: calc(100% - 13.3333vw);
+          height: calc(100% - 14vw);
           overflow-y: auto;
           margin-right: -1.0416666667vw;
           padding-right: 0.625vw; }
