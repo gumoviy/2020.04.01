@@ -2644,6 +2644,7 @@ html, body {
       right: 0;
       left: 0;
       top: 0;
+      min-width: 100vw;
       /*min-width: calc(100% - 114px);*/ }
       html .page-slider .top-nav + .uk-sticky-placeholder, body .page-slider .top-nav + .uk-sticky-placeholder {
         display: block !important;

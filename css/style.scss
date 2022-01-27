@@ -1234,7 +1234,7 @@ html, body {
             svg {transform: scale(-1); width: get-vw(65px); height: auto;}
         }
         .top-nav {
-            padding-left: get-vw(114px); /*position: fixed;*/ position: absolute; left: 0; top: 0; right: 0; display: block; z-index: 11; transition: padding 300ms ease-in-out; right: 0; left: 0; top: 0; /*min-width: calc(100% - 114px);*/ 
+            padding-left: get-vw(114px); /*position: fixed;*/ position: absolute; left: 0; top: 0; right: 0; display: block; z-index: 11; transition: padding 300ms ease-in-out; right: 0; left: 0; top: 0; min-width: 100vw; /*min-width: calc(100% - 114px);*/ 
             &+ .uk-sticky-placeholder {display: block!important; position: absolute;}
             .primary-nav {
                 display: flex; align-items: center; padding: 0; margin: 0;
