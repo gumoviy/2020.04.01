@@ -169,7 +169,7 @@ html, body {
             }
         }
         &.uk-button-link {
-            padding-left: 0; padding-right: 0; background-color: transparent; color: rgba(255,255,255,1); border: 0; box-sizing: border-box; box-shadow: none; backdrop-filter: blur(0); border-radius: 0; padding-right: get-vw(48px); display: flex; align-items: center; font-size: get-vw(15px); display: inline-flex; letter-spacing: 0.05em; font-family: $medium; font-weight: 500;
+            padding-left: 0; padding-right: 0; background-color: transparent; color: rgba(255,255,255,1); border: 0; box-sizing: border-box; box-shadow: none; backdrop-filter: blur(0); border-radius: 0; padding-right: get-vw(48px); display: flex; align-items: center; font-size: get-vw(15px); display: inline-flex; letter-spacing: 0.05em; font-family: $medium; font-weight: 500; position: relative;
             &:before {
                 content: ''; display: inline-block; position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: get-vw(30px); height: get-vw(12px); background-image: url('../images/arrow-button.svg'); background-size: get-vw(30px); background-position: center; background-repeat: no-repeat;
             }
