@@ -364,7 +364,9 @@ html, body {
                         -webkit-mask-position: 0 0; -webkit-mask-image: linear-gradient(270deg, rgba(196, 196, 196, 0) 0%, #C4C4C4 7.95%, #C4C4C4 92.42%, rgba(196, 196, 196, 0) 100%);
                         
                     }
-                    
+                }
+                &:after {
+                    position: absolute; z-index: 0; left: 0; top: 100%; transform: translateY(-30%); background-image: url('../images/nebula-purple.png'); background-size: 100%; background-position: center; background-repeat: no-repeat; content: ''; display: block; width: get-vw(1343px); height: get-vw(1043px);
                 }
             }
             &#data-slide-3 {
@@ -415,6 +417,7 @@ html, body {
                         .stars-2 {opacity: 1; transform: translateX(0);}
                     }
                 }
+                .section-content {padding-bottom: get-vw(60px);}
             }
             &#data-slide-6 {
                 &:before {
@@ -430,6 +433,10 @@ html, body {
                         .stars-1 {transform: translateY(0); opacity: 1;}
                         .stars-2 {opacity: 1;}
                     }
+                }
+                .section-content {padding-bottom: get-vw(60px);}
+                &:after {
+                    position: absolute; content: ''; display: block; z-index: 0; background-image: url('../images/nebula-yellow.png'); background-position: center; background-repeat: no-repeat; background-size: 100%; right: 0; transform: translate(20%,-30%); width: get-vw(1399px); height: get-vw(1085px); top: 50%;
                 }
             }
             &#data-slide-7 {
@@ -808,7 +815,7 @@ html, body {
                 }
             }
             .video {
-                margin-top: get-vw(150px);
+                margin-top: get-vw(210px);
                 .uk-container {
                     video {
                         display: block; margin: 0 auto;

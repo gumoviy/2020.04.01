@@ -1525,7 +1525,7 @@
                                     
                                     <section class="timeline">
                                         <div class="roadmap-content">
-                                        <ol>
+                                        <ol class="roadmap-content-ol">
                                             <li class="active">
                                                 <div>
                                                     <time>Запуск игры Галактика Онлайн</time> Игра Галактика Онлайн запущена в режиме бета-версии.
@@ -1935,11 +1935,11 @@
                                     <button class="uk-button uk-button-drop" type="button">Все партнеры</button>
                                     <div uk-dropdown="mode: click">
                                         <ul class="uk-nav uk-dropdown-nav">
-                                            <li uk-filter-control=".tag-all" class="uk-active"><a href="#" onclick="$(this).parents('.tag-container').find('.uk-button-drop').html($(this).html()); UIkit.dropdown('.uk-dropdown').hide();">Все партнеры</a></li>
-                                            <li uk-filter-control=".tag-blockchaine"><a href="#" onclick="$(this).parents('.tag-container').find('.uk-button-drop').html($(this).html()); UIkit.dropdown('.uk-dropdown').hide();">Блокчейны</a></li>
-                                            <li uk-filter-control=".tag-validator"><a href="#" onclick="$(this).parents('.tag-container').find('.uk-button-drop').html($(this).html()); UIkit.dropdown('.uk-dropdown').hide();">Валидаторы</a></li>
-                                            <li uk-filter-control=".tag-project"><a href="#" onclick="$(this).parents('.tag-container').find('.uk-button-drop').html($(this).html()); UIkit.dropdown('.uk-dropdown').hide();">Проекты</a></li>
-                                            <li uk-filter-control=".tag-smi"><a href="#" onclick="$(this).parents('.tag-container').find('.uk-button-drop').html($(this).html()); UIkit.dropdown('.uk-dropdown').hide();">СМИ</a></li>
+                                            <li uk-filter-control=".tag-all" class="uk-active"><a href="#" class="hidedrop">Все партнеры</a></li>
+                                            <li uk-filter-control=".tag-blockchaine"><a href="#" class="hidedrop">Блокчейны</a></li>
+                                            <li uk-filter-control=".tag-validator"><a href="#" class="hidedrop">Валидаторы</a></li>
+                                            <li uk-filter-control=".tag-project"><a href="#" class="hidedrop">Проекты</a></li>
+                                            <li uk-filter-control=".tag-smi"><a href="#" class="hidedrop">СМИ</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -2692,7 +2692,6 @@
             
             
             /* roadmap slider - start */
-            /* roadmap slider - start */
             (function () {
                 const timeline = document.querySelector(".timeline ol"),
                       elH = document.querySelectorAll(".timeline li > div"),
@@ -2701,7 +2700,7 @@
                       arrowNext = document.querySelector(".timeline .arrows .arrow__next"),
                       firstItem = document.querySelector(".timeline li:first-child"),
                       lastItem = document.querySelector(".timeline li:last-child"),
-                      xScrolling = 344,
+                      xScrolling = 1032,// step 344
                       disabledClass = "disabled";
                 
                 // START
@@ -2788,10 +2787,40 @@
                 }
                 // ADD SWIPE SUPPORT FOR TOUCH DEVICES
                 function setSwipeFn(tl, prev, next) {
-                    const hammer = new Hammer(tl);
+                    /*const hammer = new Hammer(tl);
                     hammer.on("swipeleft", () => next.click());
-                    hammer.on("swiperight", () => prev.click());
+                    hammer.on("swiperight", () => prev.click());*/
                 }
+                
+                
+                const slider = document.querySelector('.roadmap-content');//.roadmap-content-ol
+                let isDown = false;
+                let startX;
+                let scrollLeft;
+                slider.addEventListener('mousedown', (e) => {
+                    isDown = true;
+                    slider.classList.add('active');
+                    startX = e.pageX - slider.offsetLeft;
+                    scrollLeft = slider.scrollLeft;
+                });
+                slider.addEventListener('mouseleave', () => {
+                    isDown = false;
+                    slider.classList.remove('active');
+                });
+                slider.addEventListener('mouseup', () => {
+                    isDown = false;
+                    slider.classList.remove('active');
+                });
+                slider.addEventListener('mousemove', (e) => {
+                    if(!isDown) return;
+                    e.preventDefault();
+                    const x = e.pageX - slider.offsetLeft;
+                    const walk = (x - startX) * 1; //scroll-fast
+                    slider.scrollLeft = scrollLeft - walk;
+                    console.log(walk);
+                });
+                
+                
                 // ADD BASIC KEYBOARD FUNCTIONALITY
                 function setKeyboardFn(prev, next) {
                     document.addEventListener("keydown", (e) => {
@@ -2810,6 +2839,15 @@
                     });
                 }
             })();
+            /* roadmap slider - end */
+            
+            $('.hidedrop').click(function() {
+                $(this).parents('.tag-container').find('.uk-button-drop').html($(this).html());
+                /*setTimeout(function() {
+                    $('.uk-dropdown').removeClass('uk-open');
+                    //UIkit.dropdown('.uk-dropdown').hide();
+                }, 300);*/
+            });
             
         </script>
     </body>

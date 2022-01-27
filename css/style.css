@@ -937,6 +937,20 @@ html, body {
         html .page-slider .panel#data-slide-2 .section .uk-slider-container, body .page-slider .panel#data-slide-2 .section .uk-slider-container {
           -webkit-mask-position: 0 0;
           -webkit-mask-image: linear-gradient(270deg, rgba(196, 196, 196, 0) 0%, #C4C4C4 7.95%, #C4C4C4 92.42%, rgba(196, 196, 196, 0) 100%); }
+      html .page-slider .panel#data-slide-2:after, body .page-slider .panel#data-slide-2:after {
+        position: absolute;
+        z-index: 0;
+        left: 0;
+        top: 100%;
+        transform: translateY(-30%);
+        background-image: url("../images/nebula-purple.png");
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        content: '';
+        display: block;
+        width: 69.9479166667vw;
+        height: 54.3229166667vw; }
       html .page-slider .panel#data-slide-3:before, body .page-slider .panel#data-slide-3:before {
         background-image: linear-gradient(135deg, rgba(254, 175, 20, 0), rgba(254, 175, 20, 0.3)), url("../images/light-1.png");
         transform: scale(-1); }
@@ -1087,6 +1101,8 @@ html, body {
       html .page-slider .panel#data-slide-5.active .animate-layer .stars-2, body .page-slider .panel#data-slide-5.active .animate-layer .stars-2 {
         opacity: 1;
         transform: translateX(0); }
+      html .page-slider .panel#data-slide-5 .section-content, body .page-slider .panel#data-slide-5 .section-content {
+        padding-bottom: 3.125vw; }
       html .page-slider .panel#data-slide-6:before, body .page-slider .panel#data-slide-6:before {
         background-image: linear-gradient(45deg, rgba(12, 183, 84, 0), rgba(12, 183, 84, 0.3)), url("../images/light-1.png");
         transform: scaleX(-1); }
@@ -1128,6 +1144,22 @@ html, body {
         opacity: 1; }
       html .page-slider .panel#data-slide-6.active .animate-layer .stars-2, body .page-slider .panel#data-slide-6.active .animate-layer .stars-2 {
         opacity: 1; }
+      html .page-slider .panel#data-slide-6 .section-content, body .page-slider .panel#data-slide-6 .section-content {
+        padding-bottom: 3.125vw; }
+      html .page-slider .panel#data-slide-6:after, body .page-slider .panel#data-slide-6:after {
+        position: absolute;
+        content: '';
+        display: block;
+        z-index: 0;
+        background-image: url("../images/nebula-yellow.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        right: 0;
+        transform: translate(20%, -30%);
+        width: 72.8645833333vw;
+        height: 56.5104166667vw;
+        top: 50%; }
       html .page-slider .panel#data-slide-7:before, body .page-slider .panel#data-slide-7:before {
         background-image: linear-gradient(135deg, rgba(236, 81, 81, 0), rgba(236, 81, 81, 0.3)), url("../images/light-1.png");
         transform: scaleX(1); }
@@ -1790,7 +1822,7 @@ html, body {
             width: 2.2395833333vw;
             height: auto; }
       html .page-slider .panel .video, body .page-slider .panel .video {
-        margin-top: 7.8125vw; }
+        margin-top: 10.9375vw; }
         html .page-slider .panel .video .uk-container video, body .page-slider .panel .video .uk-container video {
           display: block;
           margin: 0 auto; }
