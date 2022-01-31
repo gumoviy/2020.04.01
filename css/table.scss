@@ -1,6 +1,18 @@
 html, body {
+    .uk-content {
+        .uk-section {
+            .table {
+                a {color: $primary;}
+            }
+        }
+    }
     .table {
-        .table-header {}
+        .table-header {
+            margin-bottom: get-vw(10px);
+            .table-row {
+                font-family: $semibold; font-weight: 600; font-size: get-vw(18px); line-height: get-vw(30px); color: rgba(255, 255, 255, 0.4); text-transform: uppercase; padding: 0 get-vw(16px) get-vw(9.2px) get-vw(16px); box-sizing: border-box;
+            }
+        }
         .table-body {
             .table-row {background: rgba(255, 255, 255, 0.05); border-radius: get-vw(7px); padding: get-vw(9.2px) get-vw(16px);}
         }
@@ -10,6 +22,24 @@ html, body {
         .table-icon {margin-right: get-vw(12px); width: get-vw(25px); height: auto;}
     }
     .uk-table-list {
+        ul {
+            padding: 0;
+            &.uk-grid, .uk-grid {
+                &.uk-grid-xsmall {
+                    > * {
+                        padding-left: get-vw(10px); margin: 0;
+                        &.uk-grid-margin {margin-top: get-vw(10px);}
+                    }
+                }
+            }
+            margin: 0;
+            li {
+                padding: 0;
+            }
+        }
+        &.uk-overflow-auto {
+            padding-right: 22px;
+        }
         .uk-table-list-item {
             .uk-card-body, .uk-card-footer, .uk-card-header {
                 padding: get-vw(24px) get-vw(28px);

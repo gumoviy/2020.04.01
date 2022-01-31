@@ -2,6 +2,7 @@
 @import "table.scss";
 @import "buttons.scss";
 @import "roadmap.scss";
+@import "lists.scss";
 @import "main.scss";
 
 html, body {
@@ -35,7 +36,11 @@ html, body {
             &.uk-area-drop {
                 &+ .uk-dropdown {
                     top: calc(100% + 0.5208vw)!important; left: auto!important; right: 0; background: rgba(#32363a,.85);
+                    .uk-dropdown-nav {
+                        padding: 0; margin: 0;
+                    }
                     li {
+                        margin: 0; padding: 0; list-style: none;
                         a {
                             background: rgba(#32363a,.85); transition: all 300ms ease-in-out;
                             &:hover {background: rgba(255,255,255,.2);}
@@ -110,9 +115,32 @@ html, body {
     }
     .uk-content {
         padding-top: get-vw(180px); position: relative; font-size: get-vw(20px); line-height: get-vw(30px);
+        .uk-text-xsmall {font-size: 15px; letter-spacing: 0.08em;}
         .uk-section {
             padding: 0;
-            a {color: $warning;}
+            a {
+                &:not(.uk-button) {
+                    color: $warning;
+                }
+            }
+            ul {
+                &.uk-subnav {
+                    li {
+                        a {font-size: get-vw(18px); line-height: get-vw(16px); padding: get-vw(16px) get-vw(16px); color: rgba(255,255,255,.4); font-family: $medium; text-transform: uppercase; transition: all 300ms ease;}
+                        &:first-of-type {border-radius: get-vw(7px) 0 0 get-vw(7px);}
+                        &:last-of-type {border-radius: 0 get-vw(7px) get-vw(7px) 0;}
+                        &.uk-active {
+                            a {background: rgba($primary,1); border-radius: get-vw(7px); color: rgba(#121212,1);}
+                            &:hover {
+                                a {background: rgba($primary,1); border-radius: get-vw(7px); color: rgba(#121212,1); cursor: default;}
+                            }
+                        }
+                        &:hover {
+                            a {background: rgba($primary,1); border-radius: get-vw(7px); color: rgba(255,255,255,1); text-shadow: 0 0 5px rgba(255,255,255,.4); cursor: pointer;}
+                        }
+                    }
+                }
+            }
             &.uk-footer {
                 margin-top: get-vw(60px); display: flex; flex-direction: column; align-items: center; background: rgba(255, 255, 255, 0.07); border: get-vw(1px) solid rgba(255, 255, 255, 0.05); box-sizing: border-box; backdrop-filter: blur(get-vw(40px));
                 .uk-container {padding: get-vw(50px) get-vw(60px) get-vw(40px);}
@@ -136,7 +164,7 @@ html, body {
                 ul {
                     margin: 0; padding: 0;
                     li {
-                        padding: 10px 0; list-style: none;
+                        padding: 10px 0; list-style: none; margin-left: 0; margin-top: 0;
                         a {
                             font-size: get-vw(22px); line-height: 130%; letter-spacing: 0.02em; font-family: $medium; color: rgba(255,255,255,.6);
                             &:hover {text-decoration: none; color: rgba(255,255,255,1);}
@@ -146,20 +174,35 @@ html, body {
                 }
             }
         }
+        .uk-text-light {color: rgba(255,255,255,1);}
         .uk-margin-bottom {margin-bottom: get-vw(24px)!important;}
         .uk-margin-top {margin-top: get-vw(24px)!important;}
         .uk-margin-medium-bottom {margin-bottom: get-vw(54px)!important;}
         .uk-margin-medium-top {margin-top: get-vw(54px)!important;}
         p {margin-bottom: get-vw(24px);}
-        ol, ul {
-            padding: 0; margin: get-vw(24px) 0;
-            li {
-                padding: 0; list-style-position: inside;
-                p {margin: get-vw(24px) 0;}
-            }
-        }
         h1 {margin-bottom: get-vw(54px);}
         h3 {font-size: get-vw(22px); line-height: get-vw(26px); letter-spacing: 0.08em; margin-bottom: get-vw(24px);}
+        .union {
+            font-size: get-vw(18px); line-height: get-vw(24px);
+            .uk-overflow-auto {
+                height: calc(100vh - 25vw); padding-right: get-vw(22px); min-height: get-vw(350px);
+            }
+            .uk-card {
+                overflow: hidden;
+                .uk-card-body {height: 100%;}
+            }
+            .union-list-item-descr {
+                height: calc(100% - 14.3vw); overflow-y: auto; margin-right: get-vw(-20px); padding-right: get-vw(12px); color: rgba(255,255,255,.5);
+                &::-webkit-scrollbar {
+                    width: get-vw(5px); background: transparent;
+                }
+                p {
+                    &:first-of-type {margin-top: 0;}
+                    &:last-of-type {margin-bottom: 0;}
+                }
+            }
+            .uk-text-normal {font-size: get-vw(18px); line-height: get-vw(24px);}
+        }
     }
     figure {
         padding: get-vw(37px) get-vw(40px); background: rgba(255, 255, 255, 0.05); box-shadow: 0px get-vw(4px) get-vw(24px) get-vw(-1px) rgba(0, 0, 0, 0.2); backdrop-filter: blur(get-vw(40px)); border-radius: get-vw(20px); border: get-vw(1px) solid rgba(255,255,255,.2); margin: get-vw(24px) 0; text-align: center;
@@ -201,6 +244,13 @@ html, body {
                     }
                 }
             }
+        }
+    }
+    ul.uk-switcher {
+        margin-top: 0;
+        > * {margin: 0!important;}
+        &[class*=uk-width] {
+            padding-left: get-vw(46px);
         }
     }
     .uk-container {
@@ -287,17 +337,86 @@ html, body {
             
         }
     }
+    .uk-progress {
+        background: transparent; height: get-vw(5px); border-radius: get-vw(1px);
+        &::-webkit-progress-bar {border-radius: get-vw(1px); background: rgba(255,255,255,.2);}
+        &::-webkit-progress-value {background-color: $green; border-radius: get-vw(1px);}
+        &::-moz-progress-bar {border-radius: get-vw(1px);}
+        &.uk-danger {
+            &::-webkit-progress-bar {border-radius: get-vw(1px);}
+            &::-webkit-progress-value {background-color: $red; border-radius: get-vw(1px);}
+            &::-moz-progress-bar {border-radius: get-vw(1px);}
+        }
+    }
+    .uk-badge {
+        background: $blue;
+        font-size: 15px; line-height: 22px; height: 22px; letter-spacing: .08em;
+    }
+    /* inputs - start */
+    .uk-input {
+        line-height: get-vw(44px); background: rgba(255, 255, 255, 0.05); box-sizing: border-box; padding: get-vw(10px) get-vw(18px); font-size: get-vw(18px); line-height: get-vw(24px); font-family: $regular; border: 0.0521vw solid rgba(255, 255, 255, 0.1); box-sizing: border-box; box-shadow: 0px 0px get-vw(40px) rgba(255, 255, 255, 0); backdrop-filter: blur(get-vw(20px)); border-radius: get-vw(10px); transition: background 300ms ease-in-out, box-shadow 300ms ease-in-out, border 300ms ease-in-out, color 300ms ease-in-out; height: get-vw(46px); color: rgba(255,255,255,.4);
+        &:focus {box-shadow: 0px 0px get-vw(40px) rgba(255, 255, 255, 0.2); background: rgba(255, 255, 255, 0.2); color: rgba(255,255,255,1); border-color: rgba(255,255,255,.2);}
+    }
+    .uk-form-icon {
+        position: absolute; left: get-vw(18px); width: get-vw(18px); height: get-vw(18px); top: 50%; transform: translateY(-50%);
+        &.uk-form-icon-flip {
+            left: auto; right: get-vw(18px);
+        }
+        ~ .uk-input {padding-right: get-vw(48px)!important;}
+        &:not(.uk-form-icon-flip) {
+            ~ .uk-input {padding-left: get-vw(48px)!important; padding-right: get-vw(18px)!important;}
+        }
+    }
+    /* inputs - end */
+    
+    /* modal - start */
+    .uk-modal {
+        background: rgba(0, 0, 0, 0.7); font-size: get-vw(20px); line-height: 150%; font-family: $regular; font-weight: 400; color: rgba(255,255,255,.6);
+        .uk-modal-dialog {
+            background: #1A1B1E; box-shadow: 0px get-vw(4px) get-vw(24px) get-vw(-1px) rgba(0, 0, 0, 0.2); backdrop-filter: blur(get-vw(40px)); border-radius: get-vw(20px); border: 2px solid rgba(255,255,255,.1);
+            .uk-modal-body, &.uk-modal-body {
+                background: transparent; padding: get-vw(37px) get-vw(40px);
+            }
+            .uk-modal-footer {
+                background: transparent; padding: get-vw(17px) get-vw(40px); border-top: 1px solid rgba(255,255,255,.1);
+            }
+            .uk-close {
+                top: get-vw(37px); right: get-vw(40px);
+                svg {
+                    width: get-vw(20px); height: get-vw(20px);
+                    line {
+                        stroke-width: get-vw(3px); stroke-linecap: round;
+                    }
+                }
+            }
+        }
+        
+        h1, h2, h3, h4, h5, h6 {font-size: get-vw(27px); line-height: get-vw(32px); margin-bottom: get-vw(24px); font-family: $medium; font-weight: 500;}
+        .uk-text-light {color: rgba(255,255,255,1);}
+        .uk-text-xsmall {font-size: 15px;}
+    }
+    /* modal - end */
+    
+    .uk-rating-list-item {
+        font-size: get-vw(18px); line-height: get-vw(22px); min-height: get-vw(48.38px); margin-top: get-vw(6.4px)!important;
+    }
+    .uk-rating-list-item-header {font-size: get-vw(18px); line-height: get-vw(22px); min-height: get-vw(39.19px); margin-bottom: get-vw(10px)!important; padding-top: 3px; box-sizing: border-box;}
+    .uk-text-ellipsis {
+        text-overflow: ellipsis; overflow: hidden; white-space: nowrap;
+    }
 	.uk-color {
 		font-size: get-vw(26px); line-height: 130%;
 		img {margin-right: get-vw(18px);}
 	}
     .uk-padding-xsmall-top {padding-top: get-vw(5px);}
     .uk-padding-small-top {padding-top: get-vw(10px);}
+    .uk-padding-small-left {padding-left: get-vw(10px)!important;}
+    .uk-padding-small-right {padding-right: get-vw(10px)!important;}
     .uk-subnav {
         margin: 0;
         &.uk-subnav-pill {
             li {
-                padding: 0; background: rgba(255, 255, 255, 0.05); border-radius: 0;
+                padding: 0; background: rgba(255, 255, 255, 0.05); border-radius: 0; list-style: none; margin: 0;
                 a {font-size: get-vw(18px); line-height: get-vw(16px); padding: get-vw(16px) get-vw(16px); color: rgba(255,255,255,.4); font-family: $medium; text-transform: uppercase; transition: all 300ms ease;}
                 &:first-of-type {border-radius: get-vw(7px) 0 0 get-vw(7px);}
                 &:last-of-type {border-radius: 0 get-vw(7px) get-vw(7px) 0;}
@@ -372,8 +491,31 @@ html, body {
             margin-left: get-vw(-12px);
             >* {padding-left: get-vw(12px);}
         }
+        &.uk-grid-collapse {
+            margin-left: 0;
+            > * {
+                padding-left: 0;
+            }
+        }
     }
-    
+    .fun-club-card-info {
+                                            width: get-vw(28px); height: get-vw(28px); position: relative; display: inline-block; background-position: center; background-repeat: no-repeat; background-size: contain;
+                                            &.fun-club-card-text {
+                                                background-image: url('../images/fun-club-post.svg');
+                                            }
+                                            &.fun-club-card-video {
+                                                background-image: url('../images/fun-club-video.svg');
+                                            }
+                                            &.fun-club-card-audio {
+                                                background-image: url('../images/fun-club-post.svg');
+                                            }
+                                            &.fun-club-card-print {
+                                                background-image: url('../images/fun-club-print.svg');
+                                            }
+                                            &.fun-club-card-pic {
+                                                background-image: url('../images/fun-club-wallpapers.svg');
+                                            }
+                                        }
     *+.uk-grid-margin-xsmall, .uk-grid+.uk-grid-row-xsmall, .uk-grid+.uk-grid-xsmall, .uk-grid-row-xsmall>.uk-grid-margin, .uk-grid-xsmall>.uk-grid-margin {
         margin-top: get-vw(10px);
     }
