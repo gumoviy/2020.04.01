@@ -403,22 +403,7 @@ html, body {
                                             font-size: get-vw(27px); line-height: get-vw(32px); font-family: $medium; text-align: center; bottom: 0; left: 0; right: 0; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,1); min-height: get-vw(64px); position: absolute; padding: 0 get-vw(30px) get-vw(28px) get-vw(30px); background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .7) 100%); margin: 0;
                                         }
                                         .fun-club-card-info {
-                                            width: get-vw(28px); height: get-vw(28px); position: absolute; right: get-vw(24px); top: get-vw(24px); display: inline-block; background-position: center; background-repeat: no-repeat; background-size: contain;
-                                            &.fun-club-card-text {
-                                                background-image: url('../images/fun-club-post.svg');
-                                            }
-                                            &.fun-club-card-video {
-                                                background-image: url('../images/fun-club-video.svg');
-                                            }
-                                            &.fun-club-card-audio {
-                                                background-image: url('../images/fun-club-post.svg');
-                                            }
-                                            &.fun-club-card-print {
-                                                background-image: url('../images/fun-club-print.svg');
-                                            }
-                                            &.fun-club-card-pic {
-                                                background-image: url('../images/fun-club-wallpapers.svg');
-                                            }
+                                            position: absolute; right: get-vw(24px); top: get-vw(24px);
                                         }
                                         &:hover {background-size: 110%;}
                                     }
