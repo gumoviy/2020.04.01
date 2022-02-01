@@ -2928,6 +2928,10 @@ html, body {
       margin-bottom: 2.8125vw !important; }
     html .uk-content .uk-margin-medium-top, body .uk-content .uk-margin-medium-top {
       margin-top: 2.8125vw !important; }
+    html .uk-content .uk-margin-xmedium-bottom, body .uk-content .uk-margin-xmedium-bottom {
+      margin-bottom: 1.6666666667vw !important; }
+    html .uk-content .uk-margin-xmedium-top, body .uk-content .uk-margin-xmedium-top {
+      margin-top: 1.6666666667vw !important; }
     html .uk-content p, body .uk-content p {
       margin-bottom: 1.25vw; }
     html .uk-content h1, body .uk-content h1 {
@@ -3271,6 +3275,32 @@ html, body {
       border-radius: 10px; }
       html .uk-pagination.uk-pagination-navs li > a:hover, html .uk-pagination.uk-pagination-navs li > span:hover, body .uk-pagination.uk-pagination-navs li > a:hover, body .uk-pagination.uk-pagination-navs li > span:hover {
         border-color: #F59E5A; }
+  html .partner-item .partner-name, body .partner-item .partner-name {
+    font-size: 1.25vw;
+    position: relative;
+    padding-left: 4.84375vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    html .partner-item .partner-name div, body .partner-item .partner-name div {
+      font-family: "Rogan Bold", sans-serif; }
+    html .partner-item .partner-name img, body .partner-item .partner-name img {
+      width: 3.5416666667vw;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%); }
+    html .partner-item .partner-name span, body .partner-item .partner-name span {
+      font-size: 1.0416666667vw;
+      color: rgba(255, 255, 255, 0.6);
+      font-family: "Rogan Regular", sans-serif; }
+  html .partner-item svg, body .partner-item svg {
+    width: 0.625vw;
+    height: 1.09375vw; }
+  html .partner-item a, body .partner-item a {
+    width: 2.8125vw;
+    height: 2.8125vw;
+    line-height: 1.7708333333vw; }
   html .uk-rating-list-item, body .uk-rating-list-item {
     font-size: 0.9375vw;
     line-height: 1.1458333333vw;

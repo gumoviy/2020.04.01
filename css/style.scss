@@ -182,6 +182,8 @@ html, body {
         .uk-margin-top {margin-top: get-vw(24px)!important;}
         .uk-margin-medium-bottom {margin-bottom: get-vw(54px)!important;}
         .uk-margin-medium-top {margin-top: get-vw(54px)!important;}
+        .uk-margin-xmedium-bottom {margin-bottom: get-vw(32px)!important;}
+        .uk-margin-xmedium-top {margin-top: get-vw(32px)!important;}
         p {margin-bottom: get-vw(24px);}
         h1 {margin-bottom: get-vw(54px);}
         h3 {font-size: get-vw(22px); line-height: get-vw(26px); letter-spacing: 0.08em; margin-bottom: get-vw(24px);}
@@ -437,6 +439,17 @@ html, body {
     }
     /* pagination - end */
     
+    .partner-item {
+        //min-height: get-vw(300px);
+        .partner-name {
+            font-size: get-vw(24px); position: relative; padding-left: get-vw(93px); display: flex; flex-direction: column; justify-content: center;
+            div {font-family: $bold;}
+            img {width: get-vw(68px); position: absolute; left: 0; top: 50%; transform: translateY(-50%);}
+            span {font-size: get-vw(20px); color: rgba(255,255,255,.6); font-family: $regular;}
+        }
+        svg {width: get-vw(12px); height: get-vw(21px);}
+        a {width: get-vw(54px); height: get-vw(54px); line-height: get-vw(34px);}
+    }
     .uk-rating-list-item {
         font-size: get-vw(18px); line-height: get-vw(22px); min-height: get-vw(48.38px); margin-top: get-vw(6.4px)!important;
     }
