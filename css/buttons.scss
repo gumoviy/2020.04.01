@@ -39,6 +39,11 @@ html, body {
         }
         .uk-button {
             border-radius: 0; backdrop-filter: blur(0.0521vw); display: flex; align-items: center; justify-content: center;
+            &.uk-button-default {
+                border: 1px solid rgba(255,255,255,.2);
+                border-right-width: 0;
+                &:last-child {border-right-width: 1px;}
+            }
             &:first-child {border-radius: get-vw(10px) 0 0 get-vw(10px);}
             &:last-child {border-radius: 0 get-vw(10px) get-vw(10px) 0;}
             svg {margin-right: get-vw(15px); max-height: get-vw(24px); width: get-vw(34px);}

@@ -159,6 +159,11 @@ html .uk-button-group, body .uk-button-group {
     display: flex;
     align-items: center;
     justify-content: center; }
+    html .uk-button-group .uk-button.uk-button-default, body .uk-button-group .uk-button.uk-button-default {
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-right-width: 0; }
+      html .uk-button-group .uk-button.uk-button-default:last-child, body .uk-button-group .uk-button.uk-button-default:last-child {
+        border-right-width: 1px; }
     html .uk-button-group .uk-button:first-child, body .uk-button-group .uk-button:first-child {
       border-radius: 0.5208333333vw 0 0 0.5208333333vw; }
     html .uk-button-group .uk-button:last-child, body .uk-button-group .uk-button:last-child {
