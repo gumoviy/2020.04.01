@@ -253,10 +253,11 @@ html, body {
     }
     ul.uk-switcher {
         margin-top: 0;
-        > * {margin: 0!important;}
+        > * {margin: 0!important; padding: 0!important; list-style: none!important;}
         &[class*=uk-width] {
             padding-left: get-vw(46px);
         }
+        &.uk-margin {margin-top: get-vw(24px)!important;}
     }
     .uk-container {
         max-width: get-vw(1526px);
@@ -276,10 +277,12 @@ html, body {
         &:hover {color: rgba(255,255,255,.6);}
     }
     .uk-text-orange {color: #F2994A;}
+    .uk-text-yellow {color: $warning;}
     .uk-text-green {color: $green;}
     .uk-text-red {color: $red;}
     .uk-text-blue {color: $blue;}
     .uk-text-dark-blue {color: #37415B;}
+    .uk-text-purple {color: $purple;}
     .uk-card {
         &.uk-card-default {
             background: rgba(255, 255, 255, 0.05); box-shadow: 0px get-vw(4px) get-vw(24px) get-vw(-1px) rgba(0, 0, 0, 0.2); backdrop-filter: blur(get-vw(40px)); border-radius: get-vw(20px); border: 0.0521vw solid rgba(255,255,255,.06); color: rgba(255,255,255,1);
@@ -449,6 +452,75 @@ html, body {
         }
         svg {width: get-vw(12px); height: get-vw(21px);}
         a {width: get-vw(54px); height: get-vw(54px); line-height: get-vw(34px);}
+    }
+    .nft-list-item {
+        &.nft-list-item-card {
+            a {
+                display: flex; align-items: center; justify-content: center; text-align: center; font-size: get-vw(18px); text-transform: uppercase; letter-spacing: .04em; font-family: $semibold; background: rgba(255, 255, 255, 0.1); border-radius: get-vw(20px); padding: get-vw(30px); line-height: get-vw(21.6px); height: 100%; box-sizing: border-box; transition: background 300ms ease-in-out; position: relative;
+                .button-rotate {
+                    position: absolute; overflow:hidden; z-index: 0; padding: get-vw(5px); left: get-vw(12px); top: get-vw(12px); right: get-vw(12px); bottom: get-vw(12px);
+                    i {
+                        content: ''; position: absolute; z-index: -1; left: 0; top: 0; right: 0; bottom: 0; border-radius: get-vw(15px); padding: get-vw(5px); -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0) padding-box; -webkit-mask-composite: destination-out; mask-composite: exclude;
+                        &:before {
+                            content: ''; position: absolute; left: 50%; top: 50%; width: 200%; height: 0; padding-bottom: 200%; background: linear-gradient(transparent 33%, rgba(255,255,255,1) 70%, rgba(255,255,255,1) 0); animation: circle-animate-grad 6s infinite linear;
+                        }
+                        &:after {
+                            content: ''; position: absolute; left: 50%; top: 50%; width: 200%; height: 0; padding-bottom: 200%; background: linear-gradient(transparent 37%, rgba(255,255,255,1) 0); animation: circle-animate-solid 6s infinite linear;
+                            display: none;
+                        }
+                    }
+                }
+                @keyframes circle-animate-grad {
+                    0% {transform: translate(-50%, -50%) rotate(0deg);}
+                    100% {transform: translate(-50%, -50%) rotate(359deg);}
+                }
+                @keyframes circle-animate-solid {
+                    0% {transform: translate(-50%, -50%) rotate(-100deg);}
+                    100% {transform: translate(-50%, -50%) rotate(259deg);}
+                }
+                &.uk-text-green {
+                    color: $green!important;
+                    .button-rotate {
+                        i {
+                            &:before {background: linear-gradient(transparent 33%, $green 70%, $green 0);}
+                            &:after {background: linear-gradient(transparent 37%, $green 0);}
+                        }
+                    }
+                }
+                &.uk-text-blue {
+                    color: $blue!important;
+                    .button-rotate {
+                        i {
+                            &:before {background: linear-gradient(transparent 33%, $blue 70%, $blue 0);}
+                            &:after {background: linear-gradient(transparent 37%, $blue 0);}
+                        }
+                    }
+                }
+                &.uk-text-yellow {
+                    color: $warning!important;
+                    .button-rotate {
+                        i {
+                            &:before {background: linear-gradient(transparent 33%, $warning 70%, $warning 0);}
+                            &:after {background: linear-gradient(transparent 37%, $warning 0);}
+                        }
+                    }
+                }
+                &.uk-text-purple {
+                    color: $purple!important;
+                    .button-rotate {
+                        i {
+                            &:before {background: linear-gradient(transparent 33%, $purple 70%, $purple 0);}
+                            &:after {background: linear-gradient(transparent 37%, $purple 0);}
+                        }
+                    }
+                }
+                &:hover {text-decoration: none; background: rgba(255, 255, 255, 0.2);}
+            }
+        }
+        > a {
+            display: block;
+            img {width: 100%;}
+        }
     }
     .uk-rating-list-item {
         font-size: get-vw(18px); line-height: get-vw(22px); min-height: get-vw(48.38px); margin-top: get-vw(6.4px)!important;

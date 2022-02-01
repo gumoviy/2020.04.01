@@ -3050,9 +3050,13 @@ html, body {
   html ul.uk-switcher, body ul.uk-switcher {
     margin-top: 0; }
     html ul.uk-switcher > *, body ul.uk-switcher > * {
-      margin: 0 !important; }
+      margin: 0 !important;
+      padding: 0 !important;
+      list-style: none !important; }
     html ul.uk-switcher[class*=uk-width], body ul.uk-switcher[class*=uk-width] {
       padding-left: 2.3958333333vw; }
+    html ul.uk-switcher.uk-margin, body ul.uk-switcher.uk-margin {
+      margin-top: 1.25vw !important; }
   html .uk-container, body .uk-container {
     max-width: 79.4791666667vw; }
     html .uk-container.uk-container-expand, body .uk-container.uk-container-expand {
@@ -3071,6 +3075,8 @@ html, body {
       color: rgba(255, 255, 255, 0.6); }
   html .uk-text-orange, body .uk-text-orange {
     color: #F2994A; }
+  html .uk-text-yellow, body .uk-text-yellow {
+    color: #F59E5A; }
   html .uk-text-green, body .uk-text-green {
     color: #0cb754; }
   html .uk-text-red, body .uk-text-red {
@@ -3079,6 +3085,8 @@ html, body {
     color: #3692c7; }
   html .uk-text-dark-blue, body .uk-text-dark-blue {
     color: #37415B; }
+  html .uk-text-purple, body .uk-text-purple {
+    color: #b25fff; }
   html .uk-card.uk-card-default, body .uk-card.uk-card-default {
     background: rgba(255, 255, 255, 0.05);
     box-shadow: 0px 0.2083333333vw 1.25vw -0.0520833333vw rgba(0, 0, 0, 0.2);
@@ -3301,6 +3309,107 @@ html, body {
     width: 2.8125vw;
     height: 2.8125vw;
     line-height: 1.7708333333vw; }
+  html .nft-list-item.nft-list-item-card a, body .nft-list-item.nft-list-item-card a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.9375vw;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    font-family: "Rogan Semibold", sans-serif;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 1.0416666667vw;
+    padding: 1.5625vw;
+    line-height: 1.125vw;
+    height: 100%;
+    box-sizing: border-box;
+    transition: background 300ms ease-in-out;
+    position: relative; }
+    html .nft-list-item.nft-list-item-card a .button-rotate, body .nft-list-item.nft-list-item-card a .button-rotate {
+      position: absolute;
+      overflow: hidden;
+      z-index: 0;
+      padding: 0.2604166667vw;
+      left: 0.625vw;
+      top: 0.625vw;
+      right: 0.625vw;
+      bottom: 0.625vw; }
+      html .nft-list-item.nft-list-item-card a .button-rotate i, body .nft-list-item.nft-list-item-card a .button-rotate i {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 0.78125vw;
+        padding: 0.2604166667vw;
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0) padding-box;
+        -webkit-mask-composite: destination-out;
+        mask-composite: exclude; }
+        html .nft-list-item.nft-list-item-card a .button-rotate i:before, body .nft-list-item.nft-list-item-card a .button-rotate i:before {
+          content: '';
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          width: 200%;
+          height: 0;
+          padding-bottom: 200%;
+          background: linear-gradient(transparent 33%, white 70%, white 0);
+          animation: circle-animate-grad 6s infinite linear; }
+        html .nft-list-item.nft-list-item-card a .button-rotate i:after, body .nft-list-item.nft-list-item-card a .button-rotate i:after {
+          content: '';
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          width: 200%;
+          height: 0;
+          padding-bottom: 200%;
+          background: linear-gradient(transparent 37%, white 0);
+          animation: circle-animate-solid 6s infinite linear;
+          display: none; }
+@keyframes circle-animate-grad {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg); }
+  100% {
+    transform: translate(-50%, -50%) rotate(359deg); } }
+@keyframes circle-animate-solid {
+  0% {
+    transform: translate(-50%, -50%) rotate(-100deg); }
+  100% {
+    transform: translate(-50%, -50%) rotate(259deg); } }
+    html .nft-list-item.nft-list-item-card a.uk-text-green, body .nft-list-item.nft-list-item-card a.uk-text-green {
+      color: #0cb754 !important; }
+      html .nft-list-item.nft-list-item-card a.uk-text-green .button-rotate i:before, body .nft-list-item.nft-list-item-card a.uk-text-green .button-rotate i:before {
+        background: linear-gradient(transparent 33%, #0cb754 70%, #0cb754 0); }
+      html .nft-list-item.nft-list-item-card a.uk-text-green .button-rotate i:after, body .nft-list-item.nft-list-item-card a.uk-text-green .button-rotate i:after {
+        background: linear-gradient(transparent 37%, #0cb754 0); }
+    html .nft-list-item.nft-list-item-card a.uk-text-blue, body .nft-list-item.nft-list-item-card a.uk-text-blue {
+      color: #3692c7 !important; }
+      html .nft-list-item.nft-list-item-card a.uk-text-blue .button-rotate i:before, body .nft-list-item.nft-list-item-card a.uk-text-blue .button-rotate i:before {
+        background: linear-gradient(transparent 33%, #3692c7 70%, #3692c7 0); }
+      html .nft-list-item.nft-list-item-card a.uk-text-blue .button-rotate i:after, body .nft-list-item.nft-list-item-card a.uk-text-blue .button-rotate i:after {
+        background: linear-gradient(transparent 37%, #3692c7 0); }
+    html .nft-list-item.nft-list-item-card a.uk-text-yellow, body .nft-list-item.nft-list-item-card a.uk-text-yellow {
+      color: #F59E5A !important; }
+      html .nft-list-item.nft-list-item-card a.uk-text-yellow .button-rotate i:before, body .nft-list-item.nft-list-item-card a.uk-text-yellow .button-rotate i:before {
+        background: linear-gradient(transparent 33%, #F59E5A 70%, #F59E5A 0); }
+      html .nft-list-item.nft-list-item-card a.uk-text-yellow .button-rotate i:after, body .nft-list-item.nft-list-item-card a.uk-text-yellow .button-rotate i:after {
+        background: linear-gradient(transparent 37%, #F59E5A 0); }
+    html .nft-list-item.nft-list-item-card a.uk-text-purple, body .nft-list-item.nft-list-item-card a.uk-text-purple {
+      color: #b25fff !important; }
+      html .nft-list-item.nft-list-item-card a.uk-text-purple .button-rotate i:before, body .nft-list-item.nft-list-item-card a.uk-text-purple .button-rotate i:before {
+        background: linear-gradient(transparent 33%, #b25fff 70%, #b25fff 0); }
+      html .nft-list-item.nft-list-item-card a.uk-text-purple .button-rotate i:after, body .nft-list-item.nft-list-item-card a.uk-text-purple .button-rotate i:after {
+        background: linear-gradient(transparent 37%, #b25fff 0); }
+    html .nft-list-item.nft-list-item-card a:hover, body .nft-list-item.nft-list-item-card a:hover {
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.2); }
+  html .nft-list-item > a, body .nft-list-item > a {
+    display: block; }
+    html .nft-list-item > a img, body .nft-list-item > a img {
+      width: 100%; }
   html .uk-rating-list-item, body .uk-rating-list-item {
     font-size: 0.9375vw;
     line-height: 1.1458333333vw;
