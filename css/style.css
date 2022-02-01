@@ -431,7 +431,6 @@ html .uk-button, body .uk-button {
     box-sizing: border-box;
     padding: 0.5208333333vw 1.6666666667vw;
     font-size: 1.0416666667vw;
-    border: 0.0521vw solid rgba(255, 255, 255, 0.1);
     box-sizing: border-box;
     backdrop-filter: blur(1.0416666667vw);
     transition: background 300ms ease-in-out, box-shadow 300ms ease-in-out, border 300ms ease-in-out, color 300ms ease-in-out; }
@@ -2854,7 +2853,8 @@ html, body {
             background: #30b2e6;
             border-radius: 0.3645833333vw;
             color: #121212;
-            cursor: default; }
+            cursor: default;
+            text-shadow: none; }
       html .uk-content .uk-section ul.uk-subnav li:first-of-type, body .uk-content .uk-section ul.uk-subnav li:first-of-type {
         border-radius: 0.3645833333vw 0 0 0.3645833333vw; }
       html .uk-content .uk-section ul.uk-subnav li:last-of-type, body .uk-content .uk-section ul.uk-subnav li:last-of-type {
@@ -2865,6 +2865,10 @@ html, body {
         color: white;
         text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
         cursor: pointer; }
+      html .uk-content .uk-section ul.uk-subnav li.uk-active a, body .uk-content .uk-section ul.uk-subnav li.uk-active a {
+        color: #121212; }
+        html .uk-content .uk-section ul.uk-subnav li.uk-active a:hover, body .uk-content .uk-section ul.uk-subnav li.uk-active a:hover {
+          text-shadow: none; }
       html .uk-content .uk-section.uk-footer, body .uk-content .uk-section.uk-footer {
         margin-top: 4.1666666667vw;
         display: flex;
@@ -3141,6 +3145,10 @@ html, body {
       height: 60%; }
   html .uk-card.uk-card-body + .uk-card-footer, html .uk-card .uk-card-body + .uk-card-footer, body .uk-card.uk-card-body + .uk-card-footer, body .uk-card .uk-card-body + .uk-card-footer {
     padding-top: 0; }
+  html .uk-card.uk-card-body + .uk-card-body, html .uk-card .uk-card-body + .uk-card-body, body .uk-card.uk-card-body + .uk-card-body, body .uk-card .uk-card-body + .uk-card-body {
+    border-top: 1px solid rgba(255, 255, 255, 0.1); }
+  html .uk-card.uk-card-small.uk-card-body, html .uk-card.uk-card-small .uk-card-body, body .uk-card.uk-card-small.uk-card-body, body .uk-card.uk-card-small .uk-card-body {
+    padding: 0.8333333333vw 1.25vw; }
   html .uk-card .uk-text-medium, body .uk-card .uk-text-medium {
     letter-spacing: 0.08em;
     font-family: "Rogan Medium", sans-serif; }
@@ -3455,10 +3463,20 @@ html, body {
         font-family: "Rogan Medium", sans-serif;
         text-transform: uppercase;
         transition: all 300ms ease; }
+        html .uk-subnav.uk-subnav-pill li a.uk-active, body .uk-subnav.uk-subnav-pill li a.uk-active {
+          text-shadow: none; }
+          html .uk-subnav.uk-subnav-pill li a.uk-active:hover, body .uk-subnav.uk-subnav-pill li a.uk-active:hover {
+            text-shadow: none; }
       html .uk-subnav.uk-subnav-pill li:first-of-type, body .uk-subnav.uk-subnav-pill li:first-of-type {
         border-radius: 0.3645833333vw 0 0 0.3645833333vw; }
       html .uk-subnav.uk-subnav-pill li:last-of-type, body .uk-subnav.uk-subnav-pill li:last-of-type {
         border-radius: 0 0.3645833333vw 0.3645833333vw 0; }
+      html .uk-subnav.uk-subnav-pill li:hover a, body .uk-subnav.uk-subnav-pill li:hover a {
+        background: #30b2e6;
+        border-radius: 0.3645833333vw;
+        color: white;
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+        cursor: pointer; }
       html .uk-subnav.uk-subnav-pill li.uk-active a, body .uk-subnav.uk-subnav-pill li.uk-active a {
         background: #30b2e6;
         border-radius: 0.3645833333vw;
@@ -3467,13 +3485,8 @@ html, body {
         background: #30b2e6;
         border-radius: 0.3645833333vw;
         color: #121212;
-        cursor: default; }
-      html .uk-subnav.uk-subnav-pill li:hover a, body .uk-subnav.uk-subnav-pill li:hover a {
-        background: #30b2e6;
-        border-radius: 0.3645833333vw;
-        color: white;
-        text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
-        cursor: pointer; }
+        cursor: default;
+        text-shadow: none; }
   html .box-shadow-none, body .box-shadow-none {
     box-shadow: none !important; }
   html .uk-ratio, body .uk-ratio {

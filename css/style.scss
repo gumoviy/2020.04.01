@@ -131,7 +131,7 @@ html, body {
                             &.uk-active {
                                 background: rgba($primary,1); border-radius: get-vw(7px); color: rgba(#121212,1);
                                 &:hover {
-                                    background: rgba($primary,1); border-radius: get-vw(7px); color: rgba(#121212,1); cursor: default;
+                                    background: rgba($primary,1); border-radius: get-vw(7px); color: rgba(#121212,1); cursor: default; text-shadow: none;
                                 }
                             }
                         }
@@ -140,6 +140,12 @@ html, body {
                         
                         &:hover {
                             a {background: rgba($primary,1); border-radius: get-vw(7px); color: rgba(255,255,255,1); text-shadow: 0 0 5px rgba(255,255,255,.4); cursor: pointer;}
+                        }
+                        &.uk-active {
+                            a {
+                                color: rgba(#121212,1);
+                                &:hover {text-shadow: none;}
+                            }
                         }
                     }
                 }
@@ -340,9 +346,13 @@ html, body {
                 }
             }
             &+ .uk-card-footer {padding-top: 0;}
+            &+ .uk-card-body {border-top: 1px solid rgba(255,255,255,.1);}
         }
         &.uk-card-footer, .uk-card-footer {
             
+        }
+        &.uk-card-small {
+            &.uk-card-body, .uk-card-body {padding: get-vw(16px) get-vw(24px);}
         }
         .uk-text-medium {letter-spacing: 0.08em; font-family: $medium;}
     }
@@ -542,17 +552,23 @@ html, body {
         &.uk-subnav-pill {
             li {
                 padding: 0; background: rgba(255, 255, 255, 0.05); border-radius: 0; list-style: none; margin: 0;
-                a {font-size: get-vw(18px); line-height: get-vw(16px); padding: get-vw(16px) get-vw(16px); color: rgba(255,255,255,.4); font-family: $medium; text-transform: uppercase; transition: all 300ms ease;}
+                a {
+                    font-size: get-vw(18px); line-height: get-vw(16px); padding: get-vw(16px) get-vw(16px); color: rgba(255,255,255,.4); font-family: $medium; text-transform: uppercase; transition: all 300ms ease;
+                    &.uk-active {
+                        text-shadow: none;
+                        &:hover {text-shadow: none;}
+                    }
+                }
                 &:first-of-type {border-radius: get-vw(7px) 0 0 get-vw(7px);}
                 &:last-of-type {border-radius: 0 get-vw(7px) get-vw(7px) 0;}
+                &:hover {
+                    a {background: rgba($primary,1); border-radius: get-vw(7px); color: rgba(255,255,255,1); text-shadow: 0 0 5px rgba(255,255,255,.4); cursor: pointer;}
+                }
                 &.uk-active {
                     a {background: rgba($primary,1); border-radius: get-vw(7px); color: rgba(#121212,1);}
                     &:hover {
-                        a {background: rgba($primary,1); border-radius: get-vw(7px); color: rgba(#121212,1); cursor: default;}
+                        a {background: rgba($primary,1); border-radius: get-vw(7px); color: rgba(#121212,1); cursor: default; text-shadow: none;}
                     }
-                }
-                &:hover {
-                    a {background: rgba($primary,1); border-radius: get-vw(7px); color: rgba(255,255,255,1); text-shadow: 0 0 5px rgba(255,255,255,.4); cursor: pointer;}
                 }
             }
         }
