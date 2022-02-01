@@ -3264,6 +3264,13 @@ html, body {
       border-color: #F59E5A;
       box-shadow: inset 0px 0px 1.5625vw rgba(245, 158, 90, 0.5);
       color: #F59E5A !important; }
+  html .uk-pagination.uk-pagination-navs li, body .uk-pagination.uk-pagination-navs li {
+    margin: 0 3px !important; }
+    html .uk-pagination.uk-pagination-navs li > a, html .uk-pagination.uk-pagination-navs li > span, body .uk-pagination.uk-pagination-navs li > a, body .uk-pagination.uk-pagination-navs li > span {
+      border-color: rgba(255, 255, 255, 0);
+      border-radius: 10px; }
+      html .uk-pagination.uk-pagination-navs li > a:hover, html .uk-pagination.uk-pagination-navs li > span:hover, body .uk-pagination.uk-pagination-navs li > a:hover, body .uk-pagination.uk-pagination-navs li > span:hover {
+        border-color: #F59E5A; }
   html .uk-rating-list-item, body .uk-rating-list-item {
     font-size: 0.9375vw;
     line-height: 1.1458333333vw;

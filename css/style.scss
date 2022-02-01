@@ -425,8 +425,14 @@ html, body {
                 > a, > span {background: rgba($warning,0.05); border-color: $warning; box-shadow: inset 0px 0px get-vw(30px) rgba($warning,0.5); color: $warning!important;}
             }
         }
-        &.uk-pagination-pages {
-            
+        &.uk-pagination-navs {
+            li {
+                margin: 0 3px!important;
+                > a, > span {
+                    border-color: rgba(255,255,255,0); border-radius: 10px;
+                    &:hover {border-color: $warning;}
+                }
+            }
         }
     }
     /* pagination - end */
