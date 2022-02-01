@@ -2881,7 +2881,7 @@ html, body {
         text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
         cursor: pointer; }
       html .uk-content .uk-section.uk-footer, body .uk-content .uk-section.uk-footer {
-        margin-top: 3.125vw;
+        margin-top: 4.1666666667vw;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -3346,6 +3346,15 @@ html, body {
       margin-left: -0.625vw; }
       html .uk-grid.uk-grid-column-small > *, html .uk-grid.uk-grid-small > *, body .uk-grid.uk-grid-column-small > *, body .uk-grid.uk-grid-small > * {
         padding-left: 0.625vw; }
+    html .uk-grid.uk-grid-column-xmedium, html .uk-grid.uk-grid-xmedium, body .uk-grid.uk-grid-column-xmedium, body .uk-grid.uk-grid-xmedium {
+      margin-left: -1.25vw; }
+      html .uk-grid.uk-grid-column-xmedium > *, html .uk-grid.uk-grid-xmedium > *, body .uk-grid.uk-grid-column-xmedium > *, body .uk-grid.uk-grid-xmedium > * {
+        padding-left: 1.25vw; }
+      html .uk-grid.uk-grid-column-xmedium + .uk-grid-margin, html .uk-grid.uk-grid-column-xmedium + .uk-grid, html .uk-grid.uk-grid-column-xmedium > .uk-grid-margin, html .uk-grid.uk-grid-xmedium + .uk-grid-margin, html .uk-grid.uk-grid-xmedium + .uk-grid, html .uk-grid.uk-grid-xmedium > .uk-grid-margin, body .uk-grid.uk-grid-column-xmedium + .uk-grid-margin, body .uk-grid.uk-grid-column-xmedium + .uk-grid, body .uk-grid.uk-grid-column-xmedium > .uk-grid-margin, body .uk-grid.uk-grid-xmedium + .uk-grid-margin, body .uk-grid.uk-grid-xmedium + .uk-grid, body .uk-grid.uk-grid-xmedium > .uk-grid-margin {
+        margin-top: 1.25vw; }
+      @media (min-width: 1200px) {
+        html .uk-grid.uk-grid-column-xmedium + .uk-grid-margin, html .uk-grid.uk-grid-column-xmedium + .uk-grid, html .uk-grid.uk-grid-column-xmedium > .uk-grid-margin, html .uk-grid.uk-grid-xmedium + .uk-grid-margin, html .uk-grid.uk-grid-xmedium + .uk-grid, html .uk-grid.uk-grid-xmedium > .uk-grid-margin, body .uk-grid.uk-grid-column-xmedium + .uk-grid-margin, body .uk-grid.uk-grid-column-xmedium + .uk-grid, body .uk-grid.uk-grid-column-xmedium > .uk-grid-margin, body .uk-grid.uk-grid-xmedium + .uk-grid-margin, body .uk-grid.uk-grid-xmedium + .uk-grid, body .uk-grid.uk-grid-xmedium > .uk-grid-margin {
+          margin-top: 1.25vw; } }
     html .uk-grid.uk-grid-collapse, body .uk-grid.uk-grid-collapse {
       margin-left: 0; }
       html .uk-grid.uk-grid-collapse > *, body .uk-grid.uk-grid-collapse > * {
