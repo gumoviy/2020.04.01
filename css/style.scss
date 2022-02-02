@@ -3,6 +3,7 @@
 @import "buttons.scss";
 @import "roadmap.scss";
 @import "lists.scss";
+@import "inputs.scss";
 @import "main.scss";
 
 html, body {
@@ -90,6 +91,8 @@ html, body {
         font-size: 2.182vw; line-height: 138%; margin-bottom: 2.08vw;/* margin-bottom: 40px;*/
         &.uk-padding-large-left {padding-left: get-vw(70px);}
     }
+    /*h3, .h3 {font-size: get-vw(27px); line-height: get-vw(32px); letter-spacing: 0.08em;}
+    h6, .h6 {font-size: get-vw(22px); line-height: get-vw(26px); letter-spacing: 0.08em;}*/
     *+.uk-grid-margin-small, .uk-grid+.uk-grid-row-small, .uk-grid+.uk-grid-small, .uk-grid-row-small>.uk-grid-margin, .uk-grid-small>.uk-grid-margin {
         margin-top: get-vw(15px);
     }
@@ -192,7 +195,9 @@ html, body {
         .uk-margin-xmedium-top {margin-top: get-vw(32px)!important;}
         p {margin-bottom: get-vw(24px);}
         h1 {margin-bottom: get-vw(54px);}
-        h3 {font-size: get-vw(22px); line-height: get-vw(26px); letter-spacing: 0.08em; margin-bottom: get-vw(24px);}
+        h2, .h2 {font-size: get-vw(27px); line-height: get-vw(32px); letter-spacing: 0.08em; margin-bottom: get-vw(24px);}
+        h3, .h3 {font-size: get-vw(22px); line-height: get-vw(26px); letter-spacing: 0.08em; margin-bottom: get-vw(24px);}
+        h6, .h6 {font-size: get-vw(22px); line-height: get-vw(26px); letter-spacing: 0.08em; margin-bottom: get-vw(18px);}
         .union {
             font-size: get-vw(18px); line-height: get-vw(24px);
             .uk-overflow-auto {
@@ -372,23 +377,16 @@ html, body {
         background: $blue;
         font-size: 15px; line-height: 22px; height: 22px; letter-spacing: .08em;
     }
-    /* inputs - start */
-    .uk-input {
-        line-height: get-vw(44px); background: rgba(255, 255, 255, 0.05); box-sizing: border-box; padding: get-vw(10px) get-vw(18px); font-size: get-vw(18px); line-height: get-vw(24px); font-family: $regular; border: 0.0521vw solid rgba(255, 255, 255, 0.1); box-sizing: border-box; box-shadow: 0px 0px get-vw(40px) rgba(255, 255, 255, 0); backdrop-filter: blur(get-vw(20px)); border-radius: get-vw(10px); transition: background 300ms ease-in-out, box-shadow 300ms ease-in-out, border 300ms ease-in-out, color 300ms ease-in-out; height: get-vw(46px); color: rgba(255,255,255,.4);
-        &:focus {box-shadow: 0px 0px get-vw(40px) rgba(255, 255, 255, 0.2); background: rgba(255, 255, 255, 0.2); color: rgba(255,255,255,1); border-color: rgba(255,255,255,.2);}
+    .uk-inventory-item {
+        display: block; border: get-vw(2px) solid rgba(255, 255, 255, 0.1); box-sizing: border-box; border-radius: get-vw(10px); height: 0; padding-bottom: 140%;
+        img {width: 100%;}
     }
-    .uk-form-icon {
-        position: absolute; left: get-vw(18px); width: get-vw(18px); height: get-vw(18px); top: 50%; transform: translateY(-50%);
-        &.uk-form-icon-flip {
-            left: auto; right: get-vw(18px);
-        }
-        ~ .uk-input {padding-right: get-vw(48px)!important;}
-        &:not(.uk-form-icon-flip) {
-            ~ .uk-input {padding-left: get-vw(48px)!important; padding-right: get-vw(18px)!important;}
+    #sidebar {
+        .uk-sticky {z-index: 10;}
+        #sidebar-footer {
+            position: absolute; left: 0; right: 0; bottom: 0;
         }
     }
-    /* inputs - end */
-    
     /* modal - start */
     .uk-modal {
         background: rgba(0, 0, 0, 0.7); font-size: get-vw(20px); line-height: 150%; font-family: $regular; font-weight: 400; color: rgba(255,255,255,.6);
@@ -536,9 +534,12 @@ html, body {
     .uk-rating-list-item {
         font-size: get-vw(18px); line-height: get-vw(22px); min-height: get-vw(48.38px); margin-top: get-vw(6.4px)!important;
     }
-    .uk-rating-list-item-header {font-size: get-vw(18px); line-height: get-vw(22px); min-height: get-vw(39.19px); margin-bottom: get-vw(10px)!important; padding-top: 3px; box-sizing: border-box;}
+    .uk-rating-list-item-header {font-size: get-vw(18px); line-height: get-vw(22px); min-height: get-vw(39.19px); margin-bottom: get-vw(10px)!important; padding-top: get-vw(3px); box-sizing: border-box;}
     .uk-text-ellipsis {
         text-overflow: ellipsis; overflow: hidden; white-space: nowrap;
+    }
+    .qr {
+        display: inline-block; width: get-vw(164px); height: get-vw(164px); background-color: rgba(255,255,255,1); border-radius: get-vw(10px); padding: get-vw(10px); box-sizing: border-box;
     }
 	.uk-color {
 		font-size: get-vw(26px); line-height: 130%;
@@ -721,16 +722,16 @@ html, body {
     .select2-container {
         min-width: auto; width: auto!important; max-width: 100%;
     }
+    .avatar {
+        display: block; width: get-vw(62px); height: get-vw(62px); border-radius: 50%; background-color: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); box-sizing: border-box; background-image: url('../images/avatar.svg'); background-position: center; background-size: 80%; background-repeat: no-repeat; backdrop-filter: blur(get-vw(10px));
+    }
+    .spacing {letter-spacing: 0.1em!important;}
+    .uk-text-xmedium {
+        font-size: get-vw(24px); line-height: get-vw(28px);
+    }
     .sidebar-user-info {
         .uk-card-body {
             padding: get-vw(24px);
-            .avatar {
-                display: block; width: get-vw(62px); height: get-vw(62px); border-radius: 50%; background-color: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); box-sizing: border-box; background-image: url('../images/avatar.svg'); background-position: center; background-size: 80%; background-repeat: no-repeat; backdrop-filter: blur(get-vw(10px));
-            }
-            .uk-text-medium {
-                font-size: get-vw(24px); line-height: get-vw(28px);
-                &+ div {letter-spacing: 0;}
-            }
             .uk-grid {
                 &.uk-grid-small {
                     margin-left: get-vw(-20px);
@@ -742,7 +743,6 @@ html, body {
                 &.uk-card-small {
                     .uk-card-body {padding: get-vw(12px) get-vw(16px);}
                 }
-                .spacing {letter-spacing: 0.1em;}
             }
             ul {
                 padding: 0; margin: 0;
