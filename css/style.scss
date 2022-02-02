@@ -415,6 +415,16 @@ html, body {
         h1, h2, h3, h4, h5, h6 {font-size: get-vw(27px); line-height: get-vw(32px); margin-bottom: get-vw(24px); font-family: $medium; font-weight: 500;}
         .uk-text-light {color: rgba(255,255,255,1);}
         .uk-text-xsmall {font-size: get-vw(15px);}
+        &.uk-modal-container {
+            .uk-modal-dialog {
+                width: get-vw(1200px);
+            }
+            &.uk-modal-container-medium {
+                .uk-modal-dialog {
+                    width: get-vw(980px);
+                }
+            }
+        }
     }
     /* modal - end */
     

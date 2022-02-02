@@ -1,6 +1,6 @@
 html, body {
-    .uk-content {
-        /* inputs - start */
+    /* inputs - start */
+    .uk-content, * {
         .uk-input {
             line-height: get-vw(44px); background: rgba(255, 255, 255, 0.05); box-sizing: border-box; padding: get-vw(10px) get-vw(18px); font-size: get-vw(18px); line-height: get-vw(24px); font-family: $regular; border: 0.0521vw solid rgba(255, 255, 255, 0.1); box-sizing: border-box; box-shadow: 0px 0px get-vw(40px) rgba(255, 255, 255, 0); backdrop-filter: blur(get-vw(20px)); border-radius: get-vw(10px); transition: background 300ms ease-in-out, box-shadow 300ms ease-in-out, border 300ms ease-in-out, color 300ms ease-in-out; height: get-vw(46px); color: rgba(255,255,255,.4);
             &:focus {box-shadow: 0px 0px get-vw(40px) rgba(255, 255, 255, 0.2); background: rgba(255, 255, 255, 0.2); color: rgba(255,255,255,1); border-color: rgba(255,255,255,.2);}
@@ -76,6 +76,5 @@ html, body {
                 }
             }
         }
-        /* inputs - end */
     }
 }

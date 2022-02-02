@@ -126,6 +126,15 @@ html, body {
                 background: rgba($warning,.05); /*box-shadow: inset 0px 0px 30px rgba(255,255,255, 0);*/ color: #fff; border: 0.0521vw solid rgba($warning,.8);
             }
         }
+        &.uk-button-green {
+            background: rgba($green,.05); border: 0.0521vw solid rgba($green,1); box-sizing: border-box; box-shadow: inset 0px 0px get-vw(30px) rgba($green, 0.5); color: $green;
+            svg {
+                path {transition: all 300ms ease-in-out;}
+            }
+            &:hover {
+                background: rgba($green,.05); /*box-shadow: inset 0px 0px 30px rgba(255,255,255, 0);*/ color: #fff; border: 0.0521vw solid rgba($green,.8);
+            }
+        }
         &.uk-button-blue {
             background: rgba($primary, 0.05); border: 1px solid rgba($primary,1); box-sizing: border-box; box-shadow: inset 0px 0px get-vw(30px) rgba($primary, 0.5); color: $primary;
             svg {
