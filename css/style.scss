@@ -197,6 +197,7 @@ html, body {
         h1 {margin-bottom: get-vw(54px);}
         h2, .h2 {font-size: get-vw(27px); line-height: get-vw(32px); letter-spacing: 0.08em; margin-bottom: get-vw(24px);}
         h3, .h3 {font-size: get-vw(22px); line-height: get-vw(26px); letter-spacing: 0.08em; margin-bottom: get-vw(24px);}
+        .h5 {font-size: get-vw(24px); line-height: get-vw(28px); letter-spacing: 0.08em; margin-bottom: get-vw(26px); font-family: $semibold; font-weight: 600;}
         h6, .h6 {font-size: get-vw(22px); line-height: get-vw(26px); letter-spacing: 0.08em; margin-bottom: get-vw(18px);}
         .union {
             font-size: get-vw(18px); line-height: get-vw(24px);
@@ -227,6 +228,9 @@ html, body {
     }
     .uk-warning {
         padding: get-vw(12px) get-vw(18px); background: rgba($warning, 0.1); border: get-vw(1px) solid rgba($warning, 0.5); box-sizing: border-box; backdrop-filter: blur(get-vw(80px)); border-radius: get-vw(10px); color: $warning;
+    }
+    .uk-danger {
+        padding: get-vw(12px) get-vw(18px); background: rgba($red, 0.1); border: get-vw(1px) solid rgba($red, 0.5); box-sizing: border-box; backdrop-filter: blur(get-vw(80px)); border-radius: get-vw(10px); color: $red;
     }
     .uk-page-container {
         display: flex;/* background-image: url('../images/page-light.png'); background-size: 100%; background-position: left 0 bottom 0; background-repeat: no-repeat;*/ background: linear-gradient(35deg, rgba(#c8703d,.3) 0%, rgba(#c8703d,0) 50%);
@@ -341,6 +345,7 @@ html, body {
             &.uk-padding-small-bottom {padding-bottom: get-vw(24px);}
         }
         &.uk-card-body, .uk-card-body {
+            //padding: get-vw(37px) get-vw(40px);
             .table-body {font-size: get-vw(16px);}
             .uk-card-media-top {
                 border-radius: 10px; position: relative;
@@ -353,6 +358,11 @@ html, body {
             }
             &+ .uk-card-footer {padding-top: 0;}
             &+ .uk-card-body {border-top: 1px solid rgba(255,255,255,.1);}
+            @media (min-width: 1200px) {
+                .uk-card-body {
+                    //padding: get-vw(37px) get-vw(40px);
+                }
+            }
         }
         &.uk-card-footer, .uk-card-footer {
             
@@ -395,7 +405,7 @@ html, body {
             .uk-modal-body, &.uk-modal-body {
                 background: transparent; padding: get-vw(37px) get-vw(40px);
                 .uk-button-group {
-                    .uk-button {text-transform: none;}
+                    .uk-button {text-transform: none; padding-top: get-vw(14px); padding-bottom: get-vw(14px);}
                 }
             }
             .uk-modal-footer {
@@ -414,6 +424,7 @@ html, body {
         
         h1, h2, h3, h4, h5, h6 {font-size: get-vw(27px); line-height: get-vw(32px); margin-bottom: get-vw(24px); font-family: $medium; font-weight: 500;}
         .uk-text-light {color: rgba(255,255,255,1);}
+        .uk-text-medium {font-family: $medium; font-weight: 500; font-size: get-vw(27px); line-height: get-vw(32px);}
         .uk-text-xsmall {font-size: get-vw(15px);}
         &.uk-modal-container {
             .uk-modal-dialog {
@@ -421,7 +432,7 @@ html, body {
             }
             &.uk-modal-container-medium {
                 .uk-modal-dialog {
-                    width: get-vw(980px);
+                    width: get-vw(972px);
                 }
             }
         }
@@ -790,6 +801,36 @@ html, body {
                             g, path {fill-opacity: 1!important; stroke-opacity: 1!important;}
                         }
                     }
+                }
+            }
+        }
+        &.sidebar-unions-info {
+            ul {
+                li {
+                    padding: get-vw(14px) 0;
+                    > * {font-size: get-vw(20px); font-family: $semibold; letter-spacing: 0.1em;}
+                    ul {
+                        margin-top: get-vw(24px); border-left: get-vw(3px) solid rgba(255, 255, 255, 0.1); padding-left: get-vw(24px);
+                        > li {
+                            &:last-of-type {padding-bottom: get-vw(4px);}
+                            &:first-of-type {padding-top: get-vw(4px);}
+                        }
+                    }
+                }
+            }
+            .uk-card-body {
+                > ul {/*margin-top: get-vw(11px); margin-bottom: get-vw(11px);*/}
+            }
+        }
+    }
+    .uk-nav-parent-icon {
+        > .uk-parent {
+            > a {
+                &:after {transform: rotate(180deg); background-image: url('../images/arrow-accordion.svg');}
+            }
+            &.uk-open {
+                > a {
+                    &:after {transform: rotate(0deg); background-image: url('../images/arrow-accordion.svg'); opacity: .5;}
                 }
             }
         }

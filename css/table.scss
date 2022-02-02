@@ -45,7 +45,8 @@ html, body {
                 padding: get-vw(24px) get-vw(28px);
                 .uk-table-list-descr {display: none;}
                 .uk-button {
-                    height: get-vw(43px); width: get-vw(43px); line-height: get-vw(21px); transition: all 300ms ease-in-out;
+                    &:not(.uk-button-blue) {width: get-vw(43px);}
+                    line-height: get-vw(21px); transition: all 300ms ease-in-out;
                     svg {width: get-vw(9px); height: auto;}
                     &:hover {
                         background: rgba($primary, 0.05); border: 0.0521vw solid rgba($primary,1); box-sizing: border-box; box-shadow: inset 0px 0px get-vw(30px) rgba($primary, 0.5); color: $primary;
