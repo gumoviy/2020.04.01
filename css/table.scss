@@ -84,4 +84,60 @@ html, body {
             }
         }
     }
+    .uk-table {
+        border-spacing: 0 12px; border-collapse: separate; min-width: 100%;
+        thead, tbody {
+            tr {
+                > * {
+                    font-size: get-vw(20px); line-height: get-vw(24px); padding: get-vw(18px) get-vw(28px); box-sizing: border-box; white-space: nowrap;
+                }
+                > th {
+                    text-transform: none;
+                    &:before, &:after {
+                        height: get-vw(8.22px); width: get-vw(14px); content: ''!important; background-size: 100%; background-position: center; background-repeat: no-repeat; background-image: url('../images/data-sort-arrow.svg'); right: get-vw(28px)!important; top: 50%; bottom: auto; transform: translateY(-50%); position: absolute;
+                    }
+                    &:before {transform: translateY(-50%) rotate(0deg);}
+                    &:after {transform: translateY(-50%) rotate(-180deg);}
+                    &.sorting {
+                        padding-right: get-vw(50px); color: rgba(255,255,255,1);
+                        &:before {display: none!important;}
+                    }
+                    &.sorting_asc {
+                        &:after {display: none!important;}
+                        &:before {display: block!important;}
+                    }
+                    &.sorting_desc {
+                        &:before {display: none!important;}
+                        &:after {display: block!important;}
+                    }
+                    &.sorting_disabled {
+                        cursor: default;
+                        &:after, &:before {display: none!important;}
+                    }
+                }
+            }
+        }
+        thead {
+            tr {
+                th {color: rgba(255, 255, 255, 0.6);}
+            }
+        }
+        tbody {
+            tr {
+                position: relative;
+                td {
+                    &:before {content: ''; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background: rgba(255, 255, 255, 0.05); border-radius: 10px;}
+                }
+            }
+        }
+    }
+    .dataTables_scroll {
+        .dataTables_scrollBody {
+            padding-right: 12px; box-sizing: border-box;
+            thead {display: none;}
+        }
+        .dataTables_scrollHead {
+            .dataTables_scrollHeadInner {min-width: 100%;}
+        }
+    }
 }
