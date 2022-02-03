@@ -430,12 +430,16 @@ html .uk-button, body .uk-button {
     box-shadow: inset 0px 0px 1.5625vw rgba(48, 178, 230, 0.5);
     color: #30B2E6; }
     html .uk-button.uk-button-blue svg path, body .uk-button.uk-button-blue svg path {
-      transition: all 300ms ease-in-out; }
+      transition: all 300ms ease-in-out;
+      fill: #3692c7;
+      fill-opacity: 1; }
     html .uk-button.uk-button-blue:hover, body .uk-button.uk-button-blue:hover {
       background: rgba(48, 178, 230, 0.05);
       /*box-shadow: inset 0px 0px 30px rgba(255,255,255, 0);*/
       color: #fff;
       border: 0.0521vw solid rgba(48, 178, 230, 0.8); }
+      html .uk-button.uk-button-blue:hover svg path, body .uk-button.uk-button-blue:hover svg path {
+        fill: #fff; }
   html .uk-button.uk-padding-small-left, body .uk-button.uk-padding-small-left {
     padding-left: 0.78125vw; }
   html .uk-button.uk-padding-small-right, body .uk-button.uk-padding-small-right {
@@ -560,6 +564,21 @@ html .uk-button, body .uk-button {
       padding-left: 0.7291666667vw !important; }
     html .uk-button.uk-button-small.uk-padding-small-right, body .uk-button.uk-button-small.uk-padding-small-right {
       padding-right: 0.7291666667vw !important; }
+  html .uk-button.uk-button-medium, body .uk-button.uk-button-medium {
+    line-height: 1.25vw;
+    box-sizing: border-box;
+    padding: 0.5729166667vw 1.6666666667vw;
+    font-size: 1.0416666667vw;
+    box-sizing: border-box;
+    backdrop-filter: blur(1.0416666667vw);
+    transition: background 300ms ease-in-out, box-shadow 300ms ease-in-out, border 300ms ease-in-out, color 300ms ease-in-out; }
+    html .uk-button.uk-button-medium svg, body .uk-button.uk-button-medium svg {
+      width: 21px;
+      height: 21px; }
+    html .uk-button.uk-button-medium.uk-padding-small-left, body .uk-button.uk-button-medium.uk-padding-small-left {
+      padding-left: 0.8333333333vw !important; }
+    html .uk-button.uk-button-medium.uk-padding-small-right, body .uk-button.uk-button-medium.uk-padding-small-right {
+      padding-right: 0.8333333333vw !important; }
 
 html .uk-content .uk-roadmap ul li, body .uk-content .uk-roadmap ul li {
   font-family: "Rogan Regular", sans-serif;
@@ -808,6 +827,64 @@ html, body {
           background-color: #feaf14; }
         html .uk-content .inline-checkbox.uk-filter-block div + div.uk-block-purple, html * .inline-checkbox.uk-filter-block div + div.uk-block-purple, body .uk-content .inline-checkbox.uk-filter-block div + div.uk-block-purple, body * .inline-checkbox.uk-filter-block div + div.uk-block-purple {
           background-color: #b25fff; }
+
+html, body {
+  /* modal - start */
+  /* modal - end */ }
+  html .uk-modal, body .uk-modal {
+    background: rgba(0, 0, 0, 0.7);
+    font-size: 1.0416666667vw;
+    line-height: 150%;
+    font-family: "Rogan Regular", sans-serif;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6); }
+    html .uk-modal .uk-modal-dialog, body .uk-modal .uk-modal-dialog {
+      background: #1A1B1E;
+      box-shadow: 0px 0.2083333333vw 1.25vw -0.0520833333vw rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(2.0833333333vw);
+      border-radius: 1.0416666667vw;
+      border: 2px solid rgba(255, 255, 255, 0.1); }
+      html .uk-modal .uk-modal-dialog .uk-modal-body, html .uk-modal .uk-modal-dialog.uk-modal-body, body .uk-modal .uk-modal-dialog .uk-modal-body, body .uk-modal .uk-modal-dialog.uk-modal-body {
+        background: transparent;
+        padding: 1.9270833333vw 2.0833333333vw; }
+        html .uk-modal .uk-modal-dialog .uk-modal-body .uk-button-group .uk-button, html .uk-modal .uk-modal-dialog.uk-modal-body .uk-button-group .uk-button, body .uk-modal .uk-modal-dialog .uk-modal-body .uk-button-group .uk-button, body .uk-modal .uk-modal-dialog.uk-modal-body .uk-button-group .uk-button {
+          text-transform: none;
+          padding-top: 0.7291666667vw;
+          padding-bottom: 0.7291666667vw; }
+      html .uk-modal .uk-modal-dialog .uk-modal-footer, body .uk-modal .uk-modal-dialog .uk-modal-footer {
+        background: transparent;
+        padding: 0.8854166667vw 2.0833333333vw;
+        border-top: 1px solid rgba(255, 255, 255, 0.1); }
+      html .uk-modal .uk-modal-dialog .uk-close, body .uk-modal .uk-modal-dialog .uk-close {
+        top: 1.9270833333vw;
+        right: 2.0833333333vw; }
+        html .uk-modal .uk-modal-dialog .uk-close svg, body .uk-modal .uk-modal-dialog .uk-close svg {
+          width: 1.0416666667vw;
+          height: 1.0416666667vw; }
+          html .uk-modal .uk-modal-dialog .uk-close svg line, body .uk-modal .uk-modal-dialog .uk-close svg line {
+            stroke-width: 0.15625vw;
+            stroke-linecap: round; }
+    html .uk-modal h1, html .uk-modal h2, html .uk-modal h3, html .uk-modal h4, html .uk-modal h5, html .uk-modal h6, body .uk-modal h1, body .uk-modal h2, body .uk-modal h3, body .uk-modal h4, body .uk-modal h5, body .uk-modal h6 {
+      font-size: 1.40625vw;
+      line-height: 1.6666666667vw;
+      margin-bottom: 1.25vw;
+      font-family: "Rogan Medium", sans-serif;
+      font-weight: 500; }
+    html .uk-modal .uk-text-light, body .uk-modal .uk-text-light {
+      color: white; }
+    html .uk-modal .uk-text-medium, body .uk-modal .uk-text-medium {
+      font-family: "Rogan Medium", sans-serif;
+      font-weight: 500;
+      font-size: 1.40625vw;
+      line-height: 1.6666666667vw; }
+    html .uk-modal .uk-text-xsmall, body .uk-modal .uk-text-xsmall {
+      font-size: 0.78125vw; }
+    html .uk-modal.uk-modal-container .uk-modal-dialog, body .uk-modal.uk-modal-container .uk-modal-dialog {
+      width: 62.5vw; }
+    html .uk-modal.uk-modal-container.uk-modal-container-medium .uk-modal-dialog, body .uk-modal.uk-modal-container.uk-modal-container-medium .uk-modal-dialog {
+      width: 50.625vw; }
+    html .uk-modal.uk-modal-container.uk-modal-container-small .uk-modal-dialog, body .uk-modal.uk-modal-container.uk-modal-container-small .uk-modal-dialog {
+      width: 30.4166666667vw; }
 
 html .page-slider, body .page-slider {
   position: relative;
@@ -2930,10 +3007,33 @@ html, body {
   background-repeat: repeat-y;
   /*h3, .h3 {font-size: get-vw(27px); line-height: get-vw(32px); letter-spacing: 0.08em;}
   h6, .h6 {font-size: get-vw(22px); line-height: get-vw(26px); letter-spacing: 0.08em;}*/
-  /* modal - start */
-  /* modal - end */
   /* pagination - start */
   /* pagination - end */
+  /*
+  .radio-buttons-group {
+      label {
+          position: relative; display: block; width: 100%; box-sizing: border-box;
+          input {
+              position: absolute; left: 0; top: 0; right: 0; bottom: 0; opacity: 0;
+              &+ div {
+                  font-size: 24px; line-height: 28px; font-family: $regular; color: rgba(255,255,255,1); background: rgba(255, 255, 255, 0.1); padding: get-vw(39px) get-vw(30px); border-radius: get-vw(20px); transition: all 300ms ease-in-out; cursor: pointer; box-shadow: 0 0 0 rgba($green,0);
+                  img {display: block; margin: 0 auto get-vw(16px) auto; height: get-vw(108px);}
+                  &:hover {
+                      box-shadow: 0 0 30px rgba($green,.7);
+                  }
+              }
+              &:checked {
+                  &+ div {
+                      background: rgba(255, 255, 255, 0.2); cursor: default;
+                      &:hover {
+                          box-shadow: 0 0 0 rgba($green,.7);
+                      }
+                  }
+              }
+          }
+      }
+  }
+  */
   scrollbar-color: #7C7C7C #B2B2B2;
   scrollbar-width: thin; }
   html .uk-slider-items, body .uk-slider-items {
@@ -3513,58 +3613,6 @@ html, body {
     left: 0;
     right: 0;
     bottom: 0; }
-  html .uk-modal, body .uk-modal {
-    background: rgba(0, 0, 0, 0.7);
-    font-size: 1.0416666667vw;
-    line-height: 150%;
-    font-family: "Rogan Regular", sans-serif;
-    font-weight: 400;
-    color: rgba(255, 255, 255, 0.6); }
-    html .uk-modal .uk-modal-dialog, body .uk-modal .uk-modal-dialog {
-      background: #1A1B1E;
-      box-shadow: 0px 0.2083333333vw 1.25vw -0.0520833333vw rgba(0, 0, 0, 0.2);
-      backdrop-filter: blur(2.0833333333vw);
-      border-radius: 1.0416666667vw;
-      border: 2px solid rgba(255, 255, 255, 0.1); }
-      html .uk-modal .uk-modal-dialog .uk-modal-body, html .uk-modal .uk-modal-dialog.uk-modal-body, body .uk-modal .uk-modal-dialog .uk-modal-body, body .uk-modal .uk-modal-dialog.uk-modal-body {
-        background: transparent;
-        padding: 1.9270833333vw 2.0833333333vw; }
-        html .uk-modal .uk-modal-dialog .uk-modal-body .uk-button-group .uk-button, html .uk-modal .uk-modal-dialog.uk-modal-body .uk-button-group .uk-button, body .uk-modal .uk-modal-dialog .uk-modal-body .uk-button-group .uk-button, body .uk-modal .uk-modal-dialog.uk-modal-body .uk-button-group .uk-button {
-          text-transform: none;
-          padding-top: 0.7291666667vw;
-          padding-bottom: 0.7291666667vw; }
-      html .uk-modal .uk-modal-dialog .uk-modal-footer, body .uk-modal .uk-modal-dialog .uk-modal-footer {
-        background: transparent;
-        padding: 0.8854166667vw 2.0833333333vw;
-        border-top: 1px solid rgba(255, 255, 255, 0.1); }
-      html .uk-modal .uk-modal-dialog .uk-close, body .uk-modal .uk-modal-dialog .uk-close {
-        top: 1.9270833333vw;
-        right: 2.0833333333vw; }
-        html .uk-modal .uk-modal-dialog .uk-close svg, body .uk-modal .uk-modal-dialog .uk-close svg {
-          width: 1.0416666667vw;
-          height: 1.0416666667vw; }
-          html .uk-modal .uk-modal-dialog .uk-close svg line, body .uk-modal .uk-modal-dialog .uk-close svg line {
-            stroke-width: 0.15625vw;
-            stroke-linecap: round; }
-    html .uk-modal h1, html .uk-modal h2, html .uk-modal h3, html .uk-modal h4, html .uk-modal h5, html .uk-modal h6, body .uk-modal h1, body .uk-modal h2, body .uk-modal h3, body .uk-modal h4, body .uk-modal h5, body .uk-modal h6 {
-      font-size: 1.40625vw;
-      line-height: 1.6666666667vw;
-      margin-bottom: 1.25vw;
-      font-family: "Rogan Medium", sans-serif;
-      font-weight: 500; }
-    html .uk-modal .uk-text-light, body .uk-modal .uk-text-light {
-      color: white; }
-    html .uk-modal .uk-text-medium, body .uk-modal .uk-text-medium {
-      font-family: "Rogan Medium", sans-serif;
-      font-weight: 500;
-      font-size: 1.40625vw;
-      line-height: 1.6666666667vw; }
-    html .uk-modal .uk-text-xsmall, body .uk-modal .uk-text-xsmall {
-      font-size: 0.78125vw; }
-    html .uk-modal.uk-modal-container .uk-modal-dialog, body .uk-modal.uk-modal-container .uk-modal-dialog {
-      width: 62.5vw; }
-    html .uk-modal.uk-modal-container.uk-modal-container-medium .uk-modal-dialog, body .uk-modal.uk-modal-container.uk-modal-container-medium .uk-modal-dialog {
-      width: 50.625vw; }
   html .uk-pagination li, body .uk-pagination li {
     list-style: none !important;
     padding: 0 !important;
@@ -3602,40 +3650,15 @@ html, body {
       border-radius: 10px; }
       html .uk-pagination.uk-pagination-navs li > a:hover, html .uk-pagination.uk-pagination-navs li > span:hover, body .uk-pagination.uk-pagination-navs li > a:hover, body .uk-pagination.uk-pagination-navs li > span:hover {
         border-color: #F59E5A; }
-  html .radio-buttons-group label, body .radio-buttons-group label {
+  html .userpic, body .userpic {
     position: relative;
     display: block;
-    width: 100%;
-    box-sizing: border-box; }
-    html .radio-buttons-group label input, body .radio-buttons-group label input {
-      position: absolute;
-      left: 0;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      opacity: 0; }
-      html .radio-buttons-group label input + div, body .radio-buttons-group label input + div {
-        font-size: 24px;
-        line-height: 28px;
-        font-family: "Rogan Regular", sans-serif;
-        color: white;
-        background: rgba(255, 255, 255, 0.1);
-        padding: 2.03125vw 1.5625vw;
-        border-radius: 1.0416666667vw;
-        transition: all 300ms ease-in-out;
-        cursor: pointer;
-        box-shadow: 0 0 0 rgba(12, 183, 84, 0); }
-        html .radio-buttons-group label input + div img, body .radio-buttons-group label input + div img {
-          display: block;
-          margin: 0 auto 0.8333333333vw auto;
-          height: 5.625vw; }
-        html .radio-buttons-group label input + div:hover, body .radio-buttons-group label input + div:hover {
-          box-shadow: 0 0 30px rgba(12, 183, 84, 0.7); }
-      html .radio-buttons-group label input:checked + div, body .radio-buttons-group label input:checked + div {
-        background: rgba(255, 255, 255, 0.2);
-        cursor: default; }
-        html .radio-buttons-group label input:checked + div:hover, body .radio-buttons-group label input:checked + div:hover {
-          box-shadow: 0 0 0 rgba(12, 183, 84, 0.7); }
+    width: 2.5vw;
+    height: 2.5vw;
+    border-radius: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
   html .rase-choose-item, body .rase-choose-item {
     font-size: 24px;
     line-height: 28px;

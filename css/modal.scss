@@ -1,0 +1,48 @@
+html, body {
+    /* modal - start */
+    .uk-modal {
+        background: rgba(0, 0, 0, 0.7); font-size: get-vw(20px); line-height: 150%; font-family: $regular; font-weight: 400; color: rgba(255,255,255,.6);
+        .uk-modal-dialog {
+            background: #1A1B1E; box-shadow: 0px get-vw(4px) get-vw(24px) get-vw(-1px) rgba(0, 0, 0, 0.2); backdrop-filter: blur(get-vw(40px)); border-radius: get-vw(20px); border: 2px solid rgba(255,255,255,.1);
+            .uk-modal-body, &.uk-modal-body {
+                background: transparent; padding: get-vw(37px) get-vw(40px);
+                .uk-button-group {
+                    .uk-button {text-transform: none; padding-top: get-vw(14px); padding-bottom: get-vw(14px);}
+                }
+            }
+            .uk-modal-footer {
+                background: transparent; padding: get-vw(17px) get-vw(40px); border-top: 1px solid rgba(255,255,255,.1);
+            }
+            .uk-close {
+                top: get-vw(37px); right: get-vw(40px);
+                svg {
+                    width: get-vw(20px); height: get-vw(20px);
+                    line {
+                        stroke-width: get-vw(3px); stroke-linecap: round;
+                    }
+                }
+            }
+        }
+        
+        h1, h2, h3, h4, h5, h6 {font-size: get-vw(27px); line-height: get-vw(32px); margin-bottom: get-vw(24px); font-family: $medium; font-weight: 500;}
+        .uk-text-light {color: rgba(255,255,255,1);}
+        .uk-text-medium {font-family: $medium; font-weight: 500; font-size: get-vw(27px); line-height: get-vw(32px);}
+        .uk-text-xsmall {font-size: get-vw(15px);}
+        &.uk-modal-container {
+            .uk-modal-dialog {
+                width: get-vw(1200px);
+            }
+            &.uk-modal-container-medium {
+                .uk-modal-dialog {
+                    width: get-vw(972px);
+                }
+            }
+            &.uk-modal-container-small {
+                .uk-modal-dialog {
+                    width: get-vw(584px);
+                }
+            }
+        }
+    }
+    /* modal - end */
+}
