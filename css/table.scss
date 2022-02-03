@@ -96,16 +96,19 @@ html, body {
                     text-transform: none;
                     
                     &.sorting {
-                        padding-right: get-vw(50px); color: rgba(255,255,255,1);
-                        &:before {display: none!important;}
+                        /*padding-right: get-vw(50px);*/ color: rgba(255,255,255,1);
+                        &:after {display: none!important; position: relative; right: 0; margin-left: get-vw(10px);}
+                        &:before {display: none!important; position: relative;}
                     }
                     &.sorting_asc {
-                        &:after {display: none!important;}
-                        &:before {display: block!important;}
+                        /*&:after {display: none!important;}
+                        &:before {display: inline-block!important;}*/
+                        &:after {display: inline-block!important; transform: rotate(0deg); opacity: 1;}
                     }
                     &.sorting_desc {
-                        &:before {display: none!important;}
-                        &:after {display: block!important;}
+                        /*&:before {display: none!important;}
+                        &:after {display: inline-block!important;}*/
+                        &:after {display: inline-block!important; transform: rotate(180deg);}
                     }
                     &.sorting_disabled {
                         cursor: default;
@@ -123,8 +126,10 @@ html, body {
             tr {
                 position: relative;
                 td {
-                    &:before {content: ''; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background: rgba(255, 255, 255, 0.01); border-radius: get-vw(10px); z-index: -1;}
                     .table-icon {margin-right: get-vw(16px); width: get-vw(30px);}
+                    background: rgba(255, 255, 255, 0.05);
+                    &:first-child {border-top-left-radius: 10px; border-bottom-left-radius: 10px;}
+                    &:last-child {border-top-right-radius: 10px; border-bottom-right-radius: 10px;}
                 }
             }
         }
@@ -132,7 +137,7 @@ html, body {
             tr {
                 > th {
                     &:before, &:after {
-                        height: get-vw(8.22px); width: get-vw(14px); content: ''!important; background-size: 100%; background-position: center; background-repeat: no-repeat; background-image: url('../images/data-sort-arrow.svg'); right: get-vw(28px)!important; top: 50%; bottom: auto; transform: translateY(-50%); position: absolute;
+                        height: get-vw(8.22px); width: get-vw(14px); content: ''!important; background-size: 100%; background-position: center; background-repeat: no-repeat; background-image: url('../images/data-sort-arrow.svg'); /*right: get-vw(28px)!important; top: 50%;*/ bottom: auto; /*transform: translateY(-50%); position: absolute;*/
                     }
                     &:before {transform: translateY(-50%) rotate(0deg);}
                     &:after {transform: translateY(-50%) rotate(-180deg);}
@@ -153,6 +158,7 @@ html, body {
         .dataTables_scrollBody {
             padding-right: 12px; box-sizing: border-box;
             thead {display: none;}
+            > .uk-table {margin-top: -12px!important;}
         }
         .dataTables_scrollHead {
             .dataTables_scrollHeadInner {min-width: 100%;}

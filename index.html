@@ -2460,70 +2460,65 @@
                         </div>
                         <div class="uk-width-1-1">
                             
-                            <div class="radio-buttons-group">
-                                <div class="uk-grid uk-grid-xmedium uk-child-width-1-4@m uk-child-width-1-3@s uk-child-width-1-2" uk-grid>
-                                    <!-- one rase item - start -->
-                                    <div>
-                                        <label>
-                                            <input type="radio" name="choose-rase" />
-                                            <div class="uk-text-center">
-                                                <img src="images/blockchain-minter.svg" />
-                                                Minter
-                                            </div>
-                                        </label>
-                                    </div>
-                                    <!-- one rase item - end -->
-                                    <!-- one rase item - start -->
-                                    <div>
-                                        <label>
-                                            <input type="radio" name="choose-rase" />
-                                            <div class="uk-text-center">
-                                                <img src="images/blockchain-aurora.svg" />
-                                                Aurora
-                                            </div>
-                                        </label>
-                                    </div>
-                                    <!-- one rase item - end -->
-                                    <!-- one rase item - start -->
-                                    <div>
-                                        <label>
-                                            <input type="radio" name="choose-rase" />
-                                            <div class="uk-text-center">
-                                                <img src="images/blockchain-decimal.svg" />
-                                                DecimalChain
-                                            </div>
-                                        </label>
-                                    </div>
-                                    <!-- one rase item - end -->
-                                    <!-- one rase item - start -->
-                                    <div>
-                                        <label>
-                                            <input type="radio" name="choose-rase" />
-                                            <div class="uk-text-center">
-                                                <img src="images/blockchain-tron.svg" />
-                                                Tron
-                                            </div>
-                                        </label>
-                                    </div>
-                                    <!-- one rase item - end -->
-                                    <!-- one rase item - start -->
-                                    <div>
-                                        <label>
-                                            <input type="radio" name="choose-rase" />
-                                            <div class="uk-text-center">
-                                                <img src="images/blockchain-near.svg" />
-                                                NEAR
-                                            </div>
-                                        </label>
-                                    </div>
-                                    <!-- one rase item - end -->
+                            <div class="uk-grid uk-grid-xmedium uk-child-width-1-4@m uk-child-width-1-3@s uk-child-width-1-2" uk-grid>
+                                <!-- one rase item - start -->
+                                <div>
+                                    <a href="#" class="rase-choose-item">
+                                        <div class="uk-text-center">
+                                            <img src="images/blockchain-minter.svg" />
+                                            Minter
+                                        </div>
+                                    </a>
                                 </div>
+                                <!-- one rase item - end -->
+                                <!-- one rase item - start -->
+                                <div>
+                                    <a href="#" class="rase-choose-item">
+                                        <div class="uk-text-center">
+                                            <img src="images/blockchain-aurora.svg" />
+                                            Aurora
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- one rase item - end -->
+                                <!-- one rase item - start -->
+                                <div>
+                                    <a href="#" class="rase-choose-item">
+                                        <div class="uk-text-center">
+                                            <img src="images/blockchain-decimal.svg" />
+                                            DecimalChain
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- one rase item - end -->
+                                <!-- one rase item - start -->
+                                <div>
+                                    <a href="#" class="rase-choose-item">
+                                        <div class="uk-text-center">
+                                            <img src="images/blockchain-tron.svg" />
+                                            Tron
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- one rase item - end -->
+                                <!-- one rase item - start -->
+                                <div>
+                                    <a href="#" class="rase-choose-item uk-disabled">
+                                        <div class="uk-text-center">
+                                            <img src="images/blockchain-near.svg" />
+                                            NEAR
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- one rase item - end -->
                             </div>
                             
                         </div>
+                        <!--
                         <div class="uk-width-1-1">
                             <a href="#" class="uk-button uk-button-blue uk-width-auto@s uk-width-1-1">Начать игру</a>
                         </div>
+                        -->
                     </div>
                 </div>
 
@@ -2852,6 +2847,23 @@
                 }, 300);*/
             });
             
+            $(document).ready(function() {
+                $('.rase-choose-item').on('click', function() {
+                    UIkit.modal.confirm('Вы действительно хотите играть за расу Near?', {
+                        labels: {
+                            cancel: 'Отмена',
+                            ok: 'Да'
+                        },
+                        //center: true,
+                        //stack: true
+                    }).then(function() {
+                        console.log('Confirmed.');
+                    }, function () {
+                        UIkit.modal('#choose-rase').show();
+                        console.log('Rejected.');
+                    });
+                });
+            });
         </script>
     </body>
 </html>
