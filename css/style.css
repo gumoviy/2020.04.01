@@ -117,23 +117,6 @@ html .uk-table, body .uk-table {
     white-space: nowrap; }
   html .uk-table thead tr > th, html .uk-table tbody tr > th, body .uk-table thead tr > th, body .uk-table tbody tr > th {
     text-transform: none; }
-    html .uk-table thead tr > th:before, html .uk-table thead tr > th:after, html .uk-table tbody tr > th:before, html .uk-table tbody tr > th:after, body .uk-table thead tr > th:before, body .uk-table thead tr > th:after, body .uk-table tbody tr > th:before, body .uk-table tbody tr > th:after {
-      height: 0.428125vw;
-      width: 0.7291666667vw;
-      content: "" !important;
-      background-size: 100%;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-image: url("../images/data-sort-arrow.svg");
-      right: 1.4583333333vw !important;
-      top: 50%;
-      bottom: auto;
-      transform: translateY(-50%);
-      position: absolute; }
-    html .uk-table thead tr > th:before, html .uk-table tbody tr > th:before, body .uk-table thead tr > th:before, body .uk-table tbody tr > th:before {
-      transform: translateY(-50%) rotate(0deg); }
-    html .uk-table thead tr > th:after, html .uk-table tbody tr > th:after, body .uk-table thead tr > th:after, body .uk-table tbody tr > th:after {
-      transform: translateY(-50%) rotate(-180deg); }
     html .uk-table thead tr > th.sorting, html .uk-table tbody tr > th.sorting, body .uk-table thead tr > th.sorting, body .uk-table tbody tr > th.sorting {
       padding-right: 2.6041666667vw;
       color: white; }
@@ -162,8 +145,32 @@ html .uk-table, body .uk-table {
       top: 0;
       right: 0;
       bottom: 0;
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 10px; }
+      background: rgba(255, 255, 255, 0.01);
+      border-radius: 0.5208333333vw;
+      z-index: -1; }
+    html .uk-table tbody tr td .table-icon, body .uk-table tbody tr td .table-icon {
+      margin-right: 0.8333333333vw;
+      width: 1.5625vw; }
+  html .uk-table.sort-table tr > th:before, html .uk-table.sort-table tr > th:after, body .uk-table.sort-table tr > th:before, body .uk-table.sort-table tr > th:after {
+    height: 0.428125vw;
+    width: 0.7291666667vw;
+    content: "" !important;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../images/data-sort-arrow.svg");
+    right: 1.4583333333vw !important;
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+    position: absolute; }
+  html .uk-table.sort-table tr > th:before, body .uk-table.sort-table tr > th:before {
+    transform: translateY(-50%) rotate(0deg); }
+  html .uk-table.sort-table tr > th:after, body .uk-table.sort-table tr > th:after {
+    transform: translateY(-50%) rotate(-180deg); }
+  html .uk-table.uk-table-accounts thead tr > *, html .uk-table.uk-table-accounts tbody tr > *, body .uk-table.uk-table-accounts thead tr > *, body .uk-table.uk-table-accounts tbody tr > * {
+    padding: 0.3125vw 1.25vw;
+    vertical-align: middle; }
 html .dataTables_scroll .dataTables_scrollBody, body .dataTables_scroll .dataTables_scrollBody {
   padding-right: 12px;
   box-sizing: border-box; }
@@ -3462,13 +3469,19 @@ html, body {
       border-radius: 0.0520833333vw; }
     html .uk-progress::-moz-progress-bar, body .uk-progress::-moz-progress-bar {
       border-radius: 0.0520833333vw; }
-    html .uk-progress.uk-danger::-webkit-progress-bar, body .uk-progress.uk-danger::-webkit-progress-bar {
-      border-radius: 0.0520833333vw; }
-    html .uk-progress.uk-danger::-webkit-progress-value, body .uk-progress.uk-danger::-webkit-progress-value {
-      background-color: #ec5151;
-      border-radius: 0.0520833333vw; }
-    html .uk-progress.uk-danger::-moz-progress-bar, body .uk-progress.uk-danger::-moz-progress-bar {
-      border-radius: 0.0520833333vw; }
+    html .uk-progress.uk-danger, body .uk-progress.uk-danger {
+      background: transparent;
+      height: 0.2604166667vw;
+      border-radius: 0.0520833333vw;
+      padding: 0;
+      border: 0; }
+      html .uk-progress.uk-danger::-webkit-progress-bar, body .uk-progress.uk-danger::-webkit-progress-bar {
+        border-radius: 0.0520833333vw; }
+      html .uk-progress.uk-danger::-webkit-progress-value, body .uk-progress.uk-danger::-webkit-progress-value {
+        background-color: #ec5151;
+        border-radius: 0.0520833333vw; }
+      html .uk-progress.uk-danger::-moz-progress-bar, body .uk-progress.uk-danger::-moz-progress-bar {
+        border-radius: 0.0520833333vw; }
   html .uk-badge, body .uk-badge {
     background: #3692c7;
     font-size: 15px;
@@ -3580,6 +3593,40 @@ html, body {
       border-radius: 10px; }
       html .uk-pagination.uk-pagination-navs li > a:hover, html .uk-pagination.uk-pagination-navs li > span:hover, body .uk-pagination.uk-pagination-navs li > a:hover, body .uk-pagination.uk-pagination-navs li > span:hover {
         border-color: #F59E5A; }
+  html .radio-buttons-group label, body .radio-buttons-group label {
+    position: relative;
+    display: block;
+    width: 100%;
+    box-sizing: border-box; }
+    html .radio-buttons-group label input, body .radio-buttons-group label input {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0; }
+      html .radio-buttons-group label input + div, body .radio-buttons-group label input + div {
+        font-size: 24px;
+        line-height: 28px;
+        font-family: "Rogan Regular", sans-serif;
+        color: white;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 2.03125vw 1.5625vw;
+        border-radius: 1.0416666667vw;
+        transition: all 300ms ease-in-out;
+        cursor: pointer;
+        box-shadow: 0 0 0 rgba(12, 183, 84, 0); }
+        html .radio-buttons-group label input + div img, body .radio-buttons-group label input + div img {
+          display: block;
+          margin: 0 auto 0.8333333333vw auto;
+          height: 5.625vw; }
+        html .radio-buttons-group label input + div:hover, body .radio-buttons-group label input + div:hover {
+          box-shadow: 0 0 30px rgba(12, 183, 84, 0.7); }
+      html .radio-buttons-group label input:checked + div, body .radio-buttons-group label input:checked + div {
+        background: rgba(255, 255, 255, 0.2);
+        cursor: default; }
+        html .radio-buttons-group label input:checked + div:hover, body .radio-buttons-group label input:checked + div:hover {
+          box-shadow: 0 0 0 rgba(12, 183, 84, 0.7); }
   html .partner-item .partner-name, body .partner-item .partner-name {
     font-size: 1.25vw;
     position: relative;

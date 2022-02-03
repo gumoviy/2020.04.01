@@ -106,6 +106,11 @@
                                         <option data-thumb="images/en.svg">EN</option>
                                     </select>
                                 </div>
+                                
+                                <div class="uk-width-auto">
+                                    <a href="#choose-account" class="uk-button uk-button-default uk-button-small" uk-toggle>Войти</a>
+                                </div>
+                                
                                 <div class="uk-width-auto uk-position-relative">
                                     <div class="avatar uk-area-drop"></div>
                                     <div uk-dropdown="mode: hover" class="uk-dropdown">
@@ -2381,6 +2386,149 @@
             </div>
         </div>
         
+        <!-- выбор аккаунта -->
+        <div id="choose-account" class="uk-flex-top uk-modal-container uk-modal-container-medium" uk-modal>
+            <div class="uk-modal-dialog uk-margin-auto-vertical">
+
+                <button class="uk-modal-close-default" type="button" uk-close></button>
+
+                <div class="uk-modal-body">
+                    <div class="uk-grid uk-grid-xmedium" uk-grid>
+                        <div class="uk-width-1-1">
+                            <h3>Ваши игровые аккаунты</h3>
+                        </div>
+                        <div class="uk-width-1-1 uk-margin-small-top">
+                            
+                            <table class="uk-table uk-table-accounts">
+                                <thead>
+                                    <tr>
+                                        <th class="uk-table-expand">Раса</th>
+                                        <th class="uk-table-expand">Никнейм</th>
+                                        <th class="uk-table-expand">Галактика</th>
+                                        <th class="uk-width-small uk-text-right">&nbsp;</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="uk-table-expand uk-text-light">
+                                            <img src="images/blockchain-minter.svg" class="table-icon">
+                                            Minter
+                                        </td>
+                                        <td class="uk-width-expand uk-text-light">JohnyB</td>
+                                        <td class="uk-width-expand uk-text-light">Minter</td>
+                                        <td class="uk-width-small uk-text-right">
+                                            <a href="#" class="uk-button uk-button-green uk-button-small">Войти</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="uk-table-expand uk-text-light">
+                                            <img src="images/blockchain-everscale.svg" class="table-icon">
+                                            Everscale
+                                        </td>
+                                        <td class="uk-table-expand uk-text-light">JohnyB</td>
+                                        <td class="uk-table-expand uk-text-light">Everscale</td>
+                                        <td class="uk-width-small uk-text-right">
+                                            <a href="#" class="uk-button uk-button-green uk-button-small">Войти</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                        </div>
+                        <div class="uk-width-1-1 uk-margin-small-top">
+                            <a href="#choose-rase" class="uk-button uk-button-blue uk-width-auto@s uk-width-1-1" uk-toggle>Играть за новую расу</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        <!-- добавление новой расы -->
+        <div id="choose-rase" class="uk-flex-top uk-modal-container uk-modal-container-medium" uk-modal>
+            <div class="uk-modal-dialog uk-margin-auto-vertical">
+
+                <button class="uk-modal-close-default" type="button" uk-close></button>
+
+                <div class="uk-modal-body">
+                    <div class="uk-grid uk-grid-xmedium" uk-grid>
+                        <div class="uk-width-1-1">
+                            <h3>Регистрация аккаунта в новой расе</h3>
+                        </div>
+                        <div class="uk-width-1-1">
+                            <input type="text" class="uk-input" placeholder="Введите свой никнейм" />
+                        </div>
+                        <div class="uk-width-1-1">
+                            
+                            <div class="radio-buttons-group">
+                                <div class="uk-grid uk-grid-xmedium uk-child-width-1-4@m uk-child-width-1-3@s uk-child-width-1-2" uk-grid>
+                                    <!-- one rase item - start -->
+                                    <div>
+                                        <label>
+                                            <input type="radio" name="choose-rase" />
+                                            <div class="uk-text-center">
+                                                <img src="images/blockchain-minter.svg" />
+                                                Minter
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <!-- one rase item - end -->
+                                    <!-- one rase item - start -->
+                                    <div>
+                                        <label>
+                                            <input type="radio" name="choose-rase" />
+                                            <div class="uk-text-center">
+                                                <img src="images/blockchain-aurora.svg" />
+                                                Aurora
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <!-- one rase item - end -->
+                                    <!-- one rase item - start -->
+                                    <div>
+                                        <label>
+                                            <input type="radio" name="choose-rase" />
+                                            <div class="uk-text-center">
+                                                <img src="images/blockchain-decimal.svg" />
+                                                DecimalChain
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <!-- one rase item - end -->
+                                    <!-- one rase item - start -->
+                                    <div>
+                                        <label>
+                                            <input type="radio" name="choose-rase" />
+                                            <div class="uk-text-center">
+                                                <img src="images/blockchain-tron.svg" />
+                                                Tron
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <!-- one rase item - end -->
+                                    <!-- one rase item - start -->
+                                    <div>
+                                        <label>
+                                            <input type="radio" name="choose-rase" />
+                                            <div class="uk-text-center">
+                                                <img src="images/blockchain-near.svg" />
+                                                NEAR
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <!-- one rase item - end -->
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="uk-width-1-1">
+                            <a href="#" class="uk-button uk-button-blue uk-width-auto@s uk-width-1-1">Начать игру</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
         
         <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
         <script src="js/uikit.min.js"></script>

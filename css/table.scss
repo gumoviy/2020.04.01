@@ -94,11 +94,7 @@ html, body {
                 }
                 > th {
                     text-transform: none;
-                    &:before, &:after {
-                        height: get-vw(8.22px); width: get-vw(14px); content: ''!important; background-size: 100%; background-position: center; background-repeat: no-repeat; background-image: url('../images/data-sort-arrow.svg'); right: get-vw(28px)!important; top: 50%; bottom: auto; transform: translateY(-50%); position: absolute;
-                    }
-                    &:before {transform: translateY(-50%) rotate(0deg);}
-                    &:after {transform: translateY(-50%) rotate(-180deg);}
+                    
                     &.sorting {
                         padding-right: get-vw(50px); color: rgba(255,255,255,1);
                         &:before {display: none!important;}
@@ -127,7 +123,28 @@ html, body {
             tr {
                 position: relative;
                 td {
-                    &:before {content: ''; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background: rgba(255, 255, 255, 0.05); border-radius: 10px;}
+                    &:before {content: ''; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background: rgba(255, 255, 255, 0.01); border-radius: get-vw(10px); z-index: -1;}
+                    .table-icon {margin-right: get-vw(16px); width: get-vw(30px);}
+                }
+            }
+        }
+        &.sort-table {
+            tr {
+                > th {
+                    &:before, &:after {
+                        height: get-vw(8.22px); width: get-vw(14px); content: ''!important; background-size: 100%; background-position: center; background-repeat: no-repeat; background-image: url('../images/data-sort-arrow.svg'); right: get-vw(28px)!important; top: 50%; bottom: auto; transform: translateY(-50%); position: absolute;
+                    }
+                    &:before {transform: translateY(-50%) rotate(0deg);}
+                    &:after {transform: translateY(-50%) rotate(-180deg);}
+                }
+            }
+        }
+        &.uk-table-accounts {
+            thead, tbody {
+                tr {
+                    > * {
+                        padding: get-vw(6px) get-vw(24px); vertical-align: middle;
+                    }
                 }
             }
         }
