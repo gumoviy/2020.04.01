@@ -1058,7 +1058,7 @@ html .page-slider, body .page-slider {
         right: 0;
         z-index: 2;
         transition: opacity 1300ms ease-out, transform 1500ms ease-out;
-        transition-delay: 1200ms;
+        transition-delay: 2000ms;
         transform: translate(5%, -5%);
         opacity: 0; }
       html .page-slider .panel#data-slide-1 .first-slide-container:after, body .page-slider .panel#data-slide-1 .first-slide-container:after {

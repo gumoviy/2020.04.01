@@ -63,9 +63,8 @@ html, body {
                 .first-slide-container {
                     position: absolute; top: 50%; transform: translateY(-50%); display: block; pointer-events: none; background-image: url('../images/1th-slide-planet.png'); background-size: 100%; height: 0; width: 100%; padding-bottom: 65%; left: 0; right: 0; z-index: 0; background-position: top 0 right 0; transition: all 300ms ease-in; opacity: 0;
                     span {
-                        position: absolute; top: 0; transform: translateY(0); display: block; pointer-events: none; background-image: url('../images/1th-slide-spaceship.png'); background-size: 100%; height: 0; width: 100%; padding-bottom: 65%; left: 0; right: 0; z-index: 2; transition: opacity 1300ms ease-out, transform 1500ms ease-out; transition-delay: 1200ms;
+                        position: absolute; top: 0; transform: translateY(0); display: block; pointer-events: none; background-image: url('../images/1th-slide-spaceship.png'); background-size: 100%; height: 0; width: 100%; padding-bottom: 65%; left: 0; right: 0; z-index: 2; transition: opacity 1300ms ease-out, transform 1500ms ease-out; transition-delay: 2000ms;
                         transform: translate(5%,-5%); opacity: 0;
-                        
                     }
                     &:after {
                         content: ''; position: absolute; top: 0; transform: translateY(0); display: block; pointer-events: none; background-image: url('../images/1th-slide-fog.png'); background-size: 100%; height: 0; width: 100%; padding-bottom: 65%; left: 0; right: 0; z-index: 0; transition: opacity 200ms ease, transform 2000ms ease-out;
