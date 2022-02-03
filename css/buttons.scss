@@ -99,7 +99,7 @@ html, body {
                 background: rgba($primary,1); border: 1px solid rgba($primary,1); color: #121212;
                 svg {
                     transform: translateX(get-vw(5px));
-                    path {fill: #fff;}
+                    //path {fill: #fff;}
                 }
                 &:before {opacity: 1; transform: translate3d(0px, 0px, 0px);}
             }
@@ -116,7 +116,7 @@ html, body {
                 /*box-shadow: inset 0px 0px 30px rgba(255,255,255, 0);*/ color: #121212; border: 0.0521vw solid rgba($warning,1); background: rgba($warning,1);
                 &:before {opacity: 1; transform: translate3d(0px, 0px, 0px);}
                 svg {
-                    path {fill: #ffffff;}
+                    //path {fill: #ffffff;}
                 }
             }
         }
