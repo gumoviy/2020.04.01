@@ -390,6 +390,11 @@ html, body {
                 .section-content {
                     padding-bottom: get-vw(60px);
                 }
+                .select2-container--default .select2-selection--single .select2-selection__rendered {
+                    @media (max-width: 639px) {
+                        padding-left: 0;
+                    }
+                }
             }
             &#data-slide-6 {
                 &:before {
@@ -890,7 +895,12 @@ html, body {
                     .uk-grid {
                         &+ .uk-grid-small {margin-top: 0;}
                     }
-                    .uk-card-footer {padding-bottom: 18%;}
+                    .uk-card-footer {
+                        padding-bottom: 18%;
+                        @media (max-width: 959px) {
+                            padding-bottom: 17%;
+                        }
+                    }
                     @media (max-width: 959px) {
                         padding: 0 0px;
                     }
@@ -977,17 +987,31 @@ html, body {
             .union {
                 .uk-overflow-auto {
                     height: calc(100vh - 25vw); padding-right: get-vw(22px); min-height: get-vw(350px);
+                    @media (max-width: 959px) {
+                        height: auto; padding-right: 0; min-height: auto;
+                    }
                 }
                 .switcher-container {
                     .uk-overflow-auto {padding-right: 0;}
                 }
                 font-size: get-vw(20px); line-height: get-vw(26px);
-                .uk-text-normal {font-size: get-vw(20px); line-height: get-vw(26px);}
+                .uk-text-normal {
+                    font-size: get-vw(20px); line-height: get-vw(26px);
+                    @media (max-width: 959px) {
+                        font-size: 20px; line-height: 26px;
+                    }
+                }
                 .union-list-item-descr {
                     height: calc(100% - 14vw); overflow-y: auto; margin-right: get-vw(-20px); padding-right: get-vw(12px);
                     p {color: rgba(255,255,255,.5);}
                     &::-webkit-scrollbar {
                         width: get-vw(5px); background: transparent;
+                        @media (max-width: 959px) {
+                            width: 5px;
+                        }
+                    }
+                    @media (max-width: 959px) {
+                        height: auto; margin-right: -20px; padding-right: 12px;
                     }
                 }
                 .uk-card {
@@ -996,8 +1020,16 @@ html, body {
                         height: 100%;
                     }
                     .uk-card-body {
-                        img {width: get-vw(43px); height: auto;}
+                        img {
+                            width: get-vw(43px); height: auto;
+                            @media (max-width: 959px) {
+                                width: 43px;
+                            }
+                        }
                     }
+                }
+                @media (max-width: 959px) {
+                    font-size: 20px; line-height: 26px;
                 }
             }
             .video {

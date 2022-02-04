@@ -28,7 +28,15 @@ html, body {
                 &.uk-grid-xsmall {
                     > * {
                         padding-left: get-vw(10px); margin: 0;
-                        &.uk-grid-margin {margin-top: get-vw(10px);}
+                        &.uk-grid-margin {
+                            margin-top: get-vw(10px);
+                            @media (max-width: 959px) {
+                                margin-top: 10px;
+                            }
+                        }
+                        @media (max-width: 959px) {
+                            padding-left: 10px;
+                        }
                     }
                 }
                 > * {list-style: none;}
@@ -40,34 +48,77 @@ html, body {
         }
         &.uk-overflow-auto {
             padding-right: 22px;
+            @media (max-width: 959px) {
+                padding-right: 0;
+            }
         }
         .uk-table-list-item {
             .uk-card-body, .uk-card-footer, .uk-card-header {
                 padding: get-vw(24px) get-vw(28px);
                 .uk-table-list-descr {
                     opacity: 0; padding-top: 0; height: 0; /*line-height: 0;*/ transition: all 300ms ease-in-out; margin-top: 0!important; white-space: nowrap; overflow: hidden; 
-                    > span {display: block; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+                    > span {
+                        display: block; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+                        @media (max-width: 959px) {
+                            overflow: visible; text-overflow: unset; white-space: normal;
+                        }
+                    }
                 }
                 .uk-button {
-                    &:not(.uk-button-blue) {width: get-vw(43px);}
+                    &:not(.uk-button-blue) {
+                        width: get-vw(43px);
+                        @media (max-width: 959px) {
+                            width: 43px;
+                        }
+                    }
                     line-height: get-vw(21px); transition: all 300ms ease-in-out;
-                    svg {width: get-vw(9px); height: auto;}
+                    svg {
+                        width: get-vw(9px); height: auto;
+                        @media (max-width: 959px) {
+                            width: 9px;
+                        }
+                    }
                     &:hover {
-                        background: rgba($primary, 0.05); border: 0.0521vw solid rgba($primary,1); box-sizing: border-box; box-shadow: inset 0px 0px get-vw(30px) rgba($primary, 0.5); color: $primary;
+                        background: rgba($primary, 0.05); border: 1px solid rgba($primary,1); box-sizing: border-box; box-shadow: inset 0px 0px get-vw(30px) rgba($primary, 0.5); color: $primary;
                         svg {
                             path, g {fill: rgba($primary,1)!important;}
                         }
+                        @media (max-width: 959px) {
+                            box-shadow: inset 0px 0px 30px rgba($primary, 0.5);
+                        }
                     }
+                    @media (max-width: 959px) {
+                        line-height: 21px;
+                    }
+                }
+                @media (max-width: 959px) {
+                    padding: 24px 28px;
                 }
             }
             &:hover {
                 .uk-card-body, .uk-card-footer, .uk-card-header {
-                    .uk-table-list-descr {opacity: 1; padding-top: get-vw(10px); /*line-height: get-vw(24px);*/ height: get-vw(32px);}
+                    .uk-table-list-descr {
+                        opacity: 1; padding-top: get-vw(10px); height: get-vw(32px);
+                        @media (max-width: 959px) {
+                            height: auto; padding-top: 10px;
+                        }
+                    }
+                }
+            }
+            &:active, &:focus, &:focus-within, &:target {
+                background: rgba(255,255,255,.1)!important;
+                .uk-card-body, .uk-card-footer, .uk-card-header {
+                    .uk-table-list-descr {
+                        opacity: 1; padding-top: get-vw(10px); /*line-height: get-vw(24px);*/ height: get-vw(32px);
+                        @media (max-width: 959px) {
+                            height: auto; padding-top: 10px;
+                        }
+                    }
                 }
             }
         }
         .uk-card {transition: all 300ms ease-in-out;}
-        .uk-active {
+        .uk-active, .uk-table-list-item:active, .uk-table-list-item:focus, .uk-table-list-item:focus-within, .uk-table-list-item:target {
             .uk-card {
                 &.uk-card-default {
                     background: rgba(255,255,255,.1);
@@ -76,20 +127,28 @@ html, body {
                     }
                     a {
                         &.uk-button {
-                            opacity: .2; cursor: default; background: rgba(255, 255, 255, 0.1); border: 0.0521vw solid rgba(255, 255, 255, 0.2); box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.2); color: rgba(255,255,255,1);
-                            .uk-visible {display: none;}
-                            .uk-hidden {display: inline-block!important;}
-                            svg {
-                                path, g {fill: rgba(255,255,255,1)!important;}
-                            }
-                            &:hover {
+                            &.uk-button-default {
+                                opacity: .2; cursor: default; background: rgba(255, 255, 255, 0.1); border: 0.0521vw solid rgba(255, 255, 255, 0.2); box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.2); color: rgba(255,255,255,1);
+                                .uk-visible {display: none;}
+                                .uk-hidden {display: inline-block!important;}
                                 svg {
                                     path, g {fill: rgba(255,255,255,1)!important;}
+                                }
+                                &:hover {
+                                    svg {
+                                        path, g {fill: rgba(255,255,255,1)!important;}
+                                    }
                                 }
                             }
                         }
                     }
-                    .uk-table-list-descr {opacity: 1; padding-top: get-vw(10px); /*line-height: get-vw(24px);*/ height: get-vw(32px);}
+                    .uk-table-list-descr {
+                        opacity: 1; padding-top: get-vw(10px); /*line-height: get-vw(24px);*/ height: get-vw(32px);
+                        @media (max-width: 959px) {
+                            height: auto; padding-top: 10px;
+                            a {margin-top: 12px;}
+                        }
+                    }
                 }
             }
         }

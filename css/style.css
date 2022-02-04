@@ -57,6 +57,12 @@ html .uk-table-list ul, body .uk-table-list ul {
     margin: 0; }
     html .uk-table-list ul.uk-grid.uk-grid-xsmall > *.uk-grid-margin, html .uk-table-list ul .uk-grid.uk-grid-xsmall > *.uk-grid-margin, body .uk-table-list ul.uk-grid.uk-grid-xsmall > *.uk-grid-margin, body .uk-table-list ul .uk-grid.uk-grid-xsmall > *.uk-grid-margin {
       margin-top: 0.5208333333vw; }
+      @media (max-width: 959px) {
+        html .uk-table-list ul.uk-grid.uk-grid-xsmall > *.uk-grid-margin, html .uk-table-list ul .uk-grid.uk-grid-xsmall > *.uk-grid-margin, body .uk-table-list ul.uk-grid.uk-grid-xsmall > *.uk-grid-margin, body .uk-table-list ul .uk-grid.uk-grid-xsmall > *.uk-grid-margin {
+          margin-top: 10px; } }
+    @media (max-width: 959px) {
+      html .uk-table-list ul.uk-grid.uk-grid-xsmall > *, html .uk-table-list ul .uk-grid.uk-grid-xsmall > *, body .uk-table-list ul.uk-grid.uk-grid-xsmall > *, body .uk-table-list ul .uk-grid.uk-grid-xsmall > * {
+        padding-left: 10px; } }
   html .uk-table-list ul.uk-grid > *, html .uk-table-list ul .uk-grid > *, body .uk-table-list ul.uk-grid > *, body .uk-table-list ul .uk-grid > * {
     list-style: none; }
   html .uk-table-list ul li, body .uk-table-list ul li {
@@ -65,6 +71,9 @@ html .uk-table-list ul, body .uk-table-list ul {
     margin-left: 0; }
 html .uk-table-list.uk-overflow-auto, body .uk-table-list.uk-overflow-auto {
   padding-right: 22px; }
+  @media (max-width: 959px) {
+    html .uk-table-list.uk-overflow-auto, body .uk-table-list.uk-overflow-auto {
+      padding-right: 0; } }
 html .uk-table-list .uk-table-list-item .uk-card-body, html .uk-table-list .uk-table-list-item .uk-card-footer, html .uk-table-list .uk-table-list-item .uk-card-header, body .uk-table-list .uk-table-list-item .uk-card-body, body .uk-table-list .uk-table-list-item .uk-card-footer, body .uk-table-list .uk-table-list-item .uk-card-header {
   padding: 1.25vw 1.4583333333vw; }
   html .uk-table-list .uk-table-list-item .uk-card-body .uk-table-list-descr, html .uk-table-list .uk-table-list-item .uk-card-footer .uk-table-list-descr, html .uk-table-list .uk-table-list-item .uk-card-header .uk-table-list-descr, body .uk-table-list .uk-table-list-item .uk-card-body .uk-table-list-descr, body .uk-table-list .uk-table-list-item .uk-card-footer .uk-table-list-descr, body .uk-table-list .uk-table-list-item .uk-card-header .uk-table-list-descr {
@@ -82,54 +91,94 @@ html .uk-table-list .uk-table-list-item .uk-card-body, html .uk-table-list .uk-t
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap; }
+      @media (max-width: 959px) {
+        html .uk-table-list .uk-table-list-item .uk-card-body .uk-table-list-descr > span, html .uk-table-list .uk-table-list-item .uk-card-footer .uk-table-list-descr > span, html .uk-table-list .uk-table-list-item .uk-card-header .uk-table-list-descr > span, body .uk-table-list .uk-table-list-item .uk-card-body .uk-table-list-descr > span, body .uk-table-list .uk-table-list-item .uk-card-footer .uk-table-list-descr > span, body .uk-table-list .uk-table-list-item .uk-card-header .uk-table-list-descr > span {
+          overflow: visible;
+          text-overflow: unset;
+          white-space: normal; } }
   html .uk-table-list .uk-table-list-item .uk-card-body .uk-button, html .uk-table-list .uk-table-list-item .uk-card-footer .uk-button, html .uk-table-list .uk-table-list-item .uk-card-header .uk-button, body .uk-table-list .uk-table-list-item .uk-card-body .uk-button, body .uk-table-list .uk-table-list-item .uk-card-footer .uk-button, body .uk-table-list .uk-table-list-item .uk-card-header .uk-button {
     line-height: 1.09375vw;
     transition: all 300ms ease-in-out; }
     html .uk-table-list .uk-table-list-item .uk-card-body .uk-button:not(.uk-button-blue), html .uk-table-list .uk-table-list-item .uk-card-footer .uk-button:not(.uk-button-blue), html .uk-table-list .uk-table-list-item .uk-card-header .uk-button:not(.uk-button-blue), body .uk-table-list .uk-table-list-item .uk-card-body .uk-button:not(.uk-button-blue), body .uk-table-list .uk-table-list-item .uk-card-footer .uk-button:not(.uk-button-blue), body .uk-table-list .uk-table-list-item .uk-card-header .uk-button:not(.uk-button-blue) {
       width: 2.2395833333vw; }
+      @media (max-width: 959px) {
+        html .uk-table-list .uk-table-list-item .uk-card-body .uk-button:not(.uk-button-blue), html .uk-table-list .uk-table-list-item .uk-card-footer .uk-button:not(.uk-button-blue), html .uk-table-list .uk-table-list-item .uk-card-header .uk-button:not(.uk-button-blue), body .uk-table-list .uk-table-list-item .uk-card-body .uk-button:not(.uk-button-blue), body .uk-table-list .uk-table-list-item .uk-card-footer .uk-button:not(.uk-button-blue), body .uk-table-list .uk-table-list-item .uk-card-header .uk-button:not(.uk-button-blue) {
+          width: 43px; } }
     html .uk-table-list .uk-table-list-item .uk-card-body .uk-button svg, html .uk-table-list .uk-table-list-item .uk-card-footer .uk-button svg, html .uk-table-list .uk-table-list-item .uk-card-header .uk-button svg, body .uk-table-list .uk-table-list-item .uk-card-body .uk-button svg, body .uk-table-list .uk-table-list-item .uk-card-footer .uk-button svg, body .uk-table-list .uk-table-list-item .uk-card-header .uk-button svg {
       width: 0.46875vw;
       height: auto; }
+      @media (max-width: 959px) {
+        html .uk-table-list .uk-table-list-item .uk-card-body .uk-button svg, html .uk-table-list .uk-table-list-item .uk-card-footer .uk-button svg, html .uk-table-list .uk-table-list-item .uk-card-header .uk-button svg, body .uk-table-list .uk-table-list-item .uk-card-body .uk-button svg, body .uk-table-list .uk-table-list-item .uk-card-footer .uk-button svg, body .uk-table-list .uk-table-list-item .uk-card-header .uk-button svg {
+          width: 9px; } }
     html .uk-table-list .uk-table-list-item .uk-card-body .uk-button:hover, html .uk-table-list .uk-table-list-item .uk-card-footer .uk-button:hover, html .uk-table-list .uk-table-list-item .uk-card-header .uk-button:hover, body .uk-table-list .uk-table-list-item .uk-card-body .uk-button:hover, body .uk-table-list .uk-table-list-item .uk-card-footer .uk-button:hover, body .uk-table-list .uk-table-list-item .uk-card-header .uk-button:hover {
       background: rgba(48, 178, 230, 0.05);
-      border: 0.0521vw solid #30b2e6;
+      border: 1px solid #30b2e6;
       box-sizing: border-box;
       box-shadow: inset 0px 0px 1.5625vw rgba(48, 178, 230, 0.5);
       color: #30B2E6; }
       html .uk-table-list .uk-table-list-item .uk-card-body .uk-button:hover svg path, html .uk-table-list .uk-table-list-item .uk-card-body .uk-button:hover svg g, html .uk-table-list .uk-table-list-item .uk-card-footer .uk-button:hover svg path, html .uk-table-list .uk-table-list-item .uk-card-footer .uk-button:hover svg g, html .uk-table-list .uk-table-list-item .uk-card-header .uk-button:hover svg path, html .uk-table-list .uk-table-list-item .uk-card-header .uk-button:hover svg g, body .uk-table-list .uk-table-list-item .uk-card-body .uk-button:hover svg path, body .uk-table-list .uk-table-list-item .uk-card-body .uk-button:hover svg g, body .uk-table-list .uk-table-list-item .uk-card-footer .uk-button:hover svg path, body .uk-table-list .uk-table-list-item .uk-card-footer .uk-button:hover svg g, body .uk-table-list .uk-table-list-item .uk-card-header .uk-button:hover svg path, body .uk-table-list .uk-table-list-item .uk-card-header .uk-button:hover svg g {
         fill: #30b2e6 !important; }
+      @media (max-width: 959px) {
+        html .uk-table-list .uk-table-list-item .uk-card-body .uk-button:hover, html .uk-table-list .uk-table-list-item .uk-card-footer .uk-button:hover, html .uk-table-list .uk-table-list-item .uk-card-header .uk-button:hover, body .uk-table-list .uk-table-list-item .uk-card-body .uk-button:hover, body .uk-table-list .uk-table-list-item .uk-card-footer .uk-button:hover, body .uk-table-list .uk-table-list-item .uk-card-header .uk-button:hover {
+          box-shadow: inset 0px 0px 30px rgba(48, 178, 230, 0.5); } }
+    @media (max-width: 959px) {
+      html .uk-table-list .uk-table-list-item .uk-card-body .uk-button, html .uk-table-list .uk-table-list-item .uk-card-footer .uk-button, html .uk-table-list .uk-table-list-item .uk-card-header .uk-button, body .uk-table-list .uk-table-list-item .uk-card-body .uk-button, body .uk-table-list .uk-table-list-item .uk-card-footer .uk-button, body .uk-table-list .uk-table-list-item .uk-card-header .uk-button {
+        line-height: 21px; } }
+  @media (max-width: 959px) {
+    html .uk-table-list .uk-table-list-item .uk-card-body, html .uk-table-list .uk-table-list-item .uk-card-footer, html .uk-table-list .uk-table-list-item .uk-card-header, body .uk-table-list .uk-table-list-item .uk-card-body, body .uk-table-list .uk-table-list-item .uk-card-footer, body .uk-table-list .uk-table-list-item .uk-card-header {
+      padding: 24px 28px; } }
 html .uk-table-list .uk-table-list-item:hover .uk-card-body .uk-table-list-descr, html .uk-table-list .uk-table-list-item:hover .uk-card-footer .uk-table-list-descr, html .uk-table-list .uk-table-list-item:hover .uk-card-header .uk-table-list-descr, body .uk-table-list .uk-table-list-item:hover .uk-card-body .uk-table-list-descr, body .uk-table-list .uk-table-list-item:hover .uk-card-footer .uk-table-list-descr, body .uk-table-list .uk-table-list-item:hover .uk-card-header .uk-table-list-descr {
   opacity: 1;
   padding-top: 0.5208333333vw;
-  /*line-height: get-vw(24px);*/
   height: 1.6666666667vw; }
+  @media (max-width: 959px) {
+    html .uk-table-list .uk-table-list-item:hover .uk-card-body .uk-table-list-descr, html .uk-table-list .uk-table-list-item:hover .uk-card-footer .uk-table-list-descr, html .uk-table-list .uk-table-list-item:hover .uk-card-header .uk-table-list-descr, body .uk-table-list .uk-table-list-item:hover .uk-card-body .uk-table-list-descr, body .uk-table-list .uk-table-list-item:hover .uk-card-footer .uk-table-list-descr, body .uk-table-list .uk-table-list-item:hover .uk-card-header .uk-table-list-descr {
+      height: auto;
+      padding-top: 10px; } }
+html .uk-table-list .uk-table-list-item:active, html .uk-table-list .uk-table-list-item:focus, html .uk-table-list .uk-table-list-item:focus-within, html .uk-table-list .uk-table-list-item:target, body .uk-table-list .uk-table-list-item:active, body .uk-table-list .uk-table-list-item:focus, body .uk-table-list .uk-table-list-item:focus-within, body .uk-table-list .uk-table-list-item:target {
+  background: rgba(255, 255, 255, 0.1) !important; }
+  html .uk-table-list .uk-table-list-item:active .uk-card-body .uk-table-list-descr, html .uk-table-list .uk-table-list-item:active .uk-card-footer .uk-table-list-descr, html .uk-table-list .uk-table-list-item:active .uk-card-header .uk-table-list-descr, html .uk-table-list .uk-table-list-item:focus .uk-card-body .uk-table-list-descr, html .uk-table-list .uk-table-list-item:focus .uk-card-footer .uk-table-list-descr, html .uk-table-list .uk-table-list-item:focus .uk-card-header .uk-table-list-descr, html .uk-table-list .uk-table-list-item:focus-within .uk-card-body .uk-table-list-descr, html .uk-table-list .uk-table-list-item:focus-within .uk-card-footer .uk-table-list-descr, html .uk-table-list .uk-table-list-item:focus-within .uk-card-header .uk-table-list-descr, html .uk-table-list .uk-table-list-item:target .uk-card-body .uk-table-list-descr, html .uk-table-list .uk-table-list-item:target .uk-card-footer .uk-table-list-descr, html .uk-table-list .uk-table-list-item:target .uk-card-header .uk-table-list-descr, body .uk-table-list .uk-table-list-item:active .uk-card-body .uk-table-list-descr, body .uk-table-list .uk-table-list-item:active .uk-card-footer .uk-table-list-descr, body .uk-table-list .uk-table-list-item:active .uk-card-header .uk-table-list-descr, body .uk-table-list .uk-table-list-item:focus .uk-card-body .uk-table-list-descr, body .uk-table-list .uk-table-list-item:focus .uk-card-footer .uk-table-list-descr, body .uk-table-list .uk-table-list-item:focus .uk-card-header .uk-table-list-descr, body .uk-table-list .uk-table-list-item:focus-within .uk-card-body .uk-table-list-descr, body .uk-table-list .uk-table-list-item:focus-within .uk-card-footer .uk-table-list-descr, body .uk-table-list .uk-table-list-item:focus-within .uk-card-header .uk-table-list-descr, body .uk-table-list .uk-table-list-item:target .uk-card-body .uk-table-list-descr, body .uk-table-list .uk-table-list-item:target .uk-card-footer .uk-table-list-descr, body .uk-table-list .uk-table-list-item:target .uk-card-header .uk-table-list-descr {
+    opacity: 1;
+    padding-top: 0.5208333333vw;
+    /*line-height: get-vw(24px);*/
+    height: 1.6666666667vw; }
+    @media (max-width: 959px) {
+      html .uk-table-list .uk-table-list-item:active .uk-card-body .uk-table-list-descr, html .uk-table-list .uk-table-list-item:active .uk-card-footer .uk-table-list-descr, html .uk-table-list .uk-table-list-item:active .uk-card-header .uk-table-list-descr, html .uk-table-list .uk-table-list-item:focus .uk-card-body .uk-table-list-descr, html .uk-table-list .uk-table-list-item:focus .uk-card-footer .uk-table-list-descr, html .uk-table-list .uk-table-list-item:focus .uk-card-header .uk-table-list-descr, html .uk-table-list .uk-table-list-item:focus-within .uk-card-body .uk-table-list-descr, html .uk-table-list .uk-table-list-item:focus-within .uk-card-footer .uk-table-list-descr, html .uk-table-list .uk-table-list-item:focus-within .uk-card-header .uk-table-list-descr, html .uk-table-list .uk-table-list-item:target .uk-card-body .uk-table-list-descr, html .uk-table-list .uk-table-list-item:target .uk-card-footer .uk-table-list-descr, html .uk-table-list .uk-table-list-item:target .uk-card-header .uk-table-list-descr, body .uk-table-list .uk-table-list-item:active .uk-card-body .uk-table-list-descr, body .uk-table-list .uk-table-list-item:active .uk-card-footer .uk-table-list-descr, body .uk-table-list .uk-table-list-item:active .uk-card-header .uk-table-list-descr, body .uk-table-list .uk-table-list-item:focus .uk-card-body .uk-table-list-descr, body .uk-table-list .uk-table-list-item:focus .uk-card-footer .uk-table-list-descr, body .uk-table-list .uk-table-list-item:focus .uk-card-header .uk-table-list-descr, body .uk-table-list .uk-table-list-item:focus-within .uk-card-body .uk-table-list-descr, body .uk-table-list .uk-table-list-item:focus-within .uk-card-footer .uk-table-list-descr, body .uk-table-list .uk-table-list-item:focus-within .uk-card-header .uk-table-list-descr, body .uk-table-list .uk-table-list-item:target .uk-card-body .uk-table-list-descr, body .uk-table-list .uk-table-list-item:target .uk-card-footer .uk-table-list-descr, body .uk-table-list .uk-table-list-item:target .uk-card-header .uk-table-list-descr {
+        height: auto;
+        padding-top: 10px; } }
 html .uk-table-list .uk-card, body .uk-table-list .uk-card {
   transition: all 300ms ease-in-out; }
-html .uk-table-list .uk-active .uk-card.uk-card-default, body .uk-table-list .uk-active .uk-card.uk-card-default {
+html .uk-table-list .uk-active .uk-card.uk-card-default, html .uk-table-list .uk-table-list-item:active .uk-card.uk-card-default, html .uk-table-list .uk-table-list-item:focus .uk-card.uk-card-default, html .uk-table-list .uk-table-list-item:focus-within .uk-card.uk-card-default, html .uk-table-list .uk-table-list-item:target .uk-card.uk-card-default, body .uk-table-list .uk-active .uk-card.uk-card-default, body .uk-table-list .uk-table-list-item:active .uk-card.uk-card-default, body .uk-table-list .uk-table-list-item:focus .uk-card.uk-card-default, body .uk-table-list .uk-table-list-item:focus-within .uk-card.uk-card-default, body .uk-table-list .uk-table-list-item:target .uk-card.uk-card-default {
   background: rgba(255, 255, 255, 0.1); }
 @-moz-document url-prefix() {
-  html .uk-table-list .uk-active .uk-card.uk-card-default, body .uk-table-list .uk-active .uk-card.uk-card-default {
+  html .uk-table-list .uk-active .uk-card.uk-card-default, html .uk-table-list .uk-table-list-item:active .uk-card.uk-card-default, html .uk-table-list .uk-table-list-item:focus .uk-card.uk-card-default, html .uk-table-list .uk-table-list-item:focus-within .uk-card.uk-card-default, html .uk-table-list .uk-table-list-item:target .uk-card.uk-card-default, body .uk-table-list .uk-active .uk-card.uk-card-default, body .uk-table-list .uk-table-list-item:active .uk-card.uk-card-default, body .uk-table-list .uk-table-list-item:focus .uk-card.uk-card-default, body .uk-table-list .uk-table-list-item:focus-within .uk-card.uk-card-default, body .uk-table-list .uk-table-list-item:target .uk-card.uk-card-default {
     background: rgba(50, 54, 58, 0.85); } }
-  html .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button, body .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button {
+  html .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button.uk-button-default, html .uk-table-list .uk-table-list-item:active .uk-card.uk-card-default a.uk-button.uk-button-default, html .uk-table-list .uk-table-list-item:focus .uk-card.uk-card-default a.uk-button.uk-button-default, html .uk-table-list .uk-table-list-item:focus-within .uk-card.uk-card-default a.uk-button.uk-button-default, html .uk-table-list .uk-table-list-item:target .uk-card.uk-card-default a.uk-button.uk-button-default, body .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button.uk-button-default, body .uk-table-list .uk-table-list-item:active .uk-card.uk-card-default a.uk-button.uk-button-default, body .uk-table-list .uk-table-list-item:focus .uk-card.uk-card-default a.uk-button.uk-button-default, body .uk-table-list .uk-table-list-item:focus-within .uk-card.uk-card-default a.uk-button.uk-button-default, body .uk-table-list .uk-table-list-item:target .uk-card.uk-card-default a.uk-button.uk-button-default {
     opacity: .2;
     cursor: default;
     background: rgba(255, 255, 255, 0.1);
     border: 0.0521vw solid rgba(255, 255, 255, 0.2);
     box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.2);
     color: white; }
-    html .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button .uk-visible, body .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button .uk-visible {
+    html .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button.uk-button-default .uk-visible, html .uk-table-list .uk-table-list-item:active .uk-card.uk-card-default a.uk-button.uk-button-default .uk-visible, html .uk-table-list .uk-table-list-item:focus .uk-card.uk-card-default a.uk-button.uk-button-default .uk-visible, html .uk-table-list .uk-table-list-item:focus-within .uk-card.uk-card-default a.uk-button.uk-button-default .uk-visible, html .uk-table-list .uk-table-list-item:target .uk-card.uk-card-default a.uk-button.uk-button-default .uk-visible, body .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button.uk-button-default .uk-visible, body .uk-table-list .uk-table-list-item:active .uk-card.uk-card-default a.uk-button.uk-button-default .uk-visible, body .uk-table-list .uk-table-list-item:focus .uk-card.uk-card-default a.uk-button.uk-button-default .uk-visible, body .uk-table-list .uk-table-list-item:focus-within .uk-card.uk-card-default a.uk-button.uk-button-default .uk-visible, body .uk-table-list .uk-table-list-item:target .uk-card.uk-card-default a.uk-button.uk-button-default .uk-visible {
       display: none; }
-    html .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button .uk-hidden, body .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button .uk-hidden {
+    html .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button.uk-button-default .uk-hidden, html .uk-table-list .uk-table-list-item:active .uk-card.uk-card-default a.uk-button.uk-button-default .uk-hidden, html .uk-table-list .uk-table-list-item:focus .uk-card.uk-card-default a.uk-button.uk-button-default .uk-hidden, html .uk-table-list .uk-table-list-item:focus-within .uk-card.uk-card-default a.uk-button.uk-button-default .uk-hidden, html .uk-table-list .uk-table-list-item:target .uk-card.uk-card-default a.uk-button.uk-button-default .uk-hidden, body .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button.uk-button-default .uk-hidden, body .uk-table-list .uk-table-list-item:active .uk-card.uk-card-default a.uk-button.uk-button-default .uk-hidden, body .uk-table-list .uk-table-list-item:focus .uk-card.uk-card-default a.uk-button.uk-button-default .uk-hidden, body .uk-table-list .uk-table-list-item:focus-within .uk-card.uk-card-default a.uk-button.uk-button-default .uk-hidden, body .uk-table-list .uk-table-list-item:target .uk-card.uk-card-default a.uk-button.uk-button-default .uk-hidden {
       display: inline-block !important; }
-    html .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button svg path, html .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button svg g, body .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button svg path, body .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button svg g {
+    html .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button.uk-button-default svg path, html .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button.uk-button-default svg g, html .uk-table-list .uk-table-list-item:active .uk-card.uk-card-default a.uk-button.uk-button-default svg path, html .uk-table-list .uk-table-list-item:active .uk-card.uk-card-default a.uk-button.uk-button-default svg g, html .uk-table-list .uk-table-list-item:focus .uk-card.uk-card-default a.uk-button.uk-button-default svg path, html .uk-table-list .uk-table-list-item:focus .uk-card.uk-card-default a.uk-button.uk-button-default svg g, html .uk-table-list .uk-table-list-item:focus-within .uk-card.uk-card-default a.uk-button.uk-button-default svg path, html .uk-table-list .uk-table-list-item:focus-within .uk-card.uk-card-default a.uk-button.uk-button-default svg g, html .uk-table-list .uk-table-list-item:target .uk-card.uk-card-default a.uk-button.uk-button-default svg path, html .uk-table-list .uk-table-list-item:target .uk-card.uk-card-default a.uk-button.uk-button-default svg g, body .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button.uk-button-default svg path, body .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button.uk-button-default svg g, body .uk-table-list .uk-table-list-item:active .uk-card.uk-card-default a.uk-button.uk-button-default svg path, body .uk-table-list .uk-table-list-item:active .uk-card.uk-card-default a.uk-button.uk-button-default svg g, body .uk-table-list .uk-table-list-item:focus .uk-card.uk-card-default a.uk-button.uk-button-default svg path, body .uk-table-list .uk-table-list-item:focus .uk-card.uk-card-default a.uk-button.uk-button-default svg g, body .uk-table-list .uk-table-list-item:focus-within .uk-card.uk-card-default a.uk-button.uk-button-default svg path, body .uk-table-list .uk-table-list-item:focus-within .uk-card.uk-card-default a.uk-button.uk-button-default svg g, body .uk-table-list .uk-table-list-item:target .uk-card.uk-card-default a.uk-button.uk-button-default svg path, body .uk-table-list .uk-table-list-item:target .uk-card.uk-card-default a.uk-button.uk-button-default svg g {
       fill: white !important; }
-    html .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button:hover svg path, html .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button:hover svg g, body .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button:hover svg path, body .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button:hover svg g {
+    html .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button.uk-button-default:hover svg path, html .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button.uk-button-default:hover svg g, html .uk-table-list .uk-table-list-item:active .uk-card.uk-card-default a.uk-button.uk-button-default:hover svg path, html .uk-table-list .uk-table-list-item:active .uk-card.uk-card-default a.uk-button.uk-button-default:hover svg g, html .uk-table-list .uk-table-list-item:focus .uk-card.uk-card-default a.uk-button.uk-button-default:hover svg path, html .uk-table-list .uk-table-list-item:focus .uk-card.uk-card-default a.uk-button.uk-button-default:hover svg g, html .uk-table-list .uk-table-list-item:focus-within .uk-card.uk-card-default a.uk-button.uk-button-default:hover svg path, html .uk-table-list .uk-table-list-item:focus-within .uk-card.uk-card-default a.uk-button.uk-button-default:hover svg g, html .uk-table-list .uk-table-list-item:target .uk-card.uk-card-default a.uk-button.uk-button-default:hover svg path, html .uk-table-list .uk-table-list-item:target .uk-card.uk-card-default a.uk-button.uk-button-default:hover svg g, body .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button.uk-button-default:hover svg path, body .uk-table-list .uk-active .uk-card.uk-card-default a.uk-button.uk-button-default:hover svg g, body .uk-table-list .uk-table-list-item:active .uk-card.uk-card-default a.uk-button.uk-button-default:hover svg path, body .uk-table-list .uk-table-list-item:active .uk-card.uk-card-default a.uk-button.uk-button-default:hover svg g, body .uk-table-list .uk-table-list-item:focus .uk-card.uk-card-default a.uk-button.uk-button-default:hover svg path, body .uk-table-list .uk-table-list-item:focus .uk-card.uk-card-default a.uk-button.uk-button-default:hover svg g, body .uk-table-list .uk-table-list-item:focus-within .uk-card.uk-card-default a.uk-button.uk-button-default:hover svg path, body .uk-table-list .uk-table-list-item:focus-within .uk-card.uk-card-default a.uk-button.uk-button-default:hover svg g, body .uk-table-list .uk-table-list-item:target .uk-card.uk-card-default a.uk-button.uk-button-default:hover svg path, body .uk-table-list .uk-table-list-item:target .uk-card.uk-card-default a.uk-button.uk-button-default:hover svg g {
       fill: white !important; }
-  html .uk-table-list .uk-active .uk-card.uk-card-default .uk-table-list-descr, body .uk-table-list .uk-active .uk-card.uk-card-default .uk-table-list-descr {
+  html .uk-table-list .uk-active .uk-card.uk-card-default .uk-table-list-descr, html .uk-table-list .uk-table-list-item:active .uk-card.uk-card-default .uk-table-list-descr, html .uk-table-list .uk-table-list-item:focus .uk-card.uk-card-default .uk-table-list-descr, html .uk-table-list .uk-table-list-item:focus-within .uk-card.uk-card-default .uk-table-list-descr, html .uk-table-list .uk-table-list-item:target .uk-card.uk-card-default .uk-table-list-descr, body .uk-table-list .uk-active .uk-card.uk-card-default .uk-table-list-descr, body .uk-table-list .uk-table-list-item:active .uk-card.uk-card-default .uk-table-list-descr, body .uk-table-list .uk-table-list-item:focus .uk-card.uk-card-default .uk-table-list-descr, body .uk-table-list .uk-table-list-item:focus-within .uk-card.uk-card-default .uk-table-list-descr, body .uk-table-list .uk-table-list-item:target .uk-card.uk-card-default .uk-table-list-descr {
     opacity: 1;
     padding-top: 0.5208333333vw;
     /*line-height: get-vw(24px);*/
     height: 1.6666666667vw; }
+    @media (max-width: 959px) {
+      html .uk-table-list .uk-active .uk-card.uk-card-default .uk-table-list-descr, html .uk-table-list .uk-table-list-item:active .uk-card.uk-card-default .uk-table-list-descr, html .uk-table-list .uk-table-list-item:focus .uk-card.uk-card-default .uk-table-list-descr, html .uk-table-list .uk-table-list-item:focus-within .uk-card.uk-card-default .uk-table-list-descr, html .uk-table-list .uk-table-list-item:target .uk-card.uk-card-default .uk-table-list-descr, body .uk-table-list .uk-active .uk-card.uk-card-default .uk-table-list-descr, body .uk-table-list .uk-table-list-item:active .uk-card.uk-card-default .uk-table-list-descr, body .uk-table-list .uk-table-list-item:focus .uk-card.uk-card-default .uk-table-list-descr, body .uk-table-list .uk-table-list-item:focus-within .uk-card.uk-card-default .uk-table-list-descr, body .uk-table-list .uk-table-list-item:target .uk-card.uk-card-default .uk-table-list-descr {
+        height: auto;
+        padding-top: 10px; }
+        html .uk-table-list .uk-active .uk-card.uk-card-default .uk-table-list-descr a, html .uk-table-list .uk-table-list-item:active .uk-card.uk-card-default .uk-table-list-descr a, html .uk-table-list .uk-table-list-item:focus .uk-card.uk-card-default .uk-table-list-descr a, html .uk-table-list .uk-table-list-item:focus-within .uk-card.uk-card-default .uk-table-list-descr a, html .uk-table-list .uk-table-list-item:target .uk-card.uk-card-default .uk-table-list-descr a, body .uk-table-list .uk-active .uk-card.uk-card-default .uk-table-list-descr a, body .uk-table-list .uk-table-list-item:active .uk-card.uk-card-default .uk-table-list-descr a, body .uk-table-list .uk-table-list-item:focus .uk-card.uk-card-default .uk-table-list-descr a, body .uk-table-list .uk-table-list-item:focus-within .uk-card.uk-card-default .uk-table-list-descr a, body .uk-table-list .uk-table-list-item:target .uk-card.uk-card-default .uk-table-list-descr a {
+          margin-top: 12px; } }
 html .uk-table, body .uk-table {
   border-spacing: 0 12px;
   border-collapse: separate;
@@ -644,12 +693,22 @@ html .uk-button, body .uk-button {
     backdrop-filter: blur(1.0416666667vw);
     transition: background 300ms ease-in-out, box-shadow 300ms ease-in-out, border 300ms ease-in-out, color 300ms ease-in-out; }
     html .uk-button.uk-button-small svg, body .uk-button.uk-button-small svg {
-      width: 16px;
-      height: 16px; }
+      width: 0.8333333333vw;
+      height: 0.8333333333vw; }
+      @media (max-width: 959px) {
+        html .uk-button.uk-button-small svg, body .uk-button.uk-button-small svg {
+          width: 16px;
+          height: 16px; } }
     html .uk-button.uk-button-small.uk-padding-small-left, body .uk-button.uk-button-small.uk-padding-small-left {
       padding-left: 0.7291666667vw !important; }
     html .uk-button.uk-button-small.uk-padding-small-right, body .uk-button.uk-button-small.uk-padding-small-right {
       padding-right: 0.7291666667vw !important; }
+    @media (max-width: 959px) {
+      html .uk-button.uk-button-small, body .uk-button.uk-button-small {
+        line-height: 24px;
+        padding: 10px 32px;
+        font-size: 20px;
+        backdrop-filter: blur(20px); } }
   html .uk-button.uk-button-medium, body .uk-button.uk-button-medium {
     line-height: 1.25vw;
     box-sizing: border-box;
@@ -1679,6 +1738,9 @@ html .page-slider, body .page-slider {
       transform: translateX(0); }
     html .page-slider .panel#data-slide-5 .section-content, body .page-slider .panel#data-slide-5 .section-content {
       padding-bottom: 3.125vw; }
+    @media (max-width: 639px) {
+      html .page-slider .panel#data-slide-5 .select2-container--default .select2-selection--single .select2-selection__rendered, body .page-slider .panel#data-slide-5 .select2-container--default .select2-selection--single .select2-selection__rendered {
+        padding-left: 0; } }
     html .page-slider .panel#data-slide-6:before, body .page-slider .panel#data-slide-6:before {
       background-image: linear-gradient(45deg, rgba(12, 183, 84, 0), rgba(12, 183, 84, 0.3)), url("../images/light-1.png");
       transform: scaleX(-1); }
@@ -2437,6 +2499,9 @@ html .page-slider, body .page-slider {
           margin-top: 0; }
         html .page-slider .panel .market .market-info .uk-card-footer, body .page-slider .panel .market .market-info .uk-card-footer {
           padding-bottom: 18%; }
+          @media (max-width: 959px) {
+            html .page-slider .panel .market .market-info .uk-card-footer, body .page-slider .panel .market .market-info .uk-card-footer {
+              padding-bottom: 17%; } }
         @media (max-width: 959px) {
           html .page-slider .panel .market .market-info, body .page-slider .panel .market .market-info {
             padding: 0 0px; } }
@@ -2596,11 +2661,20 @@ html .page-slider, body .page-slider {
         height: calc(100vh - 25vw);
         padding-right: 1.1458333333vw;
         min-height: 18.2291666667vw; }
+        @media (max-width: 959px) {
+          html .page-slider .panel .union .uk-overflow-auto, body .page-slider .panel .union .uk-overflow-auto {
+            height: auto;
+            padding-right: 0;
+            min-height: auto; } }
       html .page-slider .panel .union .switcher-container .uk-overflow-auto, body .page-slider .panel .union .switcher-container .uk-overflow-auto {
         padding-right: 0; }
       html .page-slider .panel .union .uk-text-normal, body .page-slider .panel .union .uk-text-normal {
         font-size: 1.0416666667vw;
         line-height: 1.3541666667vw; }
+        @media (max-width: 959px) {
+          html .page-slider .panel .union .uk-text-normal, body .page-slider .panel .union .uk-text-normal {
+            font-size: 20px;
+            line-height: 26px; } }
       html .page-slider .panel .union .union-list-item-descr, body .page-slider .panel .union .union-list-item-descr {
         height: calc(100% - 14vw);
         overflow-y: auto;
@@ -2611,6 +2685,14 @@ html .page-slider, body .page-slider {
         html .page-slider .panel .union .union-list-item-descr::-webkit-scrollbar, body .page-slider .panel .union .union-list-item-descr::-webkit-scrollbar {
           width: 0.2604166667vw;
           background: transparent; }
+          @media (max-width: 959px) {
+            html .page-slider .panel .union .union-list-item-descr::-webkit-scrollbar, body .page-slider .panel .union .union-list-item-descr::-webkit-scrollbar {
+              width: 5px; } }
+        @media (max-width: 959px) {
+          html .page-slider .panel .union .union-list-item-descr, body .page-slider .panel .union .union-list-item-descr {
+            height: auto;
+            margin-right: -20px;
+            padding-right: 12px; } }
       html .page-slider .panel .union .uk-card, body .page-slider .panel .union .uk-card {
         overflow: hidden; }
         html .page-slider .panel .union .uk-card .uk-card-body, body .page-slider .panel .union .uk-card .uk-card-body {
@@ -2618,6 +2700,13 @@ html .page-slider, body .page-slider {
         html .page-slider .panel .union .uk-card .uk-card-body img, body .page-slider .panel .union .uk-card .uk-card-body img {
           width: 2.2395833333vw;
           height: auto; }
+          @media (max-width: 959px) {
+            html .page-slider .panel .union .uk-card .uk-card-body img, body .page-slider .panel .union .uk-card .uk-card-body img {
+              width: 43px; } }
+      @media (max-width: 959px) {
+        html .page-slider .panel .union, body .page-slider .panel .union {
+          font-size: 20px;
+          line-height: 26px; } }
     html .page-slider .panel .video, body .page-slider .panel .video {
       margin-top: 10.9375vw; }
       html .page-slider .panel .video .uk-container video, body .page-slider .panel .video .uk-container video {
@@ -4105,6 +4194,9 @@ html, body {
           background: rgba(0, 0, 0, 0.2); }
   html .uk-card.uk-small-radius, body .uk-card.uk-small-radius {
     border-radius: 0.5208333333vw; }
+    @media (max-width: 959px) {
+      html .uk-card.uk-small-radius, body .uk-card.uk-small-radius {
+        border-radius: 10px; } }
   html .uk-card .uk-card-header, html .uk-card .uk-card-body, html .uk-card .uk-card-footer, body .uk-card .uk-card-header, body .uk-card .uk-card-body, body .uk-card .uk-card-footer {
     border: 0;
     padding: 1.4583333333vw 1.6666666667vw; }
@@ -4595,22 +4687,47 @@ html, body {
       margin-left: -0.5208333333vw; }
       html .uk-grid.uk-grid-xsmall .uk-grid-column-xsmall > *, html .uk-grid.uk-grid-xsmall .uk-grid-xsmall > *, body .uk-grid.uk-grid-xsmall .uk-grid-column-xsmall > *, body .uk-grid.uk-grid-xsmall .uk-grid-xsmall > * {
         padding-left: 0.5208333333vw; }
+        @media (max-width: 959px) {
+          html .uk-grid.uk-grid-xsmall .uk-grid-column-xsmall > *, html .uk-grid.uk-grid-xsmall .uk-grid-xsmall > *, body .uk-grid.uk-grid-xsmall .uk-grid-column-xsmall > *, body .uk-grid.uk-grid-xsmall .uk-grid-xsmall > * {
+            padding-left: 10px; } }
       @media (min-width: 1200px) {
         html .uk-grid.uk-grid-xsmall > *, body .uk-grid.uk-grid-xsmall > * {
           padding-left: 0.5208333333vw; } }
+      @media (max-width: 959px) {
+        html .uk-grid.uk-grid-xsmall, body .uk-grid.uk-grid-xsmall {
+          margin-left: -10px; } }
     html .uk-grid.uk-grid-column-small, html .uk-grid.uk-grid-small, body .uk-grid.uk-grid-column-small, body .uk-grid.uk-grid-small {
       margin-left: -0.625vw; }
       html .uk-grid.uk-grid-column-small > *, html .uk-grid.uk-grid-small > *, body .uk-grid.uk-grid-column-small > *, body .uk-grid.uk-grid-small > * {
         padding-left: 0.625vw; }
+        @media (max-width: 959px) {
+          html .uk-grid.uk-grid-column-small > *, html .uk-grid.uk-grid-small > *, body .uk-grid.uk-grid-column-small > *, body .uk-grid.uk-grid-small > * {
+            padding-left: 12px; } }
+      @media (max-width: 959px) {
+        html .uk-grid.uk-grid-column-small, html .uk-grid.uk-grid-small, body .uk-grid.uk-grid-column-small, body .uk-grid.uk-grid-small {
+          margin-left: -12px; } }
     html .uk-grid.uk-grid-column-xmedium, html .uk-grid.uk-grid-xmedium, body .uk-grid.uk-grid-column-xmedium, body .uk-grid.uk-grid-xmedium {
       margin-left: -1.25vw; }
       html .uk-grid.uk-grid-column-xmedium > *, html .uk-grid.uk-grid-xmedium > *, body .uk-grid.uk-grid-column-xmedium > *, body .uk-grid.uk-grid-xmedium > * {
         padding-left: 1.25vw; }
+        @media (max-width: 959px) {
+          html .uk-grid.uk-grid-column-xmedium > *, html .uk-grid.uk-grid-xmedium > *, body .uk-grid.uk-grid-column-xmedium > *, body .uk-grid.uk-grid-xmedium > * {
+            padding-left: 24px; } }
       html .uk-grid.uk-grid-column-xmedium + .uk-grid-margin, html .uk-grid.uk-grid-column-xmedium + .uk-grid, html .uk-grid.uk-grid-column-xmedium > .uk-grid-margin, html .uk-grid.uk-grid-xmedium + .uk-grid-margin, html .uk-grid.uk-grid-xmedium + .uk-grid, html .uk-grid.uk-grid-xmedium > .uk-grid-margin, body .uk-grid.uk-grid-column-xmedium + .uk-grid-margin, body .uk-grid.uk-grid-column-xmedium + .uk-grid, body .uk-grid.uk-grid-column-xmedium > .uk-grid-margin, body .uk-grid.uk-grid-xmedium + .uk-grid-margin, body .uk-grid.uk-grid-xmedium + .uk-grid, body .uk-grid.uk-grid-xmedium > .uk-grid-margin {
         margin-top: 1.25vw; }
+        @media (max-width: 959px) {
+          html .uk-grid.uk-grid-column-xmedium + .uk-grid-margin, html .uk-grid.uk-grid-column-xmedium + .uk-grid, html .uk-grid.uk-grid-column-xmedium > .uk-grid-margin, html .uk-grid.uk-grid-xmedium + .uk-grid-margin, html .uk-grid.uk-grid-xmedium + .uk-grid, html .uk-grid.uk-grid-xmedium > .uk-grid-margin, body .uk-grid.uk-grid-column-xmedium + .uk-grid-margin, body .uk-grid.uk-grid-column-xmedium + .uk-grid, body .uk-grid.uk-grid-column-xmedium > .uk-grid-margin, body .uk-grid.uk-grid-xmedium + .uk-grid-margin, body .uk-grid.uk-grid-xmedium + .uk-grid, body .uk-grid.uk-grid-xmedium > .uk-grid-margin {
+            margin-top: 24px; } }
       @media (min-width: 1200px) {
         html .uk-grid.uk-grid-column-xmedium + .uk-grid-margin, html .uk-grid.uk-grid-column-xmedium + .uk-grid, html .uk-grid.uk-grid-column-xmedium > .uk-grid-margin, html .uk-grid.uk-grid-xmedium + .uk-grid-margin, html .uk-grid.uk-grid-xmedium + .uk-grid, html .uk-grid.uk-grid-xmedium > .uk-grid-margin, body .uk-grid.uk-grid-column-xmedium + .uk-grid-margin, body .uk-grid.uk-grid-column-xmedium + .uk-grid, body .uk-grid.uk-grid-column-xmedium > .uk-grid-margin, body .uk-grid.uk-grid-xmedium + .uk-grid-margin, body .uk-grid.uk-grid-xmedium + .uk-grid, body .uk-grid.uk-grid-xmedium > .uk-grid-margin {
           margin-top: 1.25vw; } }
+  @media (min-width: 1200px) and (max-width: 959px) {
+    html .uk-grid.uk-grid-column-xmedium + .uk-grid-margin, html .uk-grid.uk-grid-column-xmedium + .uk-grid, html .uk-grid.uk-grid-column-xmedium > .uk-grid-margin, html .uk-grid.uk-grid-xmedium + .uk-grid-margin, html .uk-grid.uk-grid-xmedium + .uk-grid, html .uk-grid.uk-grid-xmedium > .uk-grid-margin, body .uk-grid.uk-grid-column-xmedium + .uk-grid-margin, body .uk-grid.uk-grid-column-xmedium + .uk-grid, body .uk-grid.uk-grid-column-xmedium > .uk-grid-margin, body .uk-grid.uk-grid-xmedium + .uk-grid-margin, body .uk-grid.uk-grid-xmedium + .uk-grid, body .uk-grid.uk-grid-xmedium > .uk-grid-margin {
+      margin-top: 24px; } }
+
+      @media (max-width: 959px) {
+        html .uk-grid.uk-grid-column-xmedium, html .uk-grid.uk-grid-xmedium, body .uk-grid.uk-grid-column-xmedium, body .uk-grid.uk-grid-xmedium {
+          margin-left: -24px; } }
     html .uk-grid.uk-grid-collapse, body .uk-grid.uk-grid-collapse {
       margin-left: 0; }
       html .uk-grid.uk-grid-collapse > *, body .uk-grid.uk-grid-collapse > * {

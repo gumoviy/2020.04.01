@@ -447,7 +447,12 @@ html, body {
                 }
             }
         }
-        &.uk-small-radius {border-radius: get-vw(10px);}
+        &.uk-small-radius {
+            border-radius: get-vw(10px);
+            @media (max-width: 959px) {
+                border-radius: 10px;
+            }
+        }
         .uk-card-header, .uk-card-body, .uk-card-footer {border: 0; padding: get-vw(28px) get-vw(32px);}
         &.uk-card-header, .uk-card-header {
             .table-header {font-size: get-vw(16px);}
@@ -859,6 +864,9 @@ html, body {
             .uk-grid-column-xsmall, .uk-grid-xsmall {
                 >* {
                     padding-left: get-vw(10px);
+                    @media (max-width: 959px) {
+                        padding-left: 10px;
+                    }
                 }
             }
             @media (min-width: 1200px) {
@@ -866,21 +874,46 @@ html, body {
                     padding-left: get-vw(10px);
                 }
             }
+            @media (max-width: 959px) {
+                margin-left: -10px;
+            }
         }
         &.uk-grid-column-small, &.uk-grid-small {
             margin-left: get-vw(-12px);
-            >* {padding-left: get-vw(12px);}
+            >* {
+                padding-left: get-vw(12px);
+                @media (max-width: 959px) {
+                    padding-left: 12px;
+                }
+            }
+            @media (max-width: 959px) {
+                margin-left: -12px;
+            }
         }
         &.uk-grid-column-xmedium, &.uk-grid-xmedium {
             margin-left: get-vw(-24px);
-            >* {padding-left: get-vw(24px);}
+            >* {
+                padding-left: get-vw(24px);
+                @media (max-width: 959px) {
+                    padding-left: 24px;
+                }
+            }
             &+ .uk-grid-margin, &+ .uk-grid, > .uk-grid-margin {
                 margin-top: get-vw(24px);
+                @media (max-width: 959px) {
+                    margin-top: 24px;
+                }
             }
             @media (min-width: 1200px) {
                 &+ .uk-grid-margin, &+ .uk-grid , >.uk-grid-margin {
                     margin-top: get-vw(24px);
+                    @media (max-width: 959px) {
+                        margin-top: 24px;
+                    }
                 }
+            }
+            @media (max-width: 959px) {
+                margin-left: -24px;
             }
         }
         &.uk-grid-collapse {

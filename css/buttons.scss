@@ -247,9 +247,17 @@ html, body {
         }
         &.uk-button-small {
             line-height: get-vw(24px); box-sizing: border-box; padding: get-vw(10px) get-vw(32px); font-size: get-vw(20px); box-sizing: border-box; backdrop-filter: blur(get-vw(20px)); transition: background 300ms ease-in-out, box-shadow 300ms ease-in-out, border 300ms ease-in-out, color 300ms ease-in-out;
-            svg {width: 16px; height: 16px;}
+            svg {
+                width: get-vw(16px); height: get-vw(16px);
+                @media (max-width: 959px) {
+                    width: 16px; height: 16px;
+                }
+            }
             &.uk-padding-small-left {padding-left: get-vw(14px)!important;}
             &.uk-padding-small-right {padding-right: get-vw(14px)!important;}
+            @media (max-width: 959px) {
+                line-height: 24px; padding: 10px 32px; font-size: 20px; backdrop-filter: blur(20px);
+            }
         }
         &.uk-button-medium {
             line-height: get-vw(24px); box-sizing: border-box; padding: get-vw(11px) get-vw(32px); font-size: get-vw(20px); box-sizing: border-box; backdrop-filter: blur(get-vw(20px)); transition: background 300ms ease-in-out, box-shadow 300ms ease-in-out, border 300ms ease-in-out, color 300ms ease-in-out;
