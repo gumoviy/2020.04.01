@@ -47,7 +47,7 @@ html, body {
             }
         }
         &.uk-overflow-auto {
-            padding-right: 22px;
+            padding-right: get-vw(22px);
             @media (max-width: 959px) {
                 padding-right: 0;
             }
@@ -95,30 +95,71 @@ html, body {
                     padding: 24px 28px;
                 }
             }
+            .uk-button {
+                &.uk-button-default {
+                    @media (max-width: 959px) {
+                        svg {min-height: 16px;}
+                        &.uk-button-hover-blue {
+                            &:hover {border: 0; background-color: rgba(255,255,255,.05); color: #fff;}
+                        }
+                    }
+                }
+            }
             &:hover {
+                @media (max-width: 959px) {
+                    background: rgba(255,255,255,.1);
+                }
                 .uk-card-body, .uk-card-footer, .uk-card-header {
                     .uk-table-list-descr {
                         opacity: 1; padding-top: get-vw(10px); height: get-vw(32px);
                         @media (max-width: 959px) {
-                            height: auto; padding-top: 10px;
+                            height: auto!important; padding-top: 10px!important;
+                            a {margin-top: 12px!important;}
+                        }
+                    }
+                }
+                &.uk-card-default {
+                    a {
+                        &.uk-button {
+                            &.uk-button-default {
+                                @media (max-width: 959px) {
+                                    opacity: .2!important;
+                                    svg {transform: rotate(90deg)!important;}
+                                    &:hover {border: 0; background-color: rgba(255,255,255,.05); color: #fff;}
+                                }
+                            }
                         }
                     }
                 }
             }
             &:active, &:focus, &:focus-within, &:target {
-                background: rgba(255,255,255,.1)!important;
+                background: rgba(255,255,255,.1);
                 .uk-card-body, .uk-card-footer, .uk-card-header {
                     .uk-table-list-descr {
-                        opacity: 1; padding-top: get-vw(10px); /*line-height: get-vw(24px);*/ height: get-vw(32px);
+                        opacity: 1; padding-top: get-vw(10px); height: get-vw(32px);
                         @media (max-width: 959px) {
-                            height: auto; padding-top: 10px;
+                            height: auto!important; padding-top: 10px!important;
+                            a {margin-top: 12px!important;}
+                        }
+                    }
+                }
+                &.uk-card-default {
+                    a {
+                        &.uk-button {
+                            &.uk-button-default {
+                                @media (max-width: 959px) {
+                                    opacity: .2!important;
+                                    svg {transform: rotate(90deg)!important;}
+                                    &:hover {border: 0!important; background-color: rgba(255,255,255,.05)!important; color: #fff!important;}
+                                }
+                            }
                         }
                     }
                 }
             }
         }
         .uk-card {transition: all 300ms ease-in-out;}
-        .uk-active, .uk-table-list-item:active, .uk-table-list-item:focus, .uk-table-list-item:focus-within, .uk-table-list-item:target {
+        .uk-active/*, .uk-table-list-item:active, .uk-table-list-item:focus, .uk-table-list-item:focus-within, .uk-table-list-item:target*/ {
             .uk-card {
                 &.uk-card-default {
                     background: rgba(255,255,255,.1);
@@ -128,16 +169,32 @@ html, body {
                     a {
                         &.uk-button {
                             &.uk-button-default {
-                                opacity: .2; cursor: default; background: rgba(255, 255, 255, 0.1); border: 0.0521vw solid rgba(255, 255, 255, 0.2); box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.2); color: rgba(255,255,255,1);
-                                .uk-visible {display: none;}
-                                .uk-hidden {display: inline-block!important;}
+                                opacity: .2; cursor: default; background: rgba(255, 255, 255, 0.1); border: 1 solid rgba(255, 255, 255, 0.2); box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.2); color: rgba(255,255,255,1);
+                                .uk-visible {
+                                    display: none;
+                                    @media (max-width: 959px) {
+                                        display: inline-block!important;
+                                    }
+                                }
+                                .uk-hidden {
+                                    display: inline-block!important;
+                                    @media (max-width: 959px) {
+                                        display: none!important;
+                                    }
+                                }
                                 svg {
                                     path, g {fill: rgba(255,255,255,1)!important;}
+                                    @media (max-width: 959px) {
+                                        svg {transform: rotate(0);}
+                                    }
                                 }
                                 &:hover {
                                     svg {
                                         path, g {fill: rgba(255,255,255,1)!important;}
                                     }
+                                }
+                                @media (max-width: 959px) {
+                                    opacity: 1; background: rgba(255, 255, 255, 0.05);
                                 }
                             }
                         }
@@ -145,11 +202,32 @@ html, body {
                     .uk-table-list-descr {
                         opacity: 1; padding-top: get-vw(10px); /*line-height: get-vw(24px);*/ height: get-vw(32px);
                         @media (max-width: 959px) {
-                            height: auto; padding-top: 10px;
-                            a {margin-top: 12px;}
+                            //height: auto; padding-top: 10px;
+                            //a {margin-top: 12px;}
+                        }
+                    }
+                    @media (max-width: 959px) {
+                        background: rgba(255,255,255,.05);
+                    }
+                }
+                &:active, &:focus, &:focus-within, &:target, &:hover {
+                    @media (max-width: 959px) {
+                        background: rgba(255,255,255,.1);
+                        a {
+                            &.uk-button {
+                                &.uk-button-default {
+                                    @media (max-width: 959px) {
+                                        opacity: .2!important;
+                                        svg {transform: rotate(90deg)!important;}
+                                            &:hover {border: 0; background-color: rgba(255,255,255,.05); color: #fff;
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
+                
             }
         }
     }
