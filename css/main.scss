@@ -558,11 +558,6 @@ html, body {
                         &+ .uk-grid-small {margin-top: 0;}
                     }
                     .uk-card-footer {padding-bottom: 18%;}
-                    .nowrapline {
-                        display: flex; white-space: nowrap;
-                        &:after {content: ''; border-bottom: get-vw(1px) dashed rgba(255,255,255,.2); margin-left: get-vw(8px); display: block; width: 100%; height: get-vw(16px);}
-                        svg {min-width: get-vw(10px);}
-                    }
                 }
                 
                 .chart-animetd-container {

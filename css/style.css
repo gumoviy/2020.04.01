@@ -902,6 +902,11 @@ html, body {
       width: 50.625vw; }
     html .uk-modal.uk-modal-container.uk-modal-container-small .uk-modal-dialog, body .uk-modal.uk-modal-container.uk-modal-container-small .uk-modal-dialog {
       width: 30.4166666667vw; }
+    html .uk-modal .modal-user-info .uk-card, body .uk-modal .modal-user-info .uk-card {
+      border: 0;
+      border-radius: 7px; }
+      html .uk-modal .modal-user-info .uk-card .uk-card-body, body .uk-modal .modal-user-info .uk-card .uk-card-body {
+        padding: 0.46875vw 0.8333333333vw; }
 
 html .page-slider, body .page-slider {
   position: relative;
@@ -2052,18 +2057,6 @@ html .page-slider, body .page-slider {
           margin-top: 0; }
         html .page-slider .panel .market .market-info .uk-card-footer, body .page-slider .panel .market .market-info .uk-card-footer {
           padding-bottom: 18%; }
-        html .page-slider .panel .market .market-info .nowrapline, body .page-slider .panel .market .market-info .nowrapline {
-          display: flex;
-          white-space: nowrap; }
-          html .page-slider .panel .market .market-info .nowrapline:after, body .page-slider .panel .market .market-info .nowrapline:after {
-            content: '';
-            border-bottom: 0.0520833333vw dashed rgba(255, 255, 255, 0.2);
-            margin-left: 0.4166666667vw;
-            display: block;
-            width: 100%;
-            height: 0.8333333333vw; }
-          html .page-slider .panel .market .market-info .nowrapline svg, body .page-slider .panel .market .market-info .nowrapline svg {
-            min-width: 0.5208333333vw; }
       html .page-slider .panel .market .chart-animetd-container, body .page-slider .panel .market .chart-animetd-container {
         margin-top: -1.5625vw;
         position: relative;
@@ -3232,6 +3225,8 @@ html, body {
     /* margin-bottom: 40px;*/ }
     html h1.uk-padding-large-left, html .h1.uk-padding-large-left, body h1.uk-padding-large-left, body .h1.uk-padding-large-left {
       padding-left: 3.6458333333vw; }
+  html * + .uk-h1, html * + .uk-h2, html * + .uk-h3, html * + .uk-h4, html * + .uk-h5, html * + .uk-h6, html * + .uk-heading-2xlarge, html * + .uk-heading-large, html * + .uk-heading-medium, html * + .uk-heading-small, html * + .uk-heading-xlarge, html * + h1, html * + h2, html * + h3, html * + h4, html * + h5, html * + h6, body * + .uk-h1, body * + .uk-h2, body * + .uk-h3, body * + .uk-h4, body * + .uk-h5, body * + .uk-h6, body * + .uk-heading-2xlarge, body * + .uk-heading-large, body * + .uk-heading-medium, body * + .uk-heading-small, body * + .uk-heading-xlarge, body * + h1, body * + h2, body * + h3, body * + h4, body * + h5, body * + h6 {
+    margin-top: 1.8229166667vw; }
   html * + .uk-grid-margin-small, html .uk-grid + .uk-grid-row-small, html .uk-grid + .uk-grid-small, html .uk-grid-row-small > .uk-grid-margin, html .uk-grid-small > .uk-grid-margin, body * + .uk-grid-margin-small, body .uk-grid + .uk-grid-row-small, body .uk-grid + .uk-grid-small, body .uk-grid-row-small > .uk-grid-margin, body .uk-grid-small > .uk-grid-margin {
     margin-top: 0.78125vw; }
   html hr, body hr {
@@ -3376,18 +3371,6 @@ html, body {
                 width: 1.25vw; }
     html .uk-content .uk-text-light, body .uk-content .uk-text-light {
       color: white; }
-    html .uk-content .uk-margin-bottom, body .uk-content .uk-margin-bottom {
-      margin-bottom: 1.25vw !important; }
-    html .uk-content .uk-margin-top, body .uk-content .uk-margin-top {
-      margin-top: 1.25vw !important; }
-    html .uk-content .uk-margin-medium-bottom, body .uk-content .uk-margin-medium-bottom {
-      margin-bottom: 2.8125vw !important; }
-    html .uk-content .uk-margin-medium-top, body .uk-content .uk-margin-medium-top {
-      margin-top: 2.8125vw !important; }
-    html .uk-content .uk-margin-xmedium-bottom, body .uk-content .uk-margin-xmedium-bottom {
-      margin-bottom: 1.6666666667vw !important; }
-    html .uk-content .uk-margin-xmedium-top, body .uk-content .uk-margin-xmedium-top {
-      margin-top: 1.6666666667vw !important; }
     html .uk-content p, body .uk-content p {
       margin-bottom: 1.25vw; }
     html .uk-content h1, body .uk-content h1 {
@@ -3584,6 +3567,48 @@ html, body {
       background: rgba(255, 255, 255, 0.05); }
       html .uk-card.uk-card-default .uk-card-body .uk-card-media-top + div .uk-button.uk-button-default, body .uk-card.uk-card-default .uk-card-body .uk-card-media-top + div .uk-button.uk-button-default {
         color: white; }
+  html .uk-card.uk-card-success, body .uk-card.uk-card-success {
+    background: rgba(12, 183, 84, 0.1);
+    box-shadow: 0px 0.2083333333vw 1.25vw -0.0520833333vw rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(2.0833333333vw);
+    border-radius: 1.0416666667vw;
+    border: 0.0521vw solid rgba(12, 183, 84, 0.5);
+    color: #0cb754; }
+@-moz-document url-prefix() {
+  html .uk-card.uk-card-success, body .uk-card.uk-card-success {
+    background: rgba(12, 183, 84, 0.05); } }
+    html .uk-card.uk-card-success .uk-card-body .uk-card-media-top, body .uk-card.uk-card-success .uk-card-body .uk-card-media-top {
+      background: rgba(12, 183, 84, 0.05); }
+      html .uk-card.uk-card-success .uk-card-body .uk-card-media-top + div .uk-button.uk-button-default, body .uk-card.uk-card-success .uk-card-body .uk-card-media-top + div .uk-button.uk-button-default {
+        color: white; }
+  html .uk-card.uk-card-danger, body .uk-card.uk-card-danger {
+    background: rgba(236, 81, 81, 0.1);
+    box-shadow: 0px 0.2083333333vw 1.25vw -0.0520833333vw rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(2.0833333333vw);
+    border-radius: 1.0416666667vw;
+    border: 0.0521vw solid rgba(236, 81, 81, 0.5);
+    color: #ec5151; }
+@-moz-document url-prefix() {
+  html .uk-card.uk-card-danger, body .uk-card.uk-card-danger {
+    background: rgba(236, 81, 81, 0.05); } }
+    html .uk-card.uk-card-danger .uk-card-body .uk-card-media-top, body .uk-card.uk-card-danger .uk-card-body .uk-card-media-top {
+      background: rgba(236, 81, 81, 0.05); }
+      html .uk-card.uk-card-danger .uk-card-body .uk-card-media-top + div .uk-button.uk-button-default, body .uk-card.uk-card-danger .uk-card-body .uk-card-media-top + div .uk-button.uk-button-default {
+        color: white; }
+  html .uk-card.uk-card-warning, body .uk-card.uk-card-warning {
+    background: rgba(245, 158, 90, 0.1);
+    box-shadow: 0px 0.2083333333vw 1.25vw -0.0520833333vw rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(2.0833333333vw);
+    border-radius: 1.0416666667vw;
+    border: 1px solid rgba(245, 158, 90, 0.5);
+    color: #f59e5a; }
+@-moz-document url-prefix() {
+  html .uk-card.uk-card-warning, body .uk-card.uk-card-warning {
+    background: rgba(245, 158, 90, 0.05); } }
+    html .uk-card.uk-card-warning .uk-card-body .uk-card-media-top, body .uk-card.uk-card-warning .uk-card-body .uk-card-media-top {
+      background: rgba(245, 158, 90, 0.05); }
+      html .uk-card.uk-card-warning .uk-card-body .uk-card-media-top + div .uk-button.uk-button-default, body .uk-card.uk-card-warning .uk-card-body .uk-card-media-top + div .uk-button.uk-button-default {
+        color: white; }
   html .uk-card.uk-card-light, body .uk-card.uk-card-light {
     background: white;
     box-shadow: 0px 0.2083333333vw 1.25vw -0.0520833333vw rgba(0, 0, 0, 0.2);
@@ -3628,9 +3653,46 @@ html, body {
     border-top: 1px solid rgba(255, 255, 255, 0.1); }
   html .uk-card.uk-card-small.uk-card-body, html .uk-card.uk-card-small .uk-card-body, body .uk-card.uk-card-small.uk-card-body, body .uk-card.uk-card-small .uk-card-body {
     padding: 0.8333333333vw 1.25vw; }
+  html .uk-card.uk-card-xsmall, body .uk-card.uk-card-xsmall {
+    border-radius: 0.5208333333vw; }
+    html .uk-card.uk-card-xsmall.uk-card-body, html .uk-card.uk-card-xsmall .uk-card-body, body .uk-card.uk-card-xsmall.uk-card-body, body .uk-card.uk-card-xsmall .uk-card-body {
+      padding: 0.5208333333vw 0.5208333333vw; }
   html .uk-card .uk-text-medium, body .uk-card .uk-text-medium {
     letter-spacing: 0.08em;
     font-family: "Rogan Medium", sans-serif; }
+  html .uk-card.uk-border-remove, body .uk-card.uk-border-remove {
+    border: 0 !important; }
+  html .show-hide-nav, body .show-hide-nav {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer; }
+    html .show-hide-nav:after, body .show-hide-nav:after {
+      position: relative;
+      width: 0.7291666667vw;
+      height: 0.4166666667vw;
+      margin-left: 0.625vw;
+      content: '';
+      display: inline-block;
+      background-image: url("../images/arrow-down.svg");
+      background-size: 100%;
+      background-position: center;
+      background-repeat: no-repeat; }
+    html .show-hide-nav[aria-expanded="true"]:after, body .show-hide-nav[aria-expanded="true"]:after {
+      transform: scale(-1); }
+  html .uk-scrollbar-hidden, body .uk-scrollbar-hidden {
+    scrollbar-color: #7C7C7C #B2B2B2;
+    scrollbar-width: none; }
+    html .uk-scrollbar-hidden ::-webkit-scrollbar-track, body .uk-scrollbar-hidden ::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 0.2083333333vw; }
+    html .uk-scrollbar-hidden ::-webkit-scrollbar, body .uk-scrollbar-hidden ::-webkit-scrollbar {
+      width: 0;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 0.2083333333vw; }
+    html .uk-scrollbar-hidden ::-webkit-scrollbar-thumb, body .uk-scrollbar-hidden ::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 0.2083333333vw; }
   html .uk-progress, body .uk-progress {
     background: transparent;
     height: 0.2604166667vw;
@@ -3913,6 +3975,22 @@ html, body {
     padding-left: 0.5208333333vw !important; }
   html .uk-padding-small-right, body .uk-padding-small-right {
     padding-right: 0.5208333333vw !important; }
+  html .uk-margin-bottom, body .uk-margin-bottom {
+    margin-bottom: 1.25vw !important; }
+  html .uk-margin-top, body .uk-margin-top {
+    margin-top: 1.25vw !important; }
+  html .uk-margin-xsmall-bottom, body .uk-margin-xsmall-bottom {
+    margin-bottom: 0.5208333333vw !important; }
+  html .uk-margin-xsmall-top, body .uk-margin-xsmall-top {
+    margin-top: 0.5208333333vw !important; }
+  html .uk-margin-medium-bottom, body .uk-margin-medium-bottom {
+    margin-bottom: 2.8125vw !important; }
+  html .uk-margin-medium-top, body .uk-margin-medium-top {
+    margin-top: 2.8125vw !important; }
+  html .uk-margin-xmedium-bottom, body .uk-margin-xmedium-bottom {
+    margin-bottom: 1.6666666667vw !important; }
+  html .uk-margin-xmedium-top, body .uk-margin-xmedium-top {
+    margin-top: 1.6666666667vw !important; }
   html .uk-subnav, body .uk-subnav {
     margin: 0; }
     html .uk-subnav.uk-subnav-pill li, body .uk-subnav.uk-subnav-pill li {
@@ -3976,6 +4054,23 @@ html, body {
   @media (min-width: 1200px) {
     html .uk-ratio-16-9\@l, body .uk-ratio-16-9\@l {
       padding-top: 56.25%; } }
+  html .uk-container-ratio-1-1, body .uk-container-ratio-1-1 {
+    position: relative; }
+    html .uk-container-ratio-1-1 > *, body .uk-container-ratio-1-1 > * {
+      position: absolute;
+      height: 100%;
+      overflow-y: auto;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0; }
+    html .uk-container-ratio-1-1:before, body .uk-container-ratio-1-1:before {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 100%;
+      display: block;
+      content: ''; }
   html .uk-grid, body .uk-grid {
     margin-left: -2.3958333333vw; }
     html .uk-grid > *, body .uk-grid > * {
@@ -4208,6 +4303,18 @@ html, body {
     transform: rotate(0deg);
     background-image: url("../images/arrow-accordion.svg");
     opacity: .5; }
+  html .nowrapline, body .nowrapline {
+    display: flex;
+    white-space: nowrap; }
+    html .nowrapline:after, body .nowrapline:after {
+      content: '';
+      border-bottom: 0.0520833333vw dashed rgba(255, 255, 255, 0.2);
+      margin-left: 0.4166666667vw;
+      display: block;
+      width: 100%;
+      /*height: get-vw(16px);*/ }
+    html .nowrapline svg, body .nowrapline svg {
+      min-width: 0.5208333333vw; }
   html ::-webkit-scrollbar-track, body ::-webkit-scrollbar-track {
     background: rgba(255, 255, 255, 0);
     border-radius: 0.2083333333vw; }

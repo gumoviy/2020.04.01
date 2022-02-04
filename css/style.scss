@@ -96,6 +96,9 @@ html, body {
         font-size: 2.182vw; line-height: 138%; margin-bottom: 2.08vw;/* margin-bottom: 40px;*/
         &.uk-padding-large-left {padding-left: get-vw(70px);}
     }
+    *+.uk-h1, *+.uk-h2, *+.uk-h3, *+.uk-h4, *+.uk-h5, *+.uk-h6, *+.uk-heading-2xlarge, *+.uk-heading-large, *+.uk-heading-medium, *+.uk-heading-small, *+.uk-heading-xlarge, *+h1, *+h2, *+h3, *+h4, *+h5, *+h6 {
+        margin-top: get-vw(35px);
+    }
     /*h3, .h3 {font-size: get-vw(27px); line-height: get-vw(32px); letter-spacing: 0.08em;}
     h6, .h6 {font-size: get-vw(22px); line-height: get-vw(26px); letter-spacing: 0.08em;}*/
     *+.uk-grid-margin-small, .uk-grid+.uk-grid-row-small, .uk-grid+.uk-grid-small, .uk-grid-row-small>.uk-grid-margin, .uk-grid-small>.uk-grid-margin {
@@ -192,12 +195,6 @@ html, body {
             }
         }
         .uk-text-light {color: rgba(255,255,255,1);}
-        .uk-margin-bottom {margin-bottom: get-vw(24px)!important;}
-        .uk-margin-top {margin-top: get-vw(24px)!important;}
-        .uk-margin-medium-bottom {margin-bottom: get-vw(54px)!important;}
-        .uk-margin-medium-top {margin-top: get-vw(54px)!important;}
-        .uk-margin-xmedium-bottom {margin-bottom: get-vw(32px)!important;}
-        .uk-margin-xmedium-top {margin-top: get-vw(32px)!important;}
         p {margin-bottom: get-vw(24px);}
         h1 {margin-bottom: get-vw(54px);}
         h2, .h2 {font-size: get-vw(27px); line-height: get-vw(32px); letter-spacing: 0.08em; margin-bottom: get-vw(24px);}
@@ -323,6 +320,60 @@ html, body {
                 }
             }
         }
+        &.uk-card-success {
+            background: rgba($green, 0.1); box-shadow: 0px get-vw(4px) get-vw(24px) get-vw(-1px) rgba(0, 0, 0, 0.2); backdrop-filter: blur(get-vw(40px)); border-radius: get-vw(20px); border: 0.0521vw solid rgba($green,.5); color: rgba($green,1);
+            @-moz-document url-prefix() {
+                background: rgba($green,.05);
+            }
+            .uk-card-body {
+                .uk-card-media-top {
+                    background: rgba($green, 0.05);
+                    &+ div {
+                        .uk-button {
+                            &.uk-button-default {
+                                color: rgba(255,255,255,1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.uk-card-danger {
+            background: rgba($red, 0.1); box-shadow: 0px get-vw(4px) get-vw(24px) get-vw(-1px) rgba(0, 0, 0, 0.2); backdrop-filter: blur(get-vw(40px)); border-radius: get-vw(20px); border: 0.0521vw solid rgba($red,.5); color: rgba($red,1);
+            @-moz-document url-prefix() {
+                background: rgba($red,.05);
+            }
+            .uk-card-body {
+                .uk-card-media-top {
+                    background: rgba($red, 0.05);
+                    &+ div {
+                        .uk-button {
+                            &.uk-button-default {
+                                color: rgba(255,255,255,1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.uk-card-warning {
+            background: rgba($warning, 0.1); box-shadow: 0px get-vw(4px) get-vw(24px) get-vw(-1px) rgba(0, 0, 0, 0.2); backdrop-filter: blur(get-vw(40px)); border-radius: get-vw(20px); border: 1px solid rgba($warning,.5); color: rgba($warning,1);
+            @-moz-document url-prefix() {
+                background: rgba($warning,.05);
+            }
+            .uk-card-body {
+                .uk-card-media-top {
+                    background: rgba($warning, 0.05);
+                    &+ div {
+                        .uk-button {
+                            &.uk-button-default {
+                                color: rgba(255,255,255,1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
         &.uk-card-light {
             background: rgba(255, 255, 255, 1); box-shadow: 0px get-vw(4px) get-vw(24px) get-vw(-1px) rgba(0, 0, 0, 0.2); backdrop-filter: blur(get-vw(40px)); border-radius: get-vw(20px); border: 0.0521vw solid rgba(255,255,255,.06); color: rgba(0,0,0,1);
             @-moz-document url-prefix() {
@@ -375,7 +426,31 @@ html, body {
         &.uk-card-small {
             &.uk-card-body, .uk-card-body {padding: get-vw(16px) get-vw(24px);}
         }
+        &.uk-card-xsmall {
+            border-radius: get-vw(10px);
+            &.uk-card-body, .uk-card-body {padding: get-vw(10px) get-vw(10px);}
+        }
         .uk-text-medium {letter-spacing: 0.08em; font-family: $medium;}
+        &.uk-border-remove {
+            border: 0!important;
+        }
+    }
+    .show-hide-nav {
+        display: flex; align-items: center; position: relative; cursor: pointer;
+        &:after {
+            position: relative; width: get-vw(14px); height: get-vw(8px); margin-left: get-vw(12px); content: ''; display: inline-block; background-image: url('../images/arrow-down.svg'); background-size: 100%; background-position: center; background-repeat: no-repeat;
+        }
+        &[aria-expanded="true"] {
+            &:after {
+                transform: scale(-1);
+            }
+        }
+    }
+    .uk-scrollbar-hidden {
+        ::-webkit-scrollbar-track {background: rgba(255,255,255, 0.05); border-radius: get-vw(4px);}
+        ::-webkit-scrollbar {width: 0; background: rgba(255,255,255, 0.05); border-radius: get-vw(4px);}
+        ::-webkit-scrollbar-thumb {background: rgba(255,255,255, 0.1); border-radius: get-vw(4px);}
+        scrollbar-color: #7C7C7C #B2B2B2; scrollbar-width: none;
     }
     .uk-progress {
         background: transparent; height: get-vw(5px); border-radius: get-vw(1px);
@@ -569,10 +644,21 @@ html, body {
 		font-size: get-vw(26px); line-height: 130%;
 		img {margin-right: get-vw(18px);}
 	}
+    
     .uk-padding-xsmall-top {padding-top: get-vw(5px);}
     .uk-padding-small-top {padding-top: get-vw(10px);}
     .uk-padding-small-left {padding-left: get-vw(10px)!important;}
     .uk-padding-small-right {padding-right: get-vw(10px)!important;}
+    
+    .uk-margin-bottom {margin-bottom: get-vw(24px)!important;}
+    .uk-margin-top {margin-top: get-vw(24px)!important;}
+    .uk-margin-xsmall-bottom {margin-bottom: get-vw(10px)!important;}
+    .uk-margin-xsmall-top {margin-top: get-vw(10px)!important;}
+    .uk-margin-medium-bottom {margin-bottom: get-vw(54px)!important;}
+    .uk-margin-medium-top {margin-top: get-vw(54px)!important;}
+    .uk-margin-xmedium-bottom {margin-bottom: get-vw(32px)!important;}
+    .uk-margin-xmedium-top {margin-top: get-vw(32px)!important;}
+    
     .uk-subnav {
         margin: 0;
         &.uk-subnav-pill {
@@ -633,6 +719,13 @@ html, body {
       .uk-ratio-16-9\@l {
         padding-top: $ratio-16-9;
       }
+    }
+    
+    .uk-container-ratio-1-1 {
+        position: relative;
+        > * {position: absolute; height: 100%; overflow-y: auto; left: 0; top: 0; right: 0; bottom: 0;}
+        &:before {position: relative; width: 100%; height: 0; padding-bottom: 100%; display: block; content: '';}
+        
     }
     
     .uk-grid {
@@ -837,6 +930,11 @@ html, body {
                 }
             }
         }
+    }
+    .nowrapline {
+        display: flex; white-space: nowrap;
+        &:after {content: ''; border-bottom: get-vw(1px) dashed rgba(255,255,255,.2); margin-left: get-vw(8px); display: block; width: 100%; /*height: get-vw(16px);*/}
+        svg {min-width: get-vw(10px);}
     }
     ::-webkit-scrollbar-track {background: rgba(255,255,255,0); border-radius: get-vw(4px);}
     ::-webkit-scrollbar {width: get-vw(10px); background: rgba(255,255,255, 0.05); border-radius: 0px;}
