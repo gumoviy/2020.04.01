@@ -150,6 +150,18 @@ html, body {
                 }
             }
         }
+        &.uk-button-red {
+            background: rgba($red, 0.05); border: 1px solid rgba($red,1); box-sizing: border-box; box-shadow: inset 0px 0px get-vw(30px) rgba($red, 0.5); color: $red;
+            svg {
+                path {transition: all 300ms ease-in-out; fill: $red; fill-opacity: 1;}
+            }
+            &:hover {
+                background: rgba($red,.05); /*box-shadow: inset 0px 0px 30px rgba(255,255,255, 0);*/ color: #fff; border: 0.0521vw solid rgba($red,.8);
+                svg {
+                    path {fill: #fff;}
+                }
+            }
+        }
         &.uk-padding-small-left {padding-left: get-vw(15px);}
         &.uk-padding-small-right {padding-right: get-vw(15px);}
         &[disabled], &.uk-disabled {

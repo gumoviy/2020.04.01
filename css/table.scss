@@ -31,10 +31,11 @@ html, body {
                         &.uk-grid-margin {margin-top: get-vw(10px);}
                     }
                 }
+                > * {list-style: none;}
             }
             margin: 0;
             li {
-                padding: 0;
+                padding: 0; list-style: none; margin-left: 0;
             }
         }
         &.uk-overflow-auto {
@@ -99,21 +100,30 @@ html, body {
             tr {
                 > * {
                     font-size: get-vw(20px); line-height: get-vw(24px); padding: get-vw(18px) get-vw(28px); box-sizing: border-box; white-space: nowrap;
+                    &.uk-table-shrink {
+                        .select2-container--default {
+                            .select2-selection--single {
+                                .select2-selection__rendered {padding-left: 0;}
+                            }
+                        }
+                    }
                 }
                 > th {
                     text-transform: none;
                     
                     &.sorting {
-                        /*padding-right: get-vw(50px);*/ color: rgba(255,255,255,1);
+                        /*padding-right: get-vw(50px);*/ color: rgba(255,255,255,.6);
                         &:after {display: none!important; position: relative; right: 0; margin-left: get-vw(10px);}
                         &:before {display: none!important; position: relative;}
                     }
                     &.sorting_asc {
+                        color: rgba(255,255,255,1);
                         /*&:after {display: none!important;}
                         &:before {display: inline-block!important;}*/
                         &:after {display: inline-block!important; transform: rotate(0deg); opacity: 1;}
                     }
                     &.sorting_desc {
+                        color: rgba(255,255,255,1);
                         /*&:before {display: none!important;}
                         &:after {display: inline-block!important;}*/
                         &:after {display: inline-block!important; transform: rotate(180deg);}
@@ -170,6 +180,14 @@ html, body {
         }
         .dataTables_scrollHead {
             .dataTables_scrollHeadInner {min-width: 100%;}
+        }
+    }
+    .dt-uikit {
+        > .row {
+            &:first-of-type {display: none;}
+            &+ .row {margin-top: 0!important;}
+            .uk-width-3-5 {width: 100%!important;}
+            .uk-width-2-5 {display: none;}
         }
     }
 }
