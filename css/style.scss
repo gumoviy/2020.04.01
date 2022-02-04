@@ -906,11 +906,30 @@ html, body {
             background: rgba(255, 255, 255, 0); border: 0 solid rgba(255, 255, 255, 0.2); box-sizing: border-box; border-radius: 0; height: get-vw(48px); display: flex; align-items: center; backdrop-filter: blur(0); transition: background 300ms ease-in-out;
             .select2-selection__rendered {
                 color: rgba($primary,1); padding: 0 get-vw(45px) 0 get-vw(18px); font-size: get-vw(22px); text-transform: uppercase; display: flex; transition: color 300ms ease-in-out; height: 100%; align-items: center;
-                img {margin-right: get-vw(10px); width: get-vw(21px);}
+                img {
+                    margin-right: get-vw(10px); width: get-vw(21px);
+                    @media (max-width: 959px) {
+                        margin-right: 10px; width: 21px;
+                    }
+                }
+                @media (max-width: 959px) {
+                    padding: 0 45px 0 18px; font-size: 22px;
+                }
             }
             .select2-selection__arrow {
                 height: get-vw(8px); right: get-vw(15px); top: 50%; transform: translateY(-50%);
-                b {border: 0; background-image: url('../images/arrow-down.svg'); display: block; width: get-vw(12px); height: get-vw(8px); background-size: contain; background-position: center; background-repeat: no-repeat; margin: 0; transform: translate(-50%,-50%) scaleY(1);}
+                b {
+                    border: 0; background-image: url('../images/arrow-down.svg'); display: block; width: get-vw(12px); height: get-vw(8px); background-size: contain; background-position: center; background-repeat: no-repeat; margin: 0; transform: translate(-50%,-50%) scaleY(1);
+                    @media (max-width: 959px) {
+                        width: 12px; height: 8px;
+                    }
+                }
+                @media (max-width: 959px) {
+                    height: 8px; right: 15px;
+                }
+            }
+            @media (max-width: 959px) {
+                height: 48px;
             }
         }
         &.select2-container--open {
@@ -923,7 +942,12 @@ html, body {
             }
             .select2-results {
                 color: #181818;
-                > .select2-results__options {max-height: get-vw(200px);}
+                > .select2-results__options {
+                    max-height: get-vw(200px);
+                    @media (max-width: 959px) {
+                        max-height: 200px;
+                    }
+                }
             }
         }
         &:hover {
@@ -933,16 +957,19 @@ html, body {
             }
         }
         .select2-dropdown {
-            background: transparent; border: 0.0521vw solid rgba(255,255,255,.3); backdrop-filter: blur(get-vw(20px)); border-radius: get-vw(10px); overflow: hidden;
+            background: transparent; border: 1px solid rgba(255,255,255,.3); backdrop-filter: blur(get-vw(20px)); border-radius: get-vw(10px); overflow: hidden;
             .select2-search--dropdown {
                 .select2-search__field {
-                    background: rgba(255,255,255,.05); border: 0.0521vw solid rgba(255,255,255,.1); color: rgba(255,255,255,.3);
-                    &:focus {outline: 0; border: 0.0521vw solid rgba($orange,1); color: rgba(255,255,255,1);}
+                    background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); color: rgba(255,255,255,.3);
+                    &:focus {outline: 0; border: 1px solid rgba($orange,1); color: rgba(255,255,255,1);}
                 }
             }
             .select2-results {
                 .select2-results__option {
                     padding: get-vw(10px) get-vw(18px); line-height: get-vw(26px); font-size: get-vw(18px);
+                    @media (max-width: 959px) {
+                        padding: 10px 18px; line-height: 26px; font-size: 18px;
+                    }
                 }
                 .select2-results__option--selected {background: rgba(255,255,255,.2);}
                 .select2-results__option--highlighted {
@@ -954,6 +981,9 @@ html, body {
                     transition: all 300ms ease-in-out; color: #fff; background: rgba(255,255,255,.1);
                     &:hover {background: rgba(255,255,255,.2);}
                 }
+            }
+            @media (max-width: 959px) {
+                backdrop-filter: blur(20px); border-radius: 10px;
             }
         }
     }

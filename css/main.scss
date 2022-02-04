@@ -10,6 +10,9 @@ html, body {
         }
         .panel {
             position: relative; width: 100%; padding-top: get-vw(10px); margin: auto; padding-left: 0; transition: padding 300ms ease-in-out, opacity 500ms ease-in-out; box-sizing: border-box; visibility: visible!important;
+            @media (max-width: 959px) {
+                padding-top: 10px;
+            }
             &.active {
                 z-index: 10; opacity: 1;
             }
@@ -37,7 +40,7 @@ html, body {
                         }
                     }
                     @media (max-width: 959px) {
-                        padding: 90px 0;
+                        padding: 80px 0;
                     }
                 }
                 &.active {transform: translateY(get-vw(-100px));}
@@ -215,6 +218,7 @@ html, body {
                     .uk-card-header {
                         @media (max-width: 959px) {
                             padding: 37px 40px;
+                            &.uk-padding-small-top {padding-top: 37px!important;}
                         }
                     }
                     .uk-card-body {
@@ -294,9 +298,35 @@ html, body {
                         padding-top: 80px;
                     }
                 }
+                .uk-card {
+                    .uk-card-header {
+                        @media (max-width: 959px) {
+                            padding: 37px 40px;
+                            &.uk-padding-small-top {padding-top: 37px!important;}
+                        }
+                    }
+                    .uk-card-body {
+                        @media (max-width: 959px) {
+                            padding: 37px 40px 27px 40px;
+                        }
+                    }
+                    @media (max-width: 959px) {
+                        margin-left: -33px; margin-right: -33px; border-radius: 0;
+                    }
+                    h6 {
+                        @media (max-width: 959px) {
+                            font-size: 22px; line-height: 26px; font-family: $semibold; font-weight: 600; margin-bottom: 18px;
+                        }
+                    }
+                }
             }
             &#data-slide-4 {
-                &:after {/*width: 1920px; height: 1199px;*/ content: ''; position: absolute; top: 100%; transform: translateY(-50%); display: block; pointer-events: none; background-image: url('../images/asteroids.png'); background-size: 100%; height: 0; width: 100%; padding-bottom: 63%; left: 0; right: 0; z-index: 0;}
+                &:after {
+                    /*width: 1920px; height: 1199px;*/ content: ''; position: absolute; top: 100%; transform: translateY(-50%); display: block; pointer-events: none; background-image: url('../images/asteroids.png'); background-size: 100%; height: 0; width: 100%; padding-bottom: 63%; left: 0; right: 0; z-index: 0;
+                    @media (max-width: 639px) {
+                        display: none;
+                    }
+                }
                 &:before {
                     background-image: linear-gradient(170deg, rgba($purple,0), rgba($purple,.3)), url('../images/light-1.png'); transform: scale(-1);
                 }
@@ -314,7 +344,12 @@ html, body {
                 a {
                     &.uk-card {
                         transition: all 300ms ease-in-out;
-                        .uk-button {width: get-vw(43px); height: get-vw(43px); display: block; line-height: 20px;}
+                        .uk-button {
+                            width: get-vw(43px); height: get-vw(43px); display: block; line-height: get-vw(20px);
+                            @media (max-width: 959px) {
+                                width: 43px; height: 43px; line-height: 20px;
+                            }
+                        }
                         &:hover {
                             text-decoration: none; background: rgba(255,255,255,.1);
                             .uk-button {
@@ -323,9 +358,17 @@ html, body {
                                     svg {
                                         path, g {fill: rgba($primary,1)!important;}
                                     }
+                                    @media (max-width: 959px) {
+                                        box-shadow: inset 0px 0px 30px rgba($primary, 0.5), 0px 0px 0px rgba(255,255,255,0);
+                                    }
                                 }
                             }
                         }
+                    }
+                }
+                .section-content {
+                    @media (max-width: 959px) {
+                        padding-bottom: 0;
                     }
                 }
             }
@@ -344,7 +387,9 @@ html, body {
                         .stars-2 {opacity: 1; transform: translateX(0);}
                     }
                 }
-                .section-content {padding-bottom: get-vw(60px);}
+                .section-content {
+                    padding-bottom: get-vw(60px);
+                }
             }
             &#data-slide-6 {
                 &:before {
@@ -636,6 +681,9 @@ html, body {
                     > div {
                         min-width: 30%;
                         img {width: 100%;}
+                        @media (max-width: 639px) {
+                            min-width: 210px;
+                        }
                     }
                 }
                 .uk-switcher {
@@ -657,7 +705,12 @@ html, body {
                     }
                 }
                 .uk-grid.uk-grid-small {margin-left: -18px;}
-                column-small>*, .uk-grid.uk-grid-small>*, .uk-grid.uk-grid-column-small>*, .uk-grid.uk-grid-small>* {padding-left: get-vw(18px);}
+                column-small>*, .uk-grid.uk-grid-small>*, .uk-grid.uk-grid-column-small>*, .uk-grid.uk-grid-small>* {
+                    padding-left: get-vw(18px);
+                    @media (max-width: 959px) {
+                        padding-left: 18px;
+                    }
+                }
             }
             .market {
                 overflow: hidden;
@@ -665,24 +718,67 @@ html, body {
                     margin-bottom: get-vw(19px); font-size: get-vw(24px); font-family: $regular;
                     svg {
                         width: get-vw(34px); height: auto;
+                        @media (max-width: 959px) {
+                            width: 34px;
+                        }
+                    }
+                    @media (max-width: 959px) {
+                        margin-bottom: 19px; font-size: 20px;
                     }
                 }
                 p {
                     margin-top: get-vw(19px); margin-bottom: get-vw(19px);
                     &:last-of-type {margin-bottom: 0;}
+                    @media (max-width: 959px) {
+                        margin-top: 19px; margin-bottom: 19px;
+                        &:last-of-type {margin-bottom: 0;}
+                    }
                 }
                 .uk-button {
                     svg {
                         width: get-vw(9px); height: auto;
+                        @media (max-width: 959px) {
+                            width: 9px; height: 16px; min-height: 16px;
+                        }
                     }
                 }
                 .uk-card {
                     svg {
-                        &.uk-margin-small-right {margin-right: get-vw(12px)!important;}
+                        &.uk-margin-small-right {
+                            margin-right: get-vw(12px)!important;
+                            @media (max-width: 959px) {
+                                margin-right: 12px!important;
+                            }
+                        }
                     }
                     .uk-card-body {
                         padding: get-vw(32px) get-vw(32px) get-vw(53px) get-vw(32px);
-                        p {line-height: 140%; font-size: get-vw(22px); color: rgba(255,255,255,.6);}
+                        p {
+                            line-height: 140%; font-size: get-vw(22px); color: rgba(255,255,255,.6);
+                            @media (max-width: 959px) {
+                                font-size: 20px; line-height: 30px;
+                            }
+                        }
+                        .uk-grid {
+                            &.uk-grid-small {
+                                @media (max-width: 959px) {
+                                    margin-left: -10px;
+                                }
+                                > * {
+                                    @media (max-width: 959px) {
+                                        padding-left: 10px;
+                                    }
+                                }
+                            }
+                        }
+                        h6 {
+                            @media (max-width: 959px) {
+                                text-transform: none!important;
+                                svg {
+                                    width: 24px; height: 24px; min-width: 24px;
+                                }
+                            }
+                        }
                         a {
                             height: get-vw(43px); width: get-vw(43px); line-height: get-vw(21px);
                             &.uk-button {
@@ -693,6 +789,12 @@ html, body {
                                         path, g {fill: rgba($primary,1)!important;}
                                     }
                                 }
+                                @media (max-width: 959px) {
+                                    height: 43px; width: 43px; line-height: 21px; box-shadow: inset 0px 0px 30px rgba($primary, 0);
+                                }
+                            }
+                            @media (max-width: 959px) {
+                                height: 43px; width: 43px; line-height: 21px;
                             }
                         }
                         &:hover {
@@ -703,26 +805,85 @@ html, body {
                                 }
                             }
                         }
+                        @media (max-width: 959px) {
+                            padding: 28px;
+                        }
                     }
                 }
                 .market-info {
-                    * {line-height: get-vw(22.4px); font-size: get-vw(18px);}
+                    * {
+                        line-height: get-vw(22.4px); font-size: get-vw(18px);
+                        @media (max-width: 959px) {
+                            line-height: 22.4px; font-size: 18px;
+                        }
+                    }
                     padding: 0 get-vw(54px);
-                    > .uk-card {background-image: url('../images/market-card.svg'); background-color: transparent; border: 0; box-shadow: none; background-size: 100% auto; background-position: 0 0; border-radius: 0; padding: 0 get-vw(1px); min-width: get-vw(360px); width: get-vw(360px); backdrop-filter: blur(get-vw(20px));}
-                    .uk-margin-small-bottom {margin-bottom: get-vw(16px);}
-                    .uk-margin-xsmall-bottom {margin-bottom: get-vw(10px);}
+                    > .uk-card {
+                        background-image: url('../images/market-card.svg'); background-color: transparent; border: 0; box-shadow: none; background-size: 100% auto; background-position: 0 0; border-radius: 0; padding: 0 get-vw(1px); min-width: get-vw(360px); width: get-vw(360px); backdrop-filter: blur(get-vw(20px));
+                        @media (max-width: 959px) {
+                            min-width: 360px; width: 360px; backdrop-filter: blur(20px);
+                        }
+                        @media (max-width: 959px) {
+                            min-width: 100%; width: 100%;
+                        }
+                    }
+                    .market-info-container {
+                        @media (max-width: 430px) {
+                            width: 100%;
+                        }
+                    }
+                    .uk-margin-small-bottom {
+                        margin-bottom: get-vw(16px);
+                        @media (max-width: 959px) {
+                            margin-bottom: 16px;
+                        }
+                    }
+                    .uk-margin-xsmall-bottom {
+                        margin-bottom: get-vw(10px);
+                        @media (max-width: 959px) {
+                            margin-bottom: 5px!important;
+                        }
+                    }
                     .token-name {
-                        img {height: get-vw(24px); width: get-vw(24px); opacity: .4; margin-right: get-vw(10px);}
                         color: rgba(255,255,255,.4); font-size: get-vw(20px);
+                        img {
+                            height: get-vw(24px); width: get-vw(24px); opacity: .4; margin-right: get-vw(10px);
+                            @media (max-width: 959px) {
+                                height: 24px; width: 24px; margin-right: 10px;
+                            }
+                        }
+                        @media (max-width: 959px) {
+                            font-size: 20px; margin-bottom: 5px!important;
+                        }
                     }
                     .token-rate {
-                        .uk-text-medium {font-size: get-vw(24px); color: rgba(255,255,255,1);}
-                        .uk-text-green {font-size: get-vw(16px);}
+                        .uk-text-medium {
+                            font-size: get-vw(24px); color: rgba(255,255,255,1);
+                            @media (max-width: 959px) {
+                                font-size: 24px;
+                            }
+                        }
+                        .uk-text-green {
+                            font-size: get-vw(16px);
+                            @media (max-width: 959px) {
+                                font-size: 16px;
+                            }
+                        }
                     }
                     svg {
-                        &.uk-margin-small-right {margin-right: get-vw(8px);}
+                        &.uk-margin-small-right {
+                            margin-right: get-vw(8px);
+                            @media (max-width: 959px) {
+                                margin-right: 8px;
+                            }
+                        }
                     }
-                    .uk-card-body, .uk-card-header, .uk-card-footer {padding: get-vw(16px) get-vw(24px);}
+                    .uk-card-body, .uk-card-header, .uk-card-footer {
+                        padding: get-vw(16px) get-vw(24px);
+                        @media (max-width: 959px) {
+                            padding: 12px 24px;
+                        }
+                    }
                     .uk-card-body, .uk-card-header {border-bottom: 1px solid rgba(255,255,255,.1);}
                     .uk-text-muted {color: rgba(255,255,255,.6);}
                     .uk-text-light {color: rgba(255,255,255,1);}
@@ -730,6 +891,9 @@ html, body {
                         &+ .uk-grid-small {margin-top: 0;}
                     }
                     .uk-card-footer {padding-bottom: 18%;}
+                    @media (max-width: 959px) {
+                        padding: 0 0px;
+                    }
                 }
                 
                 .chart-animetd-container {
@@ -748,6 +912,9 @@ html, body {
                                 path {fill: rgba(#121212,1)!important; transition: all 300ms ease-in-out;}
                             }
                             circle {fill: #121212!important; transition: all 300ms ease-in-out;}
+                            @media (max-width: 959px) {
+                                margin-left: 5px; width: 24px; height: 24px;
+                            }
                         }
                         &:hover {
                             text-decoration: none;
@@ -759,6 +926,12 @@ html, body {
                                 //circle {fill: #fff!important; fill-opacity: .8!important;}
                             }
                         }
+                        @media (max-width: 959px) {
+                            line-height: 18px; width: 200px; height: 55px; line-height: 55px; border-radius: 10px; font-size: 18px;
+                        }
+                    }
+                    @media (max-width: 959px) {
+                        margin-top: -30px; width: 80%; height: 0; padding-left: 2px; padding-bottom: 80%;
                     }
                 }
                 
