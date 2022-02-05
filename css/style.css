@@ -4391,7 +4391,8 @@ html, body {
       text-align: left;
       padding-left: 58px;
       position: relative;
-      padding-right: 35px; }
+      padding-right: 35px;
+      text-transform: none; }
       html .uk-offcanvas .uk-offcanvas-bar .toggle-user-menu .avatar, body .uk-offcanvas .uk-offcanvas-bar .toggle-user-menu .avatar {
         width: 40px;
         height: 40px;

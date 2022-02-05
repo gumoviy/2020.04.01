@@ -163,7 +163,7 @@ html, body {
                 }
             }
             .toggle-user-menu {
-                text-align: left; padding-left: 58px; position: relative; padding-right: 35px;
+                text-align: left; padding-left: 58px; position: relative; padding-right: 35px; text-transform: none;
                 .avatar {width: 40px; height: 40px; position: absolute; left: 8px; top: 50%; transform: translateY(-50%);}
                 &:after {
                     content: ''; display: block; width: 12px; height: 8px; position: absolute; right: 16px; top: 50%; transform: translateY(-50%) scale(1); background-image: url('../images/arrow-down.svg'); display: block; background-size: contain; background-position: center; background-repeat: no-repeat;
