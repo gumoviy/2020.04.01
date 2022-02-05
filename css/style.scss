@@ -930,9 +930,15 @@ html, body {
         &.fun-club-card-audio {background-image: url('../images/fun-club-post.svg');}
         &.fun-club-card-print {background-image: url('../images/fun-club-print.svg');}
         &.fun-club-card-pic {background-image: url('../images/fun-club-wallpapers.svg');}
+        @media (max-width: 959px) {
+            width: 28px; height: 28px;
+        }
     }
     *+.uk-grid-margin-xsmall, .uk-grid+.uk-grid-row-xsmall, .uk-grid+.uk-grid-xsmall, .uk-grid-row-xsmall>.uk-grid-margin, .uk-grid-xsmall>.uk-grid-margin {
         margin-top: get-vw(10px);
+        @media (max-width: 959px) {
+            margin-top: 10px;
+        }
     }
     .select2-container--default {
         .select2-selection--single {

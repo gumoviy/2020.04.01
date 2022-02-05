@@ -204,6 +204,7 @@ html, body {
                         @media (max-width: 959px) {
                             //height: auto; padding-top: 10px;
                             //a {margin-top: 12px;}
+                            opacity: 0; height: 0; padding-top: 0;
                         }
                     }
                     @media (max-width: 959px) {
@@ -224,6 +225,11 @@ html, body {
                                     }
                                 }
                             }
+                        }
+                    }
+                    .uk-table-list-descr {
+                        @media (max-width: 959px) {
+                            opacity: 1; height: auto; padding-top: 10px;
                         }
                     }
                 }

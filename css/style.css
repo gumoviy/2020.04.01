@@ -217,6 +217,11 @@ html .uk-table-list .uk-active .uk-card.uk-card-default, body .uk-table-list .uk
     padding-top: 0.5208333333vw;
     /*line-height: get-vw(24px);*/
     height: 1.6666666667vw; }
+    @media (max-width: 959px) {
+      html .uk-table-list .uk-active .uk-card.uk-card-default .uk-table-list-descr, body .uk-table-list .uk-active .uk-card.uk-card-default .uk-table-list-descr {
+        opacity: 0;
+        height: 0;
+        padding-top: 0; } }
   @media (max-width: 959px) {
     html .uk-table-list .uk-active .uk-card.uk-card-default, body .uk-table-list .uk-active .uk-card.uk-card-default {
       background: rgba(255, 255, 255, 0.05); } }
@@ -233,6 +238,11 @@ html .uk-table-list .uk-active .uk-card.uk-card-default, body .uk-table-list .uk
         background-color: rgba(255, 255, 255, 0.05);
         color: #fff; } }
 
+@media (max-width: 959px) {
+  html .uk-table-list .uk-active .uk-card:active .uk-table-list-descr, html .uk-table-list .uk-active .uk-card:focus .uk-table-list-descr, html .uk-table-list .uk-active .uk-card:focus-within .uk-table-list-descr, html .uk-table-list .uk-active .uk-card:target .uk-table-list-descr, html .uk-table-list .uk-active .uk-card:hover .uk-table-list-descr, body .uk-table-list .uk-active .uk-card:active .uk-table-list-descr, body .uk-table-list .uk-active .uk-card:focus .uk-table-list-descr, body .uk-table-list .uk-active .uk-card:focus-within .uk-table-list-descr, body .uk-table-list .uk-active .uk-card:target .uk-table-list-descr, body .uk-table-list .uk-active .uk-card:hover .uk-table-list-descr {
+    opacity: 1;
+    height: auto;
+    padding-top: 10px; } }
 html .uk-table, body .uk-table {
   border-spacing: 0 12px;
   border-collapse: separate;
@@ -1792,6 +1802,9 @@ html .page-slider, body .page-slider {
       transform: translateX(0); }
     html .page-slider .panel#data-slide-5 .section-content, body .page-slider .panel#data-slide-5 .section-content {
       padding-bottom: 3.125vw; }
+      @media (max-width: 959px) {
+        html .page-slider .panel#data-slide-5 .section-content, body .page-slider .panel#data-slide-5 .section-content {
+          padding-bottom: 0; } }
     @media (max-width: 639px) {
       html .page-slider .panel#data-slide-5 .select2-container--default .select2-selection--single .select2-selection__rendered, body .page-slider .panel#data-slide-5 .select2-container--default .select2-selection--single .select2-selection__rendered {
         padding-left: 0; } }
@@ -2177,7 +2190,7 @@ html .page-slider, body .page-slider {
             html .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div, body .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div {
               overflow: hidden;
               border-radius: 1.0416666667vw;
-              border: 0.0521vw solid rgba(255, 255, 255, 0.1);
+              border: 1px solid rgba(255, 255, 255, 0.1);
               color: #fff; }
               html .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card, body .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card {
                 overflow: hidden;
@@ -2210,10 +2223,24 @@ html .page-slider, body .page-slider {
                   padding: 0 1.5625vw 1.4583333333vw 1.5625vw;
                   /*background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .7) 100%); margin: 0;*/
                   transition: all 300ms ease-in-out; }
+                  @media (max-width: 959px) {
+                    html .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card h6, body .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card h6 {
+                      font-size: 24px;
+                      line-height: 27px;
+                      min-height: auto;
+                      padding: 0 26px 24px 26px;
+                      margin-bottom: 0;
+                      letter-spacing: 0;
+                      align-items: end;
+                      font-family: "Rogan Medium", sans-serif; } }
                 html .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card .fun-club-card-info, body .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card .fun-club-card-info {
                   position: absolute;
                   right: 1.25vw;
                   top: 1.25vw; }
+                  @media (max-width: 959px) {
+                    html .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card .fun-club-card-info, body .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card .fun-club-card-info {
+                      right: 24px;
+                      top: 24px; } }
                 html .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card:hover, body .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card:hover {
                   background-size: 100%; }
                   html .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card:hover h6, body .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div .uk-card:hover h6 {
@@ -2234,6 +2261,19 @@ html .page-slider, body .page-slider {
                   opacity: 0;
                   transition: all 300ms ease-in-out;
                   transform: translateY(30%); }
+              @media (max-width: 959px) {
+                html .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div, body .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li > div {
+                  border-radius: 20px; } }
+            @media (max-width: 959px) {
+              html .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li, body .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items li {
+                padding-left: 24px; } }
+          @media (max-width: 959px) {
+            html .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items, body .page-slider .panel .fan-club .uk-slider .uk-slider-container .uk-slider-items {
+              margin-left: -24px; } }
+        @media (max-width: 959px) {
+          html .page-slider .panel .fan-club .uk-slider .uk-slider-container, body .page-slider .panel .fan-club .uk-slider .uk-slider-container {
+            padding-left: 70px !important;
+            padding-right: 70px !important; } }
       html .page-slider .panel .fan-club .uk-slider .uk-slidenav, body .page-slider .panel .fan-club .uk-slider .uk-slidenav {
         background: rgba(255, 255, 255, 0.1);
         border: 0.0521vw solid rgba(255, 255, 255, 0.2);
@@ -2722,6 +2762,9 @@ html .page-slider, body .page-slider {
             min-height: auto; } }
       html .page-slider .panel .union .switcher-container .uk-overflow-auto, body .page-slider .panel .union .switcher-container .uk-overflow-auto {
         padding-right: 0; }
+      @media (max-width: 959px) {
+        html .page-slider .panel .union .switcher-container, body .page-slider .panel .union .switcher-container {
+          margin-top: 0; } }
       html .page-slider .panel .union .uk-text-normal, body .page-slider .panel .union .uk-text-normal {
         font-size: 1.0416666667vw;
         line-height: 1.3541666667vw; }
@@ -2806,6 +2849,13 @@ html .page-slider, body .page-slider {
             opacity: 1; }
           html .page-slider .panel .video .video-play:hover img:last-child, body .page-slider .panel .video .video-play:hover img:last-child {
             transform: scale(1.05); }
+        @media (max-width: 959px) {
+          html .page-slider .panel .video .video-play, body .page-slider .panel .video .video-play {
+            width: 100%;
+            height: 40%; } }
+      @media (max-width: 959px) {
+        html .page-slider .panel .video, body .page-slider .panel .video {
+          margin-top: 80px; } }
     html .page-slider .panel .roadmap .timeline, body .page-slider .panel .roadmap .timeline {
       position: relative; }
       html .page-slider .panel .roadmap .timeline .uk-container, body .page-slider .panel .roadmap .timeline .uk-container {
@@ -2814,6 +2864,10 @@ html .page-slider, body .page-slider {
       html .page-slider .panel .roadmap .timeline.with-ends .roadmap-content, body .page-slider .panel .roadmap .timeline.with-ends .roadmap-content {
         -webkit-mask-image: linear-gradient(270deg, #c4c4c4 0, #c4c4c4 7.95%, #c4c4c4 92.42%, rgba(196, 196, 196, 0) 100%);
         mask-image: linear-gradient(270deg, #c4c4c4 0, #c4c4c4 7.95%, #c4c4c4 92.42%, rgba(196, 196, 196, 0) 100%); }
+        @media (max-width: 639px) {
+          html .page-slider .panel .roadmap .timeline.with-ends .roadmap-content, body .page-slider .panel .roadmap .timeline.with-ends .roadmap-content {
+            -webkit-mask-image: none;
+            mask-image: none; } }
       html .page-slider .panel .roadmap .timeline .roadmap-content, body .page-slider .panel .roadmap .timeline .roadmap-content {
         white-space: nowrap;
         overflow-x: hidden;
@@ -2833,10 +2887,19 @@ html .page-slider, body .page-slider {
         cursor: grab;
         cursor: -moz-grab;
         cursor: -webkit-grab;
-        scrollbar-color: #7C7C7C #B2B2B2;
-        scrollbar-width: none;
         -webkit-mask-image: linear-gradient(270deg, rgba(196, 196, 196, 0) 0, #c4c4c4 7.95%, #c4c4c4 92.42%, rgba(196, 196, 196, 0) 100%);
-        mask-image: linear-gradient(270deg, rgba(196, 196, 196, 0) 0, #c4c4c4 7.95%, #c4c4c4 92.42%, rgba(196, 196, 196, 0) 100%); }
+        mask-image: linear-gradient(270deg, rgba(196, 196, 196, 0) 0, #c4c4c4 7.95%, #c4c4c4 92.42%, rgba(196, 196, 196, 0) 100%);
+        scrollbar-color: #7C7C7C #B2B2B2;
+        scrollbar-width: none; }
+        @media (max-width: 959px) {
+          html .page-slider .panel .roadmap .timeline .roadmap-content, body .page-slider .panel .roadmap .timeline .roadmap-content {
+            padding-left: 0; } }
+        @media (max-width: 639px) {
+          html .page-slider .panel .roadmap .timeline .roadmap-content, body .page-slider .panel .roadmap .timeline .roadmap-content {
+            -webkit-mask-image: none;
+            mask-image: none;
+            max-width: 100vw;
+            width: calc(100vw - 55px); } }
         html .page-slider .panel .roadmap .timeline .roadmap-content::-webkit-scrollbar-track, body .page-slider .panel .roadmap .timeline .roadmap-content::-webkit-scrollbar-track {
           background: rgba(255, 255, 255, 0.05);
           border-radius: 0.2083333333vw; }
@@ -2872,12 +2935,38 @@ html .page-slider, body .page-slider {
               height: 0.1041666667vw;
               background: linear-gradient(to right, #0cb754, #0cb754 0.2604166667vw, transparent 0.2604166667vw, transparent);
               background-size: 0.5208333333vw 100%; }
+              @media (max-width: 959px) {
+                html .page-slider .panel .roadmap .timeline .roadmap-content ol li.active:before, body .page-slider .panel .roadmap .timeline .roadmap-content ol li.active:before {
+                  height: 2px;
+                  background: linear-gradient(to right, #0cb754, #0cb754 5px, transparent 5px, transparent);
+                  background-size: 10px 100%; } }
+              @media (max-width: 639px) {
+                html .page-slider .panel .roadmap .timeline .roadmap-content ol li.active:before, body .page-slider .panel .roadmap .timeline .roadmap-content ol li.active:before {
+                  height: 100%;
+                  width: 2px;
+                  background: linear-gradient(to bottom, #0cb754, #0cb754 5px, transparent 5px, transparent);
+                  background-size: 100% 10px; } }
             html .page-slider .panel .roadmap .timeline .roadmap-content ol li.active:after, body .page-slider .panel .roadmap .timeline .roadmap-content ol li.active:after {
               box-shadow: 0 0 0 0.7291666667vw rgba(12, 183, 84, 0.1); }
+              @media (max-width: 959px) {
+                html .page-slider .panel .roadmap .timeline .roadmap-content ol li.active:after, body .page-slider .panel .roadmap .timeline .roadmap-content ol li.active:after {
+                  box-shadow: 0 0 0 14px rgba(12, 183, 84, 0.1); } }
             html .page-slider .panel .roadmap .timeline .roadmap-content ol li:after, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:after {
               box-shadow: 0 0 0 0.7291666667vw rgba(254, 175, 20, 0.1); }
+              @media (max-width: 959px) {
+                html .page-slider .panel .roadmap .timeline .roadmap-content ol li:after, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:after {
+                  box-shadow: 0 0 0 14px rgba(254, 175, 20, 0.1); } }
             html .page-slider .panel .roadmap .timeline .roadmap-content ol li:first-child, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:first-child {
               margin-left: 3.6458333333vw; }
+              @media (max-width: 959px) {
+                html .page-slider .panel .roadmap .timeline .roadmap-content ol li:first-child, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:first-child {
+                  margin-left: 70px; } }
+              @media (max-width: 639px) {
+                html .page-slider .panel .roadmap .timeline .roadmap-content ol li:first-child, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:first-child {
+                  margin-left: 0; } }
+              @media (max-width: 639px) {
+                html .page-slider .panel .roadmap .timeline .roadmap-content ol li:first-child:after, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:first-child:after {
+                  top: 60px !important; } }
             html .page-slider .panel .roadmap .timeline .roadmap-content ol li:last-child, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:last-child {
               width: 15.625vw; }
               html .page-slider .panel .roadmap .timeline .roadmap-content ol li:last-child a, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:last-child a {
@@ -2920,6 +3009,12 @@ html .page-slider, body .page-slider {
                   border-radius: 50%;
                   -webkit-backface-visibility: hidden;
                   animation: wave-animate 2s infinite ease-out; }
+                  @media (max-width: 959px) {
+                    html .page-slider .panel .roadmap .timeline .roadmap-content ol li:last-child a:before, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:last-child a:before {
+                      margin-left: -15px;
+                      margin-top: -15px;
+                      width: 30px;
+                      height: 30px; } }
                 html .page-slider .panel .roadmap .timeline .roadmap-content ol li:last-child a:after, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:last-child a:after {
                   position: absolute;
                   background: #feaf14;
@@ -2935,6 +3030,12 @@ html .page-slider, body .page-slider {
                   -webkit-backface-visibility: hidden;
                   opacity: 0;
                   animation: wave-animate 3s 1s infinite ease-out; }
+                  @media (max-width: 959px) {
+                    html .page-slider .panel .roadmap .timeline .roadmap-content ol li:last-child a:after, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:last-child a:after {
+                      margin-left: -15px;
+                      margin-top: -15px;
+                      width: 30px;
+                      height: 30px; } }
                 html .page-slider .panel .roadmap .timeline .roadmap-content ol li:last-child a:before, html .page-slider .panel .roadmap .timeline .roadmap-content ol li:last-child a:after, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:last-child a:before, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:last-child a:after {
                   transition: background 500ms ease-in-out;
                   pointer-events: none; }
@@ -2951,8 +3052,20 @@ html .page-slider, body .page-slider {
                   transform: translateY(-50%) scale(1.2); }
                   html .page-slider .panel .roadmap .timeline .roadmap-content ol li:last-child a:hover:before, html .page-slider .panel .roadmap .timeline .roadmap-content ol li:last-child a:hover:after, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:last-child a:hover:before, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:last-child a:hover:after {
                     background: #0cb754; }
+                @media (max-width: 959px) {
+                  html .page-slider .panel .roadmap .timeline .roadmap-content ol li:last-child a, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:last-child a {
+                    margin: 0 12px; } }
+              @media (max-width: 959px) {
+                html .page-slider .panel .roadmap .timeline .roadmap-content ol li:last-child, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:last-child {
+                  width: 300px; } }
+              @media (max-width: 639px) {
+                html .page-slider .panel .roadmap .timeline .roadmap-content ol li:last-child, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:last-child {
+                  display: none; } }
             html .page-slider .panel .roadmap .timeline .roadmap-content ol li:not(:first-child), body .page-slider .panel .roadmap .timeline .roadmap-content ol li:not(:first-child) {
               margin-left: 0.625vw; }
+              @media (max-width: 959px) {
+                html .page-slider .panel .roadmap .timeline .roadmap-content ol li:not(:first-child), body .page-slider .panel .roadmap .timeline .roadmap-content ol li:not(:first-child) {
+                  margin-left: 12px; } }
             html .page-slider .panel .roadmap .timeline .roadmap-content ol li:not(:last-child):after, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:not(:last-child):after {
               content: '';
               position: absolute;
@@ -2964,10 +3077,23 @@ html .page-slider, body .page-slider {
               transform: translateY(-50%);
               border-radius: 50%;
               background: white; }
+              @media (max-width: 959px) {
+                html .page-slider .panel .roadmap .timeline .roadmap-content ol li:not(:last-child):after, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:not(:last-child):after {
+                  left: calc(100% - 1px);
+                  width: 14px;
+                  height: 14px; } }
+              @media (max-width: 639px) {
+                html .page-slider .panel .roadmap .timeline .roadmap-content ol li:not(:last-child):after, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:not(:last-child):after {
+                  left: -6px;
+                  top: 20px;
+                  bottom: auto; } }
             html .page-slider .panel .roadmap .timeline .roadmap-content ol li.active:not(:last-child):after, body .page-slider .panel .roadmap .timeline .roadmap-content ol li.active:not(:last-child):after {
               background: #0cb754; }
             html .page-slider .panel .roadmap .timeline .roadmap-content ol li.active.last:after, body .page-slider .panel .roadmap .timeline .roadmap-content ol li.active.last:after {
               box-shadow: 0 0 0 0.7291666667vw rgba(46, 52, 33, 0.8), 0 0 0.625vw 1.0416666667vw rgba(12, 183, 84, 0.4); }
+              @media (max-width: 959px) {
+                html .page-slider .panel .roadmap .timeline .roadmap-content ol li.active.last:after, body .page-slider .panel .roadmap .timeline .roadmap-content ol li.active.last:after {
+                  box-shadow: 0 0 0 14px rgba(46, 52, 33, 0.8), 0 0 12px 20px rgba(12, 183, 84, 0.4); } }
             html .page-slider .panel .roadmap .timeline .roadmap-content ol li div, body .page-slider .panel .roadmap .timeline .roadmap-content ol li div {
               position: absolute;
               left: calc(100% + 0.3646vw);
@@ -2975,7 +3101,7 @@ html .page-slider, body .page-slider {
               box-sizing: border-box;
               padding: 0.9895833333vw 0.7291666667vw;
               white-space: normal;
-              border-left: 0.0521vw solid #FFFFFF;
+              border-left: 1px solid #FFFFFF;
               font-size: 0.8333333333vw;
               line-height: 1.0833333333vw;
               color: rgba(255, 255, 255, 0.6);
@@ -2984,6 +3110,32 @@ html .page-slider, body .page-slider {
               html .page-slider .panel .roadmap .timeline .roadmap-content ol li div .date, body .page-slider .panel .roadmap .timeline .roadmap-content ol li div .date {
                 font-size: 0.78125vw;
                 letter-spacing: .08em; }
+                @media (max-width: 959px) {
+                  html .page-slider .panel .roadmap .timeline .roadmap-content ol li div .date, body .page-slider .panel .roadmap .timeline .roadmap-content ol li div .date {
+                    font-size: 15px; } }
+                @media (max-width: 639px) {
+                  html .page-slider .panel .roadmap .timeline .roadmap-content ol li div .date, body .page-slider .panel .roadmap .timeline .roadmap-content ol li div .date {
+                    transform: rotate(90deg) translate(-60%, 40px) !important;
+                    transform-origin: left;
+                    left: 0 !important;
+                    top: 0 !important;
+                    bottom: auto !important;
+                    right: auto; } }
+              @media (max-width: 959px) {
+                html .page-slider .panel .roadmap .timeline .roadmap-content ol li div, body .page-slider .panel .roadmap .timeline .roadmap-content ol li div {
+                  left: calc(100% + 7px);
+                  width: 289px;
+                  padding: 19px 14px;
+                  font-size: 16px;
+                  line-height: 20.8px; } }
+              @media (max-width: 639px) {
+                html .page-slider .panel .roadmap .timeline .roadmap-content ol li div, body .page-slider .panel .roadmap .timeline .roadmap-content ol li div {
+                  border-left: 0;
+                  border-top: 1px solid #FFFFFF;
+                  padding-bottom: 132px;
+                  padding-left: 26px;
+                  padding-right: 0;
+                  margin-right: 0 !important; } }
             html .page-slider .panel .roadmap .timeline .roadmap-content ol li:nth-child(even) div, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:nth-child(even) div {
               padding-top: 0;
               padding-bottom: 4.4270833333vw;
@@ -2993,6 +3145,20 @@ html .page-slider, body .page-slider {
                 left: 0;
                 transform: translateX(-50%);
                 bottom: -2.8645833333vw; }
+                @media (max-width: 959px) {
+                  html .page-slider .panel .roadmap .timeline .roadmap-content ol li:nth-child(even) div .date, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:nth-child(even) div .date {
+                    bottom: -55px; } }
+                @media (max-width: 639px) {
+                  html .page-slider .panel .roadmap .timeline .roadmap-content ol li:nth-child(even) div .date, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:nth-child(even) div .date {
+                    bottom: 0;
+                    top: 0; } }
+              @media (max-width: 959px) {
+                html .page-slider .panel .roadmap .timeline .roadmap-content ol li:nth-child(even) div, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:nth-child(even) div {
+                  padding-bottom: 85px; } }
+              @media (max-width: 639px) {
+                html .page-slider .panel .roadmap .timeline .roadmap-content ol li:nth-child(even) div, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:nth-child(even) div {
+                  padding-bottom: 60px;
+                  padding-top: 20px; } }
             html .page-slider .panel .roadmap .timeline .roadmap-content ol li:nth-child(odd) div, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:nth-child(odd) div {
               padding-bottom: 0;
               padding-top: 4.4270833333vw;
@@ -3002,42 +3168,104 @@ html .page-slider, body .page-slider {
                 left: 0;
                 transform: translateX(-50%);
                 top: -2.8645833333vw; }
+                @media (max-width: 959px) {
+                  html .page-slider .panel .roadmap .timeline .roadmap-content ol li:nth-child(odd) div .date, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:nth-child(odd) div .date {
+                    top: -55px; } }
+                @media (max-width: 639px) {
+                  html .page-slider .panel .roadmap .timeline .roadmap-content ol li:nth-child(odd) div .date, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:nth-child(odd) div .date {
+                    top: 0;
+                    bottom: 0; } }
+              @media (max-width: 959px) {
+                html .page-slider .panel .roadmap .timeline .roadmap-content ol li:nth-child(odd) div, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:nth-child(odd) div {
+                  padding-top: 85px; } }
+              @media (max-width: 639px) {
+                html .page-slider .panel .roadmap .timeline .roadmap-content ol li:nth-child(odd) div, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:nth-child(odd) div {
+                  padding-top: 20px;
+                  padding-bottom: 60px; } }
+            html .page-slider .panel .roadmap .timeline .roadmap-content ol li:before, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:before {
+              content: '';
+              display: block;
+              position: absolute;
+              left: 0;
+              right: 0;
+              top: 50%;
+              transform: translateY(-50%);
+              height: 0.1041666667vw;
+              background: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 0.2604166667vw, transparent 0.2604166667vw, transparent);
+              background-size: 0.5208333333vw 100%; }
+              @media (max-width: 959px) {
+                html .page-slider .panel .roadmap .timeline .roadmap-content ol li:before, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:before {
+                  height: 2px;
+                  background: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 5px, transparent 5px, transparent);
+                  background-size: 10px 100%; } }
+              @media (max-width: 639px) {
+                html .page-slider .panel .roadmap .timeline .roadmap-content ol li:before, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:before {
+                  content: '';
+                  display: block;
+                  position: absolute;
+                  left: 0;
+                  right: 0;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  height: 100%;
+                  width: 2px;
+                  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 5px, transparent 5px, transparent);
+                  background-size: 100% 10px; } }
+            @media (max-width: 959px) {
+              html .page-slider .panel .roadmap .timeline .roadmap-content ol li, body .page-slider .panel .roadmap .timeline .roadmap-content ol li {
+                width: 222px;
+                height: 8px; } }
+          @media (max-width: 959px) {
+            html .page-slider .panel .roadmap .timeline .roadmap-content ol, body .page-slider .panel .roadmap .timeline .roadmap-content ol {
+              padding: 300px 0; } }
         html .page-slider .panel .roadmap .timeline .roadmap-content time, body .page-slider .panel .roadmap .timeline .roadmap-content time {
           display: block;
           font-size: 1.0416666667vw;
           line-height: 1.3541666667vw;
           color: white;
           margin-bottom: 0.5208333333vw; }
-        @media screen and (max-width: 599px) {
-          html .page-slider .panel .roadmap .timeline .roadmap-content ol, body .page-slider .panel .roadmap .timeline .roadmap-content ol {
-            padding: 0;
-            transform: none !important;
-            width: auto; }
-            html .page-slider .panel .roadmap .timeline .roadmap-content ol li, body .page-slider .panel .roadmap .timeline .roadmap-content ol li {
-              display: block;
-              height: auto;
-              background: transparent;
-              width: auto; }
-              html .page-slider .panel .roadmap .timeline .roadmap-content ol li:first-child, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:first-child {
-                margin-top: 1.3020833333vw; }
-              html .page-slider .panel .roadmap .timeline .roadmap-content ol li:not(:first-child), body .page-slider .panel .roadmap .timeline .roadmap-content ol li:not(:first-child) {
-                margin-left: auto; }
-              html .page-slider .panel .roadmap .timeline .roadmap-content ol li div, body .page-slider .panel .roadmap .timeline .roadmap-content ol li div {
-                width: 94%;
-                height: auto !important;
-                margin: 0 auto 1.3020833333vw;
-                position: static; }
-              html .page-slider .panel .roadmap .timeline .roadmap-content ol li:nth-child(even) div, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:nth-child(even) div {
-                transform: none; }
-              html .page-slider .panel .roadmap .timeline .roadmap-content ol li:nth-child(odd) div:before, html .page-slider .panel .roadmap .timeline .roadmap-content ol li:nth-child(even) div:before, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:nth-child(odd) div:before, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:nth-child(even) div:before {
-                left: 50%;
-                top: 100%;
-                transform: translateX(-50%);
-                border: none;
-                border-left: 0.0521vw solid white;
-                height: 1.3020833333vw; }
-              html .page-slider .panel .roadmap .timeline .roadmap-content ol li:last-child, html .page-slider .panel .roadmap .timeline .roadmap-content ol li:nth-last-child(2) div:before, html .page-slider .panel .roadmap .timeline .roadmap-content ol li:not(:last-child):after, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:last-child, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:nth-last-child(2) div:before, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:not(:last-child):after {
-                display: none; } }
+          @media (max-width: 959px) {
+            html .page-slider .panel .roadmap .timeline .roadmap-content time, body .page-slider .panel .roadmap .timeline .roadmap-content time {
+              font-size: 20px;
+              line-height: 26px;
+              margin-bottom: 10px; } }
+          @media (max-width: 639px) {
+            html .page-slider .panel .roadmap .timeline .roadmap-content time, body .page-slider .panel .roadmap .timeline .roadmap-content time {
+              font-size: 22px;
+              line-height: 26x;
+              margin-bottom: 12px; } }
+        @media screen and (max-width: 639px) {
+          html .page-slider .panel .roadmap .timeline .roadmap-content, body .page-slider .panel .roadmap .timeline .roadmap-content {
+            margin-right: 55px; }
+            html .page-slider .panel .roadmap .timeline .roadmap-content ol, body .page-slider .panel .roadmap .timeline .roadmap-content ol {
+              padding: 0 55px 0 80px;
+              transform: none !important;
+              width: 100vw;
+              height: 700px;
+              max-height: 700px;
+              overflow-y: auto;
+              box-sizing: border-box; }
+              html .page-slider .panel .roadmap .timeline .roadmap-content ol li, body .page-slider .panel .roadmap .timeline .roadmap-content ol li {
+                display: block;
+                height: auto;
+                background: transparent;
+                width: auto;
+                padding-top: 20px;
+                position: relative; }
+                html .page-slider .panel .roadmap .timeline .roadmap-content ol li:first-child, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:first-child {
+                  margin-top: 0;
+                  padding-top: 60px; }
+                html .page-slider .panel .roadmap .timeline .roadmap-content ol li:not(:first-child), body .page-slider .panel .roadmap .timeline .roadmap-content ol li:not(:first-child) {
+                  margin-left: auto; }
+                html .page-slider .panel .roadmap .timeline .roadmap-content ol li div, body .page-slider .panel .roadmap .timeline .roadmap-content ol li div {
+                  width: 100%;
+                  height: auto !important;
+                  margin: 0;
+                  position: relative;
+                  padding-top: 0;
+                  left: 0; }
+                html .page-slider .panel .roadmap .timeline .roadmap-content ol li:nth-child(even) div, body .page-slider .panel .roadmap .timeline .roadmap-content ol li:nth-child(even) div {
+                  transform: none; } }
       html .page-slider .panel .roadmap .timeline .arrows, body .page-slider .panel .roadmap .timeline .arrows {
         display: flex;
         position: absolute;
@@ -3077,7 +3305,7 @@ html .page-slider, body .page-slider {
             pointer-events: none; }
             html .page-slider .panel .roadmap .timeline .arrows .arrow.disabled:hover, body .page-slider .panel .roadmap .timeline .arrows .arrow.disabled:hover {
               background: rgba(255, 255, 255, 0.1) !important; }
-      @media screen and (max-width: 599px) {
+      @media screen and (max-width: 959px) {
         html .page-slider .panel .roadmap .timeline .arrows, body .page-slider .panel .roadmap .timeline .arrows {
           display: none; } }
     html .page-slider .panel .roadmap .uk-container, body .page-slider .panel .roadmap .uk-container {
@@ -3109,7 +3337,7 @@ html .page-slider, body .page-slider {
   html .page-slider .panel .partners .uk-accordion li > div, body .page-slider .panel .partners .uk-accordion li > div {
     background: rgba(24, 29, 35, 0.95); } }
         html .page-slider .panel .partners .uk-accordion li > div > a, body .page-slider .panel .partners .uk-accordion li > div > a {
-          width: 101px;
+          width: 5.2604166667vw;
           transition: all 300ms ease-in-out;
           position: absolute;
           left: 0;
@@ -3144,12 +3372,25 @@ html .page-slider, body .page-slider {
                 left: 0;
                 top: 50%;
                 transform: translateY(-50%) rotate(90deg); }
+                @media (max-width: 959px) {
+                  html .page-slider .panel .partners .uk-accordion li > div > a > span > b img, body .page-slider .panel .partners .uk-accordion li > div > a > span > b img {
+                    width: 40px;
+                    height: 40px; } }
+              @media (max-width: 959px) {
+                html .page-slider .panel .partners .uk-accordion li > div > a > span > b, body .page-slider .panel .partners .uk-accordion li > div > a > span > b {
+                  padding-left: 64px;
+                  font-size: 24px;
+                  line-height: 21px; } }
             html .page-slider .panel .partners .uk-accordion li > div > a > span > span, body .page-slider .panel .partners .uk-accordion li > div > a > span > span {
               font-family: "Rogan Regular", sans-serif;
               font-size: 1.0416666667vw;
               line-height: 1.3541666667vw;
               color: rgba(255, 255, 255, 0.6);
               order: 3; }
+              @media (max-width: 959px) {
+                html .page-slider .panel .partners .uk-accordion li > div > a > span > span, body .page-slider .panel .partners .uk-accordion li > div > a > span > span {
+                  font-size: 20px;
+                  line-height: 26px; } }
             html .page-slider .panel .partners .uk-accordion li > div > a > span:before, body .page-slider .panel .partners .uk-accordion li > div > a > span:before {
               content: '';
               display: block;
@@ -3158,6 +3399,19 @@ html .page-slider, body .page-slider {
               margin: 0 1.25vw;
               background: rgba(255, 255, 255, 0.3);
               order: 2; }
+              @media (max-width: 959px) {
+                html .page-slider .panel .partners .uk-accordion li > div > a > span:before, body .page-slider .panel .partners .uk-accordion li > div > a > span:before {
+                  height: 2px;
+                  margin: 0 24px; } }
+            @media (max-width: 959px) {
+              html .page-slider .panel .partners .uk-accordion li > div > a > span, body .page-slider .panel .partners .uk-accordion li > div > a > span {
+                padding: 27px 30px 26px 30px;
+                width: 517px;
+                height: 101px;
+                transform: translate(0, 517px) rotate(-90deg); } }
+          @media (max-width: 959px) {
+            html .page-slider .panel .partners .uk-accordion li > div > a, body .page-slider .panel .partners .uk-accordion li > div > a {
+              width: 101px; } }
         html .page-slider .panel .partners .uk-accordion li > div .uk-accordion-content, body .page-slider .panel .partners .uk-accordion li > div .uk-accordion-content {
           position: absolute;
           left: 3.8541666667vw;
@@ -3176,8 +3430,14 @@ html .page-slider, body .page-slider {
             html .page-slider .panel .partners .uk-accordion li > div .uk-accordion-content > div::-webkit-scrollbar, body .page-slider .panel .partners .uk-accordion li > div .uk-accordion-content > div::-webkit-scrollbar {
               width: 0.2604166667vw;
               background: transparent; }
+              @media (max-width: 959px) {
+                html .page-slider .panel .partners .uk-accordion li > div .uk-accordion-content > div::-webkit-scrollbar, body .page-slider .panel .partners .uk-accordion li > div .uk-accordion-content > div::-webkit-scrollbar {
+                  width: 5px; } }
             html .page-slider .panel .partners .uk-accordion li > div .uk-accordion-content > div p:last-child, body .page-slider .panel .partners .uk-accordion li > div .uk-accordion-content > div p:last-child {
               margin-bottom: 0; }
+            @media (max-width: 959px) {
+              html .page-slider .panel .partners .uk-accordion li > div .uk-accordion-content > div, body .page-slider .panel .partners .uk-accordion li > div .uk-accordion-content > div {
+                padding-right: 12px; } }
           html .page-slider .panel .partners .uk-accordion li > div .uk-accordion-content + span, body .page-slider .panel .partners .uk-accordion li > div .uk-accordion-content + span {
             position: absolute;
             transform: translateX(-100%);
@@ -3195,6 +3455,9 @@ html .page-slider, body .page-slider {
               left: 0;
               top: 50%;
               transform: translateY(-50%); }
+              @media (max-width: 959px) {
+                html .page-slider .panel .partners .uk-accordion li > div .uk-accordion-content + span img, body .page-slider .panel .partners .uk-accordion li > div .uk-accordion-content + span img {
+                  width: 68px; } }
             html .page-slider .panel .partners .uk-accordion li > div .uk-accordion-content + span b, body .page-slider .panel .partners .uk-accordion li > div .uk-accordion-content + span b {
               font-family: "Rogan Regular", sans-serif;
               font-size: 1.25vw;
@@ -3206,11 +3469,43 @@ html .page-slider, body .page-slider {
               html .page-slider .panel .partners .uk-accordion li > div .uk-accordion-content + span b span, body .page-slider .panel .partners .uk-accordion li > div .uk-accordion-content + span b span {
                 font-size: 1.0416666667vw;
                 color: rgba(255, 255, 255, 0.6); }
+                @media (max-width: 959px) {
+                  html .page-slider .panel .partners .uk-accordion li > div .uk-accordion-content + span b span, body .page-slider .panel .partners .uk-accordion li > div .uk-accordion-content + span b span {
+                    font-size: 20px; } }
               html .page-slider .panel .partners .uk-accordion li > div .uk-accordion-content + span b div, body .page-slider .panel .partners .uk-accordion li > div .uk-accordion-content + span b div {
                 color: white;
                 margin-bottom: 0.2083333333vw; }
+                @media (max-width: 959px) {
+                  html .page-slider .panel .partners .uk-accordion li > div .uk-accordion-content + span b div, body .page-slider .panel .partners .uk-accordion li > div .uk-accordion-content + span b div {
+                    margin-bottom: 4px; } }
+              @media (max-width: 959px) {
+                html .page-slider .panel .partners .uk-accordion li > div .uk-accordion-content + span b, body .page-slider .panel .partners .uk-accordion li > div .uk-accordion-content + span b {
+                  font-size: 24px;
+                  padding-left: 93px; } }
+            @media (max-width: 959px) {
+              html .page-slider .panel .partners .uk-accordion li > div .uk-accordion-content + span, body .page-slider .panel .partners .uk-accordion li > div .uk-accordion-content + span {
+                padding: 30px 40px;
+                width: 512px; } }
+            @media (max-width: 639px) {
+              html .page-slider .panel .partners .uk-accordion li > div .uk-accordion-content + span, body .page-slider .panel .partners .uk-accordion li > div .uk-accordion-content + span {
+                width: calc(100vw - 100px); } }
+          @media (max-width: 959px) {
+            html .page-slider .panel .partners .uk-accordion li > div .uk-accordion-content, body .page-slider .panel .partners .uk-accordion li > div .uk-accordion-content {
+              left: 74px;
+              width: 512px;
+              padding: 37px 40px 0 40px;
+              bottom: 115px; } }
+          @media (max-width: 639px) {
+            html .page-slider .panel .partners .uk-accordion li > div .uk-accordion-content, body .page-slider .panel .partners .uk-accordion li > div .uk-accordion-content {
+              width: calc(100vw - 100px); } }
+        @media (max-width: 959px) {
+          html .page-slider .panel .partners .uk-accordion li > div, body .page-slider .panel .partners .uk-accordion li > div {
+            width: 101px;
+            height: 517px;
+            box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.06); } }
       html .page-slider .panel .partners .uk-accordion li:hover > div, body .page-slider .panel .partners .uk-accordion li:hover > div {
-        /*background: rgba(255, 255, 255, 0.15);*/
         background: rgba(50, 54, 58, 0.85); }
 @-moz-document url-prefix() {
   html .page-slider .panel .partners .uk-accordion li:hover > div, body .page-slider .panel .partners .uk-accordion li:hover > div {
@@ -3219,12 +3514,20 @@ html .page-slider, body .page-slider {
         width: 26.6666666667vw; }
         html .page-slider .panel .partners .uk-accordion li.uk-open > div > a, body .page-slider .panel .partners .uk-accordion li.uk-open > div > a {
           transform: translateX(-5.2604166667vw); }
+          @media (max-width: 959px) {
+            html .page-slider .panel .partners .uk-accordion li.uk-open > div > a, body .page-slider .panel .partners .uk-accordion li.uk-open > div > a {
+              transform: translateX(-101px); } }
         html .page-slider .panel .partners .uk-accordion li.uk-open > div .uk-accordion-content, body .page-slider .panel .partners .uk-accordion li.uk-open > div .uk-accordion-content {
           left: 0; }
           html .page-slider .panel .partners .uk-accordion li.uk-open > div .uk-accordion-content + span, body .page-slider .panel .partners .uk-accordion li.uk-open > div .uk-accordion-content + span {
             transform: translateX(0); }
+        @media (max-width: 959px) {
+          html .page-slider .panel .partners .uk-accordion li.uk-open > div, body .page-slider .panel .partners .uk-accordion li.uk-open > div {
+            width: 512px; } }
+        @media (max-width: 639px) {
+          html .page-slider .panel .partners .uk-accordion li.uk-open > div, body .page-slider .panel .partners .uk-accordion li.uk-open > div {
+            width: calc(100vw - 100px); } }
       html .page-slider .panel .partners .uk-accordion li.uk-open:hover > div, body .page-slider .panel .partners .uk-accordion li.uk-open:hover > div {
-        /*background: rgba(255, 255, 255, 0.05);*/
         background: rgba(24, 29, 35, 0.95); }
 @-moz-document url-prefix() {
   html .page-slider .panel .partners .uk-accordion li.uk-open:hover > div, body .page-slider .panel .partners .uk-accordion li.uk-open:hover > div {
@@ -3239,20 +3542,37 @@ html .page-slider, body .page-slider {
         html .page-slider .panel .partners .uk-accordion li .uk-button svg, body .page-slider .panel .partners .uk-accordion li .uk-button svg {
           width: 0.7083333333vw;
           height: auto; }
+          @media (max-width: 959px) {
+            html .page-slider .panel .partners .uk-accordion li .uk-button svg, body .page-slider .panel .partners .uk-accordion li .uk-button svg {
+              width: 13.6px; } }
+          @media (max-width: 639px) {
+            html .page-slider .panel .partners .uk-accordion li .uk-button svg, body .page-slider .panel .partners .uk-accordion li .uk-button svg {
+              width: 9px;
+              height: 16px;
+              max-height: 16px; } }
         html .page-slider .panel .partners .uk-accordion li .uk-button:hover, body .page-slider .panel .partners .uk-accordion li .uk-button:hover {
           background: rgba(48, 178, 230, 0.05);
-          border: 0.0521vw solid #30b2e6;
+          border: 1px solid #30b2e6;
           box-sizing: border-box;
           box-shadow: inset 0px 0px 1.5625vw rgba(48, 178, 230, 0.5);
           color: #30B2E6; }
           html .page-slider .panel .partners .uk-accordion li .uk-button:hover svg path, html .page-slider .panel .partners .uk-accordion li .uk-button:hover svg g, body .page-slider .panel .partners .uk-accordion li .uk-button:hover svg path, body .page-slider .panel .partners .uk-accordion li .uk-button:hover svg g {
             fill: #30b2e6 !important; }
+          @media (max-width: 959px) {
+            html .page-slider .panel .partners .uk-accordion li .uk-button:hover, body .page-slider .panel .partners .uk-accordion li .uk-button:hover {
+              box-shadow: inset 0px 0px 30px rgba(48, 178, 230, 0.5); } }
+        @media (max-width: 959px) {
+          html .page-slider .panel .partners .uk-accordion li .uk-button, body .page-slider .panel .partners .uk-accordion li .uk-button {
+            height: 54px;
+            width: 54px;
+            padding-top: 12px;
+            padding-bottom: 12px; } }
     html .page-slider .panel .partners .uk-slidenav, body .page-slider .panel .partners .uk-slidenav {
       background: rgba(255, 255, 255, 0.1);
       box-sizing: border-box;
       backdrop-filter: blur(1.0416666667vw);
       border-radius: 1.0416666667vw;
-      border: 0.0521vw solid rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.06);
       padding: 0.8541666667vw 0;
       transition: all 300ms ease-in-out;
       margin-right: 1.6666666667vw;
@@ -3271,6 +3591,9 @@ html .page-slider, body .page-slider {
     html .page-slider .panel .partners .uk-container, body .page-slider .panel .partners .uk-container {
       padding-left: 7.2916666667vw;
       padding-right: 7.2916666667vw; }
+    @media (max-width: 639px) {
+      html .page-slider .panel .partners .uk-margin-medium-top, body .page-slider .panel .partners .uk-margin-medium-top {
+        margin-top: 20px !important; } }
     @media (min-width: 1200px) {
       html .page-slider .panel .links .uk-margin-large-top, body .page-slider .panel .links .uk-margin-large-top {
         margin-top: 3.125vw !important; } }
@@ -4804,8 +5127,15 @@ html, body {
       background-image: url("../images/fun-club-print.svg"); }
     html .fun-club-card-info.fun-club-card-pic, body .fun-club-card-info.fun-club-card-pic {
       background-image: url("../images/fun-club-wallpapers.svg"); }
+    @media (max-width: 959px) {
+      html .fun-club-card-info, body .fun-club-card-info {
+        width: 28px;
+        height: 28px; } }
   html * + .uk-grid-margin-xsmall, html .uk-grid + .uk-grid-row-xsmall, html .uk-grid + .uk-grid-xsmall, html .uk-grid-row-xsmall > .uk-grid-margin, html .uk-grid-xsmall > .uk-grid-margin, body * + .uk-grid-margin-xsmall, body .uk-grid + .uk-grid-row-xsmall, body .uk-grid + .uk-grid-xsmall, body .uk-grid-row-xsmall > .uk-grid-margin, body .uk-grid-xsmall > .uk-grid-margin {
     margin-top: 0.5208333333vw; }
+    @media (max-width: 959px) {
+      html * + .uk-grid-margin-xsmall, html .uk-grid + .uk-grid-row-xsmall, html .uk-grid + .uk-grid-xsmall, html .uk-grid-row-xsmall > .uk-grid-margin, html .uk-grid-xsmall > .uk-grid-margin, body * + .uk-grid-margin-xsmall, body .uk-grid + .uk-grid-row-xsmall, body .uk-grid + .uk-grid-xsmall, body .uk-grid-row-xsmall > .uk-grid-margin, body .uk-grid-xsmall > .uk-grid-margin {
+        margin-top: 10px; } }
   html .select2-container--default .select2-selection--single, body .select2-container--default .select2-selection--single {
     background: rgba(255, 255, 255, 0);
     border: 0 solid rgba(255, 255, 255, 0.2);
