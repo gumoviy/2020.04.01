@@ -38,15 +38,52 @@ html, body {
             width: 100%; flex-grow: 1; flex-basis: content;
         }
         .uk-button {
-            border-radius: 0; backdrop-filter: blur(0.0521vw); display: flex; align-items: center; justify-content: center;
+            border-radius: 0; backdrop-filter: blur(1px); display: flex; align-items: center; justify-content: center;
             &.uk-button-default {
                 border: 1px solid rgba(255,255,255,.2);
                 border-right-width: 0;
-                &:last-child {border-right-width: 1px;}
+                &:last-child {
+                    border-right-width: 1px;
+                    @media (max-width: 639px) {
+                        border-bottom-width: 1px;
+                    }
+                }
+                @media (max-width: 639px) {
+                    border-right-width: 1px; border-bottom-width: 0;
+                }
             }
-            &:first-child {border-radius: get-vw(10px) 0 0 get-vw(10px);}
-            &:last-child {border-radius: 0 get-vw(10px) get-vw(10px) 0;}
-            svg {margin-right: get-vw(15px); max-height: get-vw(24px); width: get-vw(34px);}
+            &:first-child {
+                border-radius: get-vw(10px) 0 0 get-vw(10px);
+                /*@media (max-width: 959px) {
+                    border-radius: 10px 0 0 10px;
+                }*/
+                @media (max-width: 959px) {
+                    border-radius: 10px 10px 0 0;
+                }
+            }
+            &:last-child {
+                border-radius: 0 get-vw(10px) get-vw(10px) 0;
+                /*@media (max-width: 959px) {
+                    border-radius: 0 10px 10px 0;
+                }*/
+                @media (max-width: 959px) {
+                    border-radius: 0 0 10px 10px;
+                }
+            }
+            svg {
+                margin-right: get-vw(15px); max-height: get-vw(24px); width: get-vw(34px);
+                @media (max-width: 959px) {
+                    margin-right: 15px; max-height: 24px; width: 34px;
+                }
+            }
+        }
+        > .uk-button:nth-child(n+2), > div:nth-child(n+2) .uk-button {
+            @media (max-width: 959px) {
+                margin-left: 0;
+            }
+        }
+        @media (max-width: 959px) {
+            flex-direction: column;
         }
     }
     input {
