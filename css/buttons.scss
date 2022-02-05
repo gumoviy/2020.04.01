@@ -290,17 +290,45 @@ html, body {
                     width: 16px; height: 16px;
                 }
             }
-            &.uk-padding-small-left {padding-left: get-vw(14px)!important;}
-            &.uk-padding-small-right {padding-right: get-vw(14px)!important;}
+            &.uk-padding-small-left {
+                padding-left: get-vw(14px)!important;
+                @media (max-width: 959px) {
+                    padding-left: 14px!important;
+                }
+            }
+            &.uk-padding-small-right {
+                padding-right: get-vw(14px)!important;
+                @media (max-width: 959px) {
+                    padding-right: 14px!important;
+                }
+            }
             @media (max-width: 959px) {
                 line-height: 24px; padding: 10px 32px; font-size: 20px; backdrop-filter: blur(20px);
             }
         }
         &.uk-button-medium {
             line-height: get-vw(24px); box-sizing: border-box; padding: get-vw(11px) get-vw(32px); font-size: get-vw(20px); box-sizing: border-box; backdrop-filter: blur(get-vw(20px)); transition: background 300ms ease-in-out, box-shadow 300ms ease-in-out, border 300ms ease-in-out, color 300ms ease-in-out;
-            svg {width: 21px; height: 21px;}
-            &.uk-padding-small-left {padding-left: get-vw(16px)!important;}
-            &.uk-padding-small-right {padding-right: get-vw(16px)!important;}
+            svg {
+                width: get-vw(21px); height: get-vw(21px);
+                @media (max-width: 959px) {
+                    width: 21px; height: 21px;
+                }
+            }
+            &.uk-padding-small-left {
+                padding-left: get-vw(16px)!important;
+                @media (max-width: 959px) {
+                    padding-left: 16px!important;
+                }
+            }
+            &.uk-padding-small-right {
+                padding-right: get-vw(16px)!important;
+                @media (max-width: 959px) {
+                    padding-right: 16px!important;
+                }
+            }
+            @media (max-width: 959px) {
+                line-height: 24px; padding: 11px 32px; font-size: 20px; backdrop-filter: blur(20px);
+            }
         }
         @media (max-width: 959px) {
             padding: 10px 32px; font-size: 20px; box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.2), inset 0px 0px 30px rgba(255,255,255,0); backdrop-filter: blur(20px); border-radius: 10px;
