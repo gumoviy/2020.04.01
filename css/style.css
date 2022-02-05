@@ -4425,6 +4425,10 @@ html, body {
       padding-bottom: 20px; }
       html .uk-offcanvas .uk-offcanvas-bar #toggle-user-menu ul li, body .uk-offcanvas .uk-offcanvas-bar #toggle-user-menu ul li {
         padding: 12px 0; }
+    html .uk-offcanvas .uk-offcanvas-bar .select2-container--default .select2-selection--single .select2-selection__rendered, html .uk-offcanvas .uk-offcanvas-bar html .select2-container--default .select2-selection--single .select2-selection__rendered, body .uk-offcanvas .uk-offcanvas-bar .select2-container--default .select2-selection--single .select2-selection__rendered, body .uk-offcanvas .uk-offcanvas-bar html .select2-container--default .select2-selection--single .select2-selection__rendered {
+      padding-right: 30px; }
+      html .uk-offcanvas .uk-offcanvas-bar .select2-container--default .select2-selection--single .select2-selection__rendered + .select2-selection__arrow, html .uk-offcanvas .uk-offcanvas-bar html .select2-container--default .select2-selection--single .select2-selection__rendered + .select2-selection__arrow, body .uk-offcanvas .uk-offcanvas-bar .select2-container--default .select2-selection--single .select2-selection__rendered + .select2-selection__arrow, body .uk-offcanvas .uk-offcanvas-bar html .select2-container--default .select2-selection--single .select2-selection__rendered + .select2-selection__arrow {
+        right: 0; }
   html .logo, body .logo {
     display: flex;
     text-decoration: none;
