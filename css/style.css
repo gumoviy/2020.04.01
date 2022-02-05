@@ -4389,16 +4389,14 @@ html, body {
           padding: 0; }
     html .uk-offcanvas .uk-offcanvas-bar .toggle-user-menu, body .uk-offcanvas .uk-offcanvas-bar .toggle-user-menu {
       text-align: left;
-      padding-left: 71px;
-      padding-bottom: 15px;
-      padding-top: 15px;
+      padding-left: 58px;
       position: relative;
-      padding-right: 45px; }
+      padding-right: 35px; }
       html .uk-offcanvas .uk-offcanvas-bar .toggle-user-menu .avatar, body .uk-offcanvas .uk-offcanvas-bar .toggle-user-menu .avatar {
-        width: 45px;
-        height: 45px;
+        width: 40px;
+        height: 40px;
         position: absolute;
-        left: 12px;
+        left: 8px;
         top: 50%;
         transform: translateY(-50%); }
       html .uk-offcanvas .uk-offcanvas-bar .toggle-user-menu:after, body .uk-offcanvas .uk-offcanvas-bar .toggle-user-menu:after {
