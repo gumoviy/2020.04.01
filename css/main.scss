@@ -1134,7 +1134,7 @@ html, body {
                         }
                     }
                     .roadmap-content {
-                        white-space: nowrap; overflow-x: hidden; overflow-x: auto; position: relative; padding-left: get-vw(6px); overflow-y: hidden; -webkit-mask-position: 0 0; transition: all 300ms ease; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; cursor: move; cursor: grab; cursor: -moz-grab; cursor: -webkit-grab; -webkit-mask-image: linear-gradient(270deg,rgba(196,196,196,0) 0,#c4c4c4 7.95%,#c4c4c4 92.42%,rgba(196,196,196,0) 100%); mask-image: linear-gradient(270deg,rgba(196,196,196,0) 0,#c4c4c4 7.95%,#c4c4c4 92.42%,rgba(196,196,196,0) 100%);
+                        white-space: nowrap; position: relative; padding-left: get-vw(6px); overflow-y: hidden; -webkit-mask-position: 0 0; transition: all 300ms ease; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; cursor: move; cursor: grab; cursor: -moz-grab; cursor: -webkit-grab; -webkit-mask-image: linear-gradient(270deg,rgba(196,196,196,0) 0,#c4c4c4 7.95%,#c4c4c4 92.42%,rgba(196,196,196,0) 100%); mask-image: linear-gradient(270deg,rgba(196,196,196,0) 0,#c4c4c4 7.95%,#c4c4c4 92.42%,rgba(196,196,196,0) 100%); overflow-x: hidden; overflow-y: auto;
                         @media (max-width: 959px) {
                             padding-left: 0;
                         }
