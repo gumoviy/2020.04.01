@@ -31,7 +31,7 @@ html {
             &.show {display: block; opacity: 1;}
             .back-to-space {position: absolute; left: 20px; top: 16.5px;}
             .planet-name {
-                position: fixed; left: 50%; display: inline-block; top: 67px; z-index: 3; transform: translateX(-50%);
+                position: fixed; left: 50%; top: 67px; z-index: 3; transform: translateX(-50%); transition: left 400ms ease-in-out; display: inline-block;
                 .planet-title {
                     font-size: 50px; line-height: 50px; font-family: $bold; max-width: 100%; color: rgba(255,255,255,1); letter-spacing: 8px; position: relative; padding: 0 36px;
                     > span { pointer-events: none;}
@@ -45,11 +45,12 @@ html {
                     > span {font-family: $regular; font-size: 19px;}
                     > a {position: absolute; top: 50%; transform: translateY(-50%); right: 0;}
                 }
+                &.move {left: 78%;}
             }
             .planet-container {
                 position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); z-index: 2; transition: left 400ms ease-in-out;
                 &.move {
-                    left: 75%;
+                    left: 78%;
                     .planet-container-bg {
                         .planet-container-radial-element.solid {
                             transform: rotate(180deg);
@@ -84,6 +85,15 @@ html {
                             }
                         }
                     }
+                    &.planet-5 {
+                        box-shadow: 0 0 250px rgba($red,.6), 30px 30px 30px rgba($red,.6);
+                        .hexagon-container {
+                            > * {
+                                background-color: rgba($red,.8);
+                                > a {background-color: rgba(0,0,0,.75);}
+                            }
+                        }
+                    }
                     .hexagon-container {
                         position: absolute; left: 0; top: 0; right: 0; bottom: 0;
                         > * {
@@ -97,6 +107,11 @@ html {
                                 > a {
                                     svg {
                                         path {fill: $orange;}
+                                    }
+                                }
+                                > span {
+                                    svg {
+                                        path {fill: #B4B4B4;}
                                     }
                                 }
                                 .hexagon-level {
@@ -122,6 +137,30 @@ html {
                                             > span {
                                                 &.bg-success {background: repeating-linear-gradient(0deg, $mint, $mint 2.75px, transparent 2.75px, transparent 4.75px);}
                                                 &.bg-warning {background: repeating-linear-gradient(0deg, $orange, $orange 2.75px, transparent 2.75px, transparent 4.75px);}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            > span {
+                                position: absolute; left: 3px; top: 3px; bottom: 3px; right: 3px; -webkit-clip-path: polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%,50% 0); clip-path: polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%,50% 0); display: flex; align-items: center; justify-content: center; cursor: default;
+                                img, svg {display: block; width: 34px; height: auto; margin-top: -3px;}
+                                span {
+                                    &.progress {
+                                        background: rgba(255, 255, 255, 0.15); border-radius: 1px; width: 3px; height: 32px; top: 50%; transform: translateY(-50%); position: absolute; display: block;
+                                        > span {
+                                            position: absolute; left: 0; right: 0; bottom: 0; display: block; border-radius: 1px; top: auto;
+                                            &.bg-success {background-color: #fff;}
+                                            &.bg-warning {background-color: #505050;}
+                                        }
+                                        &.progress-upgrade {
+                                            left: 3px;
+                                        }
+                                        &.progress-craft {
+                                            right: 3px;
+                                            > span {
+                                                &.bg-success {background: repeating-linear-gradient(0deg, #fff, #fff 2.75px, transparent 2.75px, transparent 4.75px);}
+                                                &.bg-warning {background: repeating-linear-gradient(0deg, #505050, #505050 2.75px, transparent 2.75px, transparent 4.75px);}
                                             }
                                         }
                                     }
@@ -166,7 +205,7 @@ html {
             .planet-modal {
                 position: fixed; left: 0; right: 0; top: 0; bottom: 0; background: rgba(0, 0, 0, 0.4); backdrop-filter: blur(5px); z-index: -1; opacity: 0; transition: opacity 300ms ease-out; padding: 16.5px 20px; transform: translateX(-100vw);
                 .modal-body {
-                    padding: 0 90px; position: absolute; left: 20px; right: 20px; top: 180px; bottom: 180px;
+                    padding: 0 90px; position: absolute; left: 20px; right: 20px; top: 77px; bottom: 77px;
                     
                     opacity: 0;  transform: translateX(-100px); transition: opacity 1000ms ease-out, transform 1000ms ease-out;
                     .overflow-container {
@@ -192,16 +231,27 @@ html {
             .space-temp-layer {/* удалить, когда leaflet добавится, сейчас просто для теста */
                 position: fixed; left: 0; right: 0; bottom: 0; top: 0;
                 .planet {
-                    position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); display: block; width: 100px; height: 100px; border-radius: 50%; background-color: rgba(255,255,255,0); box-shadow: 0 0 15px rgba(141,255,255,.5); transition: all 300ms ease;
-                    &:hover {
-                        box-shadow: 0 0 30px rgba(141,255,255,.6);
+                    position: absolute; transform: translate(-50%,-50%); display: block; border-radius: 50%; background-color: rgba(255,255,255,0); transition: all 300ms ease;
+                    &.self {
+                        left: 50%; top: 50%; width: 100px; height: 100px; box-shadow: 0 0 15px rgba(141,255,255,.5);
+                        .temp-name {background-color: rgba($mint,.8);}
+                        &:hover {
+                            box-shadow: 0 0 30px rgba(141,255,255,.6);
+                        }
+                    }
+                    &.enemy {
+                        left: 65%; top: 65%; width: 80px; height: 80px; box-shadow: 0 0 15px rgba($red,.5);
+                        .temp-name {background-color: rgba($red,.8);}
+                        &:hover {
+                            box-shadow: 0 0 30px rgba($red,.6);
+                        }
                     }
                     img {
                         position: absolute; left: 0; top: 0; right: 0; bottom: 0; border-radius: 50%;
                         &.spin {z-index: 0; -webkit-animation: spin 30s linear infinite; -moz-animation: spin 30s linear infinite; animation: spin 30s linear infinite; animation-direction: normal;}
                         &.nospin {z-index: 1; mix-blend-mode: luminosity;}
                     }
-                    .temp-name {font-size: 16px; position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); color: rgba(255,255,255,1); background-color: rgba($mint,.8); padding: 5px 10px; line-height: 16px; border-radius: 3px; z-index: 2;}
+                    .temp-name {font-size: 16px; position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); color: rgba(255,255,255,1); padding: 5px 10px; line-height: 16px; border-radius: 3px; z-index: 2;}
                 }
             }
             

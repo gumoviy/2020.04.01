@@ -79,10 +79,11 @@ html {
       html body .planet-layout .planet-name {
         position: fixed;
         left: 50%;
-        display: inline-block;
         top: 67px;
         z-index: 3;
-        transform: translateX(-50%); }
+        transform: translateX(-50%);
+        transition: left 400ms ease-in-out;
+        display: inline-block; }
         html body .planet-layout .planet-name .planet-title {
           font-size: 50px;
           line-height: 50px;
@@ -122,6 +123,8 @@ html {
             top: 50%;
             transform: translateY(-50%);
             right: 0; }
+        html body .planet-layout .planet-name.move {
+          left: 78%; }
       html body .planet-layout .planet-container {
         position: absolute;
         left: 50%;
@@ -130,7 +133,7 @@ html {
         z-index: 2;
         transition: left 400ms ease-in-out; }
         html body .planet-layout .planet-container.move {
-          left: 75%; }
+          left: 78%; }
           html body .planet-layout .planet-container.move .planet-container-bg .planet-container-radial-element.solid {
             transform: rotate(180deg); }
         html body .planet-layout .planet-container .planet-container-bg {
@@ -205,6 +208,12 @@ html {
               background-color: rgba(78, 193, 198, 0.8); }
               html body .planet-layout .planet-container .planet-container-bg.planet-1 .hexagon-container > * > a {
                 background-color: rgba(0, 0, 0, 0.75); }
+          html body .planet-layout .planet-container .planet-container-bg.planet-5 {
+            box-shadow: 0 0 250px rgba(230, 89, 87, 0.6), 30px 30px 30px rgba(230, 89, 87, 0.6); }
+            html body .planet-layout .planet-container .planet-container-bg.planet-5 .hexagon-container > * {
+              background-color: rgba(230, 89, 87, 0.8); }
+              html body .planet-layout .planet-container .planet-container-bg.planet-5 .hexagon-container > * > a {
+                background-color: rgba(0, 0, 0, 0.75); }
           html body .planet-layout .planet-container .planet-container-bg .hexagon-container {
             position: absolute;
             left: 0;
@@ -245,6 +254,8 @@ html {
                 z-index: 1; }
                 html body .planet-layout .planet-container .planet-container-bg .hexagon-container > *.proceed > a svg path {
                   fill: #F2994A; }
+                html body .planet-layout .planet-container .planet-container-bg .hexagon-container > *.proceed > span svg path {
+                  fill: #B4B4B4; }
                 html body .planet-layout .planet-container .planet-container-bg .hexagon-container > *.proceed .hexagon-level {
                   background: #F2994A; }
               html body .planet-layout .planet-container .planet-container-bg .hexagon-container > * > a {
@@ -292,6 +303,52 @@ html {
                       background: repeating-linear-gradient(0deg, #2BBA91, #2BBA91 2.75px, transparent 2.75px, transparent 4.75px); }
                     html body .planet-layout .planet-container .planet-container-bg .hexagon-container > * > a span.progress.progress-craft > span.bg-warning {
                       background: repeating-linear-gradient(0deg, #F2994A, #F2994A 2.75px, transparent 2.75px, transparent 4.75px); }
+              html body .planet-layout .planet-container .planet-container-bg .hexagon-container > * > span {
+                position: absolute;
+                left: 3px;
+                top: 3px;
+                bottom: 3px;
+                right: 3px;
+                -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%, 50% 0);
+                clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%, 50% 0);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: default; }
+                html body .planet-layout .planet-container .planet-container-bg .hexagon-container > * > span img, html body .planet-layout .planet-container .planet-container-bg .hexagon-container > * > span svg {
+                  display: block;
+                  width: 34px;
+                  height: auto;
+                  margin-top: -3px; }
+                html body .planet-layout .planet-container .planet-container-bg .hexagon-container > * > span span.progress {
+                  background: rgba(255, 255, 255, 0.15);
+                  border-radius: 1px;
+                  width: 3px;
+                  height: 32px;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  position: absolute;
+                  display: block; }
+                  html body .planet-layout .planet-container .planet-container-bg .hexagon-container > * > span span.progress > span {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    display: block;
+                    border-radius: 1px;
+                    top: auto; }
+                    html body .planet-layout .planet-container .planet-container-bg .hexagon-container > * > span span.progress > span.bg-success {
+                      background-color: #fff; }
+                    html body .planet-layout .planet-container .planet-container-bg .hexagon-container > * > span span.progress > span.bg-warning {
+                      background-color: #505050; }
+                  html body .planet-layout .planet-container .planet-container-bg .hexagon-container > * > span span.progress.progress-upgrade {
+                    left: 3px; }
+                  html body .planet-layout .planet-container .planet-container-bg .hexagon-container > * > span span.progress.progress-craft {
+                    right: 3px; }
+                    html body .planet-layout .planet-container .planet-container-bg .hexagon-container > * > span span.progress.progress-craft > span.bg-success {
+                      background: repeating-linear-gradient(0deg, #fff, #fff 2.75px, transparent 2.75px, transparent 4.75px); }
+                    html body .planet-layout .planet-container .planet-container-bg .hexagon-container > * > span span.progress.progress-craft > span.bg-warning {
+                      background: repeating-linear-gradient(0deg, #505050, #505050 2.75px, transparent 2.75px, transparent 4.75px); }
               html body .planet-layout .planet-container .planet-container-bg .hexagon-container > *.hehagon-1 {
                 transform: translate(-120px, -181px); }
               html body .planet-layout .planet-container .planet-container-bg .hexagon-container > *.hehagon-2 {
@@ -362,8 +419,8 @@ html {
           position: absolute;
           left: 20px;
           right: 20px;
-          top: 180px;
-          bottom: 180px;
+          top: 77px;
+          bottom: 77px;
           opacity: 0;
           transform: translateX(-100px);
           transition: opacity 1000ms ease-out, transform 1000ms ease-out; }
@@ -415,18 +472,31 @@ html {
         top: 0; }
         html body .space-layout .space-temp-layer .planet {
           position: absolute;
-          left: 50%;
-          top: 50%;
           transform: translate(-50%, -50%);
           display: block;
-          width: 100px;
-          height: 100px;
           border-radius: 50%;
           background-color: rgba(255, 255, 255, 0);
-          box-shadow: 0 0 15px rgba(141, 255, 255, 0.5);
           transition: all 300ms ease; }
-          html body .space-layout .space-temp-layer .planet:hover {
-            box-shadow: 0 0 30px rgba(141, 255, 255, 0.6); }
+          html body .space-layout .space-temp-layer .planet.self {
+            left: 50%;
+            top: 50%;
+            width: 100px;
+            height: 100px;
+            box-shadow: 0 0 15px rgba(141, 255, 255, 0.5); }
+            html body .space-layout .space-temp-layer .planet.self .temp-name {
+              background-color: rgba(43, 186, 145, 0.8); }
+            html body .space-layout .space-temp-layer .planet.self:hover {
+              box-shadow: 0 0 30px rgba(141, 255, 255, 0.6); }
+          html body .space-layout .space-temp-layer .planet.enemy {
+            left: 65%;
+            top: 65%;
+            width: 80px;
+            height: 80px;
+            box-shadow: 0 0 15px rgba(230, 89, 87, 0.5); }
+            html body .space-layout .space-temp-layer .planet.enemy .temp-name {
+              background-color: rgba(230, 89, 87, 0.8); }
+            html body .space-layout .space-temp-layer .planet.enemy:hover {
+              box-shadow: 0 0 30px rgba(230, 89, 87, 0.6); }
           html body .space-layout .space-temp-layer .planet img {
             position: absolute;
             left: 0;
@@ -450,7 +520,6 @@ html {
             left: 50%;
             transform: translateX(-50%);
             color: white;
-            background-color: rgba(43, 186, 145, 0.8);
             padding: 5px 10px;
             line-height: 16px;
             border-radius: 3px;
